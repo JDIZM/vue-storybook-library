@@ -10,6 +10,9 @@
     "storybook": "start-storybook -p 6006 -s /src/stories/assets"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "1.2.32",
+    "@fortawesome/free-brands-svg-icons": "5.15.1",
+    "@fortawesome/free-solid-svg-icons": "5.15.1",
     "axios": "0.20.0",
     "core-js": "^3.6.5",
     "vue": "^2.6.11",

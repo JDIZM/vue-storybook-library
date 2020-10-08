@@ -7,13 +7,18 @@ footer {
   align-items: center;
   text-align: center;
   flex-direction: column;
-  background: rgba(50,84,59, 1);
+  // TODO theme styling
+  background: $primary;
+  // background: rgba(50,84,59, 1);
   color: white;
   h5 {
     margin-top: 1rem;
   }
   h3 {
     font-size: 1.25rem;
+  }
+  p {
+    padding-top: 0;
   }
 }
 .footer {
@@ -47,9 +52,10 @@ a, a:visited {
   height: 60px;
   width: 60px;
   // background: url('~assets/img/logo-white.svg');
-  background: url('/repo.svg');
+  // background: url('~@/repo.svg');
+  // the brand logo is imported as a prop and displayed as an image
   background-size: cover;
-  margin-right: 0.5rem;
+  // margin-right: 0.5rem;
 }
 .brand__name {
   display: block;
