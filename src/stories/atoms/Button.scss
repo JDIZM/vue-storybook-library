@@ -1,0 +1,49 @@
+// TODO button scss
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  border-radius: 4px;
+  // color: #3b8070;
+  text-decoration: none;
+  padding: 10px 30px;
+  margin: 0.5rem auto;
+  // color: white;
+}
+
+.btn:focus {
+  outline: none;
+  // outline: -webkit-focus-ring-color auto 5px;
+  // outline-style: auto;
+  // outline-width: 5px;
+}
+
+.btn--primary {
+  color: white;
+  background-color: #32543B;
+  border: 1px solid #32543B;
+}
+.btn--primary:hover {
+  color: white;
+  background-color: rgba(50,84,59, 0.8);
+  border: 1px solid #32543B;
+}
+.btn--primary:focus {
+  outline-color: #32543B;
+}
+
+.btn--secondary {
+  color: #32543B;
+  background-color: white;
+  border: 1px solid #32543B;
+}
+.btn--secondary:hover {
+  color: white;
+  background-color: #32543B;
+  border: 1px solid #32543B;
+  a {
+    color: white;
+  }
+}
+.btn--secondary:focus {
+  outline-color: #32543B;
+}
