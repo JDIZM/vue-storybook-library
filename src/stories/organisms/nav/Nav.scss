@@ -1,0 +1,273 @@
+// NavMain
+.nav {
+  margin: 0 auto;
+  // display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+.nav__toggle {
+  position: fixed;
+  bottom: 4.5rem;
+  right: 1rem;
+  align-self: flex-end;
+  margin: 1rem 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 1rem 1rem;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 1);
+  z-index: 1001;
+  color: white;
+  @media screen and (min-width: 768px) {
+    //
+    display: none;
+  }
+}
+.nav__mobile {
+  width: 100%;
+  min-height: 95px;
+  // margin: auto;
+  display: flex;
+  justify-content: space-between;
+  // align-self: center;
+  // justify-content: center;
+  @media screen and (min-width: 768px) {
+    //
+    display: none;
+  }
+}
+.nav__mobile__brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1rem;
+  span {
+    font-weight: 300;
+    font-size: 1.5rem;
+    vertical-align: middle;
+  }
+}
+.nav__mobile__logo {
+  // TODO logo nav
+  background: black;
+  // background: url('~assets/img/logo.svg');
+  background-size: cover;
+  margin: auto;
+  height: 50px;
+  width: 50px;
+}
+.nav__mobile__btns {
+  display: flex;
+  // align-self: flex-end;
+  // margin: 0.5rem 0.5rem;
+  // border-radius: 4px;
+  // padding: 0.5rem 1rem;
+}
+.nav__mobile__btn {
+  margin: auto 0.5rem;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+}
+
+.nav__desktop {
+  //
+  min-height: 95px;
+  width: 100%;
+  display: none;
+  cursor: pointer;
+  @media screen and (min-width: 768px) {
+    //
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.nav__desktop__brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1rem;
+  span {
+    font-weight: 300;
+    font-size: 1.5rem;
+    vertical-align: middle;
+  }
+}
+.nav__desktop__logo {
+  // TODO nav
+  background: black;
+  // background: url('~assets/img/logo.svg');
+  background-size: cover;
+  margin: auto;
+  height: 50px;
+  width: 50px;
+}
+.nav__desktop__list {
+  //
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  @media screen and (min-width: 768px) {
+    // text-align: center;
+    li {
+      margin: 0.5rem 1rem;
+    }
+  }
+  @media screen and (min-width: 1024) {
+    // text-align: center;
+    li {
+      margin: 0.5rem 1.5rem;
+    }
+  }
+}
+.nav__desktop__list__item {
+  //
+  span {
+    font-size: 1rem;
+  }
+}
+
+.nav__desktop__btns {
+  display: flex;
+  // align-self: flex-end;
+  // margin: 0.5rem 0.5rem;
+  // border-radius: 4px;
+  // padding: 0.5rem 1rem;
+}
+.nav__desktop__btn {
+  margin: auto 0.5rem;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+}
+a.--active.nuxt-link-active {
+  color: #32543B;
+  text-decoration: underline;
+}
+
+// NavDrawer
+
+.nav__drawer__overlay {
+  // display: block;
+  z-index: 998;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: black;
+  // will-change: opacity;
+  opacity: 0.8;
+}
+.nav__drawer__wrapper {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background: white;
+}
+.nav__drawer {
+  // removed due to z-index stacking order of parent/child
+  // z-index: 999;
+  // position: fixed;
+  // top: 0;
+  // left: 0;
+  // width: 250px;
+  // height: 100%;
+  // background: white;
+  // list-style: none;
+  // display: flex;
+  // flex-direction: column;
+  // li {
+  //   margin: 0.5rem;
+  // }
+}
+.nav__drawer__list {
+  //
+  // position: relative;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  li {
+    margin: 0.5rem;
+  }
+}
+.nav__drawer__top {
+  border-bottom: solid 1px grey;
+  margin: 1rem 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .btn {
+    padding: 34px 3px;
+    margin-left: 4rem;
+  }
+}
+.nav__drawer__logo {
+  // TODO logo
+  background: black;
+  // background: url('~assets/img/logo.svg');
+  background-size: cover;
+  margin: auto;
+  height: 50px;
+  width: 50px;
+}
+.nav__drawer__brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  span {
+    font-weight: 300;
+    font-size: 1.5rem;
+    vertical-align: middle;
+  }
+}
+.nav__menu__wrapper {
+    border-bottom: solid 1px grey;
+    padding-bottom: 1rem;
+    width: 90%;
+    margin: auto;
+}
+a.--active.nuxt-link-active {
+  color: #32543B;
+  text-decoration: underline;
+}
+.nav__drawer__dropdown {
+  margin: 1rem;
+  list-style: none;
+}
+:focus {
+  outline: none;
+}
+
+// NavDropdown
+
+.nav__dropdown {
+  position: relative;
+  top: 0;
+  left: 0;
+  background: #32543b;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 2rem;
+  span {
+    color: white;
+  }
+}
+.nav__dropdown__item {
+  display: block;
+  // height: 0;
+  height: 60px;
+  align-self: center;
+}
+
+// LINKS
+a, a:visited {
+  color: black;
+}
