@@ -10,7 +10,7 @@
           <!-- logo -->
           <!-- <img :src="require('~/assets/img/' + logo)" :alt="logo"> -->
           </div>
-          <span>COMPANY</span>
+          <!-- <span>COMPANY</span> -->
         </div>
         <!-- <div class="nav__drawer__brand"></div> -->
         <div
@@ -20,7 +20,7 @@
           aria-pressed="false"
           tabindex="0"
         >
-          <span class="material-icons">close</span>
+          <i class="material-icons">close</i>
         </div>
       </div>
       <ul class="nav__drawer__list">

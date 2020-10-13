@@ -2,12 +2,13 @@
   <div v-if="showDropdown" class="nav__dropdown">
     <ul>
       <li v-for="item in items" :key="item.name" class="nav__dropdown__item">
-        <nuxt-link v-if="item.path" :to="item.path" exact-active-class="--active">
+        <!-- FIXME links -->
+        <a v-if="item.path" :to="item.path" exact-active-class="--active">
           <div class="nav__desktop__list__item">
             <span v-if="item.icon" class="material-icons">{{ item.icon }}</span>
             <span>{{ item.name.toUpperCase() }}</span>
           </div>
-        </nuxt-link>
+        </a>
       </li>
     </ul>
   </div>

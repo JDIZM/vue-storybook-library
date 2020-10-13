@@ -10,7 +10,7 @@
         <!-- logo -->
         <!-- <img :src="require('~/assets/img/' + logo)" :alt="logo"> -->
         </div>
-        <span>COMPANY</span>
+        <!-- <span>COMPANY</span> -->
       </div>
       <!--  -->
       <ul class="nav__desktop__list">
@@ -18,7 +18,7 @@
           <nuxt-link v-if="link.path" :to="link.path" exact-active-class="--active">
             <div class="nav__desktop__list__item">
               <span v-if="link.icon" class="material-icons">{{ link.icon }}</span>
-              <span>{{ link.name.toUpperCase() }}</span>
+              <span v-if="link.name">{{ link.name.toUpperCase() }}</span>
             </div>
           </nuxt-link>
           <a
@@ -31,7 +31,7 @@
           >
             <div class="nav__desktop__list__item">
               <span v-if="link.icon" class="material-icons">{{ link.icon }}</span>
-              <span>{{ link.name.toUpperCase() }}</span>
+              <span v-if="link.name">{{ link.name.toUpperCase() }}</span>
             </div>
           </a>
         </li>
@@ -61,7 +61,7 @@
         <!-- logo -->
         <!-- <img :src="require('~/assets/img/' + logo)" :alt="logo"> -->
         </div>
-        <span>COMPANY</span>
+        <!-- <span>COMPANY</span> -->
       </div>
       <div class="nav__mobile__btns">
         <a class="nav__mobile__btn btn--secondary" href="tel:12345678">
@@ -113,26 +113,44 @@ export default {
     NavDrawer,
     NavDropdown
   },
+  props: {
+    links: {
+      type: Array,
+      required: true
+    },
+    showDrawer: {
+      type: Boolean,
+      required: true
+    },
+    showDropdown: {
+      type: Boolean,
+      required: true
+    },
+    dropdownItems: {
+      type: Array,
+      required: true
+    }
+  },
   data () {
     return {
       //
-      showDrawer: false,
-      showDropdown: false,
+      // showDrawer: false,
+      // showDropdown: false,
       showEnquire: false,
       drawer: false,
       phone: process.env.CONTACT_PHONE,
-      dropdownItems: [
-        { name: 'Domestic', path: '/domestic-scaffolding/' },
-        { name: 'Commercial', path: '/commercial-scaffolding/' },
-        { name: 'Industrial', path: '/industrial-scaffolding/' }
-      ],
-      links: [
-        { name: 'Home', path: '/' },
-        { name: 'About', path: '/about/' },
-        { name: 'Services' },
-        { name: 'Contact', path: '/contact/' }
-        // { name: 'Blog', path: '/blog', icon: '' }
-      ]
+      // dropdownItems: [
+      //   { name: 'Domestic', path: '/domestic-scaffolding/' },
+      //   { name: 'Commercial', path: '/commercial-scaffolding/' },
+      //   { name: 'Industrial', path: '/industrial-scaffolding/' }
+      // ],
+      // links: [
+      //   { name: 'Home', path: '/' },
+      //   { name: 'About', path: '/about/' },
+      //   { name: 'Services' },
+      //   { name: 'Contact', path: '/contact/' }
+      //   // { name: 'Blog', path: '/blog', icon: '' }
+      // ]
     }
   },
   watch: {
