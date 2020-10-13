@@ -13,18 +13,11 @@
         <div class="footer__grid__item social">
           <h3>SOCIAL</h3>
           <ul>
-            <li>
+            <li v-for="link in social" :key="link.name">
               <a
-                href="https://www.linkedin.com/company/vertex-scaffolding-solutions-ltd/"
-                aria-label="Find us on LinkedIn"
-                ><i class="fab fa-linkedin" /></a>
-            </li>
-            <li>
-              <a
-                href="https://www.facebook.com/VERTEXScaffoldingSolutions/"
-                aria-label="Find us on Facebook"
-                ><i class="fab fa-facebook-square" />
-              </a>
+                :href="link.path"
+                :aria-label="link.aria"
+                ><i :class="link.iconClass" /></a>
             </li>
             <!-- <li><a href="#" aria-label="Find us on Twitter"><i class="fab fa-twitter-square" /></a></li> -->
           </ul>
@@ -72,6 +65,13 @@ export default {
     address: {
       type: Array,
       required: true,
+    },
+    social: {
+      type: Array,
+      required: true,
+      // default: () => {
+      //   [{linkedin: 'https://linkedin.com'}]
+      // } 
     }
   },
 };

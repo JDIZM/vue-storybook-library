@@ -15,7 +15,7 @@ export default {
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { Footer },
-  template: '<Footer :name="name" :companyNo="companyNo" :privacy="privacy" :logoSrc="logoSrc" :address="address"/>',
+  template: '<Footer :social="social" :name="name" :companyNo="companyNo" :privacy="privacy" :logoSrc="logoSrc" :address="address"/>',
 });
 
 // create an image object for the logo
@@ -41,5 +41,11 @@ Primary.args = {
   ],
   companyNo: '12345678',
   privacy: '/privacy.pdf',
-  logoSrc: Logo.src
+  logoSrc: Logo.src,
+  social: [
+    { name: "linkedin", path: 'https://linkedin.com', aria: 'Find us on LinkedIn', iconClass: 'fab fa-linkedin'},
+    { name: "fb", path: 'https://facebook.com', aria: 'Find us on Facebook', iconClass: 'fab fa-facebook-square'},
+    { name: "fb", path: 'https://twitter.com', aria: 'Find us on Twitter', iconClass: 'fab fa-twitter'},
+    { name: "fb", path: 'https://github.com', aria: 'Find us on Github', iconClass: 'fab fa-github'}
+  ]
 };
