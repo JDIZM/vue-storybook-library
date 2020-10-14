@@ -5,6 +5,7 @@ import logoFile from '../assets/flow.svg'
 export default {
   title: 'organisms/Footer',
   component: Footer,
+  // TODO set background colour and theme controls.
   // argTypes: {
   //   // backgroundColor: { control: 'color' },
   //   // size: { control: { type: 'select', options: ['small', 'medium', 'large'] } },

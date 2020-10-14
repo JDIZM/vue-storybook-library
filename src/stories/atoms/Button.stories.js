@@ -18,14 +18,16 @@ export default {
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { Button },
-  template:
-  // didnt even need to add sub components into the markup.
-  '<Button :primary="primary" />',
-    // '<NavMain :links="links" :showDrawer="showDrawer" :showDropdown="showDropdown" :dropdownItems="dropdownItems"><NavDrawer @close="showDrawer = false" :links="links" :showDrawer="showDrawer" :dropdownItems="dropdownItems" /><NavDropdown :items="dropdownItems" :showDropdown="showDropdown" /></NavMain>',
+  template: '<Button v-bind="$props" />',
 });
 
 export const Primary = Template.bind({});
 Primary.args = {
   //
   primary: true
+}
+export const Secondary = Template.bind({});
+Secondary.args = {
+  //
+  primary: false
 }

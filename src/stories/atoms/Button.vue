@@ -23,7 +23,7 @@ export default {
   methods: {
     onClick () {
       // TODO click actions
-      console.log('clicked')
+     this.$emit('onClick');
     }
   },
   computed: {
