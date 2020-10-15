@@ -79,6 +79,6 @@ export default {
 
 <style lang="scss">
 // import the theme first for global variables
-@import "../theme/theme.scss";
+// @import "../theme/theme.scss";
 @import "./Footer.scss";
 </style>
