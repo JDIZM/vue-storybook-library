@@ -6,28 +6,27 @@ import Button from './Button.vue'
 export default {
   title: 'atoms/Button',
   components: { Button},
-  // FIXME actions not working!
-  argTypes: { onClick: { action: 'clicked' } },
-  // subcomponents: [NavDrawer, NavDropdown]
-  // argTypes: {
-  //   // backgroundColor: { control: 'color' },
-  //   // size: { control: { type: 'select', options: ['small', 'medium', 'large'] } },
-  // },
+  argTypes: { 
+    onClick: { action: 'clicked' },
+    backgroundColor: { control: 'color' },
+  }
 };
 
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { Button },
-  template: '<Button v-bind="$props" />',
+  template: '<Button v-bind="$props" @onClick="onClick" />',
 });
 
 export const Primary = Template.bind({});
 Primary.args = {
   //
+  label: 'Button',
   primary: true
 }
 export const Secondary = Template.bind({});
 Secondary.args = {
   //
+  label: 'Button',
   primary: false
 }

@@ -91,6 +91,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../../theme/theme.scss";
+// @import "../../theme/theme.scss";
 @import "./Nav.scss";
 </style>
