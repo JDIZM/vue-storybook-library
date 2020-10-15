@@ -1,13 +1,13 @@
 // $primary: #e01f89;
 // FIXME vars dont work when imported in preview.
 $primary:rgba(50,84,59, 1);
+$secondary: #e01f89;
 :root {
   // @ 16px you can use 0.5 rem for an even 8px spacing grid
   font-size: 16px; // set root font-size
   line-height: 1.4; // unitless vertical rhythm
   font-family: 'Roboto Slab', serif;
   color: black;
-  // background: yellow;
 }
 
 button, span, ul, li {

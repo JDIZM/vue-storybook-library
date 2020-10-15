@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="app">
       <!-- <HelloWorld/> -->
       <router-view/>
   </div>
@@ -20,7 +20,7 @@ export default {
 </script>
 
 <style lang="scss">
-h2 {
-  color: $primary;
+#app {
+  background: $primary;
 }
 </style>
