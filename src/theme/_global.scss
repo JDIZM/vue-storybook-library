@@ -1,0 +1,46 @@
+// global sass 
+
+html, body {
+  background: white;
+  margin: 0;
+  height: 100%;
+  // all children 100%
+  // height set in container
+}
+::selection {
+background-color: #32543B;
+color: white;
+}
+*,
+*:before,
+*:after {
+box-sizing: border-box;
+margin: 0;
+}
+
+body {
+overflow: auto;
+overflow-x: hidden; // hide horizontal scroll on full width
+}
+
+.container {
+  // 100% container height causes issues
+  // height: 100%;
+  min-height: 80vh;
+  max-width: 1600px;
+  width: 90%;
+  margin: 0 auto;
+  // display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  // mobile first
+  // @media screen and (min-width: $breakpoint-md) {
+  //   width: 90%;
+  // };
+  // @media screen and (min-width: $breakpoint-lg) {
+  //   width: 80%;
+  // };
+}

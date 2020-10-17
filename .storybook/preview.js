@@ -1,5 +1,5 @@
 // import theme
-import '../src/theme/theme.scss'
+import '../src/theme/main.scss'
 // 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
