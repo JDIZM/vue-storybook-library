@@ -1,7 +1,11 @@
 <template>
-  <div class="home">
+  <div class="home container">
     <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <HelloWorld
+      title="STORYBOOK UI LIBRARY"
+      msg="a simple vue UI library built with storybook" 
+    />
+    <p></p>
   </div>
 </template>
 
