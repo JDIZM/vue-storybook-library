@@ -19,7 +19,7 @@ serve locally: `npx http-server storybook-static`
 
 https://storybook.js.org/docs/vue/workflows/publish-storybook#publish-storybook-online
 
-
+netlify is configured to deploy the storybook static build.
 
 build folder: /storybook-static
-https://vue-storybook-library.netlify.app/
+production url: https://vue-storybook-library.netlify.app/
