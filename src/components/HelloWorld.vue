@@ -17,6 +17,7 @@
 </script>
 
 <style lang="scss" scoped>
+// using global sass vars from theme files.
 h2 {
   color: $secondary;
 }

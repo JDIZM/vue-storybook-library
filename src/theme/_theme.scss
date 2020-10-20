@@ -6,12 +6,11 @@ $secondary:#b0bec5;
   // @ 16px you can use 0.5 rem for an even 8px spacing grid
   font-size: 16px; // set root font-size
   line-height: 1.4; // unitless vertical rhythm
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Roboto', serif;
   color: black;
 }
-
 button, span, ul, li {
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Roboto', serif;
   margin: 0;
   padding: 0;
   font-size: 1rem; // rem is relative to the font-size of the root element
