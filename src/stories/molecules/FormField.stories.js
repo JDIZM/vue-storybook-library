@@ -3,7 +3,6 @@ import FormField from './FormField.vue'
 export default {
   title: 'molecules/FormField',
   component: FormField,
-  // TODO set background colour and theme controls.
   // argTypes: {
   //   // backgroundColor: { control: 'color' },
   //   // size: { control: { type: 'select', options: ['small', 'medium', 'large'] } },
@@ -13,29 +12,29 @@ export default {
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { FormField },
-  template: '<FormField v-bind="$props"/>',
+  template: '<FormField v-bind="$props" v-model="value" />',
 });
 
 export const InputWithIcon = Template.bind({});
 InputWithIcon.args = {
+  name: 'TextInput',
   label: 'Input',
-  hideLabel: true,
+  hideLabel: false, // FIXME css issue
   icon: 'phone',
-  placeholder: 'Placeholder',
+  placeholder: 'Enter your phone number',
   type: 'tel',
-  primary: true,
-  input: true,
-  value: 'phone'
+  showInput: true,
+  // value: 'phone'
 }
 
 export const TextAreaWithIcon = Template.bind({});
 TextAreaWithIcon.args = {
+  name: 'TextAreaInput',
   label: 'Input',
-  hideLabel: true,
+  hideLabel: false, // FIXME css issue
   icon: 'message',
-  placeholder: 'Placeholder',
-  type: 'tel',
-  primary: true,
-  input: false,
-  value: 'message'
+  placeholder: 'Enter a message',
+  type: 'text',
+  showInput: false,
+  // value: 'message'
 }

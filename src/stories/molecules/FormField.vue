@@ -1,9 +1,9 @@
 <template>
   <div class="form__field">
-    <label v-if="!hideLabel" :for="value">{{ label }}</label>
+    <label v-if="!hideLabel" :for="name">{{ label }}</label>
     <span class="material-icons">{{ icon }}</span>
-    <input v-if="input" :type="type" :name="name" :value="value">
-    <textarea v-else :id="value" v-model="value" :type="type" :name="value" rows="4" cols="50" />
+    <input v-on="$listeners" v-if="showInput" :id="name" :type="type" :name="name" :value="value" :placeholder="placeholder" @input="$emit('update', $event.target.value)">
+    <textarea v-else :id="name" :type="type" :name="name" :value="value" :placeholder="placeholder" rows="4" cols="50" />
   </div>
 </template>
 
@@ -11,6 +11,14 @@
 export default {
   name: 'FormField',
   props: {
+    name: {
+      type: String,
+      required: true
+    },
+    placeholder: {
+      type: String,
+      required: true
+    },
     type: {
       type: String,
       required: true
@@ -27,7 +35,7 @@ export default {
       type: String,
       required: true
     },
-    input: {
+    showInput: {
       type: Boolean,
       required: true
     },
@@ -35,6 +43,10 @@ export default {
       type: Boolean,
       required: true
     },
+  },
+  model: {
+    prop: "value",
+    event: "update"
   },
   data() {
     return {
