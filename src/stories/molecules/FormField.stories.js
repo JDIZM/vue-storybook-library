@@ -24,6 +24,7 @@ InputWithIcon.args = {
   placeholder: 'Enter your phone number',
   type: 'tel',
   showInput: true,
+  showError: false,
   // value: 'phone'
 }
 
@@ -36,5 +37,6 @@ TextAreaWithIcon.args = {
   placeholder: 'Enter a message',
   type: 'text',
   showInput: false,
+  showError: false,
   // value: 'message'
 }

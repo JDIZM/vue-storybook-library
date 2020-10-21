@@ -2,7 +2,7 @@
   <div class="form__field">
     <label v-if="!hideLabel" :for="name">{{ label }}</label>
     <span class="material-icons">{{ icon }}</span>
-    <input v-on="$listeners" v-if="showInput" :id="name" :type="type" :name="name" :value="value" :placeholder="placeholder" @input="$emit('update', $event.target.value)">
+    <input :class="classes" v-on="$listeners" v-if="showInput" :id="name" :type="type" :name="name" :value="value" :placeholder="placeholder" @input="$emit('update', $event.target.value)">
     <textarea v-else :id="name" :type="type" :name="name" :value="value" :placeholder="placeholder" rows="4" cols="50" />
   </div>
 </template>
@@ -43,6 +43,10 @@ export default {
       type: Boolean,
       required: true
     },
+    showError: {
+      type: Boolean,
+      required: true
+    },
   },
   model: {
     prop: "value",
@@ -52,6 +56,13 @@ export default {
     return {
       //
       // input: true,
+    }
+  },
+  computed: {
+    classes() {
+      return {
+        '--error': this.showError,
+      }
     }
   }
 }
