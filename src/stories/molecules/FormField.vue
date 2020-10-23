@@ -1,8 +1,8 @@
 <template>
-  <div class="form__field">
+  <div :class="classes" class="form__field">
     <label v-if="!hideLabel" :for="name">{{ label }}</label>
     <span class="material-icons">{{ icon }}</span>
-    <input :class="classes" v-on="$listeners" v-if="showInput" :id="name" :type="type" :name="name" :value="value" :placeholder="placeholder" @input="$emit('update', $event.target.value)">
+    <input class="bg--primary-100" v-on="$listeners" v-if="showInput" :id="name" :type="type" :name="name" :value="value" :placeholder="placeholder" @input="$emit('update', $event.target.value)">
     <textarea v-else :id="name" :type="type" :name="name" :value="value" :placeholder="placeholder" rows="4" cols="50" />
   </div>
 </template>

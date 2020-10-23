@@ -1,5 +1,6 @@
 // main.scss
-@import './_theme.scss';
-// import theme vars first
-@import './_global.scss';
+@import './_vars.scss'; // theme colours
+@import './_mixins.scss'; // mixin classes
+@import './_theme.scss'; // base theme styling
+@import './_global.scss'; // global styles.
 

@@ -15,6 +15,19 @@ const Template = (args, { argTypes }) => ({
   template: '<FormField v-bind="$props" v-model="value" />',
 });
 
+export const Input = Template.bind({});
+Input.args = {
+  name: 'TextInput',
+  label: 'Input',
+  hideLabel: false, // FIXME css issue
+  icon: 'phone',
+  placeholder: 'Enter your phone number',
+  type: 'tel',
+  showInput: true,
+  showError: false,
+  // value: 'phone'
+}
+
 export const InputWithIcon = Template.bind({});
 InputWithIcon.args = {
   name: 'TextInput',
@@ -25,6 +38,19 @@ InputWithIcon.args = {
   type: 'tel',
   showInput: true,
   showError: false,
+  // value: 'phone'
+}
+
+export const InputWithError = Template.bind({});
+InputWithError.args = {
+  name: 'TextInput',
+  label: 'Input',
+  hideLabel: false, // FIXME css issue
+  icon: 'phone',
+  placeholder: 'Enter your phone number',
+  type: 'tel',
+  showInput: true,
+  showError: true,
   // value: 'phone'
 }
 

@@ -1,0 +1,72 @@
+// theme mixins
+// get the variables from the sass map in _theme.scss
+// $colours
+// $spacing
+// mixins to create class names automatically
+// & https://css-tricks.com/the-sass-ampersand/
+// WARNING: You probably don't mean to use the color value gray in interpolation here.
+// It may end up represented as grey, which will likely produce invalid CSS.
+// Always quote color names when using them as strings or map keys (for example, "gray").
+// If you really want to use the color value here, use '"" + $name'.
+// fixed issue https://github.com/twbs/bootstrap/issues/29219
+@mixin background {
+  @each $name, $colour in $colours {
+    // & appends to class name
+    &--#{"" + $name} {
+      background: $colour;
+    }
+  }
+}
+@mixin text {
+  @each $name, $colour in $colours {
+    // & appends to class name
+    &--#{"" + $name} {
+      color: $colour !important;
+      text-decoration: none; // also style links
+    }
+  }
+}
+// https://tailwindcss.com/docs/theme/#app
+// inherit spacing values
+@mixin spacing {
+  @each $size, $rem in $spacing {
+    // margin
+    .m--#{$size} {
+      margin: $rem;
+    }
+    .mt--#{$size} {
+      margin-top: $rem;
+    }
+    .mr--#{$size} {
+      margin-right: $rem;
+    }
+    .mb--#{$size} {
+      margin-bottom: $rem;
+    }
+    // padding
+    .p--#{$size} {
+      padding: $rem !important;
+    }
+    .pt--#{$size} {
+      padding-top: $rem;
+    }
+    .pb--#{$size} {
+      padding-bottom: $rem;
+    }
+  }
+}
+
+// create bg classes with mixin
+// appends --colour eg bg--yellow
+.bg {
+  @include background;
+};
+// create text classes with mixin
+// appends --colour eg text--yellow
+.text {
+  @include text;
+};
+
+// create spacing classes for margin and padding
+// m--1, p--1 etc
+@include spacing;

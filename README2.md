@@ -1,8 +1,31 @@
 # VUE STORYBOOK LIBRARY
 
 storybook
-vuetify material ui
-https://vuetifyjs.com/en/
+https://storybook.js.org/docs/vue/get-started/introduction
+
+## Setup & Configure
+
+/.storybook 
+
+contains all the config files for setting up storybook.
+
+* Load static assets and resources
+* Load css files, fonts
+* Load sass/scss theme and variables
+
+## Theme
+
+all the styling is configured in the theme folder and there are mixins to create custom class names for styling bg/colour.
+// TODO can you pass vars from component to css.. we could pass theme colours down
+
+```
+/theme
+  - main.scss
+  - _vars.scss
+  - _theme.scss
+  - _global.scss
+  - _mixins.scss
+```
 
 ## Run locally
 

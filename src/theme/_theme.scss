@@ -1,8 +1,10 @@
 // $primary: #e01f89;
 // FIXME vars dont work when imported in preview.
-$primary:rgba(50,84,59, 1);
-$secondary:#b0bec5;
+// $primary:rgba(50,84,59, 1);
+// $secondary:#b0bec5;
 $error:rgba(223, 27, 102, 0.7);
+$error2: rgba( $error, 0.2 );
+// controlling colour https://thoughtbot.com/blog/controlling-color-with-sass-color-functions
 :root {
   // @ 16px you can use 0.5 rem for an even 8px spacing grid
   font-size: 16px; // set root font-size
@@ -173,6 +175,24 @@ h5 {
 
 // error class
 // FIXME can't use this in the component file because vars wont work
-.--error, .--error:focus {
-  border-bottom: 2px solid $error;
+// TODO create class colours vs using sass variables if they wont import.
+// creating classes to control the state and primary / secondary colours.
+// .--error, .--error:focus {
+//   border-bottom: 2px solid $error;
+// }
+
+
+.--error {
+  input {
+    background: rgba( $error, 0.2 );;
+  }
+  input:focus {
+    border-bottom: 2px solid $error;
+  }
+  input::placeholder {
+    color: black !important;
+  }
+  span {
+    color: black !important;
+  }
 }
