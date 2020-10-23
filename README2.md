@@ -20,11 +20,11 @@ all the styling is configured in the theme folder and there are mixins to create
 
 ```
 /theme
-  - main.scss
-  - _vars.scss
-  - _theme.scss
-  - _global.scss
-  - _mixins.scss
+  main.scss
+  _vars.scss
+  _theme.scss
+  _global.scss
+  _mixins.scss
 ```
 
 ## Run locally

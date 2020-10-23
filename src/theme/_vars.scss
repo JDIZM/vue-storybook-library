@@ -9,28 +9,30 @@ $colours: (
   primary: rgba(50,84,59, 1),
   primary-100: rgba(50,84,59, 0.07),
   secondary: #b0bec5,
-  charcoal: rgb(36,30,18),
-  deep-blue: rgb(46,8,127),
-  astra: rgb(249,236,184),
-  white: rgb(255, 255, 255),
-  black: rgb(0, 0, 0),
-  red: rgb(167, 33, 69),
-  yellow: rgb(255, 200, 50),
-  // green: rgb(161,219,30),
-  purple: rgb(88,29,80),
-  light: rgb(255, 255, 255),
-  dark: rgb(48, 48, 48),
-  dark-two: rgb(46, 44, 44),
-  green:  rgba(50,84,59, 1),
-  lgreen: #1FB542B3,
-  orange: orangered,
-  grey: #B7B4B4
+  error: rgba(223, 27, 102, 0.7),
+  error-100: rgba(223, 27, 102, 0.2),
+  // charcoal: rgb(36,30,18),
+  // deep-blue: rgb(46,8,127),
+  // astra: rgb(249,236,184),
+  // white: rgb(255, 255, 255),
+  // black: rgb(0, 0, 0),
+  // red: rgb(167, 33, 69),
+  // yellow: rgb(255, 200, 50),
+  // // green: rgb(161,219,30),
+  // purple: rgb(88,29,80),
+  // light: rgb(255, 255, 255),
+  // dark: rgb(48, 48, 48),
+  // dark-two: rgb(46, 44, 44),
+  // green:  rgba(50,84,59, 1),
+  // lgreen: #1FB542B3,
+  // orange: orangered,
+  // grey: #B7B4B4
 );
 // only gets the variable doesn't create the primary class name.
 // vars aren't accessible at component level unless made global.
 $primary: map-get($colours, primary);
 $secondary: map-get($colours, secondary);
-$dark-two: map-get($colours, dark-two);
+// $dark-two: map-get($colours, dark-two);
 // @debug map.get($colours, 'purple');
 // @debug map-get($colours, purple);
 
