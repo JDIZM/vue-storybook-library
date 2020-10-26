@@ -17,52 +17,52 @@ const Template = (args, { argTypes }) => ({
 
 export const Input = Template.bind({});
 Input.args = {
-  name: 'TextInput',
+  name: 'Input',
   label: 'Input',
-  hideLabel: false, // FIXME css issue
+  // hideLabel: false, // FIXME css issue
   icon: 'phone',
   placeholder: 'Enter your phone number',
   type: 'tel',
-  showInput: true,
+  // showInput: true,
   showError: false,
-  // value: 'phone'
+  value: ''
 }
 
 export const InputWithIcon = Template.bind({});
 InputWithIcon.args = {
-  name: 'TextInput',
+  name: 'InputWithIcon',
   label: 'Input',
-  hideLabel: false, // FIXME css issue
+  // hideLabel: false, // FIXME css issue
   icon: 'phone',
   placeholder: 'Enter your phone number',
   type: 'tel',
-  showInput: true,
+  // showInput: true,
   showError: false,
-  // value: 'phone'
+  value: ''
 }
 
 export const InputWithError = Template.bind({});
 InputWithError.args = {
-  name: 'TextInput',
+  name: 'InputWithError',
   label: 'Input',
-  hideLabel: false, // FIXME css issue
+  // hideLabel: false, // FIXME css issue
   icon: 'phone',
   placeholder: 'Enter your phone number',
   type: 'tel',
-  showInput: true,
+  // showInput: true,
   showError: true,
-  // value: 'phone'
+  value: ''
 }
 
-export const TextAreaWithIcon = Template.bind({});
-TextAreaWithIcon.args = {
-  name: 'TextAreaInput',
-  label: 'Input',
-  hideLabel: false, // FIXME css issue
-  icon: 'message',
-  placeholder: 'Enter a message',
-  type: 'text',
-  showInput: false,
-  showError: false,
-  // value: 'message'
-}
+// export const TextAreaWithIcon = Template.bind({});
+// TextAreaWithIcon.args = {
+//   name: 'TextAreaInput',
+//   label: 'Input',
+//   // hideLabel: false, // FIXME css issue
+//   icon: 'message',
+//   placeholder: 'Enter a message',
+//   type: 'text',
+//   // showInput: false,
+//   showError: false,
+//   value: ''
+// }

@@ -1,9 +1,8 @@
 <template>
   <div :class="classes" class="form__field">
-    <label v-if="!hideLabel" :for="name">{{ label }}</label>
+    <label :for="name">{{ label }}</label>
     <span class="material-icons">{{ icon }}</span>
-    <input class="bg--primary-100" v-on="$listeners" v-if="showInput" :id="name" :type="type" :name="name" :value="value" :placeholder="placeholder" @input="$emit('update', $event.target.value)">
-    <textarea v-else :id="name" :type="type" :name="name" :value="value" :placeholder="placeholder" rows="4" cols="50" />
+    <input class="bg--primary-100" v-on="$listeners" :id="name" :type="type" :name="name" :value="value" :placeholder="placeholder" @input="$emit('update', $event.target.value)">
   </div>
 </template>
 
@@ -29,20 +28,23 @@ export default {
     },
     value: {
       type: String,
-      required: true
+      required: false,
+      default: () => {
+        return ('')
+      }
     },
     icon: {
       type: String,
       required: true
     },
-    showInput: {
-      type: Boolean,
-      required: true
-    },
-    hideLabel: {
-      type: Boolean,
-      required: true
-    },
+    // showInput: {
+    //   type: Boolean,
+    //   required: true
+    // },
+    // hideLabel: {
+    //   type: Boolean,
+    //   required: true
+    // },
     showError: {
       type: Boolean,
       required: true
