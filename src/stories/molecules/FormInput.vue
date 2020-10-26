@@ -1,14 +1,15 @@
 <template>
   <div :class="classes" class="form__field">
     <label :for="name">{{ label }}</label>
-    <span class="material-icons">{{ icon }}</span>
-    <input class="bg--primary-100" v-on="$listeners" :id="name" :type="type" :name="name" :value="value" :placeholder="placeholder" @input="$emit('update', $event.target.value)">
+    <span v-if="showIcon" class="material-icons">{{ icon }}</span>
+    <input class="bg--primary-100" @input="$emit('update', $event.target.value)" :id="name" :type="type" :name="name" :placeholder="placeholder">
+    <!-- <input class="bg--primary-100" v-on="$listeners" :id="name" :type="type" :name="name" :value="value" :placeholder="placeholder" @input="$emit('update', $event.target.value)"> -->
   </div>
 </template>
 
 <script>
 export default {
-  name: 'FormField',
+  name: 'Input',
   props: {
     name: {
       type: String,
@@ -26,38 +27,38 @@ export default {
       type: String,
       required: true
     },
-    value: {
-      type: String,
-      required: false,
-      default: () => {
-        return ('')
-      }
-    },
+    // value: {
+    //   type: String,
+    //   required: true
+    // },
     icon: {
       type: String,
       required: true
     },
-    // showInput: {
-    //   type: Boolean,
-    //   required: true
-    // },
-    // hideLabel: {
-    //   type: Boolean,
-    //   required: true
-    // },
-    showError: {
+    showIcon: {
       type: Boolean,
       required: true
     },
+    showError: {
+      type: Boolean,
+      required: true
+    }
   },
   model: {
-    prop: "value",
+    data: "value",
     event: "update"
   },
   data() {
     return {
       //
       // input: true,
+      value: ''
+    }
+  },
+  methods: {
+    onSubmit () {
+      // TODO click actions
+     this.$emit('onSubmit');
     }
   },
   computed: {
@@ -71,5 +72,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import './FormField.scss';
+@import './FormInput.scss';
 </style>

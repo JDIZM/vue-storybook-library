@@ -1,8 +1,8 @@
-import Input from "./Input.vue";
+import FormInput from "./FormInput.vue";
 
 export default {
-  title: "atoms/Input",
-  component: Input,
+  title: "molecules/FormInput",
+  component: FormInput,
   argTypes: {
     update: { action: "update" }
   }
@@ -10,8 +10,8 @@ export default {
 
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
-  components: { Input },
-  template: '<Input v-bind="$props" @update="update" />'
+  components: { FormInput },
+  template: '<FormInput v-bind="$props" @update="update" />'
 });
 
 export const TextInput = Template.bind({});

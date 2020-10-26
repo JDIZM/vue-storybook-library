@@ -3,11 +3,9 @@ import Form from './Form.vue'
 export default {
   title: 'organisms/Form',
   component: Form,
-  // TODO set background colour and theme controls.
-  // argTypes: {
-  //   // backgroundColor: { control: 'color' },
-  //   // size: { control: { type: 'select', options: ['small', 'medium', 'large'] } },
-  // },
+  argTypes: {
+    onSubmit: { action: "submit" }
+  }
 };
 
 const Template = (args, { argTypes }) => ({
@@ -20,5 +18,7 @@ export const Primary = Template.bind({});
 Primary.args = {
   //
   // label: 'Form',
+  // TODO props and input component
+  placeholder: "Enter your phone number",
   primary: true
 }
