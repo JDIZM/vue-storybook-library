@@ -181,10 +181,20 @@ h5 {
 //   border-bottom: 2px solid $error;
 // }
 
-
+// FIXME directly applying to the element, vs the parent form field.
+.--error-input {
+  background: rgba( $error, 0.2 ) !important;
+}
+.--error-input:focus {
+  border-bottom: 2px solid $error;
+}
+.--error-input::placeholder {
+  color: black !important;
+}
+// applied to the form field and child elements.
 .--error {
   input {
-    background: rgba( $error, 0.2 );;
+    background: rgba( $error, 0.2 ) !important;
   }
   input:focus {
     border-bottom: 2px solid $error;

@@ -43,6 +43,7 @@
 </template>
 
 <script>
+// FIXME duplicate keys
 export default {
   name: "Footer",
   props: {

@@ -1,10 +1,12 @@
 <template>
-  <div :class="classes" class="form__field">
-    <label :for="name">{{ label }}</label>
-    <span v-if="showIcon" class="material-icons">{{ icon }}</span>
-    <input class="bg--primary-100" @input="$emit('update', $event.target.value)" :id="name" :type="type" :name="name" :placeholder="placeholder">
-    <!-- <input class="bg--primary-100" v-on="$listeners" :id="name" :type="type" :name="name" :value="value" :placeholder="placeholder" @input="$emit('update', $event.target.value)"> -->
-  </div>
+    <input 
+      :class="classes" 
+      :id="name" :type="type" 
+      :name="name" 
+      :placeholder="placeholder"
+      class="bg--primary-100" 
+      @input="update($event.target.value)" 
+    >
 </template>
 
 <script>
@@ -23,22 +25,22 @@ export default {
       type: String,
       required: true
     },
-    label: {
-      type: String,
-      required: true
-    },
+    // label: {
+    //   type: String,
+    //   required: true
+    // },
     // value: {
     //   type: String,
     //   required: true
     // },
-    icon: {
-      type: String,
-      required: true
-    },
-    showIcon: {
-      type: Boolean,
-      required: true
-    },
+    // icon: {
+    //   type: String,
+    //   required: true
+    // },
+    // showIcon: {
+    //   type: Boolean,
+    //   required: true
+    // },
     showError: {
       type: Boolean,
       required: true
@@ -56,15 +58,14 @@ export default {
     }
   },
   methods: {
-    onSubmit () {
-      // TODO click actions
-     this.$emit('onSubmit');
+    update (value) {
+     this.$emit('update', value);
     }
   },
   computed: {
     classes() {
       return {
-        '--error': this.showError,
+        '--error-input': this.showError,
       }
     }
   }
