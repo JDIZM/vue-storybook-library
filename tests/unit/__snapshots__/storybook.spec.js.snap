@@ -20,8 +20,162 @@ exports[`Storyshots atoms/Button Secondary 1`] = `
 </div>
 `;
 
+exports[`Storyshots atoms/Input Text Field 1`] = `
+<div
+  class="form__field"
+>
+  <label
+    for="TextField"
+  >
+    Input
+  </label>
+   
+  <!---->
+   
+  <input
+    class="bg--primary-100"
+    id="TextField"
+    name="TextField"
+    placeholder="Enter some text"
+    type="text"
+  />
+</div>
+`;
+
+exports[`Storyshots atoms/Input Text Field With Error 1`] = `
+<div
+  class="form__field --error"
+>
+  <label
+    for="TextFieldWithError"
+  >
+    Input
+  </label>
+   
+  <span
+    class="material-icons"
+  >
+    phone
+  </span>
+   
+  <input
+    class="bg--primary-100"
+    id="TextFieldWithError"
+    name="TextFieldWithError"
+    placeholder="Enter your phone number"
+    type="tel"
+  />
+</div>
+`;
+
+exports[`Storyshots atoms/Input Text Field With Icon 1`] = `
+<div
+  class="form__field"
+>
+  <label
+    for="TextFieldWithIcon"
+  >
+    Input
+  </label>
+   
+  <span
+    class="material-icons"
+  >
+    phone
+  </span>
+   
+  <input
+    class="bg--primary-100"
+    id="TextFieldWithIcon"
+    name="TextFieldWithIcon"
+    placeholder="Enter your phone number"
+    type="tel"
+  />
+</div>
+`;
+
+exports[`Storyshots molecules/FormField Input 1`] = `
+<div
+  class="form__field"
+>
+  <label
+    for="Input"
+  >
+    Input
+  </label>
+   
+  <span
+    class="material-icons"
+  >
+    phone
+  </span>
+   
+  <input
+    class="bg--primary-100"
+    id="Input"
+    name="Input"
+    placeholder="Enter your phone number"
+    type="tel"
+  />
+</div>
+`;
+
+exports[`Storyshots molecules/FormField Input With Error 1`] = `
+<div
+  class="form__field --error"
+>
+  <label
+    for="InputWithError"
+  >
+    Input
+  </label>
+   
+  <span
+    class="material-icons"
+  >
+    phone
+  </span>
+   
+  <input
+    class="bg--primary-100"
+    id="InputWithError"
+    name="InputWithError"
+    placeholder="Enter your phone number"
+    type="tel"
+  />
+</div>
+`;
+
+exports[`Storyshots molecules/FormField Input With Icon 1`] = `
+<div
+  class="form__field"
+>
+  <label
+    for="InputWithIcon"
+  >
+    Input
+  </label>
+   
+  <span
+    class="material-icons"
+  >
+    phone
+  </span>
+   
+  <input
+    class="bg--primary-100"
+    id="InputWithIcon"
+    name="InputWithIcon"
+    placeholder="Enter your phone number"
+    type="tel"
+  />
+</div>
+`;
+
 exports[`Storyshots organisms/Footer Primary 1`] = `
-<footer>
+<footer
+  class="bg--primary text--white"
+>
   <div
     class="footer"
   >
@@ -137,6 +291,13 @@ exports[`Storyshots organisms/Footer Primary 1`] = `
     </div>
   </div>
 </footer>
+`;
+
+exports[`Storyshots organisms/Form Primary 1`] = `
+<div
+  class="form"
+  primary="true"
+/>
 `;
 
 exports[`Storyshots organisms/Nav Primary 1`] = `
@@ -781,7 +942,7 @@ exports[`Storyshots organisms/Nav Show Dropdown 1`] = `
   <!---->
    
   <div
-    class="nav__dropdown"
+    class="nav__dropdown bg--primary"
   >
     <ul>
       <li
@@ -796,7 +957,9 @@ exports[`Storyshots organisms/Nav Show Dropdown 1`] = `
           >
             <!---->
              
-            <span>
+            <span
+              class="text--white"
+            >
               DOMESTIC
             </span>
           </div>
@@ -814,7 +977,9 @@ exports[`Storyshots organisms/Nav Show Dropdown 1`] = `
           >
             <!---->
              
-            <span>
+            <span
+              class="text--white"
+            >
               COMMERCIAL
             </span>
           </div>
@@ -832,7 +997,9 @@ exports[`Storyshots organisms/Nav Show Dropdown 1`] = `
           >
             <!---->
              
-            <span>
+            <span
+              class="text--white"
+            >
               INDUSTRIAL
             </span>
           </div>
