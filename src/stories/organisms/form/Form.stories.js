@@ -1,24 +1,35 @@
+import FormInput from '../../molecules/FormInput.vue'
+import Button from '../../atoms/Button.vue'
 import Form from './Form.vue'
 
 export default {
   title: 'organisms/Form',
-  component: Form,
+  component: Form, FormInput, Button,
   argTypes: {
-    onSubmit: { action: "submit" }
+    onSubmit: { action: "submit" },
+    update: { action: "update" }
   }
 };
 
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
-  components: { Form },
-  template: '<Form v-bind="$props" @onSubmit="onSubmit"/>',
+  components: { Form, FormInput, Button },
+  template: '<Form v-bind="$props" @onSubmit="onSubmit" @update="update"/>',
 });
 
-export const Primary = Template.bind({});
-Primary.args = {
+export const SingleTextFieldWithIcon = Template.bind({});
+SingleTextFieldWithIcon.args = {
+  label: 'What\'s your name?',
+  placeholder: "Enter your name",
+  showIcon: true,
+  icon: 'person'
+}
+
+export const SingleEmailField = Template.bind({});
+SingleEmailField.args = {
   //
-  // label: 'Form',
-  // TODO props and input component
-  placeholder: "Enter your phone number",
-  primary: true
+  label: 'What\'s your email?',
+  placeholder: "Enter your email",
+  showIcon: true,
+  icon: 'email'
 }

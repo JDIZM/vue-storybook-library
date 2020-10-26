@@ -6,7 +6,7 @@
       :placeholder="placeholder"
       class="bg--primary-100" 
       @input="update($event.target.value)"
-      v-model="value" 
+      :value="value" 
     >
 </template>
 
@@ -47,10 +47,10 @@ export default {
       required: true
     }
   },
-  // model: {
-  //   data: "value",
-  //   event: "update"
-  // },
+  model: {
+    data: "value",
+    event: "update"
+  },
   data() {
     return {
       //

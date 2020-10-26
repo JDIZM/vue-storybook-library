@@ -35,7 +35,12 @@ export default {
     },
     backgroundColor: {
       type: String,
-    }
+    },
+    left: {
+      type: Boolean,
+      required: false,
+      default: () => false
+    },
   },
   data () {
     return {
@@ -62,7 +67,8 @@ export default {
         'btn--primary': this.primary,
         'btn--outline': this.outline,
         'btn--disabled bg--disabled text--dark': this.disabled,
-        'btn--destruct bg--destruct text--light': this.destruct
+        'btn--destruct bg--destruct text--light': this.destruct,
+        'btn--left': this.left
       }
     },
     // inline style binding
