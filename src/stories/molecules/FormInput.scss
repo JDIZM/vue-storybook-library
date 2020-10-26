@@ -2,9 +2,7 @@
 .form {
   width: 100%;
   padding-right: 1rem;
-  // TODO mobile layout
   max-width: 500px;
-  // margin: auto;
 }
 form {
     display: flex;
@@ -21,7 +19,6 @@ button {
     font-size: 1.25rem;
 }
 
-// new form styles
 .form__field {
   margin-top: 1rem;
   position: relative;

@@ -2,7 +2,7 @@
   <div :class="classes" class="form__field">
     <label :for="name">{{ label }}</label>
     <span v-if="showIcon" class="material-icons">{{ icon }}</span>
-    <input class="bg--primary-100" @input="$emit('update', $event.target.value)" :id="name" :type="type" :name="name" :placeholder="placeholder">
+    <input class="bg--primary-100" v-model="value" @input="$emit('update', $event.target.value)" :id="name" :type="type" :name="name" :placeholder="placeholder">
     <!-- <input class="bg--primary-100" v-on="$listeners" :id="name" :type="type" :name="name" :value="value" :placeholder="placeholder" @input="$emit('update', $event.target.value)"> -->
   </div>
 </template>
@@ -44,10 +44,10 @@ export default {
       required: true
     }
   },
-  model: {
-    data: "value",
-    event: "update"
-  },
+  // model: {
+  //   data: "value",
+  //   event: "update"
+  // },
   data() {
     return {
       //
@@ -57,7 +57,6 @@ export default {
   },
   methods: {
     onSubmit () {
-      // TODO click actions
      this.$emit('onSubmit');
     }
   },

@@ -13,8 +13,8 @@
       icon="message"
       showIcon
       :showError="showError"
-      :value="textValue"
       @update="updateValue"
+      v-model="textValue"
     />
     <Input
       name="name2"
@@ -24,8 +24,8 @@
       icon="message"
       showIcon
       :showError="showError"
-      :value="textValue2"
       @update="updateValue"
+      v-model="textValue2"
     />
     <p></p>
   </div>
@@ -44,16 +44,16 @@ export default {
   },
   data () {
     return {
-      //
       showError: false, // form validation
-      textValue: 'text',
-      textValue2: 'text2'
+      // input value is updated on @input event using v-model.
+      // :value prop is binded on the input
+      textValue: '',
+      textValue2: ''
     }
   },
   methods: {
     updateValue(value) {
-      // update form value on emit
-      // this.textValue = value
+      // TODO update form value on emit
       console.log(value)
     }
   }

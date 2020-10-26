@@ -5,8 +5,9 @@
 </template>
 
 <script>
+// TODO ToggleButton 
 export default {
-  name: 'Button',
+  name: 'ToggleButton',
   props: {
     //
     primary: {
@@ -45,6 +46,7 @@ export default {
   },
   methods: {
     onClick () {
+      // TODO click actions
      this.$emit('onClick');
     }
   },
@@ -76,5 +78,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import './Button.scss';
+@import './ToggleButton.scss';
 </style>

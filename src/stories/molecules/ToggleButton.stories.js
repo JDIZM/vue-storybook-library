@@ -1,11 +1,11 @@
-//  TODO button story
+//  TODO ToggleButton story
 //  different button states.
-import Button from './Button.vue'
+import ToggleButton from './ToggleButton.vue'
 // 
 
 export default {
-  title: 'atoms/Button',
-  components: { Button},
+  title: 'molecules/ToggleButton',
+  components: { ToggleButton },
   argTypes: { 
     onClick: { action: 'clicked' },
     backgroundColor: { control: 'color' },
@@ -14,8 +14,8 @@ export default {
 
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
-  components: { Button },
-  template: '<Button v-bind="$props" @onClick="onClick" />',
+  components: { ToggleButton },
+  template: '<ToggleButton v-bind="$props" @onClick="onClick" />',
 });
 
 export const Primary = Template.bind({});
