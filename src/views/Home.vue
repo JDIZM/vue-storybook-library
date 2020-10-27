@@ -10,7 +10,7 @@
       type="text"
       placeholder="default placeholder"
       label="label"
-      icon="message"
+      icon="icon"
       showIcon
       :showError="showError"
       @update="updateValue"
@@ -21,7 +21,7 @@
       type="text"
       placeholder="default placeholder"
       label="label"
-      icon="message"
+      icon="icon"
       showIcon
       :showError="showError"
       @update="updateValue"
