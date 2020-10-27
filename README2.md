@@ -15,8 +15,12 @@ contains all the config files for setting up storybook.
 
 ## Theme
 
-all the styling is configured in the theme folder and there are mixins to create custom class names for styling bg/colour.
-// TODO can you pass vars from component to css.. we could pass theme colours down
+all the styling is configured in the theme folder and there are mixins to create custom class names for styling bg-color, text and spacing.
+
+* class names like tailwind
+* sass/css theme variables
+
+the theme variables are mixed between sass variables for the mixins and class names in addition to css variables. I was having an issue importing the sass vars into SFC's but the root CSS vars work. Simple work around.
 
 ```
 /theme
@@ -26,6 +30,10 @@ all the styling is configured in the theme folder and there are mixins to create
   _global.scss
   _mixins.scss
 ```
+
+### utility classes
+
+// TODO utility classes, error, success etc need some work
 
 ## Run locally
 
@@ -46,3 +54,4 @@ netlify is configured to deploy the storybook static build.
 
 build folder: /storybook-static
 production url: https://vue-storybook-library.netlify.app/
+

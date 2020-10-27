@@ -9,11 +9,11 @@ $error2: rgba( $error, 0.2 );
   // @ 16px you can use 0.5 rem for an even 8px spacing grid
   font-size: 16px; // set root font-size
   line-height: 1.4; // unitless vertical rhythm
-  font-family: 'Roboto', serif;
+  font-family: var(--font-family);
   color: black;
 }
 button, span, ul, li {
-  font-family: 'Roboto', serif;
+  font-family: var(--font-family);
   margin: 0;
   padding: 0;
   font-size: 1rem; // rem is relative to the font-size of the root element
@@ -183,26 +183,31 @@ h5 {
 
 // FIXME directly applying to the element, vs the parent form field.
 .--error-input {
-  background: rgba( $error, 0.2 ) !important;
+  color: black;
 }
 .--error-input:focus {
   border-bottom: 2px solid $error;
 }
 .--error-input::placeholder {
-  color: black !important;
+  color: rgba(0,0,0, 0.4);
 }
 // applied to the form field and child elements.
 .--error {
   input {
-    background: rgba( $error, 0.2 ) !important;
+    // background: rgba( $error, 0.2 ) !important;
+    background: var(--error-100) !important;
+    color: black;
   }
   input:focus {
     border-bottom: 2px solid $error;
   }
   input::placeholder {
-    color: black !important;
+    color: rgba(0,0,0, 0.4);
   }
   span {
-    color: black !important;
+    color: rgba(0,0,0, 0.4);
+  }
+  span.material-icons {
+    color: rgba(0,0,0, 1) !important;
   }
 }

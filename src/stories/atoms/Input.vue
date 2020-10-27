@@ -1,10 +1,10 @@
 <template>
-    <input 
+    <input
+      class="bg--primary-100"
       :class="classes" 
       :id="name" :type="type" 
       :name="name" 
       :placeholder="placeholder"
-      class="bg--primary-100" 
       @input="update($event.target.value)"
       :value="value" 
     >
@@ -66,7 +66,7 @@ export default {
   computed: {
     classes() {
       return {
-        '--error-input': this.showError,
+        '--error-input bg--error-100': this.showError,
       }
     }
   }

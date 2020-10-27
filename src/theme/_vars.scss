@@ -1,18 +1,27 @@
 // theme colours http://getbem.com/naming/
-
-
+// sass variables won't work inside component files.
+// can use global css variables or
+// use custom class names for styling like tailwind.
+:root {
+  --primary:  rgba(50,84,59, 1);
+  // --primary: rgba(255, 166, 0, 1);
+  --error-100: rgba(223, 27, 27, 0.2);
+  --font-family: 'Roboto', serif;
+}
 // $secondary: rgb(36,30,18);
 // // theme colours
 // map the variables with key:value pairs for mixins
 // https://sass-lang.com/documentation/values/maps
 $colours: (
   primary: rgba(50,84,59, 1),
+  // primary: rgba(255, 166, 0, 1),
   primary-100: rgba(50,84,59, 0.07),
+  // primary-100: rgba(255, 166, 0, 0.07),
   secondary: #b0bec5,
   disabled: #b0bec5,
   destruct:rgba(165, 10, 69, 0.9),
-  error: rgba(223, 27, 102, 0.7),
-  error-100: rgba(223, 27, 102, 0.2),
+  error: rgba(223, 27, 27, 0.7),
+  error-100: rgba(223, 27, 27, 0.2),
   // charcoal: rgb(36,30,18),
   // deep-blue: rgb(46,8,127),
   // astra: rgb(249,236,184),

@@ -9,7 +9,7 @@
         :icon="icon"
         :showIcon="showIcon"
         :showError="false"
-        v-model="field1"
+        v-model="InputName"
         @update="updateValue"
       />
       <Button
@@ -33,7 +33,6 @@ export default {
     Button
   },
   props: {
-    
     // left: {
     //   type: Boolean,
     //   required: false,
@@ -59,34 +58,35 @@ export default {
   },
   data () {
     return {
-      // FIXME field1 input data not working.
-      field1: '',
-      formData: {
-        //
-        field: this.field1,
-        name: 'james',
-        last: 'd',
-        age: 34
-      }
+      //
+      InputName: '',
+      showError: false
     }
   },
   methods: {
     onSubmit () {
-      // should be kebab-case but storybook wont work with it.
-      // TODO form data
-      this.$emit('onSubmit', this.formData)
+      this.$emit('onSubmit', this.updateForm)
     },
     updateValue(value) {
       console.log(value)
     }
   },
-  // computed: {
-  //   classes() {
-  //     return {
-  //       'btn--left': this.left,
-  //     }
-  //   },
-  // }
+  computed: {
+    // classes() {
+    //   return {
+    //     'btn--left': this.left,
+    //   }
+    // },
+    // use computed values to map form data to an object.
+    updateForm () {
+      return {
+          InputName: this.InputName,
+          // name: 'james',
+          // last: 'd',
+          // age: 34
+      }
+    }
+  }
 }
 </script>
 

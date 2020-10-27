@@ -1,5 +1,3 @@
-
-// TODO ToggleButton scss
 .btn {
   cursor: pointer;
   display: inline-block;
@@ -20,34 +18,40 @@
 
 .btn--primary {
   color: white;
-  background-color: #32543B;
-  border: 1px solid #32543B;
+  background-color: var(--primary);
+  border: 1px solid var(--primary);
 }
 .btn--primary:hover {
   color: white;
-  background-color: rgba(50,84,59, 0.8);
-  border: 1px solid #32543B;
+  background-color: var(--primary);
+  border: 1px solid var(--primary);
 }
 .btn--primary:focus {
-  outline-color: #32543B;
+  outline-color: var(--primary);
 }
 
 .btn--outline {
-  color: #32543B;
+  color: var(--primary);
   background-color: white;
-  border: 1px solid #32543B;
+  border: 1px solid var(--primary);
 }
 .btn--outline:hover {
   color: white;
-  background-color: #32543B;
-  border: 1px solid #32543B;
+  background-color: var(--primary);
+  border: 1px solid var(--primary);
   a {
     color: white;
   }
 }
 .btn--outline:focus {
-  outline-color: #32543B;
+  outline-color: var(--primary);
 }
 .btn--disabled {
   opacity: 0.38;
+}
+
+.btn--left {
+  margin: 4px 0;
+  max-width: 200px;
+  text-align: center;
 }
