@@ -7,6 +7,7 @@
           <!-- logo -->
           <!-- <img :src="require('~/assets/img/' + logo)" :alt="logo"> -->
           <div class="nav__drawer__logo">
+            <img :src="logoSrc" draggable="false" />
           <!-- logo -->
           <!-- <img :src="require('~/assets/img/' + logo)" :alt="logo"> -->
           </div>
@@ -33,7 +34,7 @@
           </nuxt-link>
           <a
             v-else
-            @click.prevent="dropdown"
+            @click.prevent="onDropdown"
             exact-active-class="--active"
             role="button"
             aria-pressed="false"
@@ -49,7 +50,7 @@
                   <div class="nav__drawer__dropdown">{{ item.name }}</div>
                 </nuxt-link>
               </li>
-            </ul>
+          </ul>
           </a>
         </li>
       </ul>
@@ -73,6 +74,10 @@ export default {
     dropdownItems: {
       type: Array,
       required: true
+    },
+    logoSrc: {
+      type: String,
+      required: true,
     }
   },
   data () {
@@ -83,7 +88,7 @@ export default {
   },
   methods: {
     //
-    dropdown () {
+    onDropdown () {
       this.showDropdown = !this.showDropdown
     }
   }

@@ -3,13 +3,17 @@ import NavDrawer from './NavDrawer';
 import NavDropdown from './NavDropdown';
 // import NavMain from './NavMain'
 // import logo from static files
-// import logoFile from '../assets/flow.svg'
+import logoFile from '../../../assets/logo.png'
 
 export default {
   title: 'organisms/Nav',
   components: { NavMain, NavDrawer, NavDropdown },
   // FIXME actions not working!
-  argTypes: { onEnquire: { action: 'clicked' } },
+  argTypes: { 
+    onEnquire: { action: 'onEnquire' },
+    onShowDrawer: { action: 'onShowDrawer' },
+    onCloseDrawer: { action: 'onCloseDrawer' }
+  },
   // subcomponents: [NavDrawer, NavDropdown]
   // argTypes: {
   //   // backgroundColor: { control: 'color' },
@@ -17,11 +21,13 @@ export default {
   // },
 };
 
-// const Template = (args) => <NavMain {...args} >
-// <NavDrawer {...args} />
-// <NavDropdown {...args} />
-// </NavMain>;
+// create an image object for the logo
+const Logo = {
+  src: logoFile,
+  alt: 'logo'
+}
 
+// create template
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   // didnt even need to import the sub components.
@@ -29,13 +35,17 @@ const Template = (args, { argTypes }) => ({
   components: { NavMain },
   template:
   // didnt even need to add sub components into the markup.
-  '<NavMain :links="links" :showDrawer="showDrawer" :showDropdown="showDropdown" :dropdownItems="dropdownItems" />',
+  '<NavMain v-bind="$props" @onEnquire="onEnquire" @onCloseDrawer="onCloseDrawer" @onShowDrawer="onShowDrawer"/>',
+  // '<NavMain v-bind="$props" :links="links" :showDrawer="showDrawer" :showDropdown="showDropdown" :dropdownItems="dropdownItems" />',
     // '<NavMain :links="links" :showDrawer="showDrawer" :showDropdown="showDropdown" :dropdownItems="dropdownItems"><NavDrawer @close="showDrawer = false" :links="links" :showDrawer="showDrawer" :dropdownItems="dropdownItems" /><NavDropdown :items="dropdownItems" :showDropdown="showDropdown" /></NavMain>',
 });
 //  primary nav
 export const Primary = Template.bind({});
 Primary.args = {
   primary: true,
+  logoSrc: Logo.src,
+  // phone: process.env.CONTACT_PHONE,
+  phone: '0161 123 4567',
   links: [
     { name: 'Item', path: '/' },
     { name: 'Item', path: '/about/' },
@@ -45,9 +55,9 @@ Primary.args = {
   showDrawer: false,
   showDropdown: false,
   dropdownItems: [
-    { name: 'Domestic', path: '/domestic-scaffolding/' },
-    { name: 'Commercial', path: '/commercial-scaffolding/' },
-    { name: 'Industrial', path: '/industrial-scaffolding/' }
+    { name: 'Dropdown One', path: '/dropdown-one/' },
+    { name: 'Dropdown Two', path: '/dropdown-two/' },
+    { name: 'Dropdown Three', path: '/dropdown-three/' }
   ]
 };
 
@@ -55,6 +65,8 @@ Primary.args = {
 export const showDrawer= Template.bind({});
 showDrawer.args = {
   primary: true,
+  logoSrc: Logo.src,
+  phone: '0161 123 4567',
   links: [
     { name: 'Item', path: '/' },
     { name: 'Item', path: '/about/' },
@@ -64,9 +76,9 @@ showDrawer.args = {
   showDrawer: true,
   showDropdown: false,
   dropdownItems: [
-    { name: 'Domestic', path: '/domestic-scaffolding/' },
-    { name: 'Commercial', path: '/commercial-scaffolding/' },
-    { name: 'Industrial', path: '/industrial-scaffolding/' }
+    { name: 'Dropdown One', path: '/dropdown-one/' },
+    { name: 'Dropdown Two', path: '/dropdown-two/' },
+    { name: 'Dropdown Three', path: '/dropdown-three/' }
   ]
 };
 
@@ -74,6 +86,8 @@ showDrawer.args = {
 export const showDropdown = Template.bind({});
 showDropdown.args = {
   primary: true,
+  logoSrc: Logo.src,
+  phone: '0161 123 4567',
   links: [
     { name: 'Item', path: '/' },
     { name: 'Item', path: '/about/' },
@@ -83,9 +97,9 @@ showDropdown.args = {
   showDrawer: false,
   showDropdown: true,
   dropdownItems: [
-    { name: 'Domestic', path: '/domestic-scaffolding/' },
-    { name: 'Commercial', path: '/commercial-scaffolding/' },
-    { name: 'Industrial', path: '/industrial-scaffolding/' }
+    { name: 'Dropdown One', path: '/dropdown-one/' },
+    { name: 'Dropdown Two', path: '/dropdown-two/' },
+    { name: 'Dropdown Three', path: '/dropdown-three/' }
   ]
 };
 

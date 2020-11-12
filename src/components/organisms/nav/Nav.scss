@@ -51,13 +51,15 @@
   }
 }
 .nav__mobile__logo {
-  // TODO logo nav
-  background: black;
+  // background: black;
   // background: url('~assets/img/logo.svg');
   background-size: cover;
   margin: auto;
   height: 50px;
   width: 50px;
+  img {
+    height: 100%;
+  }
 }
 .nav__mobile__btns {
   display: flex;
@@ -97,13 +99,15 @@
   }
 }
 .nav__desktop__logo {
-  // TODO nav
-  background: black;
+  // background: black;
   // background: url('~assets/img/logo.svg');
   background-size: cover;
   margin: auto;
   height: 50px;
   width: 50px;
+  img {
+    height: 100%;
+  }
 }
 .nav__desktop__list {
   //
@@ -209,13 +213,15 @@ a.--active.nuxt-link-active {
   }
 }
 .nav__drawer__logo {
-  // TODO logo
-  background: black;
+  // background: black;
   // background: url('~assets/img/logo.svg');
   background-size: cover;
   margin: auto;
   height: 50px;
   width: 50px;
+  img {
+    height: 100%;
+  }
 }
 .nav__drawer__brand {
   display: flex;

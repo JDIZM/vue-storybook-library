@@ -7,6 +7,7 @@
     <div class="nav__desktop">
       <div class="nav__desktop__brand">
         <div class="nav__desktop__logo">
+          <img :src="logoSrc" draggable="false" />
         <!-- logo -->
         <!-- <img :src="require('~/assets/img/' + logo)" :alt="logo"> -->
         </div>
@@ -58,6 +59,7 @@
         <!-- logo -->
         <!-- <img :src="require('~/assets/img/' + logo)" :alt="logo"> -->
         <div class="nav__mobile__logo">
+          <img :src="logoSrc" draggable="false" />
         <!-- logo -->
         <!-- <img :src="require('~/assets/img/' + logo)" :alt="logo"> -->
         </div>
@@ -80,7 +82,7 @@
       </div>
     </div>
     <div
-      @click="showDrawer = !showDrawer"
+      @click="onShowDrawer"
       class="nav__toggle"
       role="button"
       aria-pressed="true"
@@ -93,7 +95,8 @@
       :links="links"
       :showDrawer="showDrawer"
       :dropdownItems="dropdownItems"
-      @close="showDrawer = false"
+      @close="onCloseDrawer"
+      :logoSrc="logoSrc"
     />
     <NavDropdown
       :items="dropdownItems"
@@ -129,6 +132,14 @@ export default {
     dropdownItems: {
       type: Array,
       required: true
+    },
+    logoSrc: {
+      type: String,
+      required: true,
+    },
+    phone: {
+      type: String,
+      required: true,
     }
   },
   data () {
@@ -136,9 +147,9 @@ export default {
       //
       // showDrawer: false,
       // showDropdown: false,
-      showEnquire: false,
-      drawer: false,
-      phone: process.env.CONTACT_PHONE,
+      // showEnquire: false,
+      // drawer: false,
+      // phone: process.env.CONTACT_PHONE,
       // dropdownItems: [
       //   { name: 'Domestic', path: '/domestic-scaffolding/' },
       //   { name: 'Commercial', path: '/commercial-scaffolding/' },
@@ -164,13 +175,23 @@ export default {
     },
     onEnquire () {
       // TODO showEnquire
-      console.log('clicked')
+      // console.log('clicked')
+      this.$emit('onEnquire');
       // this.$router.push({ path: '/contact/' })
     },
     routeChange () {
       // react to route changes...
       this.showDrawer = false
       this.showDropdown = false
+    },
+    onShowDrawer () {
+      // TODO show nav drawer, avoid prop mutation
+      this.$emit('onShowDrawer')
+    },
+    onCloseDrawer () {
+      // TODO onCloseDrawer nav drawer, avoid mutating prop.
+      // @onCloseDrawer="onCloseDrawer"
+      this.$emit('onCloseDrawer')
     }
   }
 }
