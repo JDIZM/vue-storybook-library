@@ -56,6 +56,9 @@ a, a:visited {
   // the brand logo is imported as a prop and displayed as an image
   background-size: cover;
   // margin-right: 0.5rem;
+  img {
+    height: 100%;
+  }
 }
 .brand__name {
   display: block;
