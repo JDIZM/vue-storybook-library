@@ -47,6 +47,7 @@ export default {
       required: true
     }
   },
+  // custom v-model binding to event
   model: {
     data: "value",
     event: "update"

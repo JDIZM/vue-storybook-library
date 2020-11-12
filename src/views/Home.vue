@@ -5,12 +5,13 @@
       title="STORYBOOK UI LIBRARY"
       msg="a simple vue UI library built with storybook" 
     />
+    <p>using two input components from ./components/Input.vue </p>
     <Input
       name="name"
       type="text"
-      placeholder="default placeholder"
+      placeholder="enter your name"
       label="label"
-      icon="icon"
+      icon="person"
       showIcon
       :showError="showError"
       @update="updateValue"
@@ -19,15 +20,26 @@
     <Input
       name="name2"
       type="text"
-      placeholder="default placeholder"
+      placeholder="enter your email"
       label="label"
-      icon="icon"
+      icon="email"
       showIcon
       :showError="showError"
       @update="updateValue"
       v-model="textValue2"
     />
-    <p></p>
+    <p>Using the storybook component from ./components/molecules/FormInput.vue</p>
+    <FormInput
+      name="name3"
+      type="text"
+      placeholder="enter your email"
+      label="label"
+      icon="email"
+      showIcon
+      :showError="showError"
+      @update="updateValue"
+      v-model="textValue3"
+    />
   </div>
 </template>
 
@@ -35,12 +47,13 @@
 // @ is an alias to /src
 import HelloWorld from "@/components/HelloWorld.vue";
 import Input from "@/components/Input.vue"
-
+import FormInput from "@/components/molecules/FormInput.vue"
 export default {
   name: "Home",
   components: {
     HelloWorld,
-    Input
+    Input,
+    FormInput
   },
   data () {
     return {
@@ -48,7 +61,8 @@ export default {
       // input value is updated on @input event using v-model.
       // :value prop is binded on the input
       textValue: '',
-      textValue2: ''
+      textValue2: '',
+      textValue3: ''
     }
   },
   methods: {

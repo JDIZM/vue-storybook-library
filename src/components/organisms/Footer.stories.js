@@ -1,6 +1,6 @@
 import Footer from './Footer.vue'
 // import logo from static files
-import logoFile from '../assets/flow.svg'
+import logoFile from '../../assets/logo.svg'
 
 export default {
   title: 'organisms/Footer',
