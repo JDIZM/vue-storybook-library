@@ -45,8 +45,8 @@ Primary.args = {
   logoSrc: Logo.src,
   social: [
     { name: "linkedin", path: 'https://linkedin.com', aria: 'Find us on LinkedIn', iconClass: 'fab fa-linkedin'},
-    { name: "fb", path: 'https://facebook.com', aria: 'Find us on Facebook', iconClass: 'fab fa-facebook-square'},
-    { name: "fb", path: 'https://twitter.com', aria: 'Find us on Twitter', iconClass: 'fab fa-twitter'},
-    { name: "fb", path: 'https://github.com', aria: 'Find us on Github', iconClass: 'fab fa-github'}
+    { name: "facebook", path: 'https://facebook.com', aria: 'Find us on Facebook', iconClass: 'fab fa-facebook-square'},
+    { name: "twitter", path: 'https://twitter.com', aria: 'Find us on Twitter', iconClass: 'fab fa-twitter'},
+    { name: "github", path: 'https://github.com', aria: 'Find us on Github', iconClass: 'fab fa-github'}
   ]
 };
