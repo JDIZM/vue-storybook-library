@@ -1,0 +1,30 @@
+.dropdown {
+  width: 100%;
+ }
+ 
+ .dropdown__trigger {
+   border-bottom: 1px solid #ddd;
+   padding: 10px;
+   position: relative;
+   cursor: pointer;
+   font-size: 1.25rem;
+ }
+ .dropdown__trigger::after {
+   content:">";
+   display: inline-block;
+   position: absolute;
+   right: 15px;
+   transform: rotate(90deg) scale(0.5, 1);
+   font-weight: bold;
+   transition: transform 0.3s;
+ }
+ .dropdown__trigger.active::after {
+   transform: rotate(-90deg) scale(0.5, 1);
+ }
+ .dropdown__content {
+   display: none;
+ }
+ .dropdown__content.active {
+   display: block;
+ }
+ 
