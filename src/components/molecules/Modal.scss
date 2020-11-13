@@ -1,0 +1,74 @@
+.modal {
+  background: white;
+  border-radius: 0.5rem;
+  position: fixed;
+  margin: auto;
+  top: 30%;
+  left: 0;
+  right: 0;
+  padding: 0;
+  z-index: 1000;
+  opacity: 1;
+  display: block; // change this with state
+  max-width: 400px;
+  // width: 55%;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
+.modal-content {
+  position: relative;
+  z-index: 1000;
+  // 
+  // padding: map-get($spacing, 1);
+  padding: 1rem;
+  // background: white;
+  // max-width: 400px;
+  // margin: auto;
+  h4 {
+    margin: 0;
+  }
+}
+
+.modal-footer {
+  position: relative;
+  z-index: 1000;
+  // padding: map-get($spacing, 1);
+  padding: 1rem;
+}
+
+// TODO display the modal overlay when the trigger is clicked
+.modal-overlay {
+  position: fixed;
+  z-index: 999;
+  top: -25%;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 125%;
+  width: 100%;
+  background: #000;
+  display: block; // change to display: block when trigger is clicked
+  will-change: opacity;
+  opacity: 0.6; 
+}
+
+.modal-close {
+  position: absolute;
+  // right: map-get($spacing, 1);
+  right: 1rem;
+  top: 1rem;
+  // top: map-get($spacing, 1);
+}
+
+// animation
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 30%;
+    opacity: 1;
+  }
+}
