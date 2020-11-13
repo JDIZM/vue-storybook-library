@@ -1,0 +1,35 @@
+.toast {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // background: $primary;
+  position: fixed;
+  color: white;
+  min-width: 200px;
+  max-width: 60%;
+  padding: 20px;
+  left: 50%;
+  transform: translateX(-25%);
+  margin-left: -120px;
+  bottom: 0;
+  border-radius: 4px;
+  box-shadow: 1px 3px 5px rgba(0,0,0,0.2);
+  text-align: center;
+  margin-bottom: -100%; 
+  transition: all 0.2s;
+  p {
+    padding-top: 0;
+    margin:0px 8px;
+  }
+  span {
+    margin:0px 8px;
+  }
+  z-index: 100; // set it ontop of the content
+}
+
+// active class makes toast appear from bottom by changing margin-bottom
+// use timeout to remove class
+.toast.active {
+  margin-bottom: 20px;
+ }
