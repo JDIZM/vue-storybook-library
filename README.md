@@ -1,4 +1,4 @@
-# vue-event-timeline
+# vue-storybook-library
 
 ## Project setup
 ```
