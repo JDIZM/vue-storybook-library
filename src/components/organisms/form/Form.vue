@@ -9,8 +9,8 @@
         :icon="icon"
         :showIcon="showIcon"
         :showError="false"
-        v-model="InputName"
-        @update="updateValue"
+        v-model="inputValue"
+        @update="onUpdate"
       />
       <Button
         @onClick="onSubmit"
@@ -56,10 +56,14 @@ export default {
       required: true
     }
   },
+  model: {
+    data: "value",
+    event: "update"
+  },
   data () {
     return {
       //
-      InputName: '',
+      inputValue: '',
       showError: false
     }
   },
@@ -67,8 +71,9 @@ export default {
     onSubmit () {
       this.$emit('onSubmit', this.updateForm)
     },
-    updateValue(value) {
-      console.log(value)
+    onUpdate(value) {
+      // console.log(value)
+      this.$emit('onUpdate', value)
     }
   },
   computed: {
@@ -80,7 +85,7 @@ export default {
     // use computed values to map form data to an object.
     updateForm () {
       return {
-          InputName: this.InputName,
+          inputValue: this.inputValue,
           // name: 'james',
           // last: 'd',
           // age: 34

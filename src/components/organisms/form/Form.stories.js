@@ -11,15 +11,15 @@ export default {
   component: Form,
   subcomponents: { InputWithIcon, Button },
   argTypes: {
-    onSubmit: { action: "submit" }
-    // update: { action: "update" }
+    onSubmit: { action: "onSubmit" },
+    onUpdate: { action: "onUpdate" }
   }
 };
 
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { Form, InputWithIcon, Button },
-  template: '<Form v-bind="$props" @onSubmit="onSubmit" />',
+  template: '<Form v-bind="$props" @onSubmit="onSubmit" @onUpdate="onUpdate" />',
 });
 
 // const Template = (args) => <Form {...args} />;

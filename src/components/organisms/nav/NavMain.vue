@@ -16,15 +16,16 @@
       <!--  -->
       <ul class="nav__desktop__list">
         <li v-for="link in links" :key="link.path">
-          <nuxt-link v-if="link.path" :to="link.path" exact-active-class="--active">
+          <!-- // TODO nuxt-link // router-link -->
+          <a v-if="link.path" :to="link.path" exact-active-class="--active">
             <div class="nav__desktop__list__item">
               <span v-if="link.icon" class="material-icons">{{ link.icon }}</span>
               <span v-if="link.name">{{ link.name.toUpperCase() }}</span>
             </div>
-          </nuxt-link>
+          </a>
           <a
             v-else
-            @click.prevent="dropdown"
+            @click.prevent="onDropdown"
             exact-active-class="--active"
             role="button"
             aria-pressed="false"
@@ -66,7 +67,7 @@
         <!-- <span>COMPANY</span> -->
       </div>
       <div class="nav__mobile__btns">
-        <a class="nav__mobile__btn btn--secondary" href="tel:12345678">
+        <a class="nav__mobile__btn btn--secondary" :href="'tel:' + phone">
           CALL
         </a>
         <div
@@ -97,6 +98,8 @@
       :dropdownItems="dropdownItems"
       @close="onCloseDrawer"
       :logoSrc="logoSrc"
+      :showDropdown="showDropdown"
+      @onDropdown="onDropdown"
     />
     <NavDropdown
       :items="dropdownItems"
@@ -166,12 +169,14 @@ export default {
   },
   watch: {
     // watch the route and call method
-    '$route.fullPath': 'routeChange'
+    '$route.fullPath': 'onRouteChange'
   },
   methods: {
     //
-    dropdown () {
-      this.showDropdown = !this.showDropdown
+    onDropdown () {
+      // FIXME avoid mutating prop
+      // this.showDropdown = !this.showDropdown
+      this.$emit('onDropdown')
     },
     onEnquire () {
       // TODO showEnquire
@@ -179,8 +184,9 @@ export default {
       this.$emit('onEnquire');
       // this.$router.push({ path: '/contact/' })
     },
-    routeChange () {
+    onRouteChange () {
       // react to route changes...
+      // TODO emit events instead of mutating props
       this.showDrawer = false
       this.showDropdown = false
     },

@@ -4,14 +4,14 @@ export default {
   title: "molecules/FormInput",
   component: FormInput,
   argTypes: {
-    update: { action: "update" }
+    onUpdate: { action: "onUpdate" }
   }
 };
 
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { FormInput },
-  template: '<FormInput v-bind="$props" @update="update" />'
+  template: '<FormInput v-bind="$props" @update="onUpdate" />'
 });
 
 export const TextInput = Template.bind({});

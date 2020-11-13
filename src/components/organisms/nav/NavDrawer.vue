@@ -26,12 +26,13 @@
       </div>
       <ul class="nav__drawer__list">
         <li v-for="link in links" :key="link.path">
-          <nuxt-link v-if="link.path" :to="link.path" exact-active-class="--active">
+          <!-- // TODO nuxt-link // router-link -->
+          <a v-if="link.path" :to="link.path" exact-active-class="--active">
             <div class="nav__menu__wrapper">
               <span v-if="link.icon" class="material-icons">{{ link.icon }}</span>
               <span>{{ link.name }}</span>
             </div>
-          </nuxt-link>
+          </a>
           <a
             v-else
             @click.prevent="onDropdown"
@@ -46,9 +47,10 @@
             </div>
             <ul v-if="showDropdown" class="nav__drawer__dropdown">
               <li v-for="item in dropdownItems" :key="item.name">
-                <nuxt-link v-if="item.path" :to="item.path" exact-active-class="--active">
+                <!-- // TODO nuxt-link // router-link -->
+                <a v-if="item.path" :to="item.path" exact-active-class="--active">
                   <div class="nav__drawer__dropdown">{{ item.name }}</div>
-                </nuxt-link>
+                </a>
               </li>
           </ul>
           </a>
@@ -71,6 +73,10 @@ export default {
       type: Boolean,
       required: true
     },
+    showDropdown: {
+      type: Boolean,
+      required: true
+    },
     dropdownItems: {
       type: Array,
       required: true
@@ -82,14 +88,14 @@ export default {
   },
   data () {
     return {
-      phone: process.env.CONTACT_PHONE,
-      showDropdown: true
+      // phone: process.env.CONTACT_PHONE,
+      // showDropdown: true
     }
   },
   methods: {
     //
     onDropdown () {
-      this.showDropdown = !this.showDropdown
+      this.$emit('onDropdown')
     }
   }
 }
