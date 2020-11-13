@@ -52,5 +52,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import './Toast.scss'; // imported in main.scss for access to global vars
+@import './Toast.scss';
 </style>
