@@ -14,9 +14,11 @@
     "@fortawesome/fontawesome-svg-core": "1.2.32",
     "@fortawesome/free-brands-svg-icons": "5.15.1",
     "@fortawesome/free-solid-svg-icons": "5.15.1",
+    "@mailchimp/mailchimp_marketing": "3.0.24",
     "axios": "0.20.0",
     "core-js": "^3.6.5",
     "vue": "^2.6.11",
+    "vue-axios": "3.2.0",
     "vue-router": "^3.2.0",
     "vuex": "3.5.1"
   },

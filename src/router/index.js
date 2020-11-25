@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import Subscribe from '../views/Subscribe.vue'
 import NotFoundComponent from '@/components/NotFoundComponent'
 
 Vue.use(VueRouter)
@@ -10,6 +11,11 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/subscribe',
+    name: 'Subscribe',
+    component: Subscribe
   },
   // {
   //   path: '/about',

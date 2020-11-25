@@ -25,6 +25,12 @@ module.exports = {
         ws: true,
         changeOrigin: true,
         pathRewrite: { '^/webhook': '' },
+      },
+      '^/api/mailchimp': {
+        target: 'https://us17.api.mailchimp.com/3.0/lists',
+        ws: true,
+        changeOrigin: true,
+        pathRewrite: { '^/mailchimp': '' },
       }
     }
   }
