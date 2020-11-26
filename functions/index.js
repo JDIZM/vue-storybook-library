@@ -24,6 +24,7 @@ exports.getListId = functions.https.onRequest((request, response) => {
   // get list id
   mailchimp.get({
     // path : '/lists/19e84c190f'
+    // if a list isn't specified it gets the root account info
     path: list
   })
   .then(result => {
