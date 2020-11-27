@@ -1,6 +1,7 @@
 <template>
   <div class="form">
     <form @submit.prevent="onSubmit">
+      <!-- <div :class="icons"></div> -->
       <FormInput 
         name="email"
         type="email"
@@ -9,10 +10,11 @@
         icon="email"
         :showIcon="true"
         :showError="false"
-        v-model="inputValue"
+        v-model="email"
         @update="onUpdate"
         required
       />
+      <span v-if="showError" class="text--error">please enter an email address </span>
       <Button
         @onClick="onSubmit"
         type="submit"
@@ -64,36 +66,37 @@ export default {
   data () {
     return {
       //
-      inputValue: '',
+      email: '',
       showError: false
     }
   },
   methods: {
     onSubmit () {
       // TODO validate on submit
+      if (this.email === null || this.email === '') {
+        this.showError = true
+      }
       this.$emit('onSubmit', this.updateForm)
-      // TODO on successful submit, notify user
-      // TODO on error notify user
+      // TODO send to mailchimp firebase function
+      // handle within the component or not?
     },
     onUpdate(value) {
-      // console.log(value)
-      // TODO validate as the field updates
       this.$emit('onUpdate', value)
     }
   },
   computed: {
-    // classes() {
-    //   return {
-    //     'btn--left': this.left,
-    //   }
-    // },
     // use computed values to map form data to an object.
     updateForm () {
       return {
-          inputValue: this.inputValue,
-          // name: 'james',
-          // last: 'd',
-          // age: 34
+          email: this.email,
+      }
+    },
+    // FIXME only works with dynamic classes, doesn't work with props.
+    // returns an object with props, returns the string value with classes
+    icons () {
+      return {
+          'email': !this.showError,
+          'error': this.showError
       }
     }
   }

@@ -1,7 +1,9 @@
 <template>
   <div :class="classes" class="form__field">
     <label :for="name">{{ label }}</label>
-    <span v-if="showIcon" class="material-icons">{{ icon }}</span>
+    <span v-if="showSuccess" class="material-icons">check</span>
+    <span v-if="showError" class="material-icons text--error">error</span>
+    <span v-else-if="showIcon && !showSuccess" class="material-icons">{{ icon }}</span>   
     <input 
       class="bg--primary-100" 
       :value="value" 
@@ -49,7 +51,14 @@ export default {
     },
     showError: {
       type: Boolean,
-      required: true
+      required: false,
+      default: () => false
+    },
+    // the below shows an error with default function?
+    showSuccess: {
+      type: Boolean,
+      required: false,
+      default: false
     }
   },
   model: {
@@ -72,6 +81,7 @@ export default {
     classes() {
       return {
         '--error': this.showError,
+        '--success': this.showSuccess,
       }
     }
   }

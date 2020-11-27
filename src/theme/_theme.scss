@@ -1,10 +1,3 @@
-// $primary: #e01f89;
-// FIXME vars dont work when imported in preview.
-// $primary:rgba(50,84,59, 1);
-// $secondary:#b0bec5;
-$error:rgba(223, 27, 102, 0.7);
-$error2: rgba( $error, 0.2 );
-// controlling colour https://thoughtbot.com/blog/controlling-color-with-sass-color-functions
 :root {
   // @ 16px you can use 0.5 rem for an even 8px spacing grid
   font-size: 16px; // set root font-size
@@ -195,7 +188,8 @@ h5 {
 .--error {
   input {
     // background: rgba( $error, 0.2 ) !important;
-    background: var(--error-100) !important;
+    // background: var(--error-100) !important;
+    background: $error-100;
     color: black;
   }
   input:focus {
@@ -208,6 +202,6 @@ h5 {
     color: rgba(0,0,0, 0.4);
   }
   span.material-icons {
-    color: rgba(0,0,0, 1) !important;
+    color: rgba(0,0,0, 1);
   }
 }

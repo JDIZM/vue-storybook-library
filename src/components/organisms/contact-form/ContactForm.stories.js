@@ -35,6 +35,16 @@ ContactFormWithIcons.args = {
   // email: 'hello@jamesdonnelly.dev',
   // phone: '0161 123 4567'
 }
+// TODO form with state
+// export const ContactFormWithErrors = Template.bind({});
+// ContactFormWithErrors.args = {
+//   showError: true
+// }
+// export const ContactFormWithSuccess = Template.bind({});
+// ContactFormWithSuccess.args = {
+//   showSuccess: true
+// }
+
 // export const SubmittedForm = Template.bind({});
 // SubmittedForm.args = {
 //   // label: 'What\'s your name?',

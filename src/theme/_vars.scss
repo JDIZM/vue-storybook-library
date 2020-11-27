@@ -1,17 +1,20 @@
 // theme colours http://getbem.com/naming/
-// sass variables won't work inside component files.
+// sass variables won't work inside component files unless we compile the sass files with the main.scss
 // can use global css variables or
 // use custom class names for styling like tailwind.
+
+// global css vars available at component level
 :root {
   --primary:  rgba(50,84,59, 1);
   // --primary: rgba(255, 166, 0, 1);
-  --error-100: rgba(223, 27, 27, 0.2);
+  // --error-100: rgba(223, 27, 27, 0.2);
   --font-family: 'Roboto', sans-serif;
 }
-// $secondary: rgb(36,30,18);
-// // theme colours
+
+// theme colours
 // map the variables with key:value pairs for mixins
 // https://sass-lang.com/documentation/values/maps
+// controlling colour https://thoughtbot.com/blog/controlling-color-with-sass-color-functions
 $colours: (
   primary: rgba(50,84,59, 1),
   // primary: rgba(255, 166, 0, 1),
@@ -39,13 +42,19 @@ $colours: (
   // orange: orangered,
   // grey: #B7B4B4
 );
+// make the sass vars accessible to the other files with map-get
 // only gets the variable doesn't create the primary class name.
 // vars aren't accessible at component level unless made global.
 $primary: map-get($colours, primary);
 $secondary: map-get($colours, secondary);
-// $dark-two: map-get($colours, dark-two);
-// @debug map.get($colours, 'purple');
-// @debug map-get($colours, purple);
+$error: map-get($colours, error);
+$error-100: map-get($colours, error-100);
+// debug
+// @debug map-get($colours, primary);
+// @debug map-get($colours, primary-100);
+// @debug map-get($colours, error);
+// @debug map-get($colours, error-100);
+// @debug var(--primary);
 
 // create spacing units for mixin
 $spacing: (

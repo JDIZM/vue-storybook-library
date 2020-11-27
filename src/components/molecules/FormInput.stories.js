@@ -49,3 +49,16 @@ InputWithError.args = {
   showError: true,
   value: ''
 };
+
+export const InputWithSuccess = Template.bind({});
+InputWithSuccess.args = {
+  name: "InputWithSuccess",
+  label: "Phone",
+  icon: "phone",
+  placeholder: "Enter your phone number",
+  type: "text",
+  showIcon: true,
+  showError: false,
+  showSuccess: true,
+  value: ''
+};

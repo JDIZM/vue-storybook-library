@@ -32,6 +32,7 @@
         icon="email"
         :showIcon="true"
         :showError="false"
+        :showSuccess="validations.email"
         v-model="email"
         @update="onUpdate"
       />
@@ -100,11 +101,13 @@ export default {
   },
   methods: {
     onSubmit () {
+      // TODO validate form fields
       this.$emit('onSubmit', this.updateForm)
     },
     onUpdate(value) {
       // console.log(value)
       this.$emit('onUpdate', value)
+      // TODO validate success / error on update?
     }
   },
   computed: {
@@ -123,6 +126,20 @@ export default {
           // name: 'james',
           // last: 'd',
           // age: 34
+      }
+    },
+    // TODO validate the form fields and change state
+    // TODO icons when success / error
+    validate (value) {
+      if(value != null) {
+        return true
+      } else {
+        return false
+      }
+    },
+    validations () {
+      return {
+        email: false
       }
     }
   }
