@@ -4,7 +4,20 @@
     <span v-if="showSuccess" class="material-icons">check</span>
     <span v-if="showError" class="material-icons text--error">error</span>
     <span v-else-if="showIcon && !showSuccess" class="material-icons">{{ icon }}</span>   
-    <input 
+    <textarea
+      v-if="type === 'textarea'"
+      @input="$emit('update', $event.target.value)" 
+      rows="4" 
+      cols="50"
+      class="bg--primary-100" 
+      :value="value" 
+      :id="name" 
+      :type="type" 
+      :name="name" 
+      :placeholder="placeholder"
+    />
+    <input
+      v-else
       class="bg--primary-100" 
       :value="value" 
       @input="$emit('update', $event.target.value)" 
@@ -37,10 +50,6 @@ export default {
       type: String,
       required: true
     },
-    // value: {
-    //   type: String,
-    //   required: true
-    // },
     icon: {
       type: String,
       required: true
@@ -54,11 +63,10 @@ export default {
       required: false,
       default: () => false
     },
-    // the below shows an error with default function?
     showSuccess: {
       type: Boolean,
       required: false,
-      default: false
+      default: () => false
     }
   },
   model: {
@@ -67,8 +75,6 @@ export default {
   },
   data() {
     return {
-      //
-      // input: true,
       value: ''
     }
   },

@@ -26,6 +26,18 @@ TextInput.args = {
   // value: ''
 };
 
+export const TextArea = Template.bind({});
+TextArea.args = {
+  name: "TextInput",
+  label: "label",
+  icon: "message",
+  placeholder: "Enter a message",
+  type: "textarea",
+  showIcon: true,
+  showError: false,
+  // value: ''
+};
+
 export const InputWithIcon = Template.bind({});
 InputWithIcon.args = {
   name: "InputWithIcon",

@@ -24,43 +24,62 @@ const Template = (args, { argTypes }) => ({
 
 // const Template = (args) => <Form {...args} />;
 // export const Empty = (args) => <Form {...args} />;
+const inputs = [
+  {
+    name: 'name',
+    type: 'text',
+    label: 'What\'s your name?',
+    placeholder: "James",
+    icon: 'person',
+    showIcon: true,
+    showError: false
+  },
+  {
+    name: 'email',
+    type: 'email',
+    label: 'What\'s your email?',
+    placeholder: "hello@jamesdonnelly.dev",
+    icon: 'email',
+    showIcon: true,
+    showError: false,
+  },
+  {
+    name: 'phone',
+    type: 'phone',
+    label: 'What\'s your phone number?',
+    placeholder: "0161 123 4567",
+    icon: 'phone',
+    showIcon: true,
+    showError: false,
+  },
+  {
+    name: "message",
+    type: "textarea",
+    label: "Leave us a message",
+    placeholder: "Enter a message",
+    icon: "message",
+    showIcon: true,
+    showError: false,
+  }
+]
 
 export const ContactFormWithIcons = Template.bind({});
 ContactFormWithIcons.args = {
-  // label: 'What\'s your name?',
-  // placeholder: "Enter your name",
-  // showIcon: true,
-  // icon: 'person'
-  // name: 'James',
-  // email: 'hello@jamesdonnelly.dev',
-  // phone: '0161 123 4567'
+  showError: false,
+  showSuccess: false,
+  inputs: inputs
 }
-// TODO form with state
-// export const ContactFormWithErrors = Template.bind({});
-// ContactFormWithErrors.args = {
-//   showError: true
-// }
-// export const ContactFormWithSuccess = Template.bind({});
-// ContactFormWithSuccess.args = {
-//   showSuccess: true
-// }
 
-// export const SubmittedForm = Template.bind({});
-// SubmittedForm.args = {
-//   // label: 'What\'s your name?',
-//   // placeholder: "Enter your name",
-//   // showIcon: true,
-//   // icon: 'person'
-//   // name: 'James',
-//   // email: 'hello@jamesdonnelly.dev',
-//   // phone: '0161 123 4567'
-// }
+export const formWithError = Template.bind({});
+formWithError.args = {
+  showError: true,
+  showSuccess: false,
+  inputs: inputs
+}
 
-// export const SingleEmailField = Template.bind({});
-// SingleEmailField.args = {
-//   //
-//   label: 'What\'s your email?',
-//   placeholder: "Enter your email",
-//   showIcon: true,
-//   icon: 'email'
-// }
+export const formWithSuccess = Template.bind({});
+formWithSuccess.args = {
+  showError: false,
+  showSuccess: true,
+  inputs: inputs
+}

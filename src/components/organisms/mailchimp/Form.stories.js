@@ -27,21 +27,23 @@ const Template = (args, { argTypes }) => ({
 
 export const SingleEmailField = Template.bind({});
 SingleEmailField.args = {
-  //
+  showError: false,
+  showSuccess: false,
+  label: 'Subscribe to our newsletter'
   // label: 'What\'s your email?',
   // placeholder: "Enter your email",
   // showIcon: true,
   // icon: 'email'
 }
-
-// export const withError = Template.bind({});
-// withError.args = {
-//   //
-//   // label: 'What\'s your email?',
-//   // placeholder: "Enter your email",
-//   // showIcon: true,
-//   // FIXME can't change state because error is not a prop
-//   // are you handling state within the component? or is it handled with vuex and passed as a prop/computed?
-//   showError: true,
-//   // icon: 'error'
-// }
+export const formWithError = Template.bind({});
+formWithError.args = {
+  showError: true,
+  showSuccess: false,
+  label: 'Subscribe to our newsletter'
+}
+export const formWithSuccess = Template.bind({});
+formWithSuccess.args = {
+  showSuccess: true,
+  showError: false,
+  label: 'Subscribe to our newsletter'
+}

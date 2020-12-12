@@ -1,46 +1,26 @@
 <template>
   <div class="form">
     <form @submit.prevent="onSubmit">
-      <!-- TODO built a multiple contact form -->
-      <FormInput 
-        name="name"
-        type="text"
-        placeholder="James"
-        label="What's your name?"
-        icon="person"
-        :showIcon="true"
-        :showError="false"
-        v-model="name"
-        @update="onUpdate"
+      <FormInput
+        v-for="(input, i) in inputs"
+        :key="input.name"
+        :name="input.name"
+        :type="input.type"
+        :placeholder="input.placeholder"
+        :label="input.label"
+        :icon="input.icon"
+        :showIcon="input.showIcon"
+        :showError="input.showError"
+        @update="onUpdate($event, i)"
       />
-      <FormInput 
-        name="phone"
-        type="tel"
-        placeholder="0161 123 4567"
-        label="What's your phone number?"
-        icon="phone"
-        :showIcon="true"
-        :showError="false"
-        v-model="phone"
-        @update="onUpdate"
-      />
-      <FormInput 
-        name="email"
-        type="email"
-        placeholder="hello@jamesdonnelly.dev"
-        label="What's your email?"
-        icon="email"
-        :showIcon="true"
-        :showError="false"
-        :showSuccess="validations.email"
-        v-model="email"
-        @update="onUpdate"
-      />
-      <div class="form__field">
-      <label for="message">Leave us a message</label>
-      <span class="material-icons">message</span>
-      <textarea @input="onUpdate($event.target.value)" id="message" v-model="message" name="message" rows="4" cols="50"></textarea>
-    </div>
+      <div v-if="showError">
+        <span class="material-icons text--error">error</span>
+        <span class="text--error">Please enter the correct information</span>
+      </div>
+      <div v-if="showSuccess">
+        <span class="material-icons text--success">check</span>
+        <span class="text--primary">Your message has been sent!</span>
+      </div>
       <Button
         @onClick="onSubmit"
         type="submit"
@@ -62,52 +42,38 @@ export default {
     Button
   },
   props: {
-    // left: {
-    //   type: Boolean,
-    //   required: false,
-    //   default: () => false
-    // },
-    // showIcon: {
-    //   type: Boolean,
-    //   required: false,
-    //   default: () => false
-    // },
-    // icon: {
-    //   type: String,
-    //   required: true
-    // },
-    // label: {
-    //   type: String,
-    //   required: true
-    // },
-    // placeholder: {
-    //   type: String,
-    //   required: true
-    // }
-  },
-  model: {
-    data: "value",
-    event: "update"
+    // TODO show message box
+    // TODO connect with firebase function
+    inputs: {
+      type: Array,
+      required: true
+    },
+    showError: {
+      type: Boolean,
+      required: false,
+      default: () => false
+    },
+     showSuccess: {
+      type: Boolean,
+      required: false,
+      default: () => false
+    }
   },
   data () {
     return {
-      //
-      name: null,
-      phone: null,
-      email: null,
-      message: null,
-      showError: false
+      values: []
     }
   },
   methods: {
     onSubmit () {
-      // TODO validate form fields
-      this.$emit('onSubmit', this.updateForm)
+      // TODO form validation
+      // this.$emit('onSubmit', this.updateForm)
+      this.$emit('onSubmit', this.values)
     },
-    onUpdate(value) {
-      // console.log(value)
-      this.$emit('onUpdate', value)
-      // TODO validate success / error on update?
+    onUpdate(value, i) {
+      this.values[i] = value
+      this.$emit('onUpdate', value, i, this.values)
+      // use axios to post emitted data to firebase function
     }
   },
   computed: {
@@ -117,31 +83,14 @@ export default {
     //   }
     // },
     // use computed values to map form data to an object.
-    updateForm () {
-      return {
-          name: this.name,
-          phone: this.phone,
-          email: this.email,
-          message: this.message
-          // name: 'james',
-          // last: 'd',
-          // age: 34
-      }
-    },
-    // TODO validate the form fields and change state
-    // TODO icons when success / error
-    validate (value) {
-      if(value != null) {
-        return true
-      } else {
-        return false
-      }
-    },
-    validations () {
-      return {
-        email: false
-      }
-    }
+    // updateForm () {
+    //   return {
+    //       name: this.name,
+    //       phone: this.phone,
+    //       email: this.email,
+    //       message: this.message
+    //   }
+    // }
   }
 }
 </script>
