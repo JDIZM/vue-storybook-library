@@ -1,7 +1,9 @@
 .DS_Store
 node_modules
-/dist
-
+dist
+# ignore functions folder and import repo
+# https://github.com/JDIZM/firebase-functions
+functions
 
 # local env files
 .env.local
