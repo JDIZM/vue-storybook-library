@@ -3,7 +3,7 @@ import NavDrawer from './NavDrawer';
 import NavDropdown from './NavDropdown';
 // import NavMain from './NavMain'
 // import logo from static files
-import logoFile from '../../../assets/logo.png'
+import logoFile from '../../assets/logo.png'
 
 export default {
   title: 'organisms/Nav',

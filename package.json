@@ -8,7 +8,7 @@
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
     "build-storybook": "build-storybook",
-    "storybook": "start-storybook -p 6006 -s ./src/stories/assets"
+    "storybook": "start-storybook -p 6006 -s ./stories/assets"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "1.2.32",
