@@ -14,8 +14,8 @@ const Template = (args, { argTypes }) => ({
   template: '<FormInput v-bind="$props" @update="onUpdate" />'
 });
 
-export const TextInput = Template.bind({});
-TextInput.args = {
+export const TextInputWithoutIcon = Template.bind({});
+TextInputWithoutIcon.args = {
   name: "TextInput",
   label: "label",
   icon: "phone",
@@ -23,6 +23,7 @@ TextInput.args = {
   type: "text",
   showIcon: false,
   showError: false,
+  showSuccess: false
   // value: ''
 };
 
@@ -35,6 +36,7 @@ TextArea.args = {
   type: "textarea",
   showIcon: true,
   showError: false,
+  showSuccess: false
   // value: ''
 };
 
@@ -47,6 +49,7 @@ InputWithIcon.args = {
   type: "tel",
   showIcon: true,
   showError: false,
+  showSuccess: false,
   value: ''
 };
 

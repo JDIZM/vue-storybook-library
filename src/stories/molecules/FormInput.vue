@@ -61,12 +61,12 @@ export default {
     showError: {
       type: Boolean,
       required: false,
-      default: () => false
+      default: false
     },
     showSuccess: {
       type: Boolean,
       required: false,
-      default: () => false
+      default: false
     }
   },
   model: {
