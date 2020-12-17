@@ -23,6 +23,10 @@ overflow: auto;
 overflow-x: hidden; // hide horizontal scroll on full width
 }
 
+div {
+  width: 100%;
+}
+
 .container {
   // 100% container height causes issues
   // height: 100%;
@@ -30,17 +34,10 @@ overflow-x: hidden; // hide horizontal scroll on full width
   max-width: 1600px;
   width: 90%;
   margin: 0 auto;
-  // display: block;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   flex-direction: column;
-  // mobile first
-  // @media screen and (min-width: $breakpoint-md) {
-  //   width: 90%;
-  // };
-  // @media screen and (min-width: $breakpoint-lg) {
-  //   width: 80%;
-  // };
+  padding-bottom: 2rem;
 }

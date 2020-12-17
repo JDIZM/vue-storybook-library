@@ -6,9 +6,8 @@
           <div class="brand__logo">
             <img :src="logoSrc" draggable="false" />
           </div>
-          <div class="brand__name">
-            <!-- <h3 class="brand__name__1">VERTEX</h3> -->
-          </div>
+          <!-- <div class="brand__name">
+          </div> -->
         </div>
         <div class="footer__grid__item social">
           <h3>SOCIAL</h3>

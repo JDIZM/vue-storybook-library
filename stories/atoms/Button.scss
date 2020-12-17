@@ -2,11 +2,17 @@
   cursor: pointer;
   display: inline-block;
   border-radius: 4px;
-  // color: #3b8070;
+  text-align: center;
   text-decoration: none;
   padding: 10px 30px;
   margin: 0.5rem auto;
-  // color: white;
+  user-select: none;
+  text-shadow: none;
+  text-indent: 0px;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-rendering: auto;
+  border: 1px solid transparent;
 }
 
 .btn:focus {
@@ -55,4 +61,9 @@
   margin: 4px 0;
   max-width: 200px;
   text-align: center;
+}
+
+.btn--block {
+  display: block;
+  width: 100%;
 }

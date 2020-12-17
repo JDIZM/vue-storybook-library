@@ -39,7 +39,7 @@
         </li>
       </ul>
       <div class="nav__desktop__btns">
-        <a :href="'tel:' + phone" class="nav__desktop__btn btn--secondary">
+        <a :href="'tel:' + phone" class="nav__desktop__btn btn--outline">
           CALL
         </a>
         <div
@@ -67,10 +67,10 @@
         <!-- <span>COMPANY</span> -->
       </div>
       <div class="nav__mobile__btns">
-        <a class="nav__mobile__btn btn--secondary" :href="'tel:' + phone">
+        <a class="nav__mobile__btn btn--outline" :href="'tel:' + phone">
           CALL
         </a>
-        <div
+        <button
           @click.prevent="onEnquire"
           @keydown.enter.prevent="onEnquire"
           class="nav__mobile__btn btn--primary"
@@ -79,7 +79,7 @@
           tabindex="0"
         >
           ENQUIRE
-        </div>
+        </button>
       </div>
     </div>
     <div
@@ -91,7 +91,7 @@
     >
       <i class="material-icons">menu</i>
     </div>
-    <!-- <button @click="showDrawer = !showDrawer" class="nav__toggle btn btn--secondary">TOGGLE</button> -->
+    <!-- <button @click="showDrawer = !showDrawer" class="nav__toggle btn btn--outline">TOGGLE</button> -->
     <NavDrawer
       :links="links"
       :showDrawer="showDrawer"
