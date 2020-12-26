@@ -55,3 +55,16 @@ netlify is configured to deploy the storybook static build.
 build folder: /storybook-static
 production url: https://vue-storybook-library.netlify.app/
 
+
+## Import into project
+
+Clone this git into the project root in /storybook folder
+
+Then add the theme files to the css settings in your project build config.. 
+
+Vue - vue.config.js 
+Nuxt - nuxt.config.js
+
+Import each component from the folder as needed, instead of from /components, import them directly from /storybook.
+
+
