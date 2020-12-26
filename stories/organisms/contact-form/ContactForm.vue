@@ -100,4 +100,7 @@ export default {
 textarea {
   margin-bottom: 8px;
 }
+span {
+  text-align: left;
+}
 </style>
