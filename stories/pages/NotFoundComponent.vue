@@ -38,11 +38,11 @@ export default {
     }
   },
   computed: {
-    // classes() {
-    //   return {
-    //     '--notfound': true
-    //   }
-    // }
+    classes() {
+      return {
+        '--notfound': true
+      }
+    }
     // imgSrc() {
     //  return require('@/assets/' + this.img)
     // }
