@@ -1,7 +1,6 @@
-// import FormInput from '../../molecules/FormInput.vue'
-// import Button from '../../atoms/Button.vue'
+// import the main component
 import Form from './ContactForm.vue'
-// Instead of importing the FormInput, we import its stories
+// instead of importing the sub components, we import their stories
 // https://storybook.js.org/docs/react/workflows/stories-for-multiple-components
 import InputWithIcon from '../../molecules/FormInput.stories';
 import Button from '../../atoms/Button.stories'
@@ -12,18 +11,17 @@ export default {
   subcomponents: { InputWithIcon, Button },
   argTypes: {
     onSubmit: { action: "onSubmit" },
-    onUpdate: { action: "onUpdate" }
+    onUpdate: { action: "onUpdate" },
+    error: { action: "error" },
   }
 };
 
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { Form, InputWithIcon, Button },
-  template: '<Form v-bind="$props" @onSubmit="onSubmit" @onUpdate="onUpdate" />',
+  template: '<Form v-bind="$props" @onSubmit="onSubmit" @onUpdate="onUpdate" @error="error" />',
 });
 
-// const Template = (args) => <Form {...args} />;
-// export const Empty = (args) => <Form {...args} />;
 const inputs = [
   {
     name: 'name',

@@ -1,6 +1,7 @@
 <template>
   <div class="form">
-    <form @submit.prevent="onSubmit">
+    <!-- form fires twice if handler attached to form -->
+    <form @submit.prevent>
       <FormInput
         v-for="(input, i) in inputs"
         :key="input.name"
@@ -13,6 +14,7 @@
         :showError="input.showError"
         @update="onUpdate($event, i)"
       />
+      <!-- use toast component to show errors, but this is here just incase -->
       <div v-if="showError">
         <span class="material-icons text--error">error</span>
         <span class="text--error">Please enter the correct information</span>
@@ -42,8 +44,6 @@ export default {
     Button
   },
   props: {
-    // TODO show message box
-    // TODO connect with firebase function
     inputs: {
       type: Array,
       required: true
@@ -51,7 +51,7 @@ export default {
     showError: {
       type: Boolean,
       required: false,
-      default: () => false
+      default: false
     },
      showSuccess: {
       type: Boolean,
@@ -61,36 +61,27 @@ export default {
   },
   data () {
     return {
-      values: []
+      values: [] // submitted form values
     }
   },
   methods: {
     onSubmit () {
       // TODO form validation
-      // this.$emit('onSubmit', this.updateForm)
-      this.$emit('onSubmit', this.values)
+      // TODO validate the values in the inputs array.. from numbers 0 - x
+      // FIXME how to access the values and validate each one?
+      if(this.values.length === 0) {
+        // error
+         this.$emit('error')
+      } else {
+        // success
+        this.$emit('onSubmit', this.values)
+        // use axios to post emitted data to firebase function
+      }
     },
     onUpdate(value, i) {
       this.values[i] = value
       this.$emit('onUpdate', value, i, this.values)
-      // use axios to post emitted data to firebase function
     }
-  },
-  computed: {
-    // classes() {
-    //   return {
-    //     'btn--left': this.left,
-    //   }
-    // },
-    // use computed values to map form data to an object.
-    // updateForm () {
-    //   return {
-    //       name: this.name,
-    //       phone: this.phone,
-    //       email: this.email,
-    //       message: this.message
-    //   }
-    // }
   }
 }
 </script>
