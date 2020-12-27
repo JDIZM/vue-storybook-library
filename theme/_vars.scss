@@ -2,13 +2,16 @@
 // sass variables won't work inside component files unless we compile the sass files with the main.scss
 // can use global css variables or
 // use custom class names for styling like tailwind.
-
+// @nuxtjs/style-resources allows you to use global variables
 // global css vars available at component level
 :root {
   --primary:  rgba(50,84,59, 1);
   // --primary: rgba(255, 166, 0, 1);
   // --error-100: rgba(223, 27, 27, 0.2);
   --font-family: 'Roboto', sans-serif;
+  // TODO global breakpoint variables accessible within components
+  // --breakpoint-md: 768px;
+  // --breakpoint-lg: 960px;
 }
 
 // theme colours
