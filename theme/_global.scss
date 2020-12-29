@@ -87,8 +87,11 @@ ul, ol, dl {
   padding: 0;
 }
 
-
-button, .btn {
+// BUTTON
+button {
+    line-height: inherit;
+    font-family: var(--font-family);
+    // the rest of these styles on the .btn class
     cursor: pointer;
     display: inline-block;
     border-radius: 4px;
@@ -102,5 +105,5 @@ button, .btn {
     letter-spacing: normal;
     word-spacing: normal;
     text-rendering: auto;
-    border: 1px solid transparent;
+    // border: 1px solid transparent;
 }

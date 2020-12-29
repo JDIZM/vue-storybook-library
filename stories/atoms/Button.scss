@@ -1,4 +1,7 @@
 .btn {
+  // FIXME overwrite default button styles
+  line-height: inherit;
+  font-family: var(--font-family);
   cursor: pointer;
   display: inline-block;
   border-radius: 4px;
@@ -50,7 +53,8 @@
   }
 }
 .btn--outline:focus {
-  outline-color: var(--primary);
+  // FIXME outline not showing, had to include important class to override default
+  outline-color: var(--primary) !important;
 }
 .btn--disabled {
   cursor: not-allowed;
