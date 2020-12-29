@@ -6,6 +6,6 @@ import { create } from '@storybook/theming/create';
 export default create({
   base: 'light',
   brandTitle: 'Vue Storybook Library',
-  brandUrl: 'https://example.com',
+  brandUrl: 'https://jamesdonnelly.dev',
   brandImage: './logo.png',
 });

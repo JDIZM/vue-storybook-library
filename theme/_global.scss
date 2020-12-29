@@ -1,16 +1,57 @@
-// global sass 
+// global resets and styles
+// https://getbootstrap.com/docs/4.0/content/reboot/
+
+// TODO font-face system fonts
+// https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face
+@font-face {
+  font-family:
+  // system fonts
+  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("Roboto"), local("DroidSans"), local("Tahoma");
+}
+
+// TODO self host material icons // improve speed
+// http://google.github.io/material-design-icons/
+
+:root {
+  // @ 16px you can use 0.5 rem for an even 8px spacing grid
+  font-size: 16px; // set root font-size
+  line-height: 1.4; // unitless vertical rhythm
+  // font-family: var(--font-family);
+  color: black;
+}
 
 html, body {
-  background: white;
+  background-color: white;
   margin: 0;
-  height: 100%;
+  // height: 100%;
   // all children 100%
   // height set in container
 }
+body {
+  // https://web.dev/font-display/
+  // font-family: "system";
+  font-family: var(--font-family);
+  font-display: swap;
+  // assume default browser font size of 16px unless set in root
+  font-size: 1rem; // rem is relative to the font-size of the root element
+  line-height: 1.4; // unitless vertical rhythm
+  // // hide horizontal scroll on full width
+  // overflow: auto;
+  // overflow-x: hidden; 
+}
+
+div {
+  width: 100%;
+}
+
 ::selection {
 background-color: $primary;
 color: white;
 }
+
 *,
 *:before,
 *:after {
@@ -18,26 +59,48 @@ box-sizing: border-box;
 margin: 0;
 }
 
-body {
-overflow: auto;
-overflow-x: hidden; // hide horizontal scroll on full width
+// DEFAULT ELEMENTS
+
+button, span, ul, li {
+  margin: 0;
+  padding: 0;
 }
 
-div {
-  width: 100%;
+a {
+  color: var(--links);
+  text-decoration: none;
+}
+// FIXME overrides component.
+// a:visited {
+//   // color: black;
+// }
+
+// HEADINGS
+h1, h2, h3, h4, h5 {
+  margin: 0 0 0.5rem 0;
+  padding: 0,
 }
 
-.container {
-  // 100% container height causes issues
-  // height: 100%;
-  min-height: 80vh;
-  max-width: 1600px;
-  width: 90%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  flex-direction: column;
-  padding-bottom: 2rem;
+// LISTS
+ul, ol, dl {
+  margin: 0 0 1rem 0;
+  padding: 0;
+}
+
+
+button, .btn {
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 30px;
+    margin: 0.5rem auto;
+    user-select: none;
+    text-shadow: none;
+    text-indent: 0px;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-rendering: auto;
+    border: 1px solid transparent;
 }

@@ -6,12 +6,10 @@
 // global css vars available at component level
 :root {
   --primary:  rgba(50,84,59, 1);
-  // --primary: rgba(255, 166, 0, 1);
-  // --error-100: rgba(223, 27, 27, 0.2);
-  --font-family: 'Roboto', sans-serif;
-  // TODO global breakpoint variables accessible within components
-  // --breakpoint-md: 768px;
-  // --breakpoint-lg: 960px;
+  --primary-100: rgba(50,84,59, 0.07);
+  --links: black;
+  --secondary: #b0bec5;
+  --font-family: Roboto, system-ui, sans-serif;
 }
 
 // theme colours
@@ -20,30 +18,21 @@
 // controlling colour https://thoughtbot.com/blog/controlling-color-with-sass-color-functions
 $colours: (
   primary: rgba(50,84,59, 1),
-  // primary: rgba(255, 166, 0, 1),
   primary-100: rgba(50,84,59, 0.07),
-  // primary-100: rgba(255, 166, 0, 0.07),
   secondary: #b0bec5,
   disabled: #b0bec5,
   destruct:rgba(165, 10, 69, 0.9),
-  error: rgba(223, 27, 27, 0.7),
-  error-100: rgba(223, 27, 27, 0.2),
-  // charcoal: rgb(36,30,18),
+  error:rgba(165, 10, 69, 0.9),
+  error-100: rgba(165, 10, 69, 0.2),
+  success:  #32543b,
+  pastelred: #f54d34,
+  charcoal: rgb(36,30,18),
   // deep-blue: rgb(46,8,127),
   // astra: rgb(249,236,184),
   white: rgb(255, 255, 255),
   black: rgb(0, 0, 0),
-  // red: rgb(167, 33, 69),
-  // yellow: rgb(255, 200, 50),
-  // // green: rgb(161,219,30),
-  // purple: rgb(88,29,80),
   light: rgb(255, 255, 255),
   dark: rgb(48, 48, 48),
-  // dark-two: rgb(46, 44, 44),
-  // green:  rgba(50,84,59, 1),
-  // lgreen: #1FB542B3,
-  // orange: orangered,
-  // grey: #B7B4B4
 );
 // make the sass vars accessible to the other files with map-get
 // only gets the variable doesn't create the primary class name.
@@ -60,13 +49,14 @@ $error-100: map-get($colours, error-100);
 // @debug var(--primary);
 
 // create spacing units for mixin
+// margin and paddings will be created with mixin
 $spacing: (
   1: 0.5rem,
   2: 1rem,
   3: 1.5rem,
   4: 2rem,
 );
-// margin and paddings will be created with mixin
+
 
 // breakpoints
 $breakpoint-xs: 320px;
