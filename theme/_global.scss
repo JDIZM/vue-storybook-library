@@ -62,6 +62,9 @@ margin: 0;
 // DEFAULT ELEMENTS
 
 button, span, ul, li {
+  line-height: inherit;
+  font-family: var(--font-family);
+  font-size: 1rem;
   margin: 0;
   padding: 0;
 }
@@ -88,22 +91,20 @@ ul, ol, dl {
 }
 
 // BUTTON
-button {
-    line-height: inherit;
-    font-family: var(--font-family);
-    // the rest of these styles on the .btn class
-    cursor: pointer;
-    display: inline-block;
-    border-radius: 4px;
-    text-align: center;
-    text-decoration: none;
-    padding: 10px 30px;
-    margin: 0.5rem auto;
-    user-select: none;
-    text-shadow: none;
-    text-indent: 0px;
-    letter-spacing: normal;
-    word-spacing: normal;
-    text-rendering: auto;
-    // border: 1px solid transparent;
-}
+// button {
+//     // the rest of these styles on the .btn class
+//     cursor: pointer;
+//     display: inline-block;
+//     border-radius: 4px;
+//     text-align: center;
+//     text-decoration: none;
+//     padding: 10px 30px;
+//     margin: 0.5rem auto;
+//     user-select: none;
+//     text-shadow: none;
+//     text-indent: 0px;
+//     letter-spacing: normal;
+//     word-spacing: normal;
+//     text-rendering: auto;
+//     // border: 1px solid transparent;
+// }

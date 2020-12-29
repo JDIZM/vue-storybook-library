@@ -40,6 +40,7 @@
 }
 
 .btn--outline {
+   // FIXME outline not showing, had to include important class to override default
   color: var(--primary);
   background-color: white;
   border: 1px solid var(--primary);
