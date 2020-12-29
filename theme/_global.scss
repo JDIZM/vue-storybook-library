@@ -62,6 +62,7 @@ margin: 0;
 // DEFAULT ELEMENTS
 
 button, span, ul, li {
+  // inherit body styles, overwrite default browser
   line-height: inherit;
   font-family: inherit;
   font-size: inherit;
