@@ -61,6 +61,7 @@ button {
   }
   span.material-icons {
     position: absolute;
+    // TODO change position when no label, 44px
     top: 54px;
     left: 0.5rem;
     color: var(--primary);
