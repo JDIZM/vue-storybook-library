@@ -3,6 +3,7 @@
  }
  
  .dropdown__trigger {
+   margin-bottom: 0.5rem;
    border-bottom: 1px solid #ddd;
    padding: 10px;
    position: relative;
@@ -23,6 +24,7 @@
  }
  .dropdown__content {
    display: none;
+   margin-left: 0.5rem;
  }
  .dropdown__content.active {
    display: block;

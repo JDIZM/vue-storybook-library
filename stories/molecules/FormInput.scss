@@ -19,6 +19,29 @@ button {
     font-size: 1.25rem;
 }
 
+.form__field input {
+  // stops it jumping
+  border-bottom: 2px solid transparent;
+}
+.form__field input:focus {
+  // stops it jumping
+  border-bottom: 2px solid var(--primary);
+}
+// TODO hide form label, change position.
+.form__field--inline {
+  height: 88px;
+}
+.form__field--inline span {
+  top: 16px !important;
+}
+.form__field--inline label {
+  display: none !important;
+}
+.form_field--no-label {
+  label {
+    display: none !important;
+  }
+}
 .form__field {
   margin-top: 1rem;
   position: relative;
