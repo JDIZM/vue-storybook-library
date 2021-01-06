@@ -183,13 +183,10 @@ h5 {
   }
 }
 
-// .btn {
-//   // avoid applying any styles to main component
-//   background: var(--primary-100);
-// }
 // TODO to style nuxt links
 .--active {
   color: white;
-  margin-left: 2rem;
+  // margin-left: 2rem;
   background: var(--primary);
+  text-decoration: underline !important;
 }

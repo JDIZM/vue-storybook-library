@@ -174,29 +174,19 @@ export default {
   methods: {
     //
     onDropdown () {
-      // FIXME avoid mutating prop
-      // this.showDropdown = !this.showDropdown
       this.$emit('onDropdown')
     },
     onEnquire () {
-      // TODO showEnquire
-      // console.log('clicked')
       this.$emit('onEnquire');
-      // this.$router.push({ path: '/contact/' })
     },
     onRouteChange () {
       // react to route changes...
-      // TODO emit events instead of mutating props
-      this.showDrawer = false
-      this.showDropdown = false
+      this.$emit('onReset')
     },
     onShowDrawer () {
-      // TODO show nav drawer, avoid prop mutation
       this.$emit('onShowDrawer')
     },
     onCloseDrawer () {
-      // TODO onCloseDrawer nav drawer, avoid mutating prop.
-      // @onCloseDrawer="onCloseDrawer"
       this.$emit('onCloseDrawer')
     }
   }

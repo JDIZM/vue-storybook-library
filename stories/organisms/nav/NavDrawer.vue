@@ -45,15 +45,16 @@
               <span v-if="link.icon" class="material-icons">{{ link.icon }}</span>
               <span>{{ link.name }}</span>
             </div>
-            <ul v-if="showDropdown" class="nav__drawer__dropdown">
+          </a>
+          <!-- FIXME moved to fix click issue on dropdown -->
+           <ul v-if="showDropdown" class="nav__drawer__dropdown">
               <li v-for="item in dropdownItems" :key="item.name">
                 <!-- // TODO nuxt-link // router-link -->
                 <a v-if="item.path" :to="item.path" exact-active-class="--active">
                   <div class="nav__drawer__dropdown">{{ item.name }}</div>
                 </a>
               </li>
-          </ul>
-          </a>
+            </ul>
         </li>
       </ul>
     </div>
@@ -88,8 +89,7 @@ export default {
   },
   data () {
     return {
-      // phone: process.env.CONTACT_PHONE,
-      // showDropdown: true
+      // 
     }
   },
   methods: {
