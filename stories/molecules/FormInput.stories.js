@@ -77,3 +77,17 @@ InputWithSuccess.args = {
   showSuccess: true,
   value: ''
 };
+
+export const InputWithNoLabel = Template.bind({});
+InputWithNoLabel.args = {
+  name: "InputWithNoLabel",
+  label: "Phone",
+  icon: "phone",
+  placeholder: "Enter your phone number",
+  type: "text",
+  showIcon: true,
+  showError: false,
+  showSuccess: false,
+  value: '',
+  hideLabel: true
+};
