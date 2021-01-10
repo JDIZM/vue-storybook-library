@@ -4,8 +4,7 @@
 https://vue-storybook-library.netlify.app
 ```
 
-storybook
-https://storybook.js.org/docs/vue/get-started/introduction
+Storybook docs - (https://storybook.js.org/docs/vue/get-started/introduction)
 
 ## Setup & Configure
 
@@ -34,10 +33,6 @@ the theme variables are mixed between sass variables for the mixins and class na
   _global.scss
   _mixins.scss
 ```
-
-### utility classes
-
-// TODO utility classes, error, success etc need some work
 
 ## Run locally
 
@@ -72,3 +67,29 @@ Nuxt - nuxt.config.js
 Import each component from the folder as needed, instead of from /components, import them directly from /storybook.
 
 
+For Vue - add the reference to scss files in nuxt.config.js.
+
+```
+css: [
+    // import storybook theme
+    './storybook/theme/main.scss'
+  ],
+```
+
+
+For Nuxt - add the reference to scss files in nuxt.config.js.
+
+```
+css: [
+    // import storybook theme
+    './storybook/theme/main.scss'
+  ],
+```
+
+### Using the components
+
+Import the components directly from the /storybook folder
+
+```
+import Toast from '@/storybook/stories/molecules/Toast.vue'
+```
