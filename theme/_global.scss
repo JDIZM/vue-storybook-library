@@ -109,3 +109,14 @@ ul, ol, dl {
 //     text-rendering: auto;
 //     // border: 1px solid transparent;
 // }
+
+// ERROR
+// applied to the form field and child elements.
+.--error {
+  input {
+    background: var(--error-100);
+  }
+  input:focus {
+    border-bottom: 2px solid var(--error);
+  }
+}

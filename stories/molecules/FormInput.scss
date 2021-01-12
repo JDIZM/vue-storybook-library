@@ -1,93 +1,68 @@
-// FORM
-.form {
-  width: 100%;
-  padding-right: 1rem;
-  max-width: 500px;
-}
-form {
-    display: flex;
-    /* justify-content: center;
-    align-items: center;
-    text-align: center; */
-    flex-direction: column;
-}
-label {
-    margin-bottom: 1rem;
-}
-button {
-    margin-top: 16px;
-    font-size: 1.25rem;
-}
-
+// FORM INPUT
 .form__field {
+  max-width: 500px;
   margin-top: 1rem;
   position: relative;
   display: flex;
-  // height: 56px;
   width: 100%;
-  max-width: 500px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  input {
-    font-family: var(--font-family);
-    font-size: 1rem;
-    color: black;
-    padding: 0.5rem;
-    padding-left: 2.5rem;
-    width: 100%;
-    // set max width
-    // max-width: 500px;
-    height: 56px;
-    border: none;
-    border-radius: 4px;
-    // stops it jumping
-    border-bottom: 2px solid transparent;
-  }
-  input:focus {
-    color: black;
-    outline: none;
-    border-bottom: 2px solid var(--primary);
-  }
-  input::placeholder {
-    color: rgba(0,0,0, 0.4);
-  }
-  textarea {
-    padding: 1rem;
-    padding-left: 2.5rem;
-    font-family: var(--font-family);
-    font-size: 1rem;
-    width: 100%;
-    resize: none;
-    // styled with computed class bg--primary-100
-    // background-color: var(--primary);
-    border-radius: 4px;
-    border: none;
-  }
-  textarea:focus {
-    outline: none;
-    border-bottom: 2px solid var(--primary);
-  }
   label {
     text-align: left;
     width: 100%;
     height: 22px;
     font-size: 1.25rem;
+    margin-bottom: 1rem;
   }
   span {
     text-align: left;
   }
   span.material-icons {
-    // set position of icon with a label
     position: absolute;
     top: 54px;
     left: 0.5rem;
     color: var(--primary);
   }
 }
-.form__field input {
-  // stops it jumping
+input {
+  font-family: var(--font-family);
+  font-size: 1rem;
+  color: black;
+  padding: 0.5rem;
+  padding-left: 2.5rem;
+  width: 100%;
+  height: 56px;
+  border-radius: 4px;
+  border-top: none;
+  border-right: none;
+  border-left: none;
   border-bottom: 2px solid transparent;
+}
+input:focus {
+  color: black;
+  outline: none;
+  border-bottom: 2px solid var(--primary);
+}
+input::placeholder {
+  color: rgba(0,0,0, 0.4);
+}
+textarea {
+  padding: 1rem;
+  padding-left: 2.5rem;
+  font-family: var(--font-family);
+  font-size: 1rem;
+  width: 100%;
+  resize: none;
+  border-radius: 4px;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 2px solid transparent;
+}
+textarea:focus {
+  outline: none;
+  border-bottom: 2px solid var(--primary);
 }
 
 // set position of icon without a label
@@ -100,4 +75,3 @@ button {
     top: 16px;
   }
 }
-

@@ -143,46 +143,6 @@ h5 {
   }
 }
 
-// error class
-// FIXME can't use this in the component file because vars wont work
-// TODO create class colours vs using sass variables if they wont import.
-// creating classes to control the state and primary / secondary colours.
-// .--error, .--error:focus {
-//   border-bottom: 2px solid $error;
-// }
-
-// FIXME directly applying to the element, vs the parent form field.
-.--error-input {
-  color: black;
-}
-.--error-input:focus {
-  border-bottom: 2px solid $error;
-}
-.--error-input::placeholder {
-  color: rgba(0,0,0, 0.4);
-}
-// applied to the form field and child elements.
-.--error {
-  input {
-    // background: rgba( $error, 0.2 ) !important;
-    // background: var(--error-100) !important;
-    background: $error-100;
-    color: black;
-  }
-  input:focus {
-    border-bottom: 2px solid $error;
-  }
-  input::placeholder {
-    color: rgba(0,0,0, 0.4);
-  }
-  span {
-    color: rgba(0,0,0, 0.4);
-  }
-  span.material-icons {
-    color: rgba(0,0,0, 1);
-  }
-}
-
 // TODO to style nuxt links
 .--active {
   color: white;
