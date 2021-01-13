@@ -74,10 +74,11 @@ a {
   color: var(--links);
   text-decoration: none;
 }
-// FIXME overrides component.
-// a:visited {
-//   // color: black;
-// }
+
+a:focus, i:focus {
+  outline: none;
+  box-shadow: -2px -2px 16px var(--primary);
+}
 
 // HEADINGS
 h1, h2, h3, h4, h5 {
