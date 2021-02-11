@@ -24,16 +24,11 @@ export default {
   },
   data () {
     return {
-      //
-      // dropdowns: [
-      //   { title: 'ONE TITLE', content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis non, dignissimos asperiores ipsum aliquam expedita porro enim ipsam sequi? Numquam esse incidunt quam nihil nam fugiat dignissimos dolorum reiciendis tempora', isActive: false },
-      //   { title: 'TWO TITLE', content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis non, dignissimos asperiores ipsum aliquam expedita porro enim ipsam sequi? Numquam esse incidunt quam nihil nam fugiat dignissimos dolorum reiciendis tempora', isActive: false }
-      // ]
+      // 
     }
   },
   methods: {
-    activate (dropdown) {
-      // console.log(dropdown)
+    activate (dropdown) { 
       dropdown.isActive = !dropdown.isActive
       this.$emit('onClick', dropdown)
     }

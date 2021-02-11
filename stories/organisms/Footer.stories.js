@@ -5,11 +5,6 @@ import logoFile from '../assets/logo.png'
 export default {
   title: 'organisms/Footer',
   component: Footer,
-  // TODO set background colour and theme controls.
-  // argTypes: {
-  //   // backgroundColor: { control: 'color' },
-  //   // size: { control: { type: 'select', options: ['small', 'medium', 'large'] } },
-  // },
 };
 
 // We create a “template” of how args map to rendering
@@ -24,11 +19,7 @@ const Logo = {
   src: logoFile,
   alt: 'logo'
 }
-// const facebook = icon({ prefix: 'fab', iconName: 'facebookSquare' })
-// const linkedin = icon({ prefix: 'fab', iconName: 'linkedin' })
-// export const withAnImage = () => (
-//   <img src={image.src} alt={image.alt} />
-// );
+
 // Each story then reuses that template
 export const Primary = Template.bind({});
 
