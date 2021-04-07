@@ -1,7 +1,5 @@
 <template>
   <div v-if="show" class="toast bg--primary text--white active">
-    <!-- <i class="material-icons modal-close">close</i> -->
-    <!-- <h4>{{ title }}</h4> -->
     <span class="material-icons">{{ icon }}</span>
     <p>{{ msg }}</p>
   </div>

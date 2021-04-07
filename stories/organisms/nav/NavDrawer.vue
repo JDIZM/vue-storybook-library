@@ -1,19 +1,12 @@
 <template>
   <div v-if="showDrawer" class="nav__drawer">
-    <!--  -->
     <div class="nav__drawer__wrapper">
       <div class="nav__drawer__top">
         <div class="nav__drawer__brand">
-          <!-- logo -->
-          <!-- <img :src="require('~/assets/img/' + logo)" :alt="logo"> -->
           <div class="nav__drawer__logo">
-            <img :src="logoSrc" draggable="false" />
-          <!-- logo -->
-          <!-- <img :src="require('~/assets/img/' + logo)" :alt="logo"> -->
+            <img :src="logoSrc" draggable="false" height="50px" width="50px" />
           </div>
-          <!-- <span>COMPANY</span> -->
         </div>
-        <!-- <div class="nav__drawer__brand"></div> -->
         <div
           @click="$emit('close')"
           class="btn"
@@ -45,9 +38,7 @@
               <span v-if="link.icon" class="material-icons">{{ link.icon }}</span>
               <span>{{ link.name }}</span>
             </div>
-          </a>
-          <!-- FIXME moved to fix click issue on dropdown -->
-           <ul v-if="showDropdown" class="nav__drawer__dropdown">
+            <ul v-if="showDropdown" class="nav__drawer__dropdown">
               <li v-for="item in dropdownItems" :key="item.name">
                 <!-- // TODO nuxt-link // router-link -->
                 <a v-if="item.path" :to="item.path" exact-active-class="--active">
@@ -55,6 +46,7 @@
                 </a>
               </li>
             </ul>
+          </a>
         </li>
       </ul>
     </div>
@@ -74,10 +66,10 @@ export default {
       type: Boolean,
       required: true
     },
-    showDropdown: {
-      type: Boolean,
-      required: true
-    },
+    // showDropdown: {
+    //   type: Boolean,
+    //   required: true
+    // },
     dropdownItems: {
       type: Array,
       required: true
@@ -89,13 +81,14 @@ export default {
   },
   data () {
     return {
-      // 
+      showDropdown: false
     }
   },
   methods: {
     //
     onDropdown () {
-      this.$emit('onDropdown')
+      // this.$emit('onDropdown')
+      this.showDropdown = !this.showDropdown
     }
   }
 }

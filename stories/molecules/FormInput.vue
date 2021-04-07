@@ -26,7 +26,6 @@
       :name="name" 
       :placeholder="placeholder"
     >
-    <!-- <input class="bg--primary-100" v-on="$listeners" :id="name" :type="type" :name="name" :value="value" :placeholder="placeholder" @input="$emit('update', $event.target.value)"> -->
   </div>
 </template>
 

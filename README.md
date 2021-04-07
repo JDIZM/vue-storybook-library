@@ -1,14 +1,20 @@
 # VUE STORYBOOK LIBRARY
 
-```
+Live demo:
+
+```config
 https://vue-storybook-library.netlify.app
 ```
 
-Storybook docs - (https://storybook.js.org/docs/vue/get-started/introduction)
+built without vue/nuxt router links, the components need to be edited.
+
+run locally: `npm run storybook`
+
+see Storybook docs for more info - <https://storybook.js.org/docs/vue/get-started/introduction>
 
 ## Setup & Configure
 
-/.storybook 
+/.storybook
 
 contains all the config files for setting up storybook.
 
@@ -25,7 +31,7 @@ all the styling is configured in the theme folder and there are mixins to create
 
 the theme variables are mixed between sass variables for the mixins and class names in addition to css variables. I was having an issue importing the sass vars into SFC's but the root CSS vars work. Simple work around.
 
-```
+```config
 /theme
   main.scss
   _vars.scss
@@ -40,46 +46,43 @@ the theme variables are mixed between sass variables for the mixins and class na
 
 ## Build Storybook as a static web application
 
-https://storybook.js.org/docs/vue/workflows/publish-storybook
+<https://storybook.js.org/docs/vue/workflows/publish-storybook>
 
 build storybook: `yarn build-storybook`
 serve locally: `npx http-server storybook-static`
 
 ## Publish Storybook online
 
-https://storybook.js.org/docs/vue/workflows/publish-storybook#publish-storybook-online
+<https://storybook.js.org/docs/vue/workflows/publish-storybook#publish-storybook-online>
 
 netlify is configured to deploy the storybook static build.
 
 build folder: /storybook-static
-production url: https://vue-storybook-library.netlify.app/
-
+production url: <https://vue-storybook-library.netlify.app/>
 
 ## Import into project
 
 Clone this git into the project root in /storybook folder
 
-Then add the theme files to the css settings in your project build config.. 
+Then add the theme files to the css settings in your project build config..
 
-Vue - vue.config.js 
+Vue - vue.config.js
 Nuxt - nuxt.config.js
 
 Import each component from the folder as needed, instead of from /components, import them directly from /storybook.
 
-
 For Vue - add the reference to scss files in nuxt.config.js.
 
-```
+```config
 css: [
     // import storybook theme
     './storybook/theme/main.scss'
   ],
 ```
 
-
 For Nuxt - add the reference to scss files in nuxt.config.js.
 
-```
+```config
 css: [
     // import storybook theme
     './storybook/theme/main.scss'
@@ -90,6 +93,6 @@ css: [
 
 Import the components directly from the /storybook folder
 
-```
+```config
 import Toast from '@/storybook/stories/molecules/Toast.vue'
 ```

@@ -230,7 +230,7 @@ a.--active.nuxt-link-active {
 }
 .nav__drawer__brand {
   display: flex;
-  justify-content: center;
+  // justify-content: center;
   align-items: center;
   span {
     font-weight: 300;
@@ -249,7 +249,7 @@ a.--active.nuxt-link-active {
   text-decoration: underline;
 }
 .nav__drawer__dropdown {
-  margin: 1rem;
+  // margin: 1rem;
   list-style: none;
 }
 :focus {

@@ -75,7 +75,7 @@ export default {
     onUpdate(value) {
       this.$emit('onUpdate', value)
     },
-    // FIXME outside or inside the component?
+    // TODO mailchimp
     async subscribeToList (email) {
       // https://mailchimp.com/developer/guides/marketing-api-quick-start/#install-the-client-library-for-your-language
       await this.axios.post('/api/mailchimp/', email, {
@@ -89,20 +89,7 @@ export default {
     }
   },
   computed: {
-    // use computed values to map form data to an object.
-    // updateForm () {
-    //   return {
-    //       email: this.email,
-    //   }
-    // }
-    //  dynamic icons only work with class strings, doesn't work with props.
-    // returns an object with props, returns the string value with classes
-    // icons () {
-    //   return {
-    //       'email': !this.showError,
-    //       'error': this.showError
-    //   }
-    // }
+    // 
   }
 }
 </script>

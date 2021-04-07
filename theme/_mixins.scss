@@ -1,14 +1,9 @@
 // theme mixins
-// get the variables from the sass map in _theme.scss
+// get the variables from the sass map in _vars.scss
 // $colours
 // $spacing
 // mixins to create class names automatically
 // & https://css-tricks.com/the-sass-ampersand/
-// WARNING: You probably don't mean to use the color value gray in interpolation here.
-// It may end up represented as grey, which will likely produce invalid CSS.
-// Always quote color names when using them as strings or map keys (for example, "gray").
-// If you really want to use the color value here, use '"" + $name'.
-// fixed issue https://github.com/twbs/bootstrap/issues/29219
 @mixin background {
   @each $name, $colour in $colours {
     // & appends to class name
