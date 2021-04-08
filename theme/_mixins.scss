@@ -65,3 +65,14 @@
 // create spacing classes for margin and padding
 // m--1, p--1 etc
 @include spacing;
+
+
+// create root vars for each colour
+@mixin vars {
+  @each $name, $colour in $colours {
+    :root {
+      --#{"" + $name}: #{$colour};
+    }
+  }
+}
+@include vars;
