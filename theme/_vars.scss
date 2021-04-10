@@ -4,14 +4,10 @@
 // use custom class names for styling like tailwind.
 // @nuxtjs/style-resources allows you to use global variables
 // global css vars available at component level
+
 :root {
-  --primary:  rgba(50,84,59, 1);
-  --primary-100: rgba(50,84,59, 0.07);
   --links: black;
-  --secondary: #b0bec5;
   --font-family: "Roboto", system, sans-serif;
-  --error :rgba(165, 10, 69, 0.9);
-  --error-100: rgba(165, 10, 69, 0.2);
 }
 
 // theme colours
@@ -27,22 +23,18 @@ $colours: (
   error:rgba(165, 10, 69, 0.9),
   error-100: rgba(165, 10, 69, 0.2),
   success:  #32543b,
-  pastelred: #f54d34,
-  charcoal: rgb(36,30,18),
-  // deep-blue: rgb(46,8,127),
-  // astra: rgb(249,236,184),
-  white: rgb(255, 255, 255),
-  black: rgb(0, 0, 0),
   light: rgb(255, 255, 255),
   dark: rgb(48, 48, 48),
 );
+
 // make the sass vars accessible to the other files with map-get
 // only gets the variable doesn't create the primary class name.
 // vars aren't accessible at component level unless made global.
-$primary: map-get($colours, primary);
-$secondary: map-get($colours, secondary);
-$error: map-get($colours, error);
-$error-100: map-get($colours, error-100);
+// $primary: map-get($colours, primary);
+// $secondary: map-get($colours, secondary);
+// $error: map-get($colours, error);
+// $error-100: map-get($colours, error-100);
+
 // debug
 // @debug map-get($colours, primary);
 // @debug map-get($colours, primary-100);
@@ -58,7 +50,6 @@ $spacing: (
   3: 1.5rem,
   4: 2rem,
 );
-
 
 // breakpoints
 $breakpoint-xs: 320px;
