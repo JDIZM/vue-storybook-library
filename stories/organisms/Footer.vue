@@ -1,13 +1,11 @@
 <template>
-  <footer class="bg--primary text--white">
+  <footer class="bg--primary text--secondary">
     <div class="footer">
       <div class="footer__grid">
         <div class="footer__grid__item brand">
           <div class="brand__logo">
             <img :src="logoSrc" draggable="false" />
           </div>
-          <!-- <div class="brand__name">
-          </div> -->
         </div>
         <div class="footer__grid__item social">
           <h3>SOCIAL</h3>
@@ -18,7 +16,6 @@
                 :aria-label="link.aria"
                 ><i :class="link.iconClass" /></a>
             </li>
-            <!-- <li><a href="#" aria-label="Find us on Twitter"><i class="fab fa-twitter-square" /></a></li> -->
           </ul>
         </div>
         <div class="footer__grid__item info">
@@ -42,7 +39,6 @@
 </template>
 
 <script>
-// FIXME duplicate keys
 export default {
   name: "Footer",
   props: {
@@ -78,7 +74,5 @@ export default {
 </script>
 
 <style lang="scss">
-// import the theme first for global variables
-// @import "../theme/theme.scss";
 @import "./Footer.scss";
 </style>

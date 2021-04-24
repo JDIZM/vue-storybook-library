@@ -1,31 +1,17 @@
 <template>
-  <div v-if="showDrawer" class="nav__drawer">
+  <div v-if="showDrawer" class="nav__drawer text--secondary">
+    <!--  -->
     <div class="nav__drawer__wrapper">
       <div class="nav__drawer__top">
-        <div class="nav__drawer__brand">
-          <div class="nav__drawer__logo">
-            <img :src="logoSrc" draggable="false" height="50px" width="50px" />
-          </div>
-        </div>
-        <div
-          @click="$emit('close')"
-          class="btn"
-          role="button"
-          aria-pressed="false"
-          tabindex="0"
-        >
-          <i class="material-icons">close</i>
-        </div>
       </div>
       <ul class="nav__drawer__list">
         <li v-for="link in links" :key="link.path">
-          <!-- // TODO nuxt-link // router-link -->
-          <a v-if="link.path" :to="link.path" exact-active-class="--active">
+          <router-link v-if="link.path" :to="link.path" exact-active-class="--active">
             <div class="nav__menu__wrapper">
               <span v-if="link.icon" class="material-icons">{{ link.icon }}</span>
               <span>{{ link.name }}</span>
             </div>
-          </a>
+          </router-link>
           <a
             v-else
             @click.prevent="onDropdown"
@@ -38,15 +24,15 @@
               <span v-if="link.icon" class="material-icons">{{ link.icon }}</span>
               <span>{{ link.name }}</span>
             </div>
-            <ul v-if="showDropdown" class="nav__drawer__dropdown">
+          </a>
+           <ul v-if="showDropdown" class="nav__drawer__dropdown">
               <li v-for="item in dropdownItems" :key="item.name">
-                <!-- // TODO nuxt-link // router-link -->
+                <!-- // TODO router-link // router-link -->
                 <a v-if="item.path" :to="item.path" exact-active-class="--active">
                   <div class="nav__drawer__dropdown">{{ item.name }}</div>
                 </a>
               </li>
             </ul>
-          </a>
         </li>
       </ul>
     </div>
@@ -66,10 +52,10 @@ export default {
       type: Boolean,
       required: true
     },
-    // showDropdown: {
-    //   type: Boolean,
-    //   required: true
-    // },
+    showDropdown: {
+      type: Boolean,
+      required: true
+    },
     dropdownItems: {
       type: Array,
       required: true
@@ -81,20 +67,18 @@ export default {
   },
   data () {
     return {
-      showDropdown: false
+      // 
     }
   },
   methods: {
     //
     onDropdown () {
-      // this.$emit('onDropdown')
-      this.showDropdown = !this.showDropdown
+      this.$emit('onDropdown')
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-// @import "../../theme/theme.scss";
 @import "./Nav.scss";
 </style>

@@ -6,15 +6,15 @@
           <img :src="logoSrc" draggable="false" />
         </div>
       </div>
+      <!--  -->
       <ul class="nav__desktop__list">
         <li v-for="link in links" :key="link.path">
-          <!-- // TODO nuxt-link // router-link -->
-          <a v-if="link.path" :to="link.path" exact-active-class="--active">
+          <router-link v-if="link.path" :to="link.path" exact-active-class="--active">
             <div class="nav__desktop__list__item">
               <span v-if="link.icon" class="material-icons">{{ link.icon }}</span>
               <span v-if="link.name">{{ link.name.toUpperCase() }}</span>
             </div>
-          </a>
+          </router-link>
           <a
             v-else
             @click.prevent="onDropdown"
@@ -30,14 +30,14 @@
           </a>
         </li>
       </ul>
-      <div class="nav__desktop__btns">
-        <a :href="'tel:' + phone" class="nav__desktop__btn btn--outline">
+       <div class="nav__desktop__btns">
+        <a :href="'tel:' + phone" class="nav__desktop__btn btn--primary">
           CALL
         </a>
         <div
           @click.prevent="onEnquire"
           @keydown.enter.prevent="onEnquire"
-          class="nav__desktop__btn btn--primary"
+          class="nav__desktop__btn btn--outline"
           role="button"
           aria-pressed="false"
           tabindex="0"
@@ -69,6 +69,7 @@
         </button>
       </div>
     </div>
+    <!-- toggle hidden on desktop with display:none -->
     <div
       @click="onShowDrawer"
       class="nav__toggle"
@@ -76,7 +77,8 @@
       aria-pressed="true"
       tabindex="0"
     >
-      <i class="material-icons">menu</i>
+      <i v-if="!showDrawer" class="material-icons">menu</i>
+      <i v-else class="material-icons">close</i>
     </div>
     <NavDrawer
       :links="links"
@@ -84,6 +86,8 @@
       :dropdownItems="dropdownItems"
       @close="onCloseDrawer"
       :logoSrc="logoSrc"
+      :showDropdown="showDropdown"
+      @onDropdown="onDropdown"
     />
     <NavDropdown
       :items="dropdownItems"
@@ -129,7 +133,7 @@ export default {
   },
   data () {
     return {
-      // 
+      //
     }
   },
   watch: {
@@ -159,6 +163,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// @import "../../theme/theme.scss";
 @import "./Nav.scss";
 </style>

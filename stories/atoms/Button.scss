@@ -37,12 +37,8 @@
   background-color: var(--primary);
   border: 1px solid var(--primary);
 }
-// .btn--primary:focus {
-//   outline-color: var(--primary);
-// }
 
 .btn--outline {
-   // FIXME outline not showing, had to include important class to override default
   color: var(--primary);
   background-color: white;
   border: 1px solid var(--primary);
@@ -55,10 +51,6 @@
     color: white;
   }
 }
-// .btn--outline:focus {
-//   // FIXME outline not showing, had to include important class to override default
-//   outline-color: var(--primary) !important;
-// }
 .btn--disabled {
   cursor: not-allowed;
   opacity: 0.38;
@@ -74,7 +66,3 @@
   display: block;
   width: 100%;
 }
-
-// TODO text link
-// nuxt anchor tags instead of buttons
-// need a text link version that styles a elements

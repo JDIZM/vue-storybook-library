@@ -6,8 +6,8 @@ export default {
   title: 'atoms/Button',
   components: { Button},
   argTypes: { 
-    onClick: { action: 'clicked' },
-    backgroundColor: { control: 'color' },
+    onClick: { action: 'onClick' },
+    // backgroundColor: { control: 'color' },
   }
 };
 

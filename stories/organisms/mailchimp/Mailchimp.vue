@@ -1,8 +1,6 @@
 <template>
   <div class="form">
     <form @submit.prevent="onSubmit">
-      <!-- <div :class="icons"></div> -->
-      <!-- TODO test error classes -->
       <FormInput 
         name="email"
         type="email"
@@ -70,7 +68,8 @@ export default {
         this.showError = true
       }
       this.$emit('onSubmit', this.email)
-      // TODO send to mailchimp firebase function
+      // logic on emit.
+      // send to mailchimp firebase function
     },
     onUpdate(value) {
       this.$emit('onUpdate', value)
