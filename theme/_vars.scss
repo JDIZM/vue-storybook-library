@@ -17,7 +17,7 @@
 $colours: (
   primary: rgba(50,84,59, 1),
   primary-100: rgba(50,84,59, 0.07),
-  secondary: #b0bec5,
+  secondary: #e6e6e6,
   disabled: #b0bec5,
   destruct:rgba(165, 10, 69, 0.9),
   error:rgba(165, 10, 69, 0.9),
@@ -25,6 +25,7 @@ $colours: (
   success:  #32543b,
   light: rgb(255, 255, 255),
   dark: rgb(48, 48, 48),
+  white: #fff
 );
 
 // make the sass vars accessible to the other files with map-get

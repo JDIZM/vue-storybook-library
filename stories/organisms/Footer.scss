@@ -1,8 +1,8 @@
 footer {
-  position: absolute;
+  // TODO absolute footer position doesn't sit well in storybook, switched to relative, feel free to change
+  position: relative;
   bottom: 0;
   width: 100%;
-  // margin: 0 auto;
   padding-top: 1rem;
   display: flex;
   justify-content: center;
@@ -29,7 +29,7 @@ footer {
 }
 .footer__grid__item  {
   flex: 1 1 auto;
-  margin: 1rem;
+  margin-bottom: 1rem;
   align-items: flex-start;
 }
 a, a:visited {
@@ -45,9 +45,6 @@ a, a:visited {
 .brand__logo {
   height: 60px;
   width: 60px;
-  // background: url('~assets/img/logo-white.svg');
-  // background: url('~@/repo.svg');
-  // the brand logo is imported as a prop and displayed as an image
   background-size: cover;
   img {
     height: 100%;
