@@ -6,15 +6,15 @@
           <img :src="logoSrc" draggable="false" />
         </div>
       </div>
+      <!--  -->
       <ul class="nav__desktop__list">
         <li v-for="link in links" :key="link.path">
-          <!-- // TODO nuxt-link // router-link -->
-          <a v-if="link.path" :to="link.path" exact-active-class="--active">
+          <router-link v-if="link.path" :to="link.path" exact-active-class="--active">
             <div class="nav__desktop__list__item">
               <span v-if="link.icon" class="material-icons">{{ link.icon }}</span>
               <span v-if="link.name">{{ link.name.toUpperCase() }}</span>
             </div>
-          </a>
+          </router-link>
           <a
             v-else
             @click.prevent="onDropdown"
@@ -30,14 +30,14 @@
           </a>
         </li>
       </ul>
-      <div class="nav__desktop__btns">
-        <a :href="'tel:' + phone" class="nav__desktop__btn btn--outline">
+       <div class="nav__desktop__btns">
+        <a :href="'tel:' + phone" class="nav__desktop__btn btn--primary">
           CALL
         </a>
         <div
           @click.prevent="onEnquire"
           @keydown.enter.prevent="onEnquire"
-          class="nav__desktop__btn btn--primary"
+          class="nav__desktop__btn btn--outline"
           role="button"
           aria-pressed="false"
           tabindex="0"
@@ -78,12 +78,15 @@
     >
       <i class="material-icons">menu</i>
     </div>
+    <!-- <button @click="showDrawer = !showDrawer" class="nav__toggle btn btn--outline">TOGGLE</button> -->
     <NavDrawer
       :links="links"
       :showDrawer="showDrawer"
       :dropdownItems="dropdownItems"
       @close="onCloseDrawer"
       :logoSrc="logoSrc"
+      :showDropdown="showDropdown"
+      @onDropdown="onDropdown"
     />
     <NavDropdown
       :items="dropdownItems"
@@ -93,11 +96,13 @@
 </template>
 
 <script>
+// import NavDesktop from '@/components/Nav/NavDesktop'
 import NavDrawer from './NavDrawer'
 import NavDropdown from './NavDropdown'
 export default {
   name: 'NavMain',
   components: {
+    // NavDesktop,
     NavDrawer,
     NavDropdown
   },
@@ -129,7 +134,24 @@ export default {
   },
   data () {
     return {
-      // 
+      //
+      // showDrawer: false,
+      // showDropdown: false,
+      // showEnquire: false,
+      // drawer: false,
+      // phone: process.env.CONTACT_PHONE,
+      // dropdownItems: [
+      //   { name: 'Domestic', path: '/domestic-scaffolding/' },
+      //   { name: 'Commercial', path: '/commercial-scaffolding/' },
+      //   { name: 'Industrial', path: '/industrial-scaffolding/' }
+      // ],
+      // links: [
+      //   { name: 'Home', path: '/' },
+      //   { name: 'About', path: '/about/' },
+      //   { name: 'Services' },
+      //   { name: 'Contact', path: '/contact/' }
+      //   // { name: 'Blog', path: '/blog', icon: '' }
+      // ]
     }
   },
   watch: {
