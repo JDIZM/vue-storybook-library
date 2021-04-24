@@ -1,8 +1,10 @@
 <template>
+<div class="toast-wrapper">
   <div v-if="show" class="toast bg--primary text--white active">
     <span class="material-icons">{{ icon }}</span>
     <p>{{ msg }}</p>
   </div>
+</div>
 </template>
 
 <script>

@@ -69,6 +69,7 @@
         </button>
       </div>
     </div>
+    <!-- toggle hidden on desktop with display:none -->
     <div
       @click="onShowDrawer"
       class="nav__toggle"
@@ -76,9 +77,9 @@
       aria-pressed="true"
       tabindex="0"
     >
-      <i class="material-icons">menu</i>
+      <i v-if="!showDrawer" class="material-icons">menu</i>
+      <i v-else class="material-icons">close</i>
     </div>
-    <!-- <button @click="showDrawer = !showDrawer" class="nav__toggle btn btn--outline">TOGGLE</button> -->
     <NavDrawer
       :links="links"
       :showDrawer="showDrawer"
@@ -96,13 +97,11 @@
 </template>
 
 <script>
-// import NavDesktop from '@/components/Nav/NavDesktop'
 import NavDrawer from './NavDrawer'
 import NavDropdown from './NavDropdown'
 export default {
   name: 'NavMain',
   components: {
-    // NavDesktop,
     NavDrawer,
     NavDropdown
   },
@@ -135,23 +134,6 @@ export default {
   data () {
     return {
       //
-      // showDrawer: false,
-      // showDropdown: false,
-      // showEnquire: false,
-      // drawer: false,
-      // phone: process.env.CONTACT_PHONE,
-      // dropdownItems: [
-      //   { name: 'Domestic', path: '/domestic-scaffolding/' },
-      //   { name: 'Commercial', path: '/commercial-scaffolding/' },
-      //   { name: 'Industrial', path: '/industrial-scaffolding/' }
-      // ],
-      // links: [
-      //   { name: 'Home', path: '/' },
-      //   { name: 'About', path: '/about/' },
-      //   { name: 'Services' },
-      //   { name: 'Contact', path: '/contact/' }
-      //   // { name: 'Blog', path: '/blog', icon: '' }
-      // ]
     }
   },
   watch: {
@@ -181,6 +163,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// @import "../../theme/theme.scss";
 @import "./Nav.scss";
 </style>

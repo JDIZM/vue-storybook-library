@@ -1,23 +1,30 @@
+.toast-wrapper {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+
+}
 .toast {
-  font-size: 1rem;
+  position: fixed;
+  bottom: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  // background: $primary;
-  position: fixed;
-  color: white;
-  min-width: 200px;
+  color: var(--secondary);
+  font-size: 1rem;
+  min-width: 230px;
   max-width: 60%;
   padding: 20px;
-  left: 50%;
-  transform: translateX(-25%);
-  margin-left: -120px;
-  bottom: 0;
   border-radius: 4px;
   box-shadow: 1px 3px 5px rgba(0,0,0,0.2);
   text-align: center;
-  margin-bottom: -100%; 
   transition: all 0.2s;
+  margin-bottom: -100px; // animate
   p {
     padding-top: 0;
     margin:0px 8px;

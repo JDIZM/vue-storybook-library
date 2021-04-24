@@ -20,18 +20,11 @@ const Template = (args, { argTypes }) => ({
   template: '<Form v-bind="$props" @onSubmit="onSubmit" @onUpdate="onUpdate" />',
 });
 
-// const Template = (args) => <Form {...args} />;
-// export const Empty = (args) => <Form {...args} />;
-
 export const SingleEmailField = Template.bind({});
 SingleEmailField.args = {
   showError: false,
   showSuccess: false,
   label: 'Subscribe to our newsletter'
-  // label: 'What\'s your email?',
-  // placeholder: "Enter your email",
-  // showIcon: true,
-  // icon: 'email'
 }
 export const formWithError = Template.bind({});
 formWithError.args = {

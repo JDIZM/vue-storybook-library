@@ -47,13 +47,6 @@ export default {
       // 
     }
   }
-  // TODO modal overlay
-  // toggle () {
-  //   // toggle modal state
-  // },
-  // close () {
-  //   // close the modal
-  // }
 }
 </script>
 
