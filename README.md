@@ -24,8 +24,9 @@ contains all the config files for setting up storybook.
 
 ## Theme
 
-all the styling is configured in the theme folder and there are mixins to create custom class names for styling bg-color, text and spacing.
+All the base styling is configured in the theme folder and there are mixins to create custom class names for styling background color, text and spacing according to the theme variables. Each component has it's own scoped scss file that's directly imported.
 
+* sass mixins
 * class names like tailwind
 * sass/css theme variables
 
@@ -71,7 +72,7 @@ Nuxt - nuxt.config.js
 
 Import each component from the folder as needed, instead of from /components, import them directly from /storybook.
 
-For Vue - add the reference to scss files in nuxt.config.js.
+For Vue - add the reference to scss files in vue.config.js.
 
 ```config
 css: [

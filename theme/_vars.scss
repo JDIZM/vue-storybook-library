@@ -5,19 +5,15 @@
 // @nuxtjs/style-resources allows you to use global variables
 // global css vars available at component level
 
-:root {
-  --links: black;
-  --font-family: "Roboto", system, sans-serif;
-}
 
 // theme colours
 // map the variables with key:value pairs for mixins
 // https://sass-lang.com/documentation/values/maps
 // controlling colour https://thoughtbot.com/blog/controlling-color-with-sass-color-functions
 $colours: (
-  primary: rgba(50,84,59, 1),
-  primary-100: rgba(50,84,59, 0.07),
-  secondary: #e6e6e6,
+  primary: #1a1a1d,
+  primary-100: rgba(26,26,29, 0.07),
+  secondary: #e85b46,
   disabled: #b0bec5,
   destruct:rgba(165, 10, 69, 0.9),
   error:rgba(165, 10, 69, 0.9),
@@ -25,8 +21,18 @@ $colours: (
   success:  #32543b,
   light: rgb(255, 255, 255),
   dark: rgb(48, 48, 48),
-  white: #fff
+  white: #fff,
+  blue: #1a1a1d,
 );
+
+@debug map-get($colours, secondary);
+$links: map-get($colours, secondary);
+@debug $links;
+
+:root {
+  --links: #{$links};
+  --font-family: "Roboto", system, sans-serif;
+}
 
 // make the sass vars accessible to the other files with map-get
 // only gets the variable doesn't create the primary class name.

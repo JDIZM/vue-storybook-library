@@ -1,14 +1,18 @@
 // NavMain
 .nav {
   width: 100%;
-  background: var(--secondary);
+  background: var(--primary);
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   flex-direction: column;
+  color: var(--links);
 }
+
+// mobile
+
 .nav__toggle {
   width: 56px;
   position: fixed;
@@ -68,6 +72,8 @@
   border-radius: 4px;
   padding: 0.5rem 1rem;
 }
+
+// desktop
 
 .nav__desktop {
   width: 96%;
@@ -133,12 +139,9 @@
   border-radius: 4px;
   padding: 0.5rem 1rem;
 }
-a.--active.nuxt-link-active {
-  color: #32543B;
-  text-decoration: underline;
-}
 
-// NavDrawer
+
+// drawer
 
 .nav__drawer__overlay {
   z-index: 998;
@@ -205,10 +208,7 @@ a.--active.nuxt-link-active {
     width: 90%;
     margin: auto;
 }
-a.--active.nuxt-link-active {
-  color: var(--primary);
-  text-decoration: underline;
-}
+
 .nav__drawer__dropdown {
   margin: 1rem;
   list-style: none;
@@ -216,6 +216,8 @@ a.--active.nuxt-link-active {
 :focus {
   outline: none;
 }
+
+// dropdown
 
 .nav__dropdown {
   position: relative;
@@ -232,23 +234,32 @@ a.--active.nuxt-link-active {
   align-self: center;
 }
 
-// LINKS
+// links
+
 a, a:visited {
   color: var(--links);
 }
 
-.nav__drawer__list {
-  a, a:visited {
-    color: var(--secondary);
-  }
+a.--active.nuxt-link-active {
+  color: var(--links);
+  text-decoration: underline;
 }
 
+// .nav__drawer__list {
+//   a, a:visited {
+//     color: var(--primary);
+//   }
+// }
+
 // animation
+
 @keyframes nav-in {
   from {left: -300px}
   to {left: 0px}
 }
-// FIXME import buttons
+
+// button styles
+
 .btn {
   cursor: pointer;
   display: inline-block;
