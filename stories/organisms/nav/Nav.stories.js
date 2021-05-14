@@ -84,7 +84,7 @@ showDrawerWithDropdown.args = {
     { name: 'Item', path: '/contact/' }
   ],
   showDrawer: true,
-  showDropdown: false,
+  showDropdown: true,
   dropdownItems: [
     { name: 'Dropdown One', path: '/dropdown-one/' },
     { name: 'Dropdown Two', path: '/dropdown-two/' },

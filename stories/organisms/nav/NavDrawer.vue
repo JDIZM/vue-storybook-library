@@ -12,6 +12,7 @@
               <span>{{ link.name }}</span>
             </div>
           </router-link>
+          <!-- dropdown item only -->
           <a
             v-else
             @click.prevent="onDropdown"
@@ -25,14 +26,14 @@
               <span>{{ link.name }}</span>
             </div>
           </a>
-           <ul v-if="showDropdown" class="nav__drawer__dropdown">
-              <li v-for="item in dropdownItems" :key="item.name">
-                <!-- // TODO router-link // router-link -->
-                <a v-if="item.path" :to="item.path" exact-active-class="--active">
-                  <div class="nav__drawer__dropdown">{{ item.name }}</div>
-                </a>
-              </li>
-            </ul>
+          <ul v-if="showDropdown && !link.path" class="nav__drawer__dropdown">
+            <li v-for="item in dropdownItems" :key="item.name">
+              <!-- // TODO router-link // router-link -->
+              <a v-if="item.path" :to="item.path" exact-active-class="--active">
+                <div class="nav__drawer__dropdown">{{ item.name }}</div>
+              </a>
+            </li>
+          </ul>
         </li>
       </ul>
     </div>

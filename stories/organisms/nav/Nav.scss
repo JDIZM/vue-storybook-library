@@ -163,12 +163,14 @@
   background: var(--primary);
   animation-name: nav-in;
   animation-duration: 0.4s;
+  text-align: left;
 }
 
 .nav__drawer__list {
   list-style: none;
   display: flex;
   flex-direction: column;
+  margin-left: 1rem;
   li {
     margin: 0.5rem;
   }
@@ -210,7 +212,8 @@
 }
 
 .nav__drawer__dropdown {
-  margin: 1rem;
+  padding: 0.5rem;
+  margin-bottom: 0;
   list-style: none;
 }
 :focus {
