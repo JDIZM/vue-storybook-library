@@ -42,7 +42,7 @@ Primary.args = {
     { name: 'Item', path: '/contact/' }
   ],
   showDrawer: false,
-  showDropdown: false,
+  showDropdown: false, // desktop only
   dropdownItems: [
     { name: 'Dropdown One', path: '/dropdown-one/' },
     { name: 'Dropdown Two', path: '/dropdown-two/' },
@@ -63,11 +63,11 @@ showDrawer.args = {
     { name: 'Item', path: '/contact/' }
   ],
   showDrawer: true,
-  showDropdown: false,
+  showDropdown: false, // desktop only
   dropdownItems: [
-    { name: 'Dropdown One', path: '/dropdown-one/' },
-    { name: 'Dropdown Two', path: '/dropdown-two/' },
-    { name: 'Dropdown Three', path: '/dropdown-three/' }
+    { name: 'Dropdown Item', path: '/dropdown-one/' },
+    { name: 'Dropdown Item', path: '/dropdown-two/' },
+    { name: 'Dropdown Item', path: '/dropdown-three/' }
   ]
 };
 
@@ -84,11 +84,11 @@ showDrawerWithDropdown.args = {
     { name: 'Item', path: '/contact/' }
   ],
   showDrawer: true,
-  showDropdown: true,
+  showDropdown: false, // desktop only
   dropdownItems: [
-    { name: 'Dropdown One', path: '/dropdown-one/' },
-    { name: 'Dropdown Two', path: '/dropdown-two/' },
-    { name: 'Dropdown Three', path: '/dropdown-three/' }
+    { name: 'Dropdown Item', path: '/dropdown-one/' },
+    { name: 'Dropdown Item', path: '/dropdown-two/' },
+    { name: 'Dropdown Item', path: '/dropdown-three/' }
   ]
 };
 
@@ -107,8 +107,8 @@ showDropdown.args = {
   showDrawer: false,
   showDropdown: true,
   dropdownItems: [
-    { name: 'Dropdown One', path: '/dropdown-one/' },
-    { name: 'Dropdown Two', path: '/dropdown-two/' },
-    { name: 'Dropdown Three', path: '/dropdown-three/' }
+    { name: 'Dropdown Item', path: '/dropdown-one/' },
+    { name: 'Dropdown Item', path: '/dropdown-two/' },
+    { name: 'Dropdown Item', path: '/dropdown-three/' }
   ]
 };

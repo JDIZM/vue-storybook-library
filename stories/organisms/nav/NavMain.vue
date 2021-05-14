@@ -86,7 +86,6 @@
       :dropdownItems="dropdownItems"
       @close="onCloseDrawer"
       :logoSrc="logoSrc"
-      :showDropdown="showDropdown"
       @onDropdown="onDropdown"
     />
     <NavDropdown

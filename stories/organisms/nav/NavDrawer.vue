@@ -29,9 +29,9 @@
           <ul v-if="showDropdown && !link.path" class="nav__drawer__dropdown">
             <li v-for="item in dropdownItems" :key="item.name">
               <!-- // TODO router-link // router-link -->
-              <a v-if="item.path" :to="item.path" exact-active-class="--active">
+              <router-link v-if="item.path" :to="item.path" exact-active-class="--active">
                 <div class="nav__drawer__dropdown">{{ item.name }}</div>
-              </a>
+              </router-link>
             </li>
           </ul>
         </li>
@@ -53,10 +53,10 @@ export default {
       type: Boolean,
       required: true
     },
-    showDropdown: {
-      type: Boolean,
-      required: true
-    },
+    // showDropdown: {
+    //   type: Boolean,
+    //   required: true
+    // },
     dropdownItems: {
       type: Array,
       required: true
@@ -69,12 +69,14 @@ export default {
   data () {
     return {
       // 
+      showDropdown: false
     }
   },
   methods: {
     //
     onDropdown () {
-      this.$emit('onDropdown')
+      // this.$emit('onDropdown')
+      this.showDropdown = !this.showDropdown
     }
   }
 }
