@@ -8,29 +8,31 @@ https://vue-storybook-library.netlify.app
 
 built without vue/nuxt router links, the components need to be edited.
 
-run locally: `npm run storybook`
+run locally: `yarn storybook`
 
-see Storybook docs for more info - <https://storybook.js.org/docs/vue/get-started/introduction>
+see the [storybook docs](https://storybook.js.org/docs/vue/get-started/introduction) for more info.
 
 ## Setup & Configure
 
-/.storybook
+The `.storybook` folder contains all the config files for setting up storybook.
 
-contains all the config files for setting up storybook.
+* Configure any addons in the `.storybook/main.js` file
+* External scripts, fonts and stylesheets are loaded in  `.storybook/preview-head.html`
+* Imports the sass/scss theme and variables in `.storybook/preview.js` via ` import '../theme/main.scss'`
 
-* Load static assets and resources
-* Load css files, fonts
-* Load sass/scss theme and variables
+## Assets
+
+* Static assets and resources are located in the `stories/assets` folder
 
 ## Theme
 
 All the base styling is configured in the theme folder and there are mixins to create custom class names for styling background color, text and spacing according to the theme variables. Each component has it's own scoped scss file that's directly imported.
 
 * sass mixins
-* class names like tailwind
+* utility class names like tailwind
 * sass/css theme variables
 
-the theme variables are mixed between sass variables for the mixins and class names in addition to css variables. I was having an issue importing the sass vars into SFC's but the root CSS vars work. Simple work around.
+The theme variables are mixed between sass variables for the mixins and class names in addition to css variables. I was having an issue importing the sass vars into SFC's but the root CSS vars work. Simple work around.
 
 ```config
 /theme
@@ -92,7 +94,7 @@ css: [
 
 ### Using the components
 
-Import the components directly from the /storybook folder
+Import the components directly from the /storybook folder (whatever you named this project folder).
 
 ```config
 import Toast from '@/storybook/stories/molecules/Toast.vue'
