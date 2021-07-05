@@ -27,3 +27,4 @@ pnpm-debug.log*
 # Local Netlify folder
 .netlify
 storybook-static
+coverage

@@ -1,0 +1,2002 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots atoms/Button Destruct 1`] = `
+<button
+  class="btn btn--destruct bg--destruct text--light"
+  type="button"
+>
+  
+  DELETE
+
+</button>
+`;
+
+exports[`Storyshots atoms/Button Disabled 1`] = `
+<button
+  class="btn btn--disabled bg--disabled text--dark"
+  type="button"
+>
+  
+  DISABLED
+
+</button>
+`;
+
+exports[`Storyshots atoms/Button Outline 1`] = `
+<button
+  class="btn btn--outline"
+  type="button"
+>
+  
+  OUTLINE
+
+</button>
+`;
+
+exports[`Storyshots atoms/Button Primary 1`] = `
+<button
+  class="btn btn--primary"
+  type="button"
+>
+  
+  PRIMARY
+
+</button>
+`;
+
+exports[`Storyshots molecules/Dropdown Primary 1`] = `
+<div
+  class="dropdowns"
+  name="Dropdown"
+>
+  <div
+    class="dropdown pb--2 pt--2"
+  >
+    <div
+      class="dropdown__trigger active"
+    >
+      
+      ONE TITLE
+    
+    </div>
+     
+    <div
+      class="dropdown__content active"
+    >
+      <p>
+        
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis non, dignissimos asperiores ipsum aliquam expedita porro enim ipsam sequi? Numquam esse incidunt quam nihil nam fugiat dignissimos dolorum reiciendis tempora
+      
+      </p>
+    </div>
+  </div>
+  <div
+    class="dropdown pb--2 pt--2"
+  >
+    <div
+      class="dropdown__trigger"
+    >
+      
+      TWO TITLE
+    
+    </div>
+     
+    <div
+      class="dropdown__content"
+    >
+      <p>
+        
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis non, dignissimos asperiores ipsum aliquam expedita porro enim ipsam sequi? Numquam esse incidunt quam nihil nam fugiat dignissimos dolorum reiciendis tempora
+      
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots molecules/FormInput Input With Error 1`] = `
+<div
+  class="form__field --error"
+  value=""
+>
+  <label
+    for="InputWithError"
+  >
+    Phone
+  </label>
+   
+  <!---->
+   
+  <span
+    class="material-icons text--error"
+  >
+    error
+  </span>
+   
+  <input
+    class="bg--primary-100"
+    id="InputWithError"
+    name="InputWithError"
+    placeholder="Enter your phone number"
+    type="text"
+  />
+</div>
+`;
+
+exports[`Storyshots molecules/FormInput Input With Icon 1`] = `
+<div
+  class="form__field"
+  value=""
+>
+  <label
+    for="InputWithIcon"
+  >
+    Phone
+  </label>
+   
+  <!---->
+   
+  <span
+    class="material-icons"
+  >
+    phone
+  </span>
+   
+  <input
+    class="bg--primary-100"
+    id="InputWithIcon"
+    name="InputWithIcon"
+    placeholder="Enter your phone number"
+    type="tel"
+  />
+</div>
+`;
+
+exports[`Storyshots molecules/FormInput Input With No Label 1`] = `
+<div
+  class="form__field form__field--no-label"
+  value=""
+>
+  <!---->
+   
+  <!---->
+   
+  <span
+    class="material-icons"
+  >
+    phone
+  </span>
+   
+  <input
+    class="bg--primary-100"
+    id="InputWithNoLabel"
+    name="InputWithNoLabel"
+    placeholder="Enter your phone number"
+    type="text"
+  />
+</div>
+`;
+
+exports[`Storyshots molecules/FormInput Input With Success 1`] = `
+<div
+  class="form__field --success"
+  value=""
+>
+  <label
+    for="InputWithSuccess"
+  >
+    Phone
+  </label>
+   
+  <span
+    class="material-icons"
+  >
+    check
+  </span>
+   
+  <!---->
+   
+  <input
+    class="bg--primary-100"
+    id="InputWithSuccess"
+    name="InputWithSuccess"
+    placeholder="Enter your phone number"
+    type="text"
+  />
+</div>
+`;
+
+exports[`Storyshots molecules/FormInput Text Area 1`] = `
+<div
+  class="form__field"
+>
+  <label
+    for="TextInput"
+  >
+    label
+  </label>
+   
+  <!---->
+   
+  <span
+    class="material-icons"
+  >
+    message
+  </span>
+   
+  <textarea
+    class="bg--primary-100"
+    cols="50"
+    id="TextInput"
+    name="TextInput"
+    placeholder="Enter a message"
+    rows="4"
+    type="textarea"
+  />
+</div>
+`;
+
+exports[`Storyshots molecules/FormInput Text Input Without Icon 1`] = `
+<div
+  class="form__field"
+>
+  <label
+    for="TextInput"
+  >
+    label
+  </label>
+   
+  <!---->
+   
+  <!---->
+   
+  <input
+    class="bg--primary-100"
+    id="TextInput"
+    name="TextInput"
+    placeholder="Enter some text"
+    type="text"
+  />
+</div>
+`;
+
+exports[`Storyshots molecules/Modal Hidden 1`] = `
+<div>
+  <!---->
+   
+  <!---->
+</div>
+`;
+
+exports[`Storyshots molecules/Modal Show Modal 1`] = `
+<div>
+  <div
+    class="modal bg--white text--black"
+  >
+    <div
+      class="modal-content"
+    >
+      <h4>
+        Modal Title
+      </h4>
+       
+      <p>
+        This is the message
+      </p>
+    </div>
+     
+    <div
+      class="modal-footer"
+    >
+      <button
+        class="btn btn--outline btn--left"
+        type="button"
+      >
+        
+  CONFIRM
+
+      </button>
+       
+      <button
+        class="btn btn--primary btn--left"
+        type="button"
+      >
+        
+  CLOSE
+
+      </button>
+    </div>
+  </div>
+   
+  <div
+    class="modal-overlay"
+  />
+</div>
+`;
+
+exports[`Storyshots molecules/Toast Alarm Icon 1`] = `
+<div
+  class="toast-wrapper"
+>
+  <div
+    class="toast bg--primary text--white active"
+  >
+    <span
+      class="material-icons"
+    >
+      alarm
+    </span>
+     
+    <p>
+      This is the toast message
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots molecules/Toast Default Icon 1`] = `
+<div
+  class="toast-wrapper"
+>
+  <div
+    class="toast bg--primary text--white active"
+  >
+    <span
+      class="material-icons"
+    >
+      info
+    </span>
+     
+    <p>
+      This is the toast message
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots molecules/Toast Hidden 1`] = `
+<div
+  class="toast-wrapper"
+>
+  <!---->
+</div>
+`;
+
+exports[`Storyshots organisms/ContactForm Contact Form With Icons 1`] = `
+<div
+  class="form"
+>
+  <form>
+    <div
+      class="form__field"
+    >
+      <label
+        for="name"
+      >
+        What's your name?
+      </label>
+       
+      <!---->
+       
+      <span
+        class="material-icons"
+      >
+        person
+      </span>
+       
+      <input
+        class="bg--primary-100"
+        id="name"
+        name="name"
+        placeholder="James"
+        type="text"
+      />
+    </div>
+    <div
+      class="form__field"
+    >
+      <label
+        for="email"
+      >
+        What's your email?
+      </label>
+       
+      <!---->
+       
+      <span
+        class="material-icons"
+      >
+        email
+      </span>
+       
+      <input
+        class="bg--primary-100"
+        id="email"
+        name="email"
+        placeholder="hello@jamesdonnelly.dev"
+        type="email"
+      />
+    </div>
+    <div
+      class="form__field"
+    >
+      <label
+        for="phone"
+      >
+        What's your phone number?
+      </label>
+       
+      <!---->
+       
+      <span
+        class="material-icons"
+      >
+        phone
+      </span>
+       
+      <input
+        class="bg--primary-100"
+        id="phone"
+        name="phone"
+        placeholder="0161 123 4567"
+        type="phone"
+      />
+    </div>
+    <div
+      class="form__field"
+    >
+      <label
+        for="message"
+      >
+        Leave us a message
+      </label>
+       
+      <!---->
+       
+      <span
+        class="material-icons"
+      >
+        message
+      </span>
+       
+      <textarea
+        class="bg--primary-100"
+        cols="50"
+        id="message"
+        name="message"
+        placeholder="Enter a message"
+        rows="4"
+        type="textarea"
+      />
+    </div>
+     
+    <!---->
+     
+    <!---->
+     
+    <button
+      class="btn btn--primary btn--left"
+      type="submit"
+    >
+      
+  SUBMIT
+
+    </button>
+  </form>
+</div>
+`;
+
+exports[`Storyshots organisms/ContactForm Form With Error 1`] = `
+<div
+  class="form"
+>
+  <form>
+    <div
+      class="form__field"
+    >
+      <label
+        for="name"
+      >
+        What's your name?
+      </label>
+       
+      <!---->
+       
+      <span
+        class="material-icons"
+      >
+        person
+      </span>
+       
+      <input
+        class="bg--primary-100"
+        id="name"
+        name="name"
+        placeholder="James"
+        type="text"
+      />
+    </div>
+    <div
+      class="form__field"
+    >
+      <label
+        for="email"
+      >
+        What's your email?
+      </label>
+       
+      <!---->
+       
+      <span
+        class="material-icons"
+      >
+        email
+      </span>
+       
+      <input
+        class="bg--primary-100"
+        id="email"
+        name="email"
+        placeholder="hello@jamesdonnelly.dev"
+        type="email"
+      />
+    </div>
+    <div
+      class="form__field"
+    >
+      <label
+        for="phone"
+      >
+        What's your phone number?
+      </label>
+       
+      <!---->
+       
+      <span
+        class="material-icons"
+      >
+        phone
+      </span>
+       
+      <input
+        class="bg--primary-100"
+        id="phone"
+        name="phone"
+        placeholder="0161 123 4567"
+        type="phone"
+      />
+    </div>
+    <div
+      class="form__field"
+    >
+      <label
+        for="message"
+      >
+        Leave us a message
+      </label>
+       
+      <!---->
+       
+      <span
+        class="material-icons"
+      >
+        message
+      </span>
+       
+      <textarea
+        class="bg--primary-100"
+        cols="50"
+        id="message"
+        name="message"
+        placeholder="Enter a message"
+        rows="4"
+        type="textarea"
+      />
+    </div>
+     
+    <div>
+      <span
+        class="material-icons text--error"
+      >
+        error
+      </span>
+       
+      <span
+        class="text--error"
+      >
+        Please enter the correct information
+      </span>
+    </div>
+     
+    <!---->
+     
+    <button
+      class="btn btn--primary btn--left"
+      type="submit"
+    >
+      
+  SUBMIT
+
+    </button>
+  </form>
+</div>
+`;
+
+exports[`Storyshots organisms/ContactForm Form With Success 1`] = `
+<div
+  class="form"
+>
+  <form>
+    <div
+      class="form__field"
+    >
+      <label
+        for="name"
+      >
+        What's your name?
+      </label>
+       
+      <!---->
+       
+      <span
+        class="material-icons"
+      >
+        person
+      </span>
+       
+      <input
+        class="bg--primary-100"
+        id="name"
+        name="name"
+        placeholder="James"
+        type="text"
+      />
+    </div>
+    <div
+      class="form__field"
+    >
+      <label
+        for="email"
+      >
+        What's your email?
+      </label>
+       
+      <!---->
+       
+      <span
+        class="material-icons"
+      >
+        email
+      </span>
+       
+      <input
+        class="bg--primary-100"
+        id="email"
+        name="email"
+        placeholder="hello@jamesdonnelly.dev"
+        type="email"
+      />
+    </div>
+    <div
+      class="form__field"
+    >
+      <label
+        for="phone"
+      >
+        What's your phone number?
+      </label>
+       
+      <!---->
+       
+      <span
+        class="material-icons"
+      >
+        phone
+      </span>
+       
+      <input
+        class="bg--primary-100"
+        id="phone"
+        name="phone"
+        placeholder="0161 123 4567"
+        type="phone"
+      />
+    </div>
+    <div
+      class="form__field"
+    >
+      <label
+        for="message"
+      >
+        Leave us a message
+      </label>
+       
+      <!---->
+       
+      <span
+        class="material-icons"
+      >
+        message
+      </span>
+       
+      <textarea
+        class="bg--primary-100"
+        cols="50"
+        id="message"
+        name="message"
+        placeholder="Enter a message"
+        rows="4"
+        type="textarea"
+      />
+    </div>
+     
+    <!---->
+     
+    <div>
+      <span
+        class="material-icons text--success"
+      >
+        check
+      </span>
+       
+      <span
+        class="text--primary"
+      >
+        Your message has been sent!
+      </span>
+    </div>
+     
+    <button
+      class="btn btn--primary btn--left"
+      type="submit"
+    >
+      
+  SUBMIT
+
+    </button>
+  </form>
+</div>
+`;
+
+exports[`Storyshots organisms/Footer Primary 1`] = `
+<footer
+  class="bg--primary text--white"
+>
+  <div
+    class="footer"
+  >
+    <div
+      class="footer__grid"
+    >
+      <div
+        class="footer__grid__item brand"
+      >
+        <div
+          class="brand__logo"
+        >
+          <img
+            draggable="false"
+            src=""
+          />
+        </div>
+      </div>
+       
+      <div
+        class="footer__grid__item social"
+      >
+        <h3>
+          SOCIAL
+        </h3>
+         
+        <ul>
+          <li>
+            <a
+              aria-label="Find us on LinkedIn"
+              href="https://linkedin.com"
+            >
+              <i
+                class="fab fa-linkedin"
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              aria-label="Find us on Facebook"
+              href="https://facebook.com"
+            >
+              <i
+                class="fab fa-facebook-square"
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              aria-label="Find us on Twitter"
+              href="https://twitter.com"
+            >
+              <i
+                class="fab fa-twitter"
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              aria-label="Find us on Github"
+              href="https://github.com"
+            >
+              <i
+                class="fab fa-github"
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
+       
+      <div
+        class="footer__grid__item info"
+      >
+        <h3>
+          COMPANY INFO
+        </h3>
+         
+        <p>
+          Company Name
+        </p>
+         
+        <p>
+          
+          349 Manchester Road 
+          <br />
+          
+          Manchester 
+          <br />
+          
+          M12 ABC
+        
+        </p>
+      </div>
+    </div>
+     
+    <div
+      class="copy"
+    >
+      <p>
+        
+        © Company Name - Company number 12345678 -
+        
+        <a
+          href="/privacy.pdf"
+        >
+          Privacy
+        </a>
+      </p>
+    </div>
+  </div>
+</footer>
+`;
+
+exports[`Storyshots organisms/Mailchimp Form With Error 1`] = `
+<div
+  class="form"
+>
+  <form>
+    <div
+      class="form__field --error"
+      required="required"
+      value=""
+    >
+      <label
+        for="email"
+      >
+        Subscribe to our newsletter
+      </label>
+       
+      <!---->
+       
+      <span
+        class="material-icons text--error"
+      >
+        error
+      </span>
+       
+      <input
+        class="bg--primary-100"
+        id="email"
+        name="email"
+        placeholder="Enter your email"
+        type="email"
+      />
+    </div>
+     
+    <span
+      class="text--error"
+    >
+      please enter an email address
+    </span>
+     
+    <button
+      class="btn btn--primary btn--left"
+      type="submit"
+    >
+      
+  SUBMIT
+
+    </button>
+  </form>
+</div>
+`;
+
+exports[`Storyshots organisms/Mailchimp Form With Success 1`] = `
+<div
+  class="form"
+>
+  <form>
+    <div
+      class="form__field --success"
+      required="required"
+      value=""
+    >
+      <label
+        for="email"
+      >
+        Subscribe to our newsletter
+      </label>
+       
+      <span
+        class="material-icons"
+      >
+        check
+      </span>
+       
+      <!---->
+       
+      <input
+        class="bg--primary-100"
+        id="email"
+        name="email"
+        placeholder="Enter your email"
+        type="email"
+      />
+    </div>
+     
+    <!---->
+     
+    <button
+      class="btn btn--primary btn--left"
+      type="submit"
+    >
+      
+  SUBMIT
+
+    </button>
+  </form>
+</div>
+`;
+
+exports[`Storyshots organisms/Mailchimp Single Email Field 1`] = `
+<div
+  class="form"
+>
+  <form>
+    <div
+      class="form__field"
+      required="required"
+      value=""
+    >
+      <label
+        for="email"
+      >
+        Subscribe to our newsletter
+      </label>
+       
+      <!---->
+       
+      <span
+        class="material-icons"
+      >
+        email
+      </span>
+       
+      <input
+        class="bg--primary-100"
+        id="email"
+        name="email"
+        placeholder="Enter your email"
+        type="email"
+      />
+    </div>
+     
+    <!---->
+     
+    <button
+      class="btn btn--primary btn--left"
+      type="submit"
+    >
+      
+  SUBMIT
+
+    </button>
+  </form>
+</div>
+`;
+
+exports[`Storyshots organisms/Nav Primary 1`] = `
+<nav
+  class="nav"
+  primary="true"
+>
+  <div
+    class="nav__desktop"
+  >
+    <div
+      class="nav__desktop__brand"
+    >
+      <div
+        class="nav__desktop__logo"
+      >
+        <img
+          draggable="false"
+          src=""
+        />
+      </div>
+    </div>
+     
+    <ul
+      class="nav__desktop__list"
+    >
+      <li>
+        <router-link
+          exact-active-class="--active"
+          to="/"
+        >
+          <div
+            class="nav__desktop__list__item"
+          >
+            <!---->
+             
+            <span>
+              ITEM
+            </span>
+          </div>
+        </router-link>
+      </li>
+      <li>
+        <router-link
+          exact-active-class="--active"
+          to="/about/"
+        >
+          <div
+            class="nav__desktop__list__item"
+          >
+            <!---->
+             
+            <span>
+              ITEM
+            </span>
+          </div>
+        </router-link>
+      </li>
+      <li>
+        <a
+          aria-pressed="false"
+          exact-active-class="--active"
+          role="button"
+          tabindex="0"
+        >
+          <div
+            class="nav__desktop__list__item"
+          >
+            <!---->
+             
+            <span>
+              DROPDOWN
+            </span>
+          </div>
+        </a>
+      </li>
+      <li>
+        <router-link
+          exact-active-class="--active"
+          to="/contact/"
+        >
+          <div
+            class="nav__desktop__list__item"
+          >
+            <!---->
+             
+            <span>
+              ITEM
+            </span>
+          </div>
+        </router-link>
+      </li>
+    </ul>
+     
+    <div
+      class="nav__desktop__btns"
+    >
+      <a
+        class="nav__desktop__btn btn--primary"
+        href="tel:0161 123 4567"
+      >
+        
+        CALL
+      
+      </a>
+       
+      <div
+        aria-pressed="false"
+        class="nav__desktop__btn btn--outline"
+        role="button"
+        tabindex="0"
+      >
+        
+        ENQUIRE
+      
+      </div>
+    </div>
+  </div>
+   
+  <div
+    class="nav__mobile"
+  >
+    <div
+      class="nav__mobile__brand"
+    >
+      <div
+        class="nav__mobile__logo"
+      >
+        <img
+          draggable="false"
+          src=""
+        />
+      </div>
+    </div>
+     
+    <div
+      class="nav__mobile__btns"
+    >
+      <a
+        class="nav__mobile__btn btn--outline"
+        href="tel:0161 123 4567"
+      >
+        
+        CALL
+      
+      </a>
+       
+      <button
+        aria-pressed="true"
+        class="nav__mobile__btn btn--primary"
+        role="button"
+        tabindex="0"
+      >
+        
+        ENQUIRE
+      
+      </button>
+    </div>
+  </div>
+   
+  <div
+    aria-pressed="true"
+    class="nav__toggle"
+    role="button"
+    tabindex="0"
+  >
+    <i
+      class="material-icons"
+    >
+      menu
+    </i>
+  </div>
+   
+  <!---->
+   
+  <!---->
+</nav>
+`;
+
+exports[`Storyshots organisms/Nav Show Drawer 1`] = `
+<nav
+  class="nav"
+  primary="true"
+>
+  <div
+    class="nav__desktop"
+  >
+    <div
+      class="nav__desktop__brand"
+    >
+      <div
+        class="nav__desktop__logo"
+      >
+        <img
+          draggable="false"
+          src=""
+        />
+      </div>
+    </div>
+     
+    <ul
+      class="nav__desktop__list"
+    >
+      <li>
+        <router-link
+          exact-active-class="--active"
+          to="/"
+        >
+          <div
+            class="nav__desktop__list__item"
+          >
+            <!---->
+             
+            <span>
+              ITEM
+            </span>
+          </div>
+        </router-link>
+      </li>
+      <li>
+        <router-link
+          exact-active-class="--active"
+          to="/about/"
+        >
+          <div
+            class="nav__desktop__list__item"
+          >
+            <!---->
+             
+            <span>
+              ITEM
+            </span>
+          </div>
+        </router-link>
+      </li>
+      <li>
+        <a
+          aria-pressed="false"
+          exact-active-class="--active"
+          role="button"
+          tabindex="0"
+        >
+          <div
+            class="nav__desktop__list__item"
+          >
+            <!---->
+             
+            <span>
+              DROPDOWN
+            </span>
+          </div>
+        </a>
+      </li>
+      <li>
+        <router-link
+          exact-active-class="--active"
+          to="/contact/"
+        >
+          <div
+            class="nav__desktop__list__item"
+          >
+            <!---->
+             
+            <span>
+              ITEM
+            </span>
+          </div>
+        </router-link>
+      </li>
+    </ul>
+     
+    <div
+      class="nav__desktop__btns"
+    >
+      <a
+        class="nav__desktop__btn btn--primary"
+        href="tel:0161 123 4567"
+      >
+        
+        CALL
+      
+      </a>
+       
+      <div
+        aria-pressed="false"
+        class="nav__desktop__btn btn--outline"
+        role="button"
+        tabindex="0"
+      >
+        
+        ENQUIRE
+      
+      </div>
+    </div>
+  </div>
+   
+  <div
+    class="nav__mobile"
+  >
+    <div
+      class="nav__mobile__brand"
+    >
+      <div
+        class="nav__mobile__logo"
+      >
+        <img
+          draggable="false"
+          src=""
+        />
+      </div>
+    </div>
+     
+    <div
+      class="nav__mobile__btns"
+    >
+      <a
+        class="nav__mobile__btn btn--outline"
+        href="tel:0161 123 4567"
+      >
+        
+        CALL
+      
+      </a>
+       
+      <button
+        aria-pressed="true"
+        class="nav__mobile__btn btn--primary"
+        role="button"
+        tabindex="0"
+      >
+        
+        ENQUIRE
+      
+      </button>
+    </div>
+  </div>
+   
+  <div
+    aria-pressed="true"
+    class="nav__toggle"
+    role="button"
+    tabindex="0"
+  >
+    <i
+      class="material-icons"
+    >
+      close
+    </i>
+  </div>
+   
+  <div
+    class="nav__drawer text--secondary"
+  >
+    <div
+      class="nav__drawer__wrapper"
+    >
+      <div
+        class="nav__drawer__top"
+      />
+       
+      <ul
+        class="nav__drawer__list"
+      >
+        <li>
+          <router-link
+            exact-active-class="--active"
+            to="/"
+          >
+            <div
+              class="nav__menu__wrapper"
+            >
+              <!---->
+               
+              <span>
+                Item
+              </span>
+            </div>
+          </router-link>
+           
+          <!---->
+        </li>
+        <li>
+          <router-link
+            exact-active-class="--active"
+            to="/about/"
+          >
+            <div
+              class="nav__menu__wrapper"
+            >
+              <!---->
+               
+              <span>
+                Item
+              </span>
+            </div>
+          </router-link>
+           
+          <!---->
+        </li>
+        <li>
+          <a
+            aria-pressed="false"
+            exact-active-class="--active"
+            role="button"
+            tabindex="0"
+          >
+            <div
+              class="nav__menu__wrapper"
+            >
+              <!---->
+               
+              <span>
+                Dropdown
+              </span>
+            </div>
+          </a>
+           
+          <!---->
+        </li>
+        <li>
+          <router-link
+            exact-active-class="--active"
+            to="/contact/"
+          >
+            <div
+              class="nav__menu__wrapper"
+            >
+              <!---->
+               
+              <span>
+                Item
+              </span>
+            </div>
+          </router-link>
+           
+          <!---->
+        </li>
+      </ul>
+    </div>
+     
+    <div
+      class="nav__drawer__overlay"
+    />
+  </div>
+   
+  <!---->
+</nav>
+`;
+
+exports[`Storyshots organisms/Nav Show Drawer With Dropdown 1`] = `
+<nav
+  class="nav"
+  primary="true"
+>
+  <div
+    class="nav__desktop"
+  >
+    <div
+      class="nav__desktop__brand"
+    >
+      <div
+        class="nav__desktop__logo"
+      >
+        <img
+          draggable="false"
+          src=""
+        />
+      </div>
+    </div>
+     
+    <ul
+      class="nav__desktop__list"
+    >
+      <li>
+        <router-link
+          exact-active-class="--active"
+          to="/"
+        >
+          <div
+            class="nav__desktop__list__item"
+          >
+            <!---->
+             
+            <span>
+              ITEM
+            </span>
+          </div>
+        </router-link>
+      </li>
+      <li>
+        <router-link
+          exact-active-class="--active"
+          to="/about/"
+        >
+          <div
+            class="nav__desktop__list__item"
+          >
+            <!---->
+             
+            <span>
+              ITEM
+            </span>
+          </div>
+        </router-link>
+      </li>
+      <li>
+        <a
+          aria-pressed="false"
+          exact-active-class="--active"
+          role="button"
+          tabindex="0"
+        >
+          <div
+            class="nav__desktop__list__item"
+          >
+            <!---->
+             
+            <span>
+              DROPDOWN
+            </span>
+          </div>
+        </a>
+      </li>
+      <li>
+        <router-link
+          exact-active-class="--active"
+          to="/contact/"
+        >
+          <div
+            class="nav__desktop__list__item"
+          >
+            <!---->
+             
+            <span>
+              ITEM
+            </span>
+          </div>
+        </router-link>
+      </li>
+    </ul>
+     
+    <div
+      class="nav__desktop__btns"
+    >
+      <a
+        class="nav__desktop__btn btn--primary"
+        href="tel:0161 123 4567"
+      >
+        
+        CALL
+      
+      </a>
+       
+      <div
+        aria-pressed="false"
+        class="nav__desktop__btn btn--outline"
+        role="button"
+        tabindex="0"
+      >
+        
+        ENQUIRE
+      
+      </div>
+    </div>
+  </div>
+   
+  <div
+    class="nav__mobile"
+  >
+    <div
+      class="nav__mobile__brand"
+    >
+      <div
+        class="nav__mobile__logo"
+      >
+        <img
+          draggable="false"
+          src=""
+        />
+      </div>
+    </div>
+     
+    <div
+      class="nav__mobile__btns"
+    >
+      <a
+        class="nav__mobile__btn btn--outline"
+        href="tel:0161 123 4567"
+      >
+        
+        CALL
+      
+      </a>
+       
+      <button
+        aria-pressed="true"
+        class="nav__mobile__btn btn--primary"
+        role="button"
+        tabindex="0"
+      >
+        
+        ENQUIRE
+      
+      </button>
+    </div>
+  </div>
+   
+  <div
+    aria-pressed="true"
+    class="nav__toggle"
+    role="button"
+    tabindex="0"
+  >
+    <i
+      class="material-icons"
+    >
+      close
+    </i>
+  </div>
+   
+  <div
+    class="nav__drawer text--secondary"
+  >
+    <div
+      class="nav__drawer__wrapper"
+    >
+      <div
+        class="nav__drawer__top"
+      />
+       
+      <ul
+        class="nav__drawer__list"
+      >
+        <li>
+          <router-link
+            exact-active-class="--active"
+            to="/"
+          >
+            <div
+              class="nav__menu__wrapper"
+            >
+              <!---->
+               
+              <span>
+                Item
+              </span>
+            </div>
+          </router-link>
+           
+          <!---->
+        </li>
+        <li>
+          <router-link
+            exact-active-class="--active"
+            to="/about/"
+          >
+            <div
+              class="nav__menu__wrapper"
+            >
+              <!---->
+               
+              <span>
+                Item
+              </span>
+            </div>
+          </router-link>
+           
+          <!---->
+        </li>
+        <li>
+          <a
+            aria-pressed="false"
+            exact-active-class="--active"
+            role="button"
+            tabindex="0"
+          >
+            <div
+              class="nav__menu__wrapper"
+            >
+              <!---->
+               
+              <span>
+                Dropdown
+              </span>
+            </div>
+          </a>
+           
+          <!---->
+        </li>
+        <li>
+          <router-link
+            exact-active-class="--active"
+            to="/contact/"
+          >
+            <div
+              class="nav__menu__wrapper"
+            >
+              <!---->
+               
+              <span>
+                Item
+              </span>
+            </div>
+          </router-link>
+           
+          <!---->
+        </li>
+      </ul>
+    </div>
+     
+    <div
+      class="nav__drawer__overlay"
+    />
+  </div>
+   
+  <!---->
+</nav>
+`;
+
+exports[`Storyshots organisms/Nav Show Dropdown 1`] = `
+<nav
+  class="nav"
+  primary="true"
+>
+  <div
+    class="nav__desktop"
+  >
+    <div
+      class="nav__desktop__brand"
+    >
+      <div
+        class="nav__desktop__logo"
+      >
+        <img
+          draggable="false"
+          src=""
+        />
+      </div>
+    </div>
+     
+    <ul
+      class="nav__desktop__list"
+    >
+      <li>
+        <router-link
+          exact-active-class="--active"
+          to="/"
+        >
+          <div
+            class="nav__desktop__list__item"
+          >
+            <!---->
+             
+            <span>
+              ITEM
+            </span>
+          </div>
+        </router-link>
+      </li>
+      <li>
+        <router-link
+          exact-active-class="--active"
+          to="/about/"
+        >
+          <div
+            class="nav__desktop__list__item"
+          >
+            <!---->
+             
+            <span>
+              ITEM
+            </span>
+          </div>
+        </router-link>
+      </li>
+      <li>
+        <a
+          aria-pressed="false"
+          exact-active-class="--active"
+          role="button"
+          tabindex="0"
+        >
+          <div
+            class="nav__desktop__list__item"
+          >
+            <!---->
+             
+            <span>
+              DROPDOWN
+            </span>
+          </div>
+        </a>
+      </li>
+      <li>
+        <router-link
+          exact-active-class="--active"
+          to="/contact/"
+        >
+          <div
+            class="nav__desktop__list__item"
+          >
+            <!---->
+             
+            <span>
+              ITEM
+            </span>
+          </div>
+        </router-link>
+      </li>
+    </ul>
+     
+    <div
+      class="nav__desktop__btns"
+    >
+      <a
+        class="nav__desktop__btn btn--primary"
+        href="tel:0161 123 4567"
+      >
+        
+        CALL
+      
+      </a>
+       
+      <div
+        aria-pressed="false"
+        class="nav__desktop__btn btn--outline"
+        role="button"
+        tabindex="0"
+      >
+        
+        ENQUIRE
+      
+      </div>
+    </div>
+  </div>
+   
+  <div
+    class="nav__mobile"
+  >
+    <div
+      class="nav__mobile__brand"
+    >
+      <div
+        class="nav__mobile__logo"
+      >
+        <img
+          draggable="false"
+          src=""
+        />
+      </div>
+    </div>
+     
+    <div
+      class="nav__mobile__btns"
+    >
+      <a
+        class="nav__mobile__btn btn--outline"
+        href="tel:0161 123 4567"
+      >
+        
+        CALL
+      
+      </a>
+       
+      <button
+        aria-pressed="true"
+        class="nav__mobile__btn btn--primary"
+        role="button"
+        tabindex="0"
+      >
+        
+        ENQUIRE
+      
+      </button>
+    </div>
+  </div>
+   
+  <div
+    aria-pressed="true"
+    class="nav__toggle"
+    role="button"
+    tabindex="0"
+  >
+    <i
+      class="material-icons"
+    >
+      menu
+    </i>
+  </div>
+   
+  <!---->
+   
+  <div
+    class="nav__dropdown bg--primary"
+  >
+    <ul>
+      <li
+        class="nav__dropdown__item"
+      >
+        <a
+          exact-active-class="--active"
+          to="/dropdown-one/"
+        >
+          <div
+            class="nav__desktop__list__item"
+          >
+            <!---->
+             
+            <span
+              class="text--white"
+            >
+              DROPDOWN ITEM
+            </span>
+          </div>
+        </a>
+      </li>
+      <li
+        class="nav__dropdown__item"
+      >
+        <a
+          exact-active-class="--active"
+          to="/dropdown-two/"
+        >
+          <div
+            class="nav__desktop__list__item"
+          >
+            <!---->
+             
+            <span
+              class="text--white"
+            >
+              DROPDOWN ITEM
+            </span>
+          </div>
+        </a>
+      </li>
+      <li
+        class="nav__dropdown__item"
+      >
+        <a
+          exact-active-class="--active"
+          to="/dropdown-three/"
+        >
+          <div
+            class="nav__desktop__list__item"
+          >
+            <!---->
+             
+            <span
+              class="text--white"
+            >
+              DROPDOWN ITEM
+            </span>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+`;
+
+exports[`Storyshots pages/NotFoundComponent Primary 1`] = `
+<div
+  class="notfound pb--4 --notfound"
+>
+  <h1>
+    404
+  </h1>
+   
+  <h2>
+    HELLO, IS IT ME YOUR LOOKING FOR?
+  </h2>
+   
+  <div
+    class="img-wrapper"
+  >
+    <img
+      src=""
+    />
+  </div>
+</div>
+`;
