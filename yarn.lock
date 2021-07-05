@@ -1819,7 +1819,7 @@
   resolved "https://registry.yarnpkg.com/@soda/get-current-script/-/get-current-script-1.0.2.tgz#a53515db25d8038374381b73af20bb4f2e508d87"
   integrity sha512-T7VNNlYVM1SgQ+VsMYhnDkcGmWhQdL0bDyGm5TlQ3GBXnJscEClUUOKduWTmm2zCnvNLC1hc3JpuXjs/nFOc5w==
 
-"@storybook/addon-actions@6.3.2", "@storybook/addon-actions@^6.3.2":
+"@storybook/addon-actions@6.3.2":
   version "6.3.2"
   resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-6.3.2.tgz#0671a6ca17d9199239f2763398eda04e99bd1724"
   integrity sha512-kGengy5+RrBFjRaBmtlblltLaS4GtQEDnXV3g3Geeg9+PYSVKOvh2AgdPdQrjHSJFzpOBwUr3zMhXhdWrizyiQ==
@@ -2022,7 +2022,7 @@
     prop-types "^15.7.2"
     regenerator-runtime "^0.13.7"
 
-"@storybook/addons@6.3.2", "@storybook/addons@^6.2.9", "@storybook/addons@^6.3.0":
+"@storybook/addons@6.3.2", "@storybook/addons@^6.3.0":
   version "6.3.2"
   resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-6.3.2.tgz#a116f71e07e2ca17f2c59accff8aebd0d01e3a3e"
   integrity sha512-fzpTLKyweD0yPXnfjaOrLpKRm4AVHdGRmfJb1p6KyUTXoNRWGYHsXN3EvAdsWjTamhbL2JoQy38kvu7SmkTEug==
@@ -2161,7 +2161,7 @@
     ts-dedent "^2.0.0"
     util-deprecate "^1.0.2"
 
-"@storybook/client-api@6.3.2", "@storybook/client-api@^6.2.9":
+"@storybook/client-api@6.3.2":
   version "6.3.2"
   resolved "https://registry.yarnpkg.com/@storybook/client-api/-/client-api-6.3.2.tgz#2180bd4e3ae903a1f5199651644335a1abfddcff"
   integrity sha512-vYPTaROdmBtzKckGAbZAi8gpD2OgDB0FlsjTTe7rz8jcN1ecGRBBXlb/CJndLlAKgZqF+sramtIY3GZp0wdpPA==
@@ -2487,15 +2487,6 @@
     prettier "~2.2.1"
     regenerator-runtime "^0.13.7"
 
-"@storybook/testing-vue@^0.0.1":
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/@storybook/testing-vue/-/testing-vue-0.0.1.tgz#b90f3685bbacade9b71d2cd6c0c8b39dc8041394"
-  integrity sha512-pADFE6aD4ubRJ5rpA4phtedIMt0/NGy8qqxujV7jqqIYNIBK7tgufciHn+LVTZTIAvUsruWO3NNe2uvc4hlkog==
-  dependencies:
-    "@storybook/addons" "^6.2.9"
-    "@storybook/client-api" "^6.2.9"
-    "@storybook/vue" "^6.2.9"
-
 "@storybook/theming@6.3.2", "@storybook/theming@^6.3.2":
   version "6.3.2"
   resolved "https://registry.yarnpkg.com/@storybook/theming/-/theming-6.3.2.tgz#1fbee52cb46b0386431c016f5150c7c7a0a05d4b"
@@ -2549,7 +2540,7 @@
     resolve-from "^5.0.0"
     store2 "^2.12.0"
 
-"@storybook/vue@^6.2.9", "@storybook/vue@^6.3.2":
+"@storybook/vue@^6.3.2":
   version "6.3.2"
   resolved "https://registry.yarnpkg.com/@storybook/vue/-/vue-6.3.2.tgz#c4bf252162143ba5eac0298ff21fbb09cf96cfe2"
   integrity sha512-kIeoBTMuxtZt3nsTfhSriVLYUKOxC3cPku2MNMqv/E5thpLcQiXq88IhGuzMacCIf0pT7hkNhmr37rTk8KK2vg==
@@ -15651,6 +15642,11 @@ vue-property-decorator@8.3.0:
   integrity sha512-77YtTbZHd5CNiPzbqv51kEgL48yvD2dUDfF28vEyw3MbQ9bBAb/tDyFzskcqjNRbWyXk1vq4oM2CK/LfhxuIBg==
   dependencies:
     vue-class-component "^7.1.0"
+
+vue-router@^3.5.2:
+  version "3.5.2"
+  resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-3.5.2.tgz#5f55e3f251970e36c3e8d88a7cd2d67a350ade5c"
+  integrity sha512-807gn82hTnjCYGrnF3eNmIw/dk7/GE4B5h69BlyCK9KHASwSloD1Sjcn06zg9fVG4fYH2DrsNBZkpLtb25WtaQ==
 
 vue-style-loader@^4.1.0, vue-style-loader@^4.1.2:
   version "4.1.3"

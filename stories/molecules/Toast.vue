@@ -34,7 +34,6 @@ export default {
   mounted() {
     this.onShow()
   },
-  // FIXME vue updated vs mounted.. will it call twice?
   updated () {
     this.onShow()
   },

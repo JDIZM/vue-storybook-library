@@ -4,6 +4,14 @@ import NavDropdown from './NavDropdown';
 // import logo from static files
 import logoFile from '../../assets/logo.png'
 
+// decorator for vue router
+// https://github.com/storybookjs/storybook/issues/2683#issuecomment-841110043
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+Vue.use(VueRouter)
+// Alias `NuxtLink` to `RouterLink`
+Vue.component('NuxtLink', Vue.component('RouterLink'))
+
 export default {
   title: 'organisms/Nav',
   components: { NavMain, NavDrawer, NavDropdown },
@@ -14,6 +22,14 @@ export default {
     onDropdown: { action: 'onDropdown' },
     onRouteChange: { action: 'onRouteChange' }
   },
+  // create a decorator for vue router
+  // https://github.com/storybookjs/storybook/issues/2683#issuecomment-841110043
+  decorators: [(story) => ({
+    components: { story },
+    template: `<story />`,
+    // Without a router instance, RouterLink will fail
+    router: new VueRouter()
+  })]
 };
 
 // create an image object for the logo
