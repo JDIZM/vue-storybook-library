@@ -6,8 +6,6 @@ Live demo:
 https://vue-storybook-library.netlify.app
 ```
 
-built without vue/nuxt router links, the components need to be edited.
-
 run locally: `yarn storybook`
 
 see the [storybook docs](https://storybook.js.org/docs/vue/get-started/introduction) for more info.
