@@ -1,28 +1,53 @@
 // theme mixins
-// get the variables from the sass map in _vars.scss
-// $colours
-// $spacing
-// mixins to create class names automatically
-// & https://css-tricks.com/the-sass-ampersand/
-@mixin background {
-  @each $name, $colour in $colours {
-    // & appends to class name
-    &--#{"" + $name} {
-      background: $colour;
-    }
-  }
-}
-@mixin text {
-  @each $name, $colour in $colours {
-    // & appends to class name
-    &--#{"" + $name} {
-      color: $colour !important;
-      text-decoration: none; // also style links
-    }
-  }
-}
+// get the variables from the sass map in _theme.scss
+// mixins to create class names and css vars automatically
 // https://tailwindcss.com/docs/theme/#app
-// inherit spacing values
+
+
+// 1. root vars
+// create root vars
+@mixin vars {
+  // nest it inside the :root 
+  // it doesn't create multiple style tags then.
+  :root {
+    // colours
+    @each $name, $colour in $colours {
+      --#{"" + $name}: #{$colour};
+    }
+    // breakpoints
+    @each $size, $px in $breakpoints {
+      --#{"" + $size}: #{$px};
+    }
+  }
+}
+@include vars;
+
+// 2. colours
+@mixin colours {
+  @each $name, $colour  in $colours {
+    // background colours
+    // eg. bg--primary
+    .bg {
+       // & appends to parent class name
+      &--#{"" + $name} {
+       background-color: $colour;
+     }
+    }
+    // text colours
+    // eg text--primary
+    .text {
+      &--#{"" + $name} {
+       color: $colour;
+     }
+    }
+  }
+}
+@include colours;
+
+
+// 3. spacing
+// create spacing classes for margin and padding
+// m--1, p--1 etc
 @mixin spacing {
   @each $size, $rem in $spacing {
     // margin
@@ -50,29 +75,4 @@
     }
   }
 }
-
-// create bg classes with mixin
-// appends --colour eg bg--yellow
-.bg {
-  @include background;
-};
-// create text classes with mixin
-// appends --colour eg text--yellow
-.text {
-  @include text;
-};
-
-// create spacing classes for margin and padding
-// m--1, p--1 etc
 @include spacing;
-
-
-// create root vars for each colour
-@mixin vars {
-  @each $name, $colour in $colours {
-    :root {
-      --#{"" + $name}: #{$colour};
-    }
-  }
-}
-@include vars;

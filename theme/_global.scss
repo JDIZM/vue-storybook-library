@@ -5,16 +5,12 @@
   // @ 16px you can use 0.5 rem for an even 8px spacing grid
   font-size: 16px; // set root font-size
   line-height: 1.4; // unitless vertical rhythm
-  // font-family: var(--font-family);
   color: black;
 }
 
 html, body {
   background-color: white;
   margin: 0;
-  // height: 100%;
-  // all children 100%
-  // height set in container
 }
 body {
   // https://web.dev/font-display/
@@ -22,9 +18,6 @@ body {
   // assume default browser font size of 16px unless set in root
   font-size: 1rem; // rem is relative to the font-size of the root element
   line-height: 1.4; // unitless vertical rhythm
-  // // hide horizontal scroll on full width
-  // overflow: auto;
-  // overflow-x: hidden; 
 }
 
 div {
@@ -85,4 +78,9 @@ ul, ol, dl {
   input:focus {
     border-bottom: 2px solid var(--error);
   }
+}
+
+// display
+.--hidden {
+  display: none;
 }

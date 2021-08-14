@@ -1,9 +1,11 @@
 // theme colours http://getbem.com/naming/
-// sass variables won't work inside component files unless we compile the sass files with the main.scss
+// sass variables won't work inside component files
 // can use global css variables or
 // use custom class names for styling like tailwind.
 // @nuxtjs/style-resources allows you to use global variables
 // global css vars available at component level
+// it's possible to add global sass variables via webpack config
+// using additionalData property
 
 
 // theme colours
@@ -25,29 +27,12 @@ $colours: (
   blue: #1a1a1d,
 );
 
-@debug map-get($colours, secondary);
 $links: map-get($colours, secondary);
-@debug $links;
 
 :root {
   --links: #{$links};
   --font-family: "Roboto", system, sans-serif;
 }
-
-// make the sass vars accessible to the other files with map-get
-// only gets the variable doesn't create the primary class name.
-// vars aren't accessible at component level unless made global.
-// $primary: map-get($colours, primary);
-// $secondary: map-get($colours, secondary);
-// $error: map-get($colours, error);
-// $error-100: map-get($colours, error-100);
-
-// debug
-// @debug map-get($colours, primary);
-// @debug map-get($colours, primary-100);
-// @debug map-get($colours, error);
-// @debug map-get($colours, error-100);
-// @debug var(--primary);
 
 // create spacing units for mixin
 // margin and paddings will be created with mixin
@@ -62,5 +47,14 @@ $spacing: (
 $breakpoint-xs: 320px;
 $breakpoint-sm: 600px;
 $breakpoint-md: 768px;
-$breakpoint-lg: 960px; // was 1200px
-$breakpoint-xl: 1500px;
+$breakpoint-lg: 960px;
+$breakpoint-xl: 1200px;
+
+// breakpoints
+$breakpoints: (
+  xs: 320px,
+  sm: 600px,
+  md: 768px,
+  lg: 960px,
+  xl: 1200px
+);
