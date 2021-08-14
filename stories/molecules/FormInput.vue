@@ -1,104 +1,106 @@
 <template>
   <div :class="classes" class="form__field">
-    <label :for="name" v-if="!hideLabel">{{ label }}</label>
+    <label v-if="!hideLabel" :for="name">{{ label }}</label>
     <span v-if="showSuccess" class="material-icons">check</span>
     <span v-if="showError" class="material-icons text--error">error</span>
-    <span v-else-if="showIcon && !showSuccess" class="material-icons">{{ icon }}</span>   
+    <span v-else-if="showIcon && !showSuccess" class="material-icons">{{
+      icon
+    }}</span>
     <textarea
       v-if="type === 'textarea'"
-      @input="$emit('update', $event.target.value)" 
-      rows="4" 
+      :id="name"
+      rows="4"
       cols="50"
-      class="bg--primary-100" 
-      :value="value" 
-      :id="name" 
-      :type="type" 
-      :name="name" 
+      class="bg--primary-100"
+      :value="value"
+      :type="type"
+      :name="name"
       :placeholder="placeholder"
+      @input="$emit('update', $event.target.value)"
     />
     <input
       v-else
-      class="bg--primary-100" 
-      :value="value" 
-      @input="$emit('update', $event.target.value)" 
-      :id="name" 
-      :type="type" 
-      :name="name" 
+      :id="name"
+      class="bg--primary-100"
+      :value="value"
+      :type="type"
+      :name="name"
       :placeholder="placeholder"
-    >
+      @input="$emit('update', $event.target.value)"
+    />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Input',
+  name: "Input",
+  model: {
+    data: "value",
+    event: "update",
+  },
   props: {
     name: {
       type: String,
-      required: true
+      required: true,
     },
     placeholder: {
       type: String,
-      required: true
+      required: true,
     },
     type: {
       type: String,
-      required: true
+      required: true,
     },
     label: {
       type: String,
-      required: true
+      required: true,
     },
     icon: {
       type: String,
-      required: true
+      required: true,
     },
     showIcon: {
       type: Boolean,
-      required: true
+      required: true,
     },
     showError: {
       type: Boolean,
       required: false,
-      default: false
+      default: false,
     },
     showSuccess: {
       type: Boolean,
       required: false,
-      default: false
+      default: false,
     },
     hideLabel: {
       type: Boolean,
       required: false,
-      default: false
-    }
-  },
-  model: {
-    data: "value",
-    event: "update"
+      default: false,
+    },
   },
   data() {
     return {
-      value: ''
-    }
-  },
-  methods: {
-    onSubmit () {
-     this.$emit('onSubmit');
-    }
+      value: "",
+    };
   },
   computed: {
     classes() {
       return {
-        '--error': this.showError,
-        '--success': this.showSuccess,
-        'form__field--no-label': this.hideLabel
-      }
-    }
-  }
-}
+        "--error": this.showError,
+        "--success": this.showSuccess,
+        "form__field--no-label": this.hideLabel,
+      };
+    },
+  },
+  methods: {
+    onSubmit() {
+      this.$emit("onSubmit");
+    },
+  },
+};
 </script>
 
 <style lang="scss">
-@import './FormInput.scss';
+@import "./FormInput.scss";
 </style>

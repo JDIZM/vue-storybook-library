@@ -1,56 +1,56 @@
 <template>
-<div class="toast-wrapper">
-  <div v-if="show" class="toast bg--primary text--white active">
-    <span class="material-icons">{{ icon }}</span>
-    <p>{{ msg }}</p>
+  <div class="toast-wrapper">
+    <div v-if="show" class="toast bg--primary text--white active">
+      <span class="material-icons">{{ icon }}</span>
+      <p>{{ msg }}</p>
+    </div>
   </div>
-</div>
 </template>
 
 <script>
 export default {
-  name: 'Toast',
+  name: "Toast",
   props: {
     show: Boolean,
     icon: {
       type: String,
       required: false,
-      default: 'info'
+      default: "info",
     },
     msg: {
       type: String,
-      required: true
+      required: true,
     },
     duration: {
       type: Number,
-      required: true
-    }
+      required: true,
+    },
   },
-  data () {
+  data() {
     return {
       //
-    }
+    };
   },
   mounted() {
-    this.onShow()
+    this.onShow();
   },
-  updated () {
-    this.onShow()
+  updated() {
+    this.onShow();
   },
   methods: {
     //
-    onShow () {
-      if(this.show){
+    onShow() {
+      if (this.show) {
         setTimeout(() => {
-          this.$emit('onTimeout') // emit timeout event to parent
-          console.log('timeout')
-        }, this.duration) // after set duration
+          this.$emit("onTimeout"); // emit timeout event to parent
+          console.log("timeout");
+        }, this.duration); // after set duration
       }
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
-@import './Toast.scss';
+@import "./Toast.scss";
 </style>

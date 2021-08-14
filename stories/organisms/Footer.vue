@@ -11,10 +11,9 @@
           <h3>SOCIAL</h3>
           <ul>
             <li v-for="link in social" :key="link.name">
-              <a
-                :href="link.path"
-                :aria-label="link.aria"
-                ><i :class="link.iconClass" /></a>
+              <a :href="link.path" :aria-label="link.aria">
+                <i :class="link.iconClass" />
+              </a>
             </li>
           </ul>
         </div>
@@ -65,10 +64,7 @@ export default {
     social: {
       type: Array,
       required: true,
-      // default: () => {
-      //   [{linkedin: 'https://linkedin.com'}]
-      // } 
-    }
+    },
   },
 };
 </script>

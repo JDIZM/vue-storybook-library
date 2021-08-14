@@ -1,14 +1,12 @@
-//  different button states.
-import Button from './Button.vue'
-// 
+import Button from "./Button.vue";
 
 export default {
-  title: 'atoms/Button',
-  components: { Button},
-  argTypes: { 
-    onClick: { action: 'onClick' },
+  title: "atoms/Button",
+  components: { Button },
+  argTypes: {
+    onClick: { action: "onClick" },
     // backgroundColor: { control: 'color' },
-  }
+  },
 };
 
 const Template = (args, { argTypes }) => ({
@@ -19,26 +17,22 @@ const Template = (args, { argTypes }) => ({
 
 export const Primary = Template.bind({});
 Primary.args = {
-  //
-  label: 'PRIMARY',
+  label: "PRIMARY",
   primary: true,
-}
+};
 export const Outline = Template.bind({});
 Outline.args = {
-  //
-  label: 'OUTLINE',
+  label: "OUTLINE",
   outline: true,
-}
+};
 export const Disabled = Template.bind({});
 Disabled.args = {
-  //
-  label: 'DISABLED',
+  label: "DISABLED",
   disabled: true,
-}
+};
 
 export const Destruct = Template.bind({});
 Destruct.args = {
-  //
-  label: 'DELETE',
+  label: "DELETE",
   destruct: true,
-}
+};

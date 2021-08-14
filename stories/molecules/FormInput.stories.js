@@ -4,90 +4,84 @@ export default {
   title: "molecules/FormInput",
   component: FormInput,
   argTypes: {
-    onUpdate: { action: "onUpdate" }
-  }
+    onUpdate: { action: "onUpdate" },
+  },
 };
 
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { FormInput },
-  template: '<FormInput v-bind="$props" @update="onUpdate" />'
+  template: '<FormInput v-bind="$props" @update="onUpdate" />',
 });
 
 export const TextInputWithoutIcon = Template.bind({});
 TextInputWithoutIcon.args = {
-  name: "TextInput",
-  label: "label",
-  icon: "phone",
-  placeholder: "Enter some text",
+  name: "name",
+  label: "Enter a name",
+  placeholder: "John Smith",
   type: "text",
   showIcon: false,
   showError: false,
-  showSuccess: false
-  // value: ''
+  showSuccess: false,
 };
 
 export const TextArea = Template.bind({});
 TextArea.args = {
-  name: "TextInput",
+  name: "message",
   label: "label",
   icon: "message",
   placeholder: "Enter a message",
   type: "textarea",
   showIcon: true,
   showError: false,
-  showSuccess: false
-  // value: ''
+  showSuccess: false,
 };
 
 export const InputWithIcon = Template.bind({});
 InputWithIcon.args = {
-  name: "InputWithIcon",
+  name: "phone",
   label: "Phone",
   icon: "phone",
   placeholder: "Enter your phone number",
-  type: "tel",
+  type: "phone",
   showIcon: true,
   showError: false,
   showSuccess: false,
-  value: ''
+  value: "",
 };
 
 export const InputWithError = Template.bind({});
 InputWithError.args = {
-  name: "InputWithError",
+  name: "phone",
   label: "Phone",
   icon: "phone",
   placeholder: "Enter your phone number",
-  type: "text",
+  type: "phone",
   showIcon: true,
   showError: true,
-  value: ''
 };
 
 export const InputWithSuccess = Template.bind({});
 InputWithSuccess.args = {
-  name: "InputWithSuccess",
+  name: "phone",
   label: "Phone",
   icon: "phone",
   placeholder: "Enter your phone number",
-  type: "text",
+  type: "phone",
   showIcon: true,
   showError: false,
   showSuccess: true,
-  value: ''
 };
 
 export const InputWithNoLabel = Template.bind({});
 InputWithNoLabel.args = {
-  name: "InputWithNoLabel",
+  name: "phone",
   label: "Phone",
   icon: "phone",
   placeholder: "Enter your phone number",
-  type: "text",
+  type: "phone",
   showIcon: true,
   showError: false,
   showSuccess: false,
-  value: '',
-  hideLabel: true
+  hideLabel: true,
 };

@@ -2,9 +2,15 @@
   <div v-if="showDropdown" class="nav__dropdown bg--primary">
     <ul>
       <li v-for="item in items" :key="item.path" class="nav__dropdown__item">
-        <router-link v-if="item.path" :to="item.path" exact-active-class="--active">
+        <router-link
+          v-if="item.path"
+          :to="item.path"
+          exact-active-class="--active"
+        >
           <div class="nav__desktop__list__item">
-            <span v-if="item.icon" class="material-icons text--white">{{ item.icon }}</span>
+            <span v-if="item.icon" class="material-icons text--white">
+              {{ item.icon }}
+            </span>
             <span class="text--white">{{ item.name.toUpperCase() }}</span>
           </div>
         </router-link>
@@ -15,23 +21,23 @@
 
 <script>
 export default {
-  name: 'NavDropdown',
+  name: "NavDropdown",
   props: {
     items: {
       type: Array,
-      required: true
+      required: true,
     },
     showDropdown: {
       type: Boolean,
-      required: true
-    }
+      required: true,
+    },
   },
-  data () {
+  data() {
     return {
       //
-    }
-  }
-}
+    };
+  },
+};
 </script>
 
 <style lang="scss" scoped>

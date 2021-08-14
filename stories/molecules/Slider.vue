@@ -1,22 +1,21 @@
 <template>
   <div class="slider">
     <div
-      class="slider__item"
       v-for="(slide, i) in slides"
       :key="i"
+      class="slider__item"
       :class="{ 'slider__item--active': currentSlide === i }"
     >
-      <img :src="slide.src" :alt="slide.title" draggable="false"/>
+      <img :src="slide.src" :alt="slide.title" draggable="false" />
     </div>
     <div class="slider__btns">
       <div
         v-for="(slide, i) in slides"
         :key="i"
-        @click.prevent="selectSlide(i)"
         class="slider__btns__btn"
         :class="{ 'slider__btns__btn--active': currentSlide === i }"
-      >
-      </div>
+        @click.prevent="selectSlide(i)"
+      ></div>
     </div>
   </div>
 </template>
@@ -53,7 +52,7 @@ export default {
 .slider__item {
   display: none;
   height: 100%;
-  padding: .5rem 0;
+  padding: 0.5rem 0;
 }
 .slider__btns {
   display: flex;
@@ -64,9 +63,9 @@ export default {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  margin: .25rem;
+  margin: 0.25rem;
   cursor: pointer;
-  background-color:  var(--blue);
+  background-color: var(--blue);
   &.slider__btns__btn--active {
     background-color: var(--secondary);
   }

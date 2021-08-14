@@ -1,6 +1,6 @@
 <template>
-<div class="image">
-    <picture >
+  <div class="image">
+    <picture>
       <source
         :src="src"
         :alt="alt"
@@ -8,7 +8,13 @@
         :sizes="sizes"
         type="image/webp"
       />
-      <img :src="src" :alt="alt" :srcSet="srcset" :sizes="sizes" draggable="false" />
+      <img
+        :src="src"
+        :alt="alt"
+        :srcSet="srcset"
+        :sizes="sizes"
+        draggable="false"
+      />
     </picture>
   </div>
 </template>

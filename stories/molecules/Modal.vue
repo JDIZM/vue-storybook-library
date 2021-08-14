@@ -6,18 +6,8 @@
         <p>{{ msg }}</p>
       </div>
       <div class="modal-footer">
-        <Button
-          @onClick="$emit('confirm')"
-          left
-          label="CONFIRM"
-          outline
-        />
-        <Button
-          @onClick="$emit('close')"
-          left
-          label="CLOSE"
-          primary
-        />
+        <Button left label="CONFIRM" outline @onClick="$emit('confirm')" />
+        <Button left label="CLOSE" primary @onClick="$emit('close')" />
       </div>
     </div>
     <div v-if="show" class="modal-overlay" />
@@ -25,31 +15,31 @@
 </template>
 
 <script>
-import Button from '../atoms/Button.vue'
+import Button from "../atoms/Button.vue";
 export default {
-  name: 'Modal',
+  name: "Modal",
   components: {
-    Button
+    Button,
   },
   props: {
     show: Boolean,
     title: {
       type: String,
-      required: true
+      required: true,
     },
     msg: {
       type: String,
-      required: true
-    }
+      required: true,
+    },
   },
-  data () {
+  data() {
     return {
-      // 
-    }
-  }
-}
+      //
+    };
+  },
+};
 </script>
 
 <style lang="scss" scoped>
-@import './Modal.scss';
+@import "./Modal.scss";
 </style>

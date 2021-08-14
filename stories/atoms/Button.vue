@@ -26,12 +26,10 @@ export default {
     },
     disabled: {
       type: Boolean,
-      required: false,
       default: () => false,
     },
     destruct: {
       type: Boolean,
-      required: false,
       default: () => false,
     },
     label: {
@@ -40,18 +38,13 @@ export default {
     },
     backgroundColor: {
       type: String,
+      default: " ",
     },
     left: {
       type: Boolean,
       required: false,
       default: () => false,
     },
-  },
-  data() {
-    return {
-      //
-      // styles: ['btn', 'btn--primary']
-    };
   },
   computed: {
     // class binding method 1

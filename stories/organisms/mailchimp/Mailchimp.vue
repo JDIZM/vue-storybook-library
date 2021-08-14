@@ -1,98 +1,87 @@
 <template>
   <div class="form">
-    <form @submit.prevent="onSubmit">
-      <FormInput 
+    <form id="subscribe" @submit.prevent="onSubmit">
+      <FormInput
+        ref="email"
+        v-model="email"
         name="email"
         type="email"
         :label="label"
         placeholder="Enter your email"
         icon="email"
-        :showIcon="true"
-        :showError="showError"
-        :showSuccess="showSuccess"
-        v-model="email"
-        @update="onUpdate"
+        :show-icon="true"
+        :show-error="showError"
+        :show-success="showSuccess"
         required
+        @update="onUpdate"
       />
-      <span v-if="showError" class="text--error">please enter an email address</span>
-      <Button
-        @onClick="onSubmit"
-        type="submit"
-        left
-        label="SUBMIT"
-        primary
-      />
+      <span v-if="showError" class="text--error">
+        please enter an email address
+      </span>
     </form>
+    <Button
+      type="submit"
+      left
+      label="SUBMIT"
+      primary
+      form="subscribe"
+      @onClick="onSubmit"
+    />
   </div>
 </template>
 
 <script>
-import FormInput from '../../molecules/FormInput.vue'
-import Button from '../../atoms/Button.vue'
+import FormInput from "../../molecules/FormInput.vue";
+import Button from "../../atoms/Button.vue";
 export default {
-  name: 'Form',
+  name: "Form",
   components: {
     FormInput,
-    Button
+    Button,
+  },
+  model: {
+    data: "value",
+    event: "update",
   },
   props: {
     label: {
       type: String,
-      required: true
+      required: true,
     },
     showSuccess: {
       type: Boolean,
-      required: false,
-      default: () => false
+      default: () => false,
     },
     showError: {
       type: Boolean,
-      required: false,
-      default: () => false
-    }
+      default: () => false,
+    },
   },
-  model: {
-    data: "value",
-    event: "update"
-  },
-  data () {
+  data() {
     return {
-      //
-      email: ''
-    }
-  },
-  methods: {
-    onSubmit () {
-      // validate on submit
-      if (this.email === null || this.email === '') {
-        this.showError = true
-      }
-      this.$emit('onSubmit', this.email)
-      // logic on emit.
-      // send to mailchimp firebase function
-    },
-    onUpdate(value) {
-      this.$emit('onUpdate', value)
-    },
-    // TODO mailchimp
-    async subscribeToList (email) {
-      // https://mailchimp.com/developer/guides/marketing-api-quick-start/#install-the-client-library-for-your-language
-      await this.axios.post('/api/mailchimp/', email, {
-       headers: {
-          "Content-Type": "application/x-www-form-urlencoded"
-        },
-      })
-      .then((response) => {
-        console.log(response.data)
-      })
-    }
+      email: "",
+    };
   },
   computed: {
-    // 
-  }
-}
+    //
+  },
+  methods: {
+    // FIXME native html form validation stopped working
+    onSubmit() {
+      // console.log(this.$refs["email"].$el.children[2].validity);
+      if (this.email === null || this.email === "") {
+        this.$emit("onError", this.email);
+      } else {
+        this.$emit("onSubmit", this.email);
+      }
+    },
+    onUpdate(value) {
+      this.$emit("onUpdate", value);
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
-@import './Form.scss';
+@import "./Form.scss";
 </style>

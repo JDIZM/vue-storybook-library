@@ -9,38 +9,46 @@
       <!--  -->
       <ul class="nav__desktop__list">
         <li v-for="link in links" :key="link.path">
-          <router-link v-if="link.path" :to="link.path" exact-active-class="--active">
+          <router-link
+            v-if="link.path"
+            :to="link.path"
+            exact-active-class="--active"
+          >
             <div class="nav__desktop__list__item">
-              <span v-if="link.icon" class="material-icons">{{ link.icon }}</span>
+              <span v-if="link.icon" class="material-icons">
+                {{ link.icon }}
+              </span>
               <span v-if="link.name">{{ link.name.toUpperCase() }}</span>
             </div>
           </router-link>
           <a
             v-else
-            @click.prevent="onDropdown"
             exact-active-class="--active"
             role="button"
             aria-pressed="false"
             tabindex="0"
+            @click.prevent="onDropdown"
           >
             <div class="nav__desktop__list__item">
-              <span v-if="link.icon" class="material-icons">{{ link.icon }}</span>
+              <span v-if="link.icon" class="material-icons">
+                {{ link.icon }}
+              </span>
               <span v-if="link.name">{{ link.name.toUpperCase() }}</span>
             </div>
           </a>
         </li>
       </ul>
-       <div class="nav__desktop__btns">
+      <div class="nav__desktop__btns">
         <a :href="'tel:' + phone" class="nav__desktop__btn btn--primary">
           CALL
         </a>
         <div
-          @click.prevent="onEnquire"
-          @keydown.enter.prevent="onEnquire"
           class="nav__desktop__btn btn--outline"
           role="button"
           aria-pressed="false"
           tabindex="0"
+          @click.prevent="onEnquire"
+          @keydown.enter.prevent="onEnquire"
         >
           ENQUIRE
         </div>
@@ -58,12 +66,12 @@
           CALL
         </a>
         <button
-          @click.prevent="onEnquire"
-          @keydown.enter.prevent="onEnquire"
           class="nav__mobile__btn btn--primary"
           role="button"
           aria-pressed="true"
           tabindex="0"
+          @click.prevent="onEnquire"
+          @keydown.enter.prevent="onEnquire"
         >
           ENQUIRE
         </button>
@@ -71,55 +79,52 @@
     </div>
     <!-- toggle hidden on desktop with display:none -->
     <div
-      @click="onShowDrawer"
       class="nav__toggle"
       role="button"
       aria-pressed="true"
       tabindex="0"
+      @click="onShowDrawer"
     >
       <i v-if="!showDrawer" class="material-icons">menu</i>
       <i v-else class="material-icons">close</i>
     </div>
     <NavDrawer
       :links="links"
-      :showDrawer="showDrawer"
-      :dropdownItems="dropdownItems"
+      :show-drawer="showDrawer"
+      :dropdown-items="dropdownItems"
+      :logo-src="logoSrc"
       @close="onCloseDrawer"
-      :logoSrc="logoSrc"
       @onDropdown="onDropdown"
     />
-    <NavDropdown
-      :items="dropdownItems"
-      :showDropdown="showDropdown"
-    />
+    <NavDropdown :items="dropdownItems" :show-dropdown="showDropdown" />
   </nav>
 </template>
 
 <script>
-import NavDrawer from './NavDrawer'
-import NavDropdown from './NavDropdown'
+import NavDrawer from "./NavDrawer";
+import NavDropdown from "./NavDropdown";
 export default {
-  name: 'NavMain',
+  name: "NavMain",
   components: {
     NavDrawer,
-    NavDropdown
+    NavDropdown,
   },
   props: {
     links: {
       type: Array,
-      required: true
+      required: true,
     },
     showDrawer: {
       type: Boolean,
-      required: true
+      required: true,
     },
     showDropdown: {
       type: Boolean,
-      required: true
+      required: true,
     },
     dropdownItems: {
       type: Array,
-      required: true
+      required: true,
     },
     logoSrc: {
       type: String,
@@ -128,37 +133,37 @@ export default {
     phone: {
       type: String,
       required: true,
-    }
+    },
   },
-  data () {
+  data() {
     return {
       //
-    }
+    };
   },
   watch: {
     // watch the route and call method
-    '$route.fullPath': 'onRouteChange'
+    "$route.fullPath": "onRouteChange",
   },
   methods: {
     //
-    onDropdown () {
-      this.$emit('onDropdown')
+    onDropdown() {
+      this.$emit("onDropdown");
     },
-    onEnquire () {
-      this.$emit('onEnquire');
+    onEnquire() {
+      this.$emit("onEnquire");
     },
-    onRouteChange () {
+    onRouteChange() {
       // react to route changes...
-      this.$emit('onReset')
+      this.$emit("onReset");
     },
-    onShowDrawer () {
-      this.$emit('onShowDrawer')
+    onShowDrawer() {
+      this.$emit("onShowDrawer");
     },
-    onCloseDrawer () {
-      this.$emit('onCloseDrawer')
-    }
-  }
-}
+    onCloseDrawer() {
+      this.$emit("onCloseDrawer");
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
