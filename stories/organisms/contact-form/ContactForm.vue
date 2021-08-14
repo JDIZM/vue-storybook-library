@@ -1,6 +1,5 @@
 <template>
   <div id="form" class="form">
-    <!-- form fires twice if handler attached to form -->
     <form @submit.prevent>
       <FormInput
         v-for="(input, i) in inputs"
@@ -23,15 +22,15 @@
         <span class="material-icons text--success">check</span>
         <span class="text--primary">Your message has been sent!</span>
       </div>
+      <Button
+        type="submit"
+        left
+        label="SUBMIT"
+        primary
+        form="form"
+        @onClick="onSubmit"
+      />
     </form>
-    <Button
-      type="submit"
-      left
-      label="SUBMIT"
-      primary
-      form="form"
-      @onClick="onSubmit"
-    />
   </div>
 </template>
 
@@ -55,7 +54,7 @@ export default {
     },
     showSuccess: {
       type: Boolean,
-      default: () => false,
+      default: false,
     },
   },
   data() {
@@ -65,11 +64,10 @@ export default {
   },
   methods: {
     onSubmit() {
-      // TODO validate the values in the inputs array.. from numbers 0 - x
+      // TODO validate
       // FIXME native html form validation
       if (!this.values.length) this.$emit("error");
       else this.$emit("onSubmit", this.values);
-      // use axios to post emitted data to firebase function
     },
     onUpdate(value, i) {
       this.values[i] = value;
