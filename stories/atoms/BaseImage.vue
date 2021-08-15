@@ -1,13 +1,7 @@
 <template>
   <div class="image">
     <picture>
-      <source
-        :src="src"
-        :alt="alt"
-        :srcSet="srcset"
-        :sizes="sizes"
-        type="image/webp"
-      />
+      <source :alt="alt" :srcSet="srcset" :sizes="sizes" type="image/webp" />
       <img
         :src="src"
         :alt="alt"

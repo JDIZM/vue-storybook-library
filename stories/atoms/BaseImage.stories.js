@@ -24,5 +24,4 @@ Primary.args = {
   src,
   srcset,
   sizes,
-  style: "width: 400px; height: 400px",
 };
