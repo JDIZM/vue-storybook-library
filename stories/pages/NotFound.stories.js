@@ -2,7 +2,7 @@ import NotFoundComponent from "./NotFoundComponent.vue";
 import imgSrc from "../assets/lionel-richie.jpg";
 
 export default {
-  title: "pages/NotFoundComponent",
+  title: "pages/Not Found Component",
   component: NotFoundComponent,
 };
 
@@ -12,8 +12,8 @@ const Template = (args, { argTypes }) => ({
   template: '<NotFoundComponent :imgSrc="imgSrc" />',
 });
 
-export const Primary = Template.bind({});
+export const notFoundComponent = Template.bind({});
 
-Primary.args = {
+notFoundComponent.args = {
   imgSrc: imgSrc,
 };

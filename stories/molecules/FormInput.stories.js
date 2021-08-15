@@ -1,7 +1,7 @@
 import FormInput from "./FormInput.vue";
 
 export default {
-  title: "molecules/FormInput",
+  title: "molecules/Form Input",
   component: FormInput,
   argTypes: {
     update: { action: "update" },
