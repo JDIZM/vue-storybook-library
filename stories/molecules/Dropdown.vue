@@ -8,7 +8,7 @@
       <div
         class="dropdown__trigger"
         :class="{ active: dropdown.isActive }"
-        @click="activate(dropdown)"
+        @click="onActive(dropdown)"
       >
         {{ dropdown.title }}
       </div>
@@ -30,15 +30,10 @@ export default {
       required: true,
     },
   },
-  data() {
-    return {
-      //
-    };
-  },
   methods: {
-    activate(dropdown) {
+    onActive(dropdown) {
       dropdown.isActive = !dropdown.isActive;
-      this.$emit("onClick", dropdown);
+      this.$emit("click", dropdown);
     },
   },
 };

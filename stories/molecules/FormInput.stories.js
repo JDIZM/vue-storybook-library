@@ -4,14 +4,14 @@ export default {
   title: "molecules/FormInput",
   component: FormInput,
   argTypes: {
-    onUpdate: { action: "onUpdate" },
+    update: { action: "update" },
   },
 };
 
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { FormInput },
-  template: '<FormInput v-bind="$props" @update="onUpdate" />',
+  template: '<FormInput v-bind="$props" @update="update" />',
 });
 
 export const TextInputWithoutIcon = Template.bind({});
@@ -47,7 +47,6 @@ InputWithIcon.args = {
   showIcon: true,
   showError: false,
   showSuccess: false,
-  value: "",
 };
 
 export const InputWithError = Template.bind({});

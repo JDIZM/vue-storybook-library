@@ -4,7 +4,7 @@ export default {
   title: "molecules/Dropdown",
   component: Dropdown,
   argTypes: {
-    onClick: { action: "onClick" },
+    click: { action: "click" },
   },
 };
 
@@ -12,7 +12,7 @@ export default {
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { Dropdown },
-  template: '<Dropdown v-bind="$props" @onClick="onClick" />',
+  template: '<Dropdown v-bind="$props" @click="click" />',
 });
 
 //

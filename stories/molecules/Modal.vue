@@ -6,8 +6,8 @@
         <p>{{ msg }}</p>
       </div>
       <div class="modal-footer">
-        <Button left label="CONFIRM" outline @onClick="$emit('confirm')" />
-        <Button left label="CLOSE" primary @onClick="$emit('close')" />
+        <Button left label="CONFIRM" outline @click="$emit('confirm')" />
+        <Button left label="CLOSE" primary @click="$emit('close')" />
       </div>
     </div>
     <div v-if="show" class="modal-overlay" />
@@ -31,11 +31,6 @@ export default {
       type: String,
       required: true,
     },
-  },
-  data() {
-    return {
-      //
-    };
   },
 };
 </script>

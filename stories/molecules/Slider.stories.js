@@ -4,7 +4,7 @@ export default {
   title: "molecules/Slider",
   component: Slider,
   argTypes: {
-    onSlide: { action: "onSlide" },
+    slide: { action: "slide" },
   },
 };
 
@@ -31,7 +31,7 @@ const slides = [
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { Slider },
-  template: '<Slider v-bind="$props" @onSlide="onSlide"/>',
+  template: '<Slider v-bind="$props" @slide="slide"/>',
 });
 
 //

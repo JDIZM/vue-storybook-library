@@ -37,7 +37,7 @@ export default {
   methods: {
     selectSlide(i) {
       this.currentSlide = i;
-      this.$emit("onSlide", i);
+      this.$emit("slide", i);
     },
   },
 };

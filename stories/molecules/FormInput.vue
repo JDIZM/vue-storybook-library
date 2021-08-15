@@ -3,9 +3,9 @@
     <label v-if="!hideLabel" :for="name">{{ label }}</label>
     <span v-if="showSuccess" class="material-icons">check</span>
     <span v-if="showError" class="material-icons text--error">error</span>
-    <span v-else-if="showIcon && !showSuccess" class="material-icons">{{
-      icon
-    }}</span>
+    <span v-else-if="showIcon && !showSuccess" class="material-icons">
+      {{ icon }}
+    </span>
     <textarea
       v-if="type === 'textarea'"
       :id="name"
@@ -57,7 +57,7 @@ export default {
     },
     icon: {
       type: String,
-      required: true,
+      default: "",
     },
     showIcon: {
       type: Boolean,
@@ -65,23 +65,20 @@ export default {
     },
     showError: {
       type: Boolean,
-      required: false,
       default: false,
     },
     showSuccess: {
       type: Boolean,
-      required: false,
       default: false,
     },
     hideLabel: {
       type: Boolean,
-      required: false,
       default: false,
     },
   },
   data() {
     return {
-      value: "",
+      value: null,
     };
   },
   computed: {

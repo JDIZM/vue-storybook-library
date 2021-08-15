@@ -4,7 +4,7 @@ export default {
   title: "molecules/Toast",
   component: Toast,
   argTypes: {
-    onTimeout: { action: "onTimeout" },
+    timeout: { action: "timeout" },
     // close: { action: "close" },
   },
 };
@@ -13,7 +13,7 @@ export default {
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { Toast },
-  template: '<Toast v-bind="$props" @onTimeout="onTimeout" />',
+  template: '<Toast v-bind="$props" @timeout="timeout" />',
 });
 
 //

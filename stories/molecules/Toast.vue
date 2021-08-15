@@ -14,7 +14,6 @@ export default {
     show: Boolean,
     icon: {
       type: String,
-      required: false,
       default: "info",
     },
     msg: {
@@ -25,11 +24,6 @@ export default {
       type: Number,
       required: true,
     },
-  },
-  data() {
-    return {
-      //
-    };
   },
   mounted() {
     this.onShow();
@@ -42,8 +36,7 @@ export default {
     onShow() {
       if (this.show) {
         setTimeout(() => {
-          this.$emit("onTimeout"); // emit timeout event to parent
-          console.log("timeout");
+          this.$emit("timeout"); // emit timeout event to parent
         }, this.duration); // after set duration
       }
     },
