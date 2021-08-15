@@ -15,7 +15,7 @@ const sizes = "(max-width: 500px) 300px, (max-width: 800px) 600px, 100vw";
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { BaseImage },
-  template: '<BaseImage v-bind="$props"/>',
+  template: '<BaseImage v-bind="$props" style="height: 400px; width: 400px;"/>',
 });
 
 export const Primary = Template.bind({});
