@@ -61,17 +61,7 @@ const inputs = [
   },
 ];
 
-export const ContactFormWithIcons = Template.bind({});
-ContactFormWithIcons.args = {
-  inputs: inputs,
-};
-
-export const formWithError = Template.bind({});
-formWithError.args = {
-  inputs: inputs,
-};
-
-export const formWithSuccess = Template.bind({});
-formWithSuccess.args = {
+export const contactForm = Template.bind({});
+contactForm.args = {
   inputs: inputs,
 };
