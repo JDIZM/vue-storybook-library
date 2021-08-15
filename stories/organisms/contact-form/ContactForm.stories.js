@@ -6,21 +6,19 @@ import InputWithIcon from "../../molecules/FormInput.stories";
 import Button from "../../atoms/Button.stories";
 
 export default {
-  title: "organisms/ContactForm",
+  title: "organisms/Contact Form",
   component: Form,
   subcomponents: { InputWithIcon, Button },
   argTypes: {
-    onSubmit: { action: "onSubmit" },
-    onUpdate: { action: "onUpdate" },
-    error: { action: "error" },
+    submit: { action: "submit" },
+    update: { action: "update" },
   },
 };
 
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { Form, InputWithIcon, Button },
-  template:
-    '<Form v-bind="$props" @onSubmit="onSubmit" @onUpdate="onUpdate" @error="error" />',
+  template: '<Form v-bind="$props" @submit="submit" @update="update"/>',
 });
 
 const inputs = [
@@ -41,6 +39,7 @@ const inputs = [
     icon: "email",
     showIcon: true,
     showError: false,
+    required: true,
   },
   {
     name: "phone",
@@ -64,21 +63,15 @@ const inputs = [
 
 export const ContactFormWithIcons = Template.bind({});
 ContactFormWithIcons.args = {
-  showError: false,
-  showSuccess: false,
   inputs: inputs,
 };
 
 export const formWithError = Template.bind({});
 formWithError.args = {
-  showError: true,
-  showSuccess: false,
   inputs: inputs,
 };
 
 export const formWithSuccess = Template.bind({});
 formWithSuccess.args = {
-  showError: false,
-  showSuccess: true,
   inputs: inputs,
 };
