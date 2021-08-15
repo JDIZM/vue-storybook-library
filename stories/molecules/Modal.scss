@@ -11,7 +11,6 @@
   opacity: 1;
   display: block; // change this with state
   max-width: 400px;
-  // width: 55%;
   animation-name: animatetop;
   animation-duration: 0.4s;
 }
@@ -19,12 +18,7 @@
 .modal-content {
   position: relative;
   z-index: 1000;
-  // 
-  // padding: map-get($spacing, 1);
   padding: 1rem;
-  // background: white;
-  // max-width: 400px;
-  // margin: auto;
   h4 {
     margin: 0;
   }
@@ -33,7 +27,6 @@
 .modal-footer {
   position: relative;
   z-index: 1000;
-  // padding: map-get($spacing, 1);
   padding: 1rem;
 }
 
@@ -55,10 +48,8 @@
 
 .modal-close {
   position: absolute;
-  // right: map-get($spacing, 1);
   right: 1rem;
   top: 1rem;
-  // top: map-get($spacing, 1);
 }
 
 // animation
