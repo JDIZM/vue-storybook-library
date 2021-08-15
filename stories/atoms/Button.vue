@@ -2,7 +2,7 @@
   <button
     type="button"
     :class="classes"
-    :style="style"
+    :style="styles"
     @click.prevent="onClick"
   >
     {{ label }}
@@ -13,25 +13,12 @@
 export default {
   name: "Button",
   props: {
-    //
-    primary: {
-      type: Boolean,
-      required: false,
-      default: () => false,
-    },
-    outline: {
-      type: Boolean,
-      required: false,
-      default: () => false,
-    },
-    disabled: {
-      type: Boolean,
-      default: () => false,
-    },
-    destruct: {
-      type: Boolean,
-      default: () => false,
-    },
+    primary: Boolean,
+    outline: Boolean,
+    disabled: Boolean,
+    destruct: Boolean,
+    left: Boolean,
+    block: Boolean,
     label: {
       type: String,
       required: true,
@@ -39,11 +26,6 @@ export default {
     backgroundColor: {
       type: String,
       default: " ",
-    },
-    left: {
-      type: Boolean,
-      required: false,
-      default: () => false,
     },
   },
   computed: {
@@ -58,14 +40,16 @@ export default {
       return {
         btn: true,
         "btn--primary": this.primary,
+        "btn--secondary": !this.primary,
         "btn--outline": this.outline,
         "btn--disabled bg--disabled text--dark": this.disabled,
         "btn--destruct bg--destruct text--light": this.destruct,
         "btn--left": this.left,
+        "btn--block": this.block,
       };
     },
     // inline style binding
-    style() {
+    styles() {
       return {
         backgroundColor: this.backgroundColor,
       };
@@ -73,7 +57,7 @@ export default {
   },
   methods: {
     onClick() {
-      this.$emit("onClick");
+      this.$emit("click");
     },
   },
 };

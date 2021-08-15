@@ -4,7 +4,7 @@ export default {
   title: "atoms/Button",
   components: { Button },
   argTypes: {
-    onClick: { action: "onClick" },
+    click: { action: "click" },
     // backgroundColor: { control: 'color' },
   },
 };
@@ -12,13 +12,20 @@ export default {
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { Button },
-  template: '<Button v-bind="$props" @onClick="onClick" />',
+  template: '<Button v-bind="$props" @click="click" />',
 });
 
 export const Primary = Template.bind({});
 Primary.args = {
   label: "PRIMARY",
   primary: true,
+  left: false,
+  block: false,
+};
+export const Secondary = Template.bind({});
+Secondary.args = {
+  label: "SECONDARY",
+  primary: false,
 };
 export const Outline = Template.bind({});
 Outline.args = {
@@ -29,10 +36,18 @@ export const Disabled = Template.bind({});
 Disabled.args = {
   label: "DISABLED",
   disabled: true,
+  primary: true,
 };
 
 export const Destruct = Template.bind({});
 Destruct.args = {
   label: "DELETE",
   destruct: true,
+};
+
+export const Block = Template.bind({});
+Block.args = {
+  label: "PRIMARY",
+  primary: true,
+  block: true,
 };
