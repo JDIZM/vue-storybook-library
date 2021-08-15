@@ -11,8 +11,7 @@ export default {
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { Footer },
-  template:
-    '<Footer :social="social" :name="name" :companyNo="companyNo" :privacy="privacy" :logoSrc="logoSrc" :address="address"/>',
+  template: '<Footer v-bind="$props"/>',
 });
 
 // create an image object for the logo
