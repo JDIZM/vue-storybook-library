@@ -1,25 +1,25 @@
-import Form from "./Mailchimp.vue";
+import EmailSubscribe from "./EmailSubscribe.vue";
 // Instead of importing the FormInput, we import its stories
 // https://storybook.js.org/docs/react/workflows/stories-for-multiple-components
 import FormInput from "../../molecules/FormInput.stories";
 import Button from "../../atoms/Button.stories";
 
 export default {
-  title: "organisms/Mailchimp",
-  component: Form,
+  title: "organisms/Email Subscribe",
+  component: EmailSubscribe,
   subcomponents: { FormInput, Button },
   argTypes: {
-    onSubmit: { action: "onSubmit" },
-    onUpdate: { action: "onUpdate" },
-    onError: { action: "onError" },
+    submit: { action: "submit" },
+    update: { action: "update" },
+    error: { action: "error" },
   },
 };
 
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
-  components: { Form, FormInput, Button },
+  components: { EmailSubscribe, FormInput, Button },
   template:
-    '<Form v-bind="$props" @onSubmit="onSubmit" @onUpdate="onUpdate" @onError="onError" />',
+    '<EmailSubscribe v-bind="$props" @submit="submit" @update="update" @error="error" />',
 });
 
 export const SingleEmailField = Template.bind({});
