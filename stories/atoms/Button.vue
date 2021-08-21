@@ -3,7 +3,7 @@
     type="button"
     :class="classes"
     :style="styles"
-    @click.prevent="onClick"
+    @click.prevent="onClick($event)"
   >
     {{ label }}
   </button>
@@ -56,8 +56,8 @@ export default {
     },
   },
   methods: {
-    onClick() {
-      this.$emit("click");
+    onClick($event) {
+      this.$emit("click", $event);
     },
   },
 };
