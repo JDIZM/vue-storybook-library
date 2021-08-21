@@ -10,7 +10,8 @@
     "build-storybook": "build-storybook",
     "storybook": "start-storybook -p 6006 -s ./stories/assets",
     "test:update": "vue-cli-service test:unit -u",
-    "test:coverage": "vue-cli-service test:unit --collectCoverage"
+    "test:coverage": "vue-cli-service test:unit --collectCoverage",
+    "test:verbose": "vue-cli-service test:unit --verbose"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "1.2.35",
