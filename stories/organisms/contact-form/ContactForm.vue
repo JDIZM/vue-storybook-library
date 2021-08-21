@@ -9,9 +9,9 @@
     <Button type="submit" left label="SUBMIT" primary @click="onSubmit" />
     <Toast
       :msg="msg"
-      :duration="1000"
+      :duration="3000"
       :show="showToast"
-      @timeout="!showToast"
+      @timeout="showToast = false"
     />
   </form>
 </template>
@@ -46,24 +46,35 @@ export default {
       // stops the default form submit and html validation
       // you could use the native form .submit() method
       // console.log(this.$refs["form"]);
-      this.msg = "there was an error sending the form";
-      if (!this.values.length) this.showToast = true;
-      else this.$emit("submit", this.values);
+
+      // check empty
+      if (!this.values.length) {
+        this.onError();
+        return;
+      }
+      // check for required input
+      for (let i = 0; i < this.inputs.length; i += 1) {
+        if (this.inputs[i].required && !this.values[i].length) {
+          this.onError();
+          return;
+        }
+      }
+      // success
+      this.$emit("submit", this.values);
     },
     onUpdate(value, i) {
       this.values[i] = value;
       this.$emit("update", value, i, this.values);
+    },
+    onError() {
+      this.msg = "there was an error sending the form";
+      this.showToast = true;
+      this.$emit("error", this.msg);
     },
   },
 };
 </script>
 
 <style lang="scss" scoped>
-@import "./Form.scss";
-textarea {
-  margin-bottom: 8px;
-}
-span {
-  text-align: left;
-}
+@import "./ContactForm.scss";
 </style>

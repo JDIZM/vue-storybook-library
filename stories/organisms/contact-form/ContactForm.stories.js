@@ -12,13 +12,20 @@ export default {
   argTypes: {
     submit: { action: "submit" },
     update: { action: "update" },
+    error: { action: "error" },
   },
 };
 
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { Form, InputWithIcon, Button },
-  template: '<Form v-bind="$props" @submit="submit" @update="update"/>',
+  template: `
+    <Form 
+      v-bind="$props" 
+      @submit="submit" 
+      @update="update" 
+      @error="error"
+    />`,
 });
 
 const inputs = [
@@ -30,6 +37,7 @@ const inputs = [
     icon: "person",
     showIcon: true,
     showError: false,
+    required: true,
   },
   {
     name: "email",
@@ -49,6 +57,7 @@ const inputs = [
     icon: "phone",
     showIcon: true,
     showError: false,
+    required: true,
   },
   {
     name: "message",
