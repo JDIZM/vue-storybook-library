@@ -1,8 +1,8 @@
-import ContactForm from "../../../stories/organisms/contact-form/ContactForm.vue";
+import { VContactForm } from "@/components";
 import { shallowMount } from "@vue/test-utils";
 
 describe("contact form", () => {
-  const wrapper = shallowMount(ContactForm, {
+  const wrapper = shallowMount(VContactForm, {
     propsData: {
       inputs: [
         {

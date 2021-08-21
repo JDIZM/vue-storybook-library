@@ -1,8 +1,8 @@
-import Button from "../../../stories/atoms/Button.vue";
+import { VButton } from "@/components";
 import { shallowMount } from "@vue/test-utils";
 
 describe("button", () => {
-  const wrapper = shallowMount(Button, {
+  const wrapper = shallowMount(VButton, {
     propsData: {
       label: "button text",
     },
