@@ -5,11 +5,12 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "test": "jest",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
     "build-storybook": "build-storybook",
-    "storybook": "start-storybook -p 6006 -s ./stories/assets"
+    "storybook": "start-storybook -p 6006 -s ./stories/assets",
+    "test:update": "vue-cli-service test:unit -u",
+    "test:coverage": "vue-cli-service test:unit --collectCoverage"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "1.2.35",
@@ -21,16 +22,17 @@
   },
   "devDependencies": {
     "@babel/core": "^7.11.6",
-    "@storybook/addon-essentials": "^6.3.2",
-    "@storybook/addon-links": "^6.3.2",
-    "@storybook/addon-storyshots": "^6.3.2",
+    "@storybook/addon-essentials": "^6.3.7",
+    "@storybook/addon-links": "^6.3.7",
+    "@storybook/addon-storyshots": "^6.3.7",
     "@storybook/preset-scss": "^1.0.3",
-    "@storybook/theming": "^6.3.2",
-    "@storybook/vue": "^6.3.2",
+    "@storybook/theming": "^6.3.7",
+    "@storybook/vue": "^6.3.7",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-plugin-unit-jest": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
+    "@vue/test-utils": "^1.0.3",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^27.0.6",
     "babel-loader": "^8.1.0",
