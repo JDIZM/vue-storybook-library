@@ -1,8 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots atoms/Button Block 1`] = `
+<button
+  class="btn btn--primary btn--block"
+  type="button"
+>
+  
+  PRIMARY
+
+</button>
+`;
+
 exports[`Storyshots atoms/Button Destruct 1`] = `
 <button
-  class="btn btn--destruct bg--destruct text--light"
+  class="btn btn--secondary btn--destruct bg--destruct text--light"
   type="button"
 >
   
@@ -13,7 +24,7 @@ exports[`Storyshots atoms/Button Destruct 1`] = `
 
 exports[`Storyshots atoms/Button Disabled 1`] = `
 <button
-  class="btn btn--disabled bg--disabled text--dark"
+  class="btn btn--primary btn--disabled bg--disabled text--dark"
   type="button"
 >
   
@@ -24,7 +35,7 @@ exports[`Storyshots atoms/Button Disabled 1`] = `
 
 exports[`Storyshots atoms/Button Outline 1`] = `
 <button
-  class="btn btn--outline"
+  class="btn btn--secondary btn--outline"
   type="button"
 >
   
@@ -42,6 +53,41 @@ exports[`Storyshots atoms/Button Primary 1`] = `
   PRIMARY
 
 </button>
+`;
+
+exports[`Storyshots atoms/Button Secondary 1`] = `
+<button
+  class="btn btn--secondary"
+  type="button"
+>
+  
+  SECONDARY
+
+</button>
+`;
+
+exports[`Storyshots atoms/Responsive Image Primary 1`] = `
+<div
+  class="image"
+  style="height: 400px; width: 400px;"
+>
+  <picture>
+    <source
+      alt="lionel richie"
+      sizes="(max-width: 500px) 300px, (max-width: 800px) 600px, 100vw"
+      srcset=" 300w,  600w,  900w"
+      type="image/webp"
+    />
+     
+    <img
+      alt="lionel richie"
+      draggable="false"
+      sizes="(max-width: 500px) 300px, (max-width: 800px) 600px, 100vw"
+      src=""
+      srcset=" 300w,  600w,  900w"
+    />
+  </picture>
+</div>
 `;
 
 exports[`Storyshots molecules/Dropdown Primary 1`] = `
@@ -94,13 +140,12 @@ exports[`Storyshots molecules/Dropdown Primary 1`] = `
 </div>
 `;
 
-exports[`Storyshots molecules/FormInput Input With Error 1`] = `
+exports[`Storyshots molecules/Form Input Input With Error 1`] = `
 <div
   class="form__field --error"
-  value=""
 >
   <label
-    for="InputWithError"
+    for="phone"
   >
     Phone
   </label>
@@ -115,21 +160,20 @@ exports[`Storyshots molecules/FormInput Input With Error 1`] = `
    
   <input
     class="bg--primary-100"
-    id="InputWithError"
-    name="InputWithError"
+    id="phone"
+    name="phone"
     placeholder="Enter your phone number"
-    type="text"
+    type="phone"
   />
 </div>
 `;
 
-exports[`Storyshots molecules/FormInput Input With Icon 1`] = `
+exports[`Storyshots molecules/Form Input Input With Icon 1`] = `
 <div
   class="form__field"
-  value=""
 >
   <label
-    for="InputWithIcon"
+    for="phone"
   >
     Phone
   </label>
@@ -139,23 +183,24 @@ exports[`Storyshots molecules/FormInput Input With Icon 1`] = `
   <span
     class="material-icons"
   >
+    
     phone
+  
   </span>
    
   <input
     class="bg--primary-100"
-    id="InputWithIcon"
-    name="InputWithIcon"
+    id="phone"
+    name="phone"
     placeholder="Enter your phone number"
-    type="tel"
+    type="phone"
   />
 </div>
 `;
 
-exports[`Storyshots molecules/FormInput Input With No Label 1`] = `
+exports[`Storyshots molecules/Form Input Input With No Label 1`] = `
 <div
   class="form__field form__field--no-label"
-  value=""
 >
   <!---->
    
@@ -164,26 +209,27 @@ exports[`Storyshots molecules/FormInput Input With No Label 1`] = `
   <span
     class="material-icons"
   >
+    
     phone
+  
   </span>
    
   <input
     class="bg--primary-100"
-    id="InputWithNoLabel"
-    name="InputWithNoLabel"
+    id="phone"
+    name="phone"
     placeholder="Enter your phone number"
-    type="text"
+    type="phone"
   />
 </div>
 `;
 
-exports[`Storyshots molecules/FormInput Input With Success 1`] = `
+exports[`Storyshots molecules/Form Input Input With Success 1`] = `
 <div
   class="form__field --success"
-  value=""
 >
   <label
-    for="InputWithSuccess"
+    for="phone"
   >
     Phone
   </label>
@@ -198,20 +244,20 @@ exports[`Storyshots molecules/FormInput Input With Success 1`] = `
    
   <input
     class="bg--primary-100"
-    id="InputWithSuccess"
-    name="InputWithSuccess"
+    id="phone"
+    name="phone"
     placeholder="Enter your phone number"
-    type="text"
+    type="phone"
   />
 </div>
 `;
 
-exports[`Storyshots molecules/FormInput Text Area 1`] = `
+exports[`Storyshots molecules/Form Input Text Area 1`] = `
 <div
   class="form__field"
 >
   <label
-    for="TextInput"
+    for="message"
   >
     label
   </label>
@@ -221,14 +267,16 @@ exports[`Storyshots molecules/FormInput Text Area 1`] = `
   <span
     class="material-icons"
   >
+    
     message
+  
   </span>
    
   <textarea
     class="bg--primary-100"
     cols="50"
-    id="TextInput"
-    name="TextInput"
+    id="message"
+    name="message"
     placeholder="Enter a message"
     rows="4"
     type="textarea"
@@ -236,14 +284,14 @@ exports[`Storyshots molecules/FormInput Text Area 1`] = `
 </div>
 `;
 
-exports[`Storyshots molecules/FormInput Text Input Without Icon 1`] = `
+exports[`Storyshots molecules/Form Input Text Input Without Icon 1`] = `
 <div
   class="form__field"
 >
   <label
-    for="TextInput"
+    for="name"
   >
-    label
+    Enter a name
   </label>
    
   <!---->
@@ -252,9 +300,9 @@ exports[`Storyshots molecules/FormInput Text Input Without Icon 1`] = `
    
   <input
     class="bg--primary-100"
-    id="TextInput"
-    name="TextInput"
-    placeholder="Enter some text"
+    id="name"
+    name="name"
+    placeholder="John Smith"
     type="text"
   />
 </div>
@@ -289,7 +337,7 @@ exports[`Storyshots molecules/Modal Show Modal 1`] = `
       class="modal-footer"
     >
       <button
-        class="btn btn--outline btn--left"
+        class="btn btn--secondary btn--outline btn--left"
         type="button"
       >
         
@@ -311,6 +359,66 @@ exports[`Storyshots molecules/Modal Show Modal 1`] = `
   <div
     class="modal-overlay"
   />
+</div>
+`;
+
+exports[`Storyshots molecules/Slider Primary 1`] = `
+<div
+  class="slider"
+>
+  <div
+    class="slider__item slider__item--active"
+  >
+    <img
+      alt="slide name"
+      draggable="false"
+      src="https://source.unsplash.com/random/800x600"
+    />
+  </div>
+  <div
+    class="slider__item"
+  >
+    <img
+      alt="slide name"
+      draggable="false"
+      src="https://source.unsplash.com/1000x800/?nature,water"
+    />
+  </div>
+  <div
+    class="slider__item"
+  >
+    <img
+      alt="slide name"
+      draggable="false"
+      src="https://source.unsplash.com/random/900x600"
+    />
+  </div>
+  <div
+    class="slider__item"
+  >
+    <img
+      alt="slide name"
+      draggable="false"
+      src="https://source.unsplash.com/9000x800/?nature,water"
+    />
+  </div>
+   
+  <div
+    class="slider__btns"
+  >
+    <div
+      class="slider__btns__btn slider__btns__btn--active"
+    />
+    <div
+      class="slider__btns__btn"
+    />
+    <div
+      class="slider__btns__btn"
+    />
+    <div
+      class="slider__btns__btn"
+    />
+  </div>
 </div>
 `;
 
@@ -362,405 +470,274 @@ exports[`Storyshots molecules/Toast Hidden 1`] = `
 </div>
 `;
 
-exports[`Storyshots organisms/ContactForm Contact Form With Icons 1`] = `
-<div
+exports[`Storyshots organisms/Contact Form Contact Form 1`] = `
+<form
   class="form"
 >
-  <form>
-    <div
-      class="form__field"
+  <div
+    class="form__field"
+  >
+    <label
+      for="name"
     >
-      <label
-        for="name"
-      >
-        What's your name?
-      </label>
-       
-      <!---->
-       
-      <span
-        class="material-icons"
-      >
-        person
-      </span>
-       
-      <input
-        class="bg--primary-100"
-        id="name"
-        name="name"
-        placeholder="James"
-        type="text"
-      />
-    </div>
-    <div
-      class="form__field"
-    >
-      <label
-        for="email"
-      >
-        What's your email?
-      </label>
-       
-      <!---->
-       
-      <span
-        class="material-icons"
-      >
-        email
-      </span>
-       
-      <input
-        class="bg--primary-100"
-        id="email"
-        name="email"
-        placeholder="hello@jamesdonnelly.dev"
-        type="email"
-      />
-    </div>
-    <div
-      class="form__field"
-    >
-      <label
-        for="phone"
-      >
-        What's your phone number?
-      </label>
-       
-      <!---->
-       
-      <span
-        class="material-icons"
-      >
-        phone
-      </span>
-       
-      <input
-        class="bg--primary-100"
-        id="phone"
-        name="phone"
-        placeholder="0161 123 4567"
-        type="phone"
-      />
-    </div>
-    <div
-      class="form__field"
-    >
-      <label
-        for="message"
-      >
-        Leave us a message
-      </label>
-       
-      <!---->
-       
-      <span
-        class="material-icons"
-      >
-        message
-      </span>
-       
-      <textarea
-        class="bg--primary-100"
-        cols="50"
-        id="message"
-        name="message"
-        placeholder="Enter a message"
-        rows="4"
-        type="textarea"
-      />
-    </div>
+      What's your name?
+    </label>
      
     <!---->
      
-    <!---->
-     
-    <button
-      class="btn btn--primary btn--left"
-      type="submit"
+    <span
+      class="material-icons"
     >
       
+    person
+  
+    </span>
+     
+    <input
+      class="bg--primary-100"
+      id="name"
+      name="name"
+      placeholder="James"
+      type="text"
+    />
+  </div>
+  <div
+    class="form__field"
+    required="required"
+  >
+    <label
+      for="email"
+    >
+      What's your email?
+    </label>
+     
+    <!---->
+     
+    <span
+      class="material-icons"
+    >
+      
+    email
+  
+    </span>
+     
+    <input
+      class="bg--primary-100"
+      id="email"
+      name="email"
+      placeholder="hello@jamesdonnelly.dev"
+      type="email"
+    />
+  </div>
+  <div
+    class="form__field"
+  >
+    <label
+      for="phone"
+    >
+      What's your phone number?
+    </label>
+     
+    <!---->
+     
+    <span
+      class="material-icons"
+    >
+      
+    phone
+  
+    </span>
+     
+    <input
+      class="bg--primary-100"
+      id="phone"
+      name="phone"
+      placeholder="0161 123 4567"
+      type="phone"
+    />
+  </div>
+  <div
+    class="form__field"
+  >
+    <label
+      for="message"
+    >
+      Leave us a message
+    </label>
+     
+    <!---->
+     
+    <span
+      class="material-icons"
+    >
+      
+    message
+  
+    </span>
+     
+    <textarea
+      class="bg--primary-100"
+      cols="50"
+      id="message"
+      name="message"
+      placeholder="Enter a message"
+      rows="4"
+      type="textarea"
+    />
+  </div>
+   
+  <button
+    class="btn btn--primary btn--left"
+    type="submit"
+  >
+    
   SUBMIT
 
-    </button>
-  </form>
-</div>
+  </button>
+   
+  <div
+    class="toast-wrapper"
+  >
+    <!---->
+  </div>
+</form>
 `;
 
-exports[`Storyshots organisms/ContactForm Form With Error 1`] = `
-<div
+exports[`Storyshots organisms/Email Subscribe Form With Error 1`] = `
+<form
   class="form"
 >
-  <form>
-    <div
-      class="form__field"
+  <div
+    class="form__field --error"
+    required="required"
+    value=""
+  >
+    <label
+      for="email"
     >
-      <label
-        for="name"
-      >
-        What's your name?
-      </label>
-       
-      <!---->
-       
-      <span
-        class="material-icons"
-      >
-        person
-      </span>
-       
-      <input
-        class="bg--primary-100"
-        id="name"
-        name="name"
-        placeholder="James"
-        type="text"
-      />
-    </div>
-    <div
-      class="form__field"
-    >
-      <label
-        for="email"
-      >
-        What's your email?
-      </label>
-       
-      <!---->
-       
-      <span
-        class="material-icons"
-      >
-        email
-      </span>
-       
-      <input
-        class="bg--primary-100"
-        id="email"
-        name="email"
-        placeholder="hello@jamesdonnelly.dev"
-        type="email"
-      />
-    </div>
-    <div
-      class="form__field"
-    >
-      <label
-        for="phone"
-      >
-        What's your phone number?
-      </label>
-       
-      <!---->
-       
-      <span
-        class="material-icons"
-      >
-        phone
-      </span>
-       
-      <input
-        class="bg--primary-100"
-        id="phone"
-        name="phone"
-        placeholder="0161 123 4567"
-        type="phone"
-      />
-    </div>
-    <div
-      class="form__field"
-    >
-      <label
-        for="message"
-      >
-        Leave us a message
-      </label>
-       
-      <!---->
-       
-      <span
-        class="material-icons"
-      >
-        message
-      </span>
-       
-      <textarea
-        class="bg--primary-100"
-        cols="50"
-        id="message"
-        name="message"
-        placeholder="Enter a message"
-        rows="4"
-        type="textarea"
-      />
-    </div>
-     
-    <div>
-      <span
-        class="material-icons text--error"
-      >
-        error
-      </span>
-       
-      <span
-        class="text--error"
-      >
-        Please enter the correct information
-      </span>
-    </div>
+      Subscribe to our newsletter
+    </label>
      
     <!---->
      
-    <button
-      class="btn btn--primary btn--left"
-      type="submit"
+    <span
+      class="material-icons text--error"
     >
-      
+      error
+    </span>
+     
+    <input
+      class="bg--primary-100"
+      id="email"
+      name="email"
+      placeholder="Enter your email"
+      type="email"
+    />
+  </div>
+   
+  <button
+    class="btn btn--primary btn--left"
+    type="submit"
+  >
+    
   SUBMIT
 
-    </button>
-  </form>
-</div>
+  </button>
+</form>
 `;
 
-exports[`Storyshots organisms/ContactForm Form With Success 1`] = `
-<div
+exports[`Storyshots organisms/Email Subscribe Form With Success 1`] = `
+<form
   class="form"
 >
-  <form>
-    <div
-      class="form__field"
+  <div
+    class="form__field --success"
+    required="required"
+    value=""
+  >
+    <label
+      for="email"
     >
-      <label
-        for="name"
-      >
-        What's your name?
-      </label>
-       
-      <!---->
-       
-      <span
-        class="material-icons"
-      >
-        person
-      </span>
-       
-      <input
-        class="bg--primary-100"
-        id="name"
-        name="name"
-        placeholder="James"
-        type="text"
-      />
-    </div>
-    <div
-      class="form__field"
+      Subscribe to our newsletter
+    </label>
+     
+    <span
+      class="material-icons"
     >
-      <label
-        for="email"
-      >
-        What's your email?
-      </label>
-       
-      <!---->
-       
-      <span
-        class="material-icons"
-      >
-        email
-      </span>
-       
-      <input
-        class="bg--primary-100"
-        id="email"
-        name="email"
-        placeholder="hello@jamesdonnelly.dev"
-        type="email"
-      />
-    </div>
-    <div
-      class="form__field"
-    >
-      <label
-        for="phone"
-      >
-        What's your phone number?
-      </label>
-       
-      <!---->
-       
-      <span
-        class="material-icons"
-      >
-        phone
-      </span>
-       
-      <input
-        class="bg--primary-100"
-        id="phone"
-        name="phone"
-        placeholder="0161 123 4567"
-        type="phone"
-      />
-    </div>
-    <div
-      class="form__field"
-    >
-      <label
-        for="message"
-      >
-        Leave us a message
-      </label>
-       
-      <!---->
-       
-      <span
-        class="material-icons"
-      >
-        message
-      </span>
-       
-      <textarea
-        class="bg--primary-100"
-        cols="50"
-        id="message"
-        name="message"
-        placeholder="Enter a message"
-        rows="4"
-        type="textarea"
-      />
-    </div>
+      check
+    </span>
      
     <!---->
      
-    <div>
-      <span
-        class="material-icons text--success"
-      >
-        check
-      </span>
-       
-      <span
-        class="text--primary"
-      >
-        Your message has been sent!
-      </span>
-    </div>
-     
-    <button
-      class="btn btn--primary btn--left"
-      type="submit"
-    >
-      
+    <input
+      class="bg--primary-100"
+      id="email"
+      name="email"
+      placeholder="Enter your email"
+      type="email"
+    />
+  </div>
+   
+  <button
+    class="btn btn--primary btn--left"
+    type="submit"
+  >
+    
   SUBMIT
 
-    </button>
-  </form>
-</div>
+  </button>
+</form>
+`;
+
+exports[`Storyshots organisms/Email Subscribe Single Email Field 1`] = `
+<form
+  class="form"
+>
+  <div
+    class="form__field"
+    required="required"
+    value=""
+  >
+    <label
+      for="email"
+    >
+      Subscribe to our newsletter
+    </label>
+     
+    <!---->
+     
+    <span
+      class="material-icons"
+    >
+      
+    email
+  
+    </span>
+     
+    <input
+      class="bg--primary-100"
+      id="email"
+      name="email"
+      placeholder="Enter your email"
+      type="email"
+    />
+  </div>
+   
+  <button
+    class="btn btn--primary btn--left"
+    type="submit"
+  >
+    
+  SUBMIT
+
+  </button>
+</form>
 `;
 
 exports[`Storyshots organisms/Footer Primary 1`] = `
 <footer
   class="bg--primary text--white"
+  primary="true"
 >
   <div
     class="footer"
@@ -873,151 +850,6 @@ exports[`Storyshots organisms/Footer Primary 1`] = `
     </div>
   </div>
 </footer>
-`;
-
-exports[`Storyshots organisms/Mailchimp Form With Error 1`] = `
-<div
-  class="form"
->
-  <form>
-    <div
-      class="form__field --error"
-      required="required"
-      value=""
-    >
-      <label
-        for="email"
-      >
-        Subscribe to our newsletter
-      </label>
-       
-      <!---->
-       
-      <span
-        class="material-icons text--error"
-      >
-        error
-      </span>
-       
-      <input
-        class="bg--primary-100"
-        id="email"
-        name="email"
-        placeholder="Enter your email"
-        type="email"
-      />
-    </div>
-     
-    <span
-      class="text--error"
-    >
-      please enter an email address
-    </span>
-     
-    <button
-      class="btn btn--primary btn--left"
-      type="submit"
-    >
-      
-  SUBMIT
-
-    </button>
-  </form>
-</div>
-`;
-
-exports[`Storyshots organisms/Mailchimp Form With Success 1`] = `
-<div
-  class="form"
->
-  <form>
-    <div
-      class="form__field --success"
-      required="required"
-      value=""
-    >
-      <label
-        for="email"
-      >
-        Subscribe to our newsletter
-      </label>
-       
-      <span
-        class="material-icons"
-      >
-        check
-      </span>
-       
-      <!---->
-       
-      <input
-        class="bg--primary-100"
-        id="email"
-        name="email"
-        placeholder="Enter your email"
-        type="email"
-      />
-    </div>
-     
-    <!---->
-     
-    <button
-      class="btn btn--primary btn--left"
-      type="submit"
-    >
-      
-  SUBMIT
-
-    </button>
-  </form>
-</div>
-`;
-
-exports[`Storyshots organisms/Mailchimp Single Email Field 1`] = `
-<div
-  class="form"
->
-  <form>
-    <div
-      class="form__field"
-      required="required"
-      value=""
-    >
-      <label
-        for="email"
-      >
-        Subscribe to our newsletter
-      </label>
-       
-      <!---->
-       
-      <span
-        class="material-icons"
-      >
-        email
-      </span>
-       
-      <input
-        class="bg--primary-100"
-        id="email"
-        name="email"
-        placeholder="Enter your email"
-        type="email"
-      />
-    </div>
-     
-    <!---->
-     
-    <button
-      class="btn btn--primary btn--left"
-      type="submit"
-    >
-      
-  SUBMIT
-
-    </button>
-  </form>
-</div>
 `;
 
 exports[`Storyshots organisms/Nav Primary 1`] = `
@@ -1985,7 +1817,7 @@ exports[`Storyshots organisms/Nav Show Dropdown 1`] = `
 </nav>
 `;
 
-exports[`Storyshots pages/NotFoundComponent Primary 1`] = `
+exports[`Storyshots pages/Not Found Component Not Found Component 1`] = `
 <div
   class="notfound pb--4 --notfound"
 >
