@@ -476,6 +476,7 @@ exports[`Storyshots organisms/Contact Form Contact Form 1`] = `
 >
   <div
     class="form__field"
+    required="required"
   >
     <label
       for="name"
@@ -531,6 +532,7 @@ exports[`Storyshots organisms/Contact Form Contact Form 1`] = `
   </div>
   <div
     class="form__field"
+    required="required"
   >
     <label
       for="phone"
