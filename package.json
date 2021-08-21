@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build --target lib src/components/index.js --inline-vue",
     "build-storybook": "build-storybook",
     "storybook": "start-storybook -p 6006 -s ./stories/assets",
+    "test:unit": "vue-cli-service test:unit",
     "test:update": "vue-cli-service test:unit -u",
     "test:coverage": "vue-cli-service test:unit --collectCoverage",
     "test:verbose": "vue-cli-service test:unit --verbose"
