@@ -87,9 +87,7 @@ describe("contact form", () => {
     mounted.vm.onError();
     expect(mounted.vm.$data.msg).toBe("there was an error sending the form");
     expect(mounted.emitted().error).toBeTruthy();
-    expect(mounted.emitted().error[0][0]).toBe(
-      "there was an error sending the form"
-    );
+    expect(mounted.emitted().error[0][0]).toBe(mounted.vm.$data.msg);
     expect(!mounted.emitted().error).toBeFalsy();
   });
 
