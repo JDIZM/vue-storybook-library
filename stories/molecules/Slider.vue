@@ -22,7 +22,6 @@
 
 <script>
 export default {
-  name: "Slider",
   props: {
     slides: {
       type: Array,

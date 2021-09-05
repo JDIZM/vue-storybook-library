@@ -22,7 +22,6 @@
 import FormInput from "../../molecules/FormInput.vue";
 import Button from "../../atoms/Button.vue";
 export default {
-  name: "Form",
   components: {
     FormInput,
     Button,

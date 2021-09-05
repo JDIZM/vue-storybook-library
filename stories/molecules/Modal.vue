@@ -17,7 +17,6 @@
 <script>
 import Button from "../atoms/Button.vue";
 export default {
-  name: "Modal",
   components: {
     Button,
   },

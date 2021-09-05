@@ -33,7 +33,6 @@
 
 <script>
 export default {
-  name: "Input",
   model: {
     data: "value",
     event: "update",

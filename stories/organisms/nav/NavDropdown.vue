@@ -21,7 +21,6 @@
 
 <script>
 export default {
-  name: "NavDropdown",
   props: {
     items: {
       type: Array,

@@ -9,7 +9,6 @@
 
 <script>
 export default {
-  name: "Toast",
   props: {
     show: Boolean,
     icon: {

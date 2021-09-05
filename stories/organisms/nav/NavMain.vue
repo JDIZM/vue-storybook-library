@@ -104,7 +104,6 @@
 import NavDrawer from "./NavDrawer";
 import NavDropdown from "./NavDropdown";
 export default {
-  name: "NavMain",
   components: {
     NavDrawer,
     NavDropdown,
