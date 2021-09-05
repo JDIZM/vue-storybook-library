@@ -1,4 +1,4 @@
-// exports
+// export all components to build as a library
 import "../../theme/main.scss";
 //
 // atoms

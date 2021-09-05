@@ -6,6 +6,35 @@ Live demo:
 https://vue-storybook-library.netlify.app
 ```
 
+## Install library as a package
+
+```
+# with npm
+npm install @jdizm/vue-storybook-library
+
+# with yarn
+yarn install @jdizm/vue-storybook-library
+```
+
+All exported components are prefixed with a `V` eg `VButton`
+
+In your apps main.js / main.ts
+
+```
+# import the base styles
+import "@jdizm/vue-storybook-library/dist/index.css";
+
+# import the components
+import { VButton } from "@jdizm/vue-storybook-library";
+
+# each can be registered via Vue.component()
+Vue.component("VButton", VButton);
+```
+
+## For Development
+
+For development and to edit this storybook library
+
 run locally: `yarn storybook`
 
 see the [storybook docs](https://storybook.js.org/docs/vue/get-started/introduction) for more info.
@@ -14,21 +43,21 @@ see the [storybook docs](https://storybook.js.org/docs/vue/get-started/introduct
 
 The `.storybook` folder contains all the config files for setting up storybook.
 
-* Configure any addons in the `.storybook/main.js` file
-* External scripts, fonts and stylesheets are loaded in  `.storybook/preview-head.html`
-* Imports the sass/scss theme and variables in `.storybook/preview.js` via ` import '../theme/main.scss'`
+- Configure any addons in the `.storybook/main.js` file
+- External scripts, fonts and stylesheets are loaded in `.storybook/preview-head.html`
+- Imports the sass/scss theme and variables in `.storybook/preview.js` via ` import '../theme/main.scss'`
 
 ## Assets
 
-* Static assets and resources are located in the `stories/assets` folder
+- Static assets and resources are located in the `stories/assets` folder
 
 ## Theme
 
 All the base styling is configured in the theme folder and there are mixins to create custom class names for styling background color, text and spacing according to the theme variables. Each component has it's own scoped scss file that's directly imported.
 
-* sass mixins
-* utility class names like tailwind
-* sass/css theme variables
+- sass mixins
+- utility class names like tailwind
+- sass/css theme variables
 
 The theme variables are mixed between sass variables for the mixins and class names in addition to css variables. I was having an issue importing the sass vars into SFC's but the root CSS vars work. Simple work around.
 
@@ -60,6 +89,14 @@ netlify is configured to deploy the storybook static build.
 
 build folder: /storybook-static
 production url: <https://vue-storybook-library.netlify.app/>
+
+## Build as a library
+
+This will package the Vue project as a library to be imported in another application.
+
+```
+yarn build
+```
 
 ## Import into project
 

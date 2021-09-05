@@ -1,11 +1,13 @@
 {
-  "name": "vue-storybook-library",
+  "name": "@jdizm/vue-storybook-library",
   "version": "1.0.0",
-  "private": true,
+  "private": false,
+  "main": "./dist/index.umd.min.js",
   "scripts": {
     "lint": "vue-cli-service lint",
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --target lib src/components/index.js --inline-vue",
+    "build": "vue-cli-service build --target lib src/entry.js --name index",
+    "build:inline": "vue-cli-service build --target lib src/components/index.js --inline-vue",
     "build-storybook": "build-storybook",
     "storybook": "start-storybook -p 6006 -s ./stories/assets",
     "test:unit": "vue-cli-service test:unit",
@@ -50,5 +52,23 @@
     "typescript": "^4.3.5",
     "vue-loader": "^15.9.7",
     "vue-template-compiler": "^2.6.11"
-  }
+  },
+  "description": "Live demo:",
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JDIZM/vue-storybook-library.git"
+  },
+  "keywords": [
+    "vue",
+    "ui"
+  ],
+  "author": "@jdizm",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JDIZM/vue-storybook-library/issues"
+  },
+  "homepage": "https://github.com/JDIZM/vue-storybook-library#readme"
 }
