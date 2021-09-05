@@ -1,8 +1,10 @@
 # VUE STORYBOOK LIBRARY
 
+A UI library built with Storybook for Vue 2.
+
 Live demo:
 
-```config
+```
 https://vue-storybook-library.netlify.app
 ```
 
@@ -10,10 +12,10 @@ https://vue-storybook-library.netlify.app
 
 ```
 # with npm
-npm install @jdizm/vue-storybook-library
+npm install @jdizm/vue-storybook
 
 # with yarn
-yarn install @jdizm/vue-storybook-library
+yarn install @jdizm/vue-storybook
 ```
 
 All exported components are prefixed with a `V` eg `VButton`
@@ -22,10 +24,10 @@ In your apps main.js / main.ts
 
 ```
 # import the base styles
-import "@jdizm/vue-storybook-library/dist/index.css";
+import "@jdizm/vue-storybook/dist/index.css";
 
 # import the components
-import { VButton } from "@jdizm/vue-storybook-library";
+import { VButton } from "@jdizm/vue-storybook";
 
 # each can be registered via Vue.component()
 Vue.component("VButton", VButton);
@@ -33,9 +35,12 @@ Vue.component("VButton", VButton);
 
 ## For Development
 
-For development and to edit this storybook library
+For development and to modify this storybook library clone this project and:
 
-run locally: `yarn storybook`
+```
+# run locally
+yarn storybook
+```
 
 see the [storybook docs](https://storybook.js.org/docs/vue/get-started/introduction) for more info.
 
@@ -61,7 +66,7 @@ All the base styling is configured in the theme folder and there are mixins to c
 
 The theme variables are mixed between sass variables for the mixins and class names in addition to css variables. I was having an issue importing the sass vars into SFC's but the root CSS vars work. Simple work around.
 
-```config
+```
 /theme
   main.scss
   _vars.scss
