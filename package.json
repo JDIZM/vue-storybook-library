@@ -1,6 +1,6 @@
 {
   "name": "@jdizm/vue-storybook",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": false,
   "main": "./dist/index.umd.min.js",
   "scripts": {
@@ -25,12 +25,12 @@
   },
   "devDependencies": {
     "@babel/core": "^7.11.6",
-    "@storybook/addon-essentials": "^6.3.7",
-    "@storybook/addon-links": "^6.3.7",
-    "@storybook/addon-storyshots": "^6.3.7",
+    "@storybook/addon-essentials": "^6.3.8",
+    "@storybook/addon-links": "^6.3.8",
+    "@storybook/addon-storyshots": "^6.3.8",
     "@storybook/preset-scss": "^1.0.3",
-    "@storybook/theming": "^6.3.7",
-    "@storybook/vue": "^6.3.7",
+    "@storybook/theming": "^6.3.8",
+    "@storybook/vue": "^6.3.8",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-plugin-unit-jest": "~4.5.0",
