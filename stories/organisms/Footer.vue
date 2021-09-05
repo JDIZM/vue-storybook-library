@@ -39,7 +39,6 @@
 
 <script>
 export default {
-  name: "Footer",
   props: {
     name: {
       type: String,

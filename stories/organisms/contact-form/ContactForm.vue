@@ -21,7 +21,6 @@ import FormInput from "../../molecules/FormInput.vue";
 import Button from "../../atoms/Button.vue";
 import Toast from "../../molecules/Toast.vue";
 export default {
-  name: "ContactForm",
   components: {
     FormInput,
     Button,

@@ -53,7 +53,6 @@
 
 <script>
 export default {
-  name: "NavDrawer",
   props: {
     links: {
       type: Array,
