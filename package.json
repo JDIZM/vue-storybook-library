@@ -1,5 +1,5 @@
 {
-  "name": "@jdizm/vue-storybook-library",
+  "name": "@jdizm/vue-storybook",
   "version": "1.0.0",
   "private": false,
   "main": "./dist/index.umd.min.js",
