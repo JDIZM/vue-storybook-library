@@ -1,6 +1,6 @@
 {
   "name": "@jdizm/vue-storybook",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "private": false,
   "main": "./dist/index.umd.min.js",
   "scripts": {
