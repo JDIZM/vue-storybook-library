@@ -1,0 +1,55 @@
+.modal {
+  background: white;
+  border-radius: 0.5rem;
+  position: fixed;
+  margin: auto;
+  top: 30%;
+  left: 0;
+  right: 0;
+  padding: 0;
+  z-index: 1000;
+  opacity: 1;
+  display: block;
+  max-width: 400px;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+
+  &__content {
+    position: relative;
+    padding: 1rem;
+    h4 {
+      margin: 0;
+    }
+  }
+
+  &__footer {
+    position: relative;
+    padding: 1rem;
+  }
+
+  &__overlay {
+    position: fixed;
+    z-index: 999;
+    top: -25%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 125%;
+    width: 100%;
+    background: #000;
+    display: block;
+    will-change: opacity;
+    opacity: 0.6;
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 30%;
+    opacity: 1;
+  }
+}
