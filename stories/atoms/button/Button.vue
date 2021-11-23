@@ -3,7 +3,7 @@
     :class="classes"
     :style="styles"
     :disabled="disabled"
-    @click.prevent="$emit('click', $event)"
+    @click.prevent="$emit('click')"
   >
     {{ label }}
   </button>
