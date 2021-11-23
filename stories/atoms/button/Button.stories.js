@@ -5,7 +5,6 @@ export default {
   components: { Button },
   argTypes: {
     click: { action: "click" },
-    // backgroundColor: { control: 'color' },
   },
 };
 
@@ -19,8 +18,6 @@ export const Primary = Template.bind({});
 Primary.args = {
   label: "PRIMARY",
   primary: true,
-  left: false,
-  block: false,
 };
 export const Secondary = Template.bind({});
 Secondary.args = {
@@ -47,7 +44,7 @@ Destruct.args = {
 
 export const Block = Template.bind({});
 Block.args = {
-  label: "PRIMARY",
+  label: "BLOCK",
   primary: true,
   block: true,
 };

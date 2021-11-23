@@ -1,9 +1,9 @@
 <template>
   <button
-    type="button"
     :class="classes"
     :style="styles"
-    @click.prevent="onClick($event)"
+    :disabled="disabled"
+    @click.prevent="$emit('click', $event)"
   >
     {{ label }}
   </button>
@@ -52,12 +52,6 @@ export default {
       return {
         backgroundColor: this.backgroundColor,
       };
-    },
-  },
-  methods: {
-    onClick($event) {
-      if (this.disabled) return;
-      this.$emit("click", $event);
     },
   },
 };
