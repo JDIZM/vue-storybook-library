@@ -89,11 +89,6 @@ export default {
       };
     },
   },
-  methods: {
-    onSubmit() {
-      this.$emit("onSubmit");
-    },
-  },
 };
 </script>
 
