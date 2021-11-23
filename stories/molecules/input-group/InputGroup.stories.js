@@ -1,8 +1,8 @@
-import FormInput from "./FormInput.vue";
+import InputGroup from "./InputGroup.vue";
 
 export default {
   title: "molecules/Form Input",
-  component: FormInput,
+  component: InputGroup,
   argTypes: {
     update: { action: "update" },
   },
@@ -10,8 +10,8 @@ export default {
 
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
-  components: { FormInput },
-  template: '<FormInput v-bind="$props" @update="update" />',
+  components: { InputGroup },
+  template: '<InputGroup v-bind="$props" @update="update" />',
 });
 
 export const TextInputWithoutIcon = Template.bind({});

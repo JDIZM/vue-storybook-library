@@ -17,9 +17,9 @@
 </template>
 
 <script>
-import FormInput from "../../molecules/FormInput.vue";
+import FormInput from "../../molecules/input-group/InputGroup.vue";
 import Button from "../../atoms/Button.vue";
-import Toast from "../../molecules/Toast.vue";
+import Toast from "../../molecules/toast/Toast.vue";
 export default {
   components: {
     FormInput,

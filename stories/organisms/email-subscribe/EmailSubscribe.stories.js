@@ -1,7 +1,7 @@
 import EmailSubscribe from "./EmailSubscribe.vue";
 // Instead of importing the FormInput, we import its stories
 // https://storybook.js.org/docs/react/workflows/stories-for-multiple-components
-import FormInput from "../../molecules/FormInput.stories";
+import FormInput from "../../molecules/input-group/InputGroup.stories";
 import Button from "../../atoms/Button.stories";
 
 export default {

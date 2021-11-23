@@ -98,5 +98,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import "./FormInput.scss";
+@import "./InputGroup.scss";
 </style>

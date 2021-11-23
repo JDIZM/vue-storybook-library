@@ -2,7 +2,7 @@
 import Form from "./ContactForm.vue";
 // instead of importing the sub components, we import their stories
 // https://storybook.js.org/docs/react/workflows/stories-for-multiple-components
-import InputWithIcon from "../../molecules/FormInput.stories";
+import InputWithIcon from "../../molecules/input-group/InputGroup.stories";
 import Button from "../../atoms/Button.stories";
 
 export default {

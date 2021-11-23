@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import FormInput from "../../molecules/FormInput.vue";
+import FormInput from "../../molecules/input-group/InputGroup.vue";
 import Button from "../../atoms/Button.vue";
 export default {
   components: {
