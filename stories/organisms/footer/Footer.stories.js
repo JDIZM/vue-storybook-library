@@ -1,26 +1,22 @@
 import Footer from "./Footer.vue";
-// import logo from static files
-import logoFile from "../assets/logo.png";
+import logoFile from "../../assets/logo.png";
 
 export default {
   title: "organisms/Footer",
   component: Footer,
 };
 
-// We create a “template” of how args map to rendering
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { Footer },
   template: '<Footer v-bind="$props"/>',
 });
 
-// create an image object for the logo
 const Logo = {
   src: logoFile,
   alt: "logo",
 };
 
-// Each story then reuses that template
 export const Primary = Template.bind({});
 
 Primary.args = {
