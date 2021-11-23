@@ -22,7 +22,7 @@ export { default as VSlider } from "../../stories/molecules/Slider.vue";
 export { default as VContactForm } from "../../stories/organisms/contact-form/ContactForm.vue";
 export { default as VEmailSubscribe } from "../../stories/organisms/email-subscribe/EmailSubscribe.vue";
 export { default as VNav } from "../../stories/organisms/nav/NavMain.vue";
-export { default as VFooter } from "../../stories/organisms/Footer.vue";
+export { default as VFooter } from "../../stories/organisms/footer/Footer.vue";
 
 //
 // pages
