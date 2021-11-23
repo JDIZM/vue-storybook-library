@@ -57,6 +57,9 @@
   "directories": {
     "test": "tests"
   },
+  "files": [
+    "dist/*"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/JDIZM/vue-storybook-library.git"

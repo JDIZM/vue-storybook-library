@@ -4,6 +4,8 @@ node_modules
 # https://github.com/JDIZM/firebase-functions
 functions
 
+dist
+
 # local env files
 .env.local
 .env.*.local
