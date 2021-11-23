@@ -3,8 +3,8 @@ import "../../theme/main.scss";
 //
 // atoms
 //
-export { default as VButton } from "../../stories/atoms/Button.vue";
-export { default as VImg } from "../../stories/atoms/BaseImage.vue";
+export { default as VButton } from "../../stories/atoms/button/Button.vue";
+export { default as VImg } from "../../stories/atoms/image/BaseImage.vue";
 
 //
 // molecules

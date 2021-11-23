@@ -29,7 +29,7 @@
 </template>
 
 <script>
-import Button from "../../atoms/Button.vue";
+import Button from "../../atoms/button/Button.vue";
 export default {
   components: {
     Button,
