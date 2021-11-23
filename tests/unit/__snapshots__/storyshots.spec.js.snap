@@ -308,11 +308,95 @@ exports[`Storyshots molecules/Form Input Text Input Without Icon 1`] = `
 </div>
 `;
 
-exports[`Storyshots molecules/Modal Hidden 1`] = `
+exports[`Storyshots molecules/Modal Cancel Disabled 1`] = `
 <div>
-  <!---->
+  <div
+    class="modal bg--white text--black"
+  >
+    <div
+      class="modal__content"
+    >
+      <h4>
+        Modal Title
+      </h4>
+       
+      <p>
+        some message for the user action 
+      </p>
+    </div>
+     
+    <div
+      class="modal__footer"
+    >
+      <button
+        class="btn btn--secondary btn--outline btn--left"
+        type="button"
+      >
+        
+  CONFIRM
+
+      </button>
+       
+      <button
+        class="btn btn--primary btn--disabled bg--disabled text--dark btn--left"
+        type="button"
+      >
+        
+  CLOSE
+
+      </button>
+    </div>
+  </div>
    
-  <!---->
+  <div
+    class="modal__overlay"
+  />
+</div>
+`;
+
+exports[`Storyshots molecules/Modal Confirm Disabled 1`] = `
+<div>
+  <div
+    class="modal bg--white text--black"
+  >
+    <div
+      class="modal__content"
+    >
+      <h4>
+        Modal Title
+      </h4>
+       
+      <p>
+        some message for the user action 
+      </p>
+    </div>
+     
+    <div
+      class="modal__footer"
+    >
+      <button
+        class="btn btn--secondary btn--outline btn--disabled bg--disabled text--dark btn--left"
+        type="button"
+      >
+        
+  CONFIRM
+
+      </button>
+       
+      <button
+        class="btn btn--primary btn--left"
+        type="button"
+      >
+        
+  CLOSE
+
+      </button>
+    </div>
+  </div>
+   
+  <div
+    class="modal__overlay"
+  />
 </div>
 `;
 
@@ -322,19 +406,19 @@ exports[`Storyshots molecules/Modal Show Modal 1`] = `
     class="modal bg--white text--black"
   >
     <div
-      class="modal-content"
+      class="modal__content"
     >
       <h4>
         Modal Title
       </h4>
        
       <p>
-        This is the message
+        some message for the user action 
       </p>
     </div>
      
     <div
-      class="modal-footer"
+      class="modal__footer"
     >
       <button
         class="btn btn--secondary btn--outline btn--left"
@@ -357,7 +441,7 @@ exports[`Storyshots molecules/Modal Show Modal 1`] = `
   </div>
    
   <div
-    class="modal-overlay"
+    class="modal__overlay"
   />
 </div>
 `;
