@@ -1,23 +1,21 @@
 // global resets and styles
-// https://getbootstrap.com/docs/4.0/content/reboot/
 
 :root {
   // @ 16px you can use 0.5 rem for an even 8px spacing grid
-  font-size: 16px; // set root font-size
+  font-size: 16px;
   line-height: 1.4; // unitless vertical rhythm
   color: black;
 }
 
-html, body {
+html,
+body {
   background-color: white;
   margin: 0;
 }
 body {
-  // https://web.dev/font-display/
   font-family: var(--font-family);
-  // assume default browser font size of 16px unless set in root
-  font-size: 1rem; // rem is relative to the font-size of the root element
-  line-height: 1.4; // unitless vertical rhythm
+  font-size: 1rem;
+  line-height: 1.4;
 }
 
 div {
@@ -25,21 +23,23 @@ div {
 }
 
 ::selection {
-background-color: var(--primary);
-color: white;
+  background-color: var(--primary);
+  color: white;
 }
 
 *,
 *:before,
 *:after {
-box-sizing: border-box;
-margin: 0;
+  box-sizing: border-box;
+  margin: 0;
 }
 
 // DEFAULT ELEMENTS
 
-button, span, ul, li {
-  // inherit body styles, overwrite default browser
+button,
+span,
+ul,
+li {
   line-height: inherit;
   font-family: inherit;
   font-size: inherit;
@@ -52,19 +52,26 @@ a {
   text-decoration: none;
 }
 
-a:focus, i:focus {
+a:focus,
+i:focus {
   outline: none;
   box-shadow: -2px -2px 16px var(--primary);
 }
 
 // HEADINGS
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   margin: 0 0 0.5rem 0;
-  padding: 0,
+  padding: 0;
 }
 
 // LISTS
-ul, ol, dl {
+ul,
+ol,
+dl {
   margin: 0 0 1rem 0;
   padding: 0;
 }

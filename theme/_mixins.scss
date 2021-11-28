@@ -1,14 +1,8 @@
 // theme mixins
-// get the variables from the sass map in _theme.scss
-// mixins to create class names and css vars automatically
-// https://tailwindcss.com/docs/theme/#app
-
 
 // 1. root vars
 // create root vars
 @mixin vars {
-  // nest it inside the :root 
-  // it doesn't create multiple style tags then.
   :root {
     // colours
     @each $name, $colour in $colours {
@@ -24,26 +18,25 @@
 
 // 2. colours
 @mixin colours {
-  @each $name, $colour  in $colours {
+  @each $name, $colour in $colours {
     // background colours
     // eg. bg--primary
     .bg {
-       // & appends to parent class name
+      // & appends to parent class name
       &--#{"" + $name} {
-       background-color: $colour;
-     }
+        background-color: $colour;
+      }
     }
     // text colours
     // eg text--primary
     .text {
       &--#{"" + $name} {
-       color: $colour;
-     }
+        color: $colour;
+      }
     }
   }
 }
 @include colours;
-
 
 // 3. spacing
 // create spacing classes for margin and padding
