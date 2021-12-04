@@ -19,20 +19,26 @@ Primary.args = {
   label: "PRIMARY",
   primary: true,
 };
+
 export const Secondary = Template.bind({});
 Secondary.args = {
   label: "SECONDARY",
-  primary: false,
+  secondary: true,
 };
+
 export const Outline = Template.bind({});
 Outline.args = {
   label: "OUTLINE",
   outline: true,
 };
-export const Disabled = Template.bind({});
+
+export const Disabled = (args, { argTypes }) => ({
+  props: Object.keys(argTypes),
+  components: { Button },
+  template: '<Button v-bind="$props" @click="click" disabled />',
+});
 Disabled.args = {
   label: "DISABLED",
-  disabled: true,
   primary: true,
 };
 
@@ -47,4 +53,10 @@ Block.args = {
   label: "BLOCK",
   primary: true,
   block: true,
+};
+
+export const Text = Template.bind({});
+Text.args = {
+  label: "TEXT",
+  text: true,
 };

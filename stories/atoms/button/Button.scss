@@ -16,42 +16,46 @@
   word-spacing: normal;
   text-rendering: auto;
   border: 1px solid transparent;
+  color: var(--color-text);
   &:focus {
-    outline: none;
-    box-shadow: 0 0 8px var(--primary);
+    outline: 1px solid var(--color-text);
   }
   &--primary {
-    color: white;
+    color: var(--color-text-button);
     background-color: var(--primary);
     border: 1px solid var(--primary);
     &:hover {
-      color: white;
+      color: var(--color-text-button);
       background-color: var(--primary);
       border: 1px solid var(--primary);
     }
   }
   &--secondary {
-    color: white;
+    color: var(--color-text-button);
     background-color: var(--secondary);
     border: 1px solid var(--secondary);
     &:hover {
-      color: white;
       background-color: var(--secondary);
       border: 1px solid var(--secondary);
     }
   }
   &--outline {
-    color: var(--primary);
-    background-color: white;
+    background-color: var(--color-bg);
     border: 1px solid var(--primary);
     &:hover {
-      color: white;
+      color: var(--color-text-button);
       background-color: var(--primary);
       border: 1px solid var(--primary);
-      a {
-        color: white;
-      }
     }
+    &:focus {
+      outline: none;
+      color: var(--color-text-button);
+      background-color: var(--primary);
+    }
+  }
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.38;
   }
   &--disabled {
     cursor: not-allowed;
@@ -65,5 +69,15 @@
   &--block {
     display: block;
     width: 100%;
+  }
+  &--destruct {
+    color: var(--light);
+    background-color: var(--destruct);
+  }
+  &--text {
+    color: var(--color-text);
+    background-color: transparent;
+    border: none;
+    text-decoration: none;
   }
 }

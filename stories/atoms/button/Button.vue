@@ -1,10 +1,6 @@
 <template>
-  <button
-    :class="classes"
-    :style="styles"
-    :disabled="disabled"
-    @click.prevent="$emit('click')"
-  >
+  <button :class="classes" @click.prevent="$emit('click')">
+    <slot />
     {{ label }}
   </button>
 </template>
@@ -13,44 +9,29 @@
 export default {
   props: {
     primary: Boolean,
+    secondary: Boolean,
     outline: Boolean,
-    disabled: Boolean,
     destruct: Boolean,
     left: Boolean,
     block: Boolean,
+    text: Boolean,
     label: {
       type: String,
       required: true,
     },
-    backgroundColor: {
-      type: String,
-      default: " ",
-    },
   },
   computed: {
-    // class binding method 1
-    isPrimary() {
-      if (this.primary) {
-        return ["btn", "btn--primary"];
-      } else return ["btn", "btn--secondary"];
-    },
-    // class binding method 2
     classes() {
       return {
         btn: true,
         "btn--primary": this.primary,
-        "btn--secondary": !this.primary,
+        "btn--secondary": this.secondary,
         "btn--outline": this.outline,
-        "btn--disabled bg--disabled text--dark": this.disabled,
-        "btn--destruct bg--destruct text--light": this.destruct,
+        "btn--disabled": this.disabled,
+        "btn--destruct": this.destruct,
         "btn--left": this.left,
         "btn--block": this.block,
-      };
-    },
-    // inline style binding
-    styles() {
-      return {
-        backgroundColor: this.backgroundColor,
+        "btn--text": this.text,
       };
     },
   },

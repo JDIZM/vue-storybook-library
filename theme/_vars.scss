@@ -11,7 +11,10 @@ $colours: (
   light: rgb(255, 255, 255),
   dark: rgb(48, 48, 48),
   white: #fff,
-  blue: #1a1a1d
+  blue: #1a1a1d,
+  color-text: #1a1a1d,
+  color-text-button: white,
+  color-bg: white
 );
 
 $links: map-get($colours, secondary);
