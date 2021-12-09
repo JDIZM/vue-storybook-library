@@ -8,14 +8,12 @@ export default {
   },
 };
 
-// create template
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { Dropdown },
   template: '<Dropdown v-bind="$props" @click="click" />',
 });
 
-//
 export const Primary = Template.bind({});
 Primary.args = {
   name: "Dropdown",

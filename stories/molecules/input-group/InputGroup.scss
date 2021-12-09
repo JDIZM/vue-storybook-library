@@ -44,7 +44,7 @@ input:focus {
   border-bottom: 2px solid var(--primary);
 }
 input::placeholder {
-  color: rgba(0, 0, 0, 0.4);
+  color: var(--color-placeholder);
 }
 textarea {
   padding: 1rem;

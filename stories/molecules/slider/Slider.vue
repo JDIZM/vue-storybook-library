@@ -1,5 +1,5 @@
 <template>
-  <div class="slider">
+  <div class="slider" :style="`height: ${height}px; width: ${width}px`">
     <div
       v-for="(slide, i) in slides"
       :key="i"
@@ -27,6 +27,14 @@ export default {
       type: Array,
       required: true,
     },
+    width: {
+      type: Number,
+      required: true,
+    },
+    height: {
+      type: Number,
+      required: true,
+    },
   },
   data() {
     return {
@@ -44,38 +52,34 @@ export default {
 
 <style lang="scss" scoped>
 .slider {
-  height: 500px;
-  width: 500px;
   margin: auto;
-}
-.slider__item {
-  display: none;
-  height: 100%;
-  padding: 0.5rem 0;
-}
-.slider__btns {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-.slider__btns__btn {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  margin: 0.25rem;
-  cursor: pointer;
-  background-color: var(--blue);
-  &.slider__btns__btn--active {
-    background-color: var(--secondary);
+  &__item {
+    display: none;
+    height: 100%;
+    &--active {
+      display: block;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 1rem;
+    }
   }
-}
-.slider__item--active {
-  display: block;
-}
-
-img {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
+  &__btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    &__btn {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      margin: 0.25rem;
+      cursor: pointer;
+      background-color: var(--primary);
+      &.slider__btns__btn--active {
+        background-color: var(--secondary);
+      }
+    }
+  }
 }
 </style>
