@@ -3,18 +3,16 @@
 exports[`Storyshots atoms/Button Block 1`] = `
 <button
   class="btn btn--primary btn--block"
-  type="button"
 >
   
-  PRIMARY
+  BLOCK
 
 </button>
 `;
 
 exports[`Storyshots atoms/Button Destruct 1`] = `
 <button
-  class="btn btn--secondary btn--destruct bg--destruct text--light"
-  type="button"
+  class="btn btn--destruct"
 >
   
   DELETE
@@ -24,8 +22,8 @@ exports[`Storyshots atoms/Button Destruct 1`] = `
 
 exports[`Storyshots atoms/Button Disabled 1`] = `
 <button
-  class="btn btn--primary btn--disabled bg--disabled text--dark"
-  type="button"
+  class="btn btn--primary"
+  disabled="disabled"
 >
   
   DISABLED
@@ -35,8 +33,7 @@ exports[`Storyshots atoms/Button Disabled 1`] = `
 
 exports[`Storyshots atoms/Button Outline 1`] = `
 <button
-  class="btn btn--secondary btn--outline"
-  type="button"
+  class="btn btn--outline"
 >
   
   OUTLINE
@@ -47,7 +44,6 @@ exports[`Storyshots atoms/Button Outline 1`] = `
 exports[`Storyshots atoms/Button Primary 1`] = `
 <button
   class="btn btn--primary"
-  type="button"
 >
   
   PRIMARY
@@ -58,10 +54,19 @@ exports[`Storyshots atoms/Button Primary 1`] = `
 exports[`Storyshots atoms/Button Secondary 1`] = `
 <button
   class="btn btn--secondary"
-  type="button"
 >
   
   SECONDARY
+
+</button>
+`;
+
+exports[`Storyshots atoms/Button Text 1`] = `
+<button
+  class="btn btn--text"
+>
+  
+  TEXT
 
 </button>
 `;
@@ -329,8 +334,7 @@ exports[`Storyshots molecules/Modal Cancel Disabled 1`] = `
       class="modal__footer"
     >
       <button
-        class="btn btn--secondary btn--outline btn--left"
-        type="button"
+        class="btn btn--outline btn--left"
       >
         
   CONFIRM
@@ -338,8 +342,8 @@ exports[`Storyshots molecules/Modal Cancel Disabled 1`] = `
       </button>
        
       <button
-        class="btn btn--primary btn--disabled bg--disabled text--dark btn--left"
-        type="button"
+        class="btn btn--primary btn--left"
+        disabled="disabled"
       >
         
   CLOSE
@@ -375,8 +379,8 @@ exports[`Storyshots molecules/Modal Confirm Disabled 1`] = `
       class="modal__footer"
     >
       <button
-        class="btn btn--secondary btn--outline btn--disabled bg--disabled text--dark btn--left"
-        type="button"
+        class="btn btn--outline btn--left"
+        disabled="disabled"
       >
         
   CONFIRM
@@ -385,7 +389,6 @@ exports[`Storyshots molecules/Modal Confirm Disabled 1`] = `
        
       <button
         class="btn btn--primary btn--left"
-        type="button"
       >
         
   CLOSE
@@ -421,8 +424,7 @@ exports[`Storyshots molecules/Modal Show Modal 1`] = `
       class="modal__footer"
     >
       <button
-        class="btn btn--secondary btn--outline btn--left"
-        type="button"
+        class="btn btn--outline btn--left"
       >
         
   CONFIRM
@@ -431,7 +433,6 @@ exports[`Storyshots molecules/Modal Show Modal 1`] = `
        
       <button
         class="btn btn--primary btn--left"
-        type="button"
       >
         
   CLOSE
