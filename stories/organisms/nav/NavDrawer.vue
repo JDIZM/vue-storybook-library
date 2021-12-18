@@ -1,5 +1,5 @@
 <template>
-  <div v-if="showDrawer" class="nav__drawer text--secondary">
+  <div v-if="showDrawer" class="nav__drawer">
     <!--  -->
     <div class="nav__drawer__wrapper">
       <div class="nav__drawer__top"></div>
