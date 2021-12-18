@@ -1,6 +1,5 @@
 // main.scss
-@import './_vars.scss'; // theme colours
-@import './_mixins.scss'; // mixin classes
-@import './_global.scss'; // global styles.
-@import './_theme.scss'; // base theme styling
-
+@use './vars.scss'; // theme colours
+@use './mixins.scss'; // mixin classes
+@use './global.scss'; // global styles.
+@use './theme.scss'; // base theme styling
