@@ -39,11 +39,11 @@
         </li>
       </ul>
       <div class="nav__desktop__btns">
-        <a :href="'tel:' + phone" class="nav__desktop__btn btn--primary">
+        <a :href="'tel:' + phone" class="nav__desktop__btn btn btn--outline">
           CALL
         </a>
         <div
-          class="nav__desktop__btn btn--outline"
+          class="nav__desktop__btn btn btn--secondary"
           role="button"
           aria-pressed="false"
           tabindex="0"
@@ -62,11 +62,11 @@
         </div>
       </div>
       <div class="nav__mobile__btns">
-        <a class="nav__mobile__btn btn--outline" :href="'tel:' + phone">
+        <a class="nav__mobile__btn btn btn--outline" :href="'tel:' + phone">
           CALL
         </a>
         <button
-          class="nav__mobile__btn btn--primary"
+          class="nav__mobile__btn btn btn--secondary"
           role="button"
           aria-pressed="true"
           tabindex="0"
@@ -166,5 +166,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "./Nav.scss";
+@use '../../atoms/button/Button.scss';
+@use './Nav.scss';
 </style>

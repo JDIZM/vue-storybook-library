@@ -25,6 +25,8 @@ describe("VSlider", () => {
     propsData: {
       //
       slides,
+      width: 500,
+      height: 300,
     },
   });
 

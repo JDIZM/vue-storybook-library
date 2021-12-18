@@ -1,6 +1,6 @@
 <template>
   <div class="toast-wrapper">
-    <div v-if="show" class="toast bg--primary text--white active">
+    <div v-if="show" class="toast active">
       <span class="material-icons">{{ icon }}</span>
       <p>{{ msg }}</p>
     </div>

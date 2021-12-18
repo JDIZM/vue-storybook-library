@@ -9,7 +9,7 @@
 
 html,
 body {
-  background-color: white;
+  background-color: var(--color-bg);
   margin: 0;
 }
 body {
@@ -18,13 +18,13 @@ body {
   line-height: 1.4;
 }
 
-div {
-  width: 100%;
-}
+// div {
+//   width: 100%;
+// }
 
 ::selection {
   background-color: var(--primary);
-  color: white;
+  color: var(--light);
 }
 
 *,
@@ -34,16 +34,17 @@ div {
   margin: 0;
 }
 
-// DEFAULT ELEMENTS
-
 button,
 span,
 ul,
+ol,
+dl,
 li {
   line-height: inherit;
   font-family: inherit;
   font-size: inherit;
-  margin: 0;
+  color: inherit;
+  margin: 0 0 0.5rem 0;
   padding: 0;
 }
 
@@ -51,14 +52,12 @@ a {
   color: var(--links);
   text-decoration: none;
 }
-
 a:focus,
 i:focus {
   outline: none;
   box-shadow: -2px -2px 16px var(--primary);
 }
 
-// HEADINGS
 h1,
 h2,
 h3,
@@ -66,28 +65,4 @@ h4,
 h5 {
   margin: 0 0 0.5rem 0;
   padding: 0;
-}
-
-// LISTS
-ul,
-ol,
-dl {
-  margin: 0 0 1rem 0;
-  padding: 0;
-}
-
-// ERROR
-// applied to the form field and child elements.
-.--error {
-  input {
-    background: var(--error-100);
-  }
-  input:focus {
-    border-bottom: 2px solid var(--error);
-  }
-}
-
-// display
-.--hidden {
-  display: none;
 }

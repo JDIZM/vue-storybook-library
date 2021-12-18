@@ -1,4 +1,4 @@
-// theme mixins
+@use './vars.scss' as *;
 
 // 1. root vars
 // create root vars
@@ -16,29 +16,6 @@
 }
 @include vars;
 
-// 2. colours
-@mixin colours {
-  @each $name, $colour in $colours {
-    // background colours
-    // eg. bg--primary
-    .bg {
-      // & appends to parent class name
-      &--#{"" + $name} {
-        background-color: $colour;
-      }
-    }
-    // text colours
-    // eg text--primary
-    .text {
-      &--#{"" + $name} {
-        color: $colour;
-      }
-    }
-  }
-}
-@include colours;
-
-// 3. spacing
 // create spacing classes for margin and padding
 // m--1, p--1 etc
 @mixin spacing {

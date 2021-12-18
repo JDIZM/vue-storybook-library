@@ -89,27 +89,6 @@ showDrawer.args = {
   ],
 };
 
-// active drawer with dropdown
-export const showDrawerWithDropdown = Template.bind({});
-showDrawerWithDropdown.args = {
-  primary: true,
-  logoSrc: Logo.src,
-  phone: "0161 123 4567",
-  links: [
-    { name: "Item", path: "/" },
-    { name: "Item", path: "/about/" },
-    { name: "Dropdown" },
-    { name: "Item", path: "/contact/" },
-  ],
-  showDrawer: true,
-  showDropdown: false, // desktop only
-  dropdownItems: [
-    { name: "Dropdown Item", path: "/dropdown-one/" },
-    { name: "Dropdown Item", path: "/dropdown-two/" },
-    { name: "Dropdown Item", path: "/dropdown-three/" },
-  ],
-};
-
 // active dropdown
 export const showDropdown = Template.bind({});
 showDropdown.args = {
@@ -125,8 +104,20 @@ showDropdown.args = {
   showDrawer: false,
   showDropdown: true,
   dropdownItems: [
-    { name: "Dropdown Item", path: "/dropdown-one/" },
-    { name: "Dropdown Item", path: "/dropdown-two/" },
-    { name: "Dropdown Item", path: "/dropdown-three/" },
+    {
+      name: "Dropdown Item",
+      path: "/dropdown-one/",
+      copy: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt sodales metus non efficitur. Donec risus dolor, bibendum a magna sit amet, lacinia vehicula diam.",
+    },
+    {
+      name: "Dropdown Item",
+      path: "/dropdown-two/",
+      copy: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt sodales metus non efficitur. Donec risus dolor, bibendum a magna sit amet, lacinia vehicula diam.",
+    },
+    {
+      name: "Dropdown Item",
+      path: "/dropdown-three/",
+      copy: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt sodales metus non efficitur. Donec risus dolor, bibendum a magna sit amet, lacinia vehicula diam.",
+    },
   ],
 };

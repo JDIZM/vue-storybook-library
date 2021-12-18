@@ -11,7 +11,6 @@
       :id="name"
       rows="4"
       cols="50"
-      class="bg--primary-100"
       :value="value"
       :type="type"
       :name="name"
@@ -21,7 +20,6 @@
     <input
       v-else
       :id="name"
-      class="bg--primary-100"
       :value="value"
       :type="type"
       :name="name"

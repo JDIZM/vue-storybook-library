@@ -1,6 +1,6 @@
 <template>
   <div v-if="show">
-    <div class="modal bg--white text--black">
+    <div class="modal">
       <div class="modal__content">
         <slot />
       </div>

@@ -1,18 +1,21 @@
 <template>
-  <div v-if="showDropdown" class="nav__dropdown bg--primary">
-    <ul>
-      <li v-for="item in items" :key="item.path" class="nav__dropdown__item">
+  <div v-if="showDropdown" class="nav__dropdown">
+    <ul class="nav__desktop__list">
+      <li
+        v-for="item in items"
+        :key="item.path"
+        class="nav__desktop__list__item"
+      >
         <router-link
           v-if="item.path"
           :to="item.path"
           exact-active-class="--active"
         >
-          <div class="nav__desktop__list__item">
-            <span v-if="item.icon" class="material-icons text--white">
-              {{ item.icon }}
-            </span>
-            <span class="text--white">{{ item.name.toUpperCase() }}</span>
+          <div class="nav__desktop__list__item--flex">
+            <span>{{ item.name.toUpperCase() }}</span>
+            <span class="material-icons">chevron_right</span>
           </div>
+          <p>{{ item.copy }}</p>
         </router-link>
       </li>
     </ul>
@@ -21,6 +24,7 @@
 
 <script>
 export default {
+  name: "NavDropdown",
   props: {
     items: {
       type: Array,
@@ -40,6 +44,55 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// @import "../../theme/theme.scss";
-@import "./Nav.scss";
+.nav__dropdown {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  span,
+  p {
+    color: var(--light);
+  }
+}
+.nav__desktop__list {
+  display: flex;
+  flex-direction: row;
+  margin: 1rem;
+  color: var(--light);
+  justify-content: center;
+  &__item {
+    display: block;
+    border: 1px solid rgba(255, 255, 255, 0.19);
+    border-radius: 8px;
+    width: 313px;
+    margin: 0.5rem;
+    p {
+      text-align: left;
+    }
+    a {
+      display: block;
+      padding: 1rem;
+      height: 100%;
+    }
+    &--flex {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+a.nuxt-link-active,
+a.--active {
+  background: rgba(255, 255, 255, 0.19);
+  border-radius: 8px;
+  text-decoration: none;
+  span.material-icons {
+    transform: rotate(90deg);
+  }
+}
+.material-icons {
+  vertical-align: top;
+}
 </style>

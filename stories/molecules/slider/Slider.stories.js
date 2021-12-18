@@ -39,6 +39,8 @@ export const Primary = Template.bind({});
 Primary.args = {
   show: false,
   slides,
+  height: 300,
+  width: 500,
   // title: 'Modal Title',
   // msg: 'This is the message'
 };

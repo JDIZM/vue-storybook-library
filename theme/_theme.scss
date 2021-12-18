@@ -1,10 +1,10 @@
+@use './vars.scss' as *;
 
 .container {
   height: 100%;
   max-width: 1600px; // set max breakpoint for content
   width: 90%; // 5% margin
   margin: 0 auto;
-  // flex and center
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,7 +34,7 @@ h5 {
   font-weight: 300;
 }
 // responsive sizing
-@media screen and (min-width: 768px) {
+@media screen and (min-width: $breakpoint-md) {
   //
   h1 {
     font-size: 6rem;
@@ -56,9 +56,8 @@ h5 {
     font-size: 1.5rem;
     font-weight: 300;
   }
-};
-@media screen and (min-width: 992px) {
-  //
+}
+@media screen and (min-width: $breakpoint-lg) {
   h1 {
     font-size: 6rem;
     font-weight: 700;
@@ -79,8 +78,8 @@ h5 {
     font-size: 1.5rem;
     font-weight: 300;
   }
-};
-@media screen and (min-width: 1200px) {
+}
+@media screen and (min-width: $breakpoint-xl) {
   h1 {
     font-size: 6rem;
     font-weight: 700;
@@ -101,7 +100,7 @@ h5 {
     font-size: 1.5rem;
     font-weight: 300;
   }
-};
+}
 
 // typography elements
 .overline {
@@ -130,7 +129,20 @@ h5 {
 
 // style nuxt links
 .--active {
-  color: white;
+  color: var(--links);
   background: var(--primary);
-  text-decoration: underline !important;
+  text-decoration: underline;
+}
+
+.--error {
+  input {
+    background: var(--error-100);
+  }
+  input:focus {
+    border-bottom: 2px solid var(--error);
+  }
+}
+
+.--hidden {
+  display: none;
 }
