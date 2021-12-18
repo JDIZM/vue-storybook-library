@@ -29,8 +29,9 @@ footer {
 }
 .footer__grid__item {
   flex: 1 1 auto;
-  margin-bottom: 1rem;
+  padding: 1rem;
   align-items: flex-start;
+  width: 100%;
 }
 a,
 a:visited {
