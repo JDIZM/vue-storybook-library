@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg--primary text--white">
+  <footer>
     <div class="footer">
       <div class="footer__grid">
         <div class="footer__grid__item brand">

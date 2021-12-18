@@ -37,6 +37,7 @@ input {
   border-right: none;
   border-left: none;
   border-bottom: 2px solid transparent;
+  background-color: var(--primary-100);
 }
 input:focus {
   color: black;
@@ -58,6 +59,7 @@ textarea {
   border-right: none;
   border-left: none;
   border-bottom: 2px solid transparent;
+  background-color: var(--primary-100);
 }
 textarea:focus {
   outline: none;

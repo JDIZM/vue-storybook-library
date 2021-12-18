@@ -9,6 +9,7 @@ footer {
   text-align: center;
   flex-direction: column;
   background: var(--primary);
+  color: var(--color-text-primary);
   h5 {
     margin-top: 1rem;
   }
@@ -26,13 +27,14 @@ footer {
     width: 100%;
   }
 }
-.footer__grid__item  {
+.footer__grid__item {
   flex: 1 1 auto;
   margin-bottom: 1rem;
   align-items: flex-start;
 }
-a, a:visited {
-  color: var(--links)
+a,
+a:visited {
+  color: var(--links);
 }
 
 // BRAND
@@ -74,7 +76,7 @@ a, a:visited {
   margin: auto;
   margin-top: 1rem;
   padding: 1rem 0;
-  border-top: 1px solid rgba(255,255,255,.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
   p {
     padding-top: 0;
   }
@@ -90,6 +92,6 @@ a, a:visited {
     margin: 0.5rem;
   }
   i {
-     font-size: 1.5rem;
-   }
+    font-size: 1.5rem;
+  }
 }
