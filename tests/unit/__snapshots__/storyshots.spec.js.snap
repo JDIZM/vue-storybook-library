@@ -164,7 +164,6 @@ exports[`Storyshots molecules/Form Input Input With Error 1`] = `
   </span>
    
   <input
-    class="bg--primary-100"
     id="phone"
     name="phone"
     placeholder="Enter your phone number"
@@ -194,7 +193,6 @@ exports[`Storyshots molecules/Form Input Input With Icon 1`] = `
   </span>
    
   <input
-    class="bg--primary-100"
     id="phone"
     name="phone"
     placeholder="Enter your phone number"
@@ -220,7 +218,6 @@ exports[`Storyshots molecules/Form Input Input With No Label 1`] = `
   </span>
    
   <input
-    class="bg--primary-100"
     id="phone"
     name="phone"
     placeholder="Enter your phone number"
@@ -248,7 +245,6 @@ exports[`Storyshots molecules/Form Input Input With Success 1`] = `
   <!---->
    
   <input
-    class="bg--primary-100"
     id="phone"
     name="phone"
     placeholder="Enter your phone number"
@@ -278,7 +274,6 @@ exports[`Storyshots molecules/Form Input Text Area 1`] = `
   </span>
    
   <textarea
-    class="bg--primary-100"
     cols="50"
     id="message"
     name="message"
@@ -304,7 +299,6 @@ exports[`Storyshots molecules/Form Input Text Input Without Icon 1`] = `
   <!---->
    
   <input
-    class="bg--primary-100"
     id="name"
     name="name"
     placeholder="John Smith"
@@ -316,7 +310,7 @@ exports[`Storyshots molecules/Form Input Text Input Without Icon 1`] = `
 exports[`Storyshots molecules/Modal Cancel Disabled 1`] = `
 <div>
   <div
-    class="modal bg--white text--black"
+    class="modal"
   >
     <div
       class="modal__content"
@@ -361,7 +355,7 @@ exports[`Storyshots molecules/Modal Cancel Disabled 1`] = `
 exports[`Storyshots molecules/Modal Confirm Disabled 1`] = `
 <div>
   <div
-    class="modal bg--white text--black"
+    class="modal"
   >
     <div
       class="modal__content"
@@ -406,7 +400,7 @@ exports[`Storyshots molecules/Modal Confirm Disabled 1`] = `
 exports[`Storyshots molecules/Modal Show Modal 1`] = `
 <div>
   <div
-    class="modal bg--white text--black"
+    class="modal"
   >
     <div
       class="modal__content"
@@ -450,6 +444,7 @@ exports[`Storyshots molecules/Modal Show Modal 1`] = `
 exports[`Storyshots molecules/Slider Primary 1`] = `
 <div
   class="slider"
+  style="height: 300px; width: 500px;"
 >
   <div
     class="slider__item slider__item--active"
@@ -512,7 +507,7 @@ exports[`Storyshots molecules/Toast Alarm Icon 1`] = `
   class="toast-wrapper"
 >
   <div
-    class="toast bg--primary text--white active"
+    class="toast active"
   >
     <span
       class="material-icons"
@@ -532,7 +527,7 @@ exports[`Storyshots molecules/Toast Default Icon 1`] = `
   class="toast-wrapper"
 >
   <div
-    class="toast bg--primary text--white active"
+    class="toast active"
   >
     <span
       class="material-icons"
@@ -580,7 +575,6 @@ exports[`Storyshots organisms/Contact Form Contact Form 1`] = `
     </span>
      
     <input
-      class="bg--primary-100"
       id="name"
       name="name"
       placeholder="James"
@@ -608,7 +602,6 @@ exports[`Storyshots organisms/Contact Form Contact Form 1`] = `
     </span>
      
     <input
-      class="bg--primary-100"
       id="email"
       name="email"
       placeholder="hello@jamesdonnelly.dev"
@@ -636,7 +629,6 @@ exports[`Storyshots organisms/Contact Form Contact Form 1`] = `
     </span>
      
     <input
-      class="bg--primary-100"
       id="phone"
       name="phone"
       placeholder="0161 123 4567"
@@ -663,7 +655,6 @@ exports[`Storyshots organisms/Contact Form Contact Form 1`] = `
     </span>
      
     <textarea
-      class="bg--primary-100"
       cols="50"
       id="message"
       name="message"
@@ -714,7 +705,6 @@ exports[`Storyshots organisms/Email Subscribe Form With Error 1`] = `
     </span>
      
     <input
-      class="bg--primary-100"
       id="email"
       name="email"
       placeholder="Enter your email"
@@ -757,7 +747,6 @@ exports[`Storyshots organisms/Email Subscribe Form With Success 1`] = `
     <!---->
      
     <input
-      class="bg--primary-100"
       id="email"
       name="email"
       placeholder="Enter your email"
@@ -802,7 +791,6 @@ exports[`Storyshots organisms/Email Subscribe Single Email Field 1`] = `
     </span>
      
     <input
-      class="bg--primary-100"
       id="email"
       name="email"
       placeholder="Enter your email"
@@ -823,7 +811,6 @@ exports[`Storyshots organisms/Email Subscribe Single Email Field 1`] = `
 
 exports[`Storyshots organisms/Footer Primary 1`] = `
 <footer
-  class="bg--primary text--white"
   primary="true"
 >
   <div
@@ -1036,7 +1023,7 @@ exports[`Storyshots organisms/Nav Primary 1`] = `
       class="nav__desktop__btns"
     >
       <a
-        class="nav__desktop__btn btn--primary"
+        class="nav__desktop__btn btn btn--outline"
         href="tel:0161 123 4567"
       >
         
@@ -1046,7 +1033,7 @@ exports[`Storyshots organisms/Nav Primary 1`] = `
        
       <div
         aria-pressed="false"
-        class="nav__desktop__btn btn--outline"
+        class="nav__desktop__btn btn btn--secondary"
         role="button"
         tabindex="0"
       >
@@ -1077,7 +1064,7 @@ exports[`Storyshots organisms/Nav Primary 1`] = `
       class="nav__mobile__btns"
     >
       <a
-        class="nav__mobile__btn btn--outline"
+        class="nav__mobile__btn btn btn--outline"
         href="tel:0161 123 4567"
       >
         
@@ -1087,7 +1074,7 @@ exports[`Storyshots organisms/Nav Primary 1`] = `
        
       <button
         aria-pressed="true"
-        class="nav__mobile__btn btn--primary"
+        class="nav__mobile__btn btn btn--secondary"
         role="button"
         tabindex="0"
       >
@@ -1214,7 +1201,7 @@ exports[`Storyshots organisms/Nav Show Drawer 1`] = `
       class="nav__desktop__btns"
     >
       <a
-        class="nav__desktop__btn btn--primary"
+        class="nav__desktop__btn btn btn--outline"
         href="tel:0161 123 4567"
       >
         
@@ -1224,7 +1211,7 @@ exports[`Storyshots organisms/Nav Show Drawer 1`] = `
        
       <div
         aria-pressed="false"
-        class="nav__desktop__btn btn--outline"
+        class="nav__desktop__btn btn btn--secondary"
         role="button"
         tabindex="0"
       >
@@ -1255,7 +1242,7 @@ exports[`Storyshots organisms/Nav Show Drawer 1`] = `
       class="nav__mobile__btns"
     >
       <a
-        class="nav__mobile__btn btn--outline"
+        class="nav__mobile__btn btn btn--outline"
         href="tel:0161 123 4567"
       >
         
@@ -1265,7 +1252,7 @@ exports[`Storyshots organisms/Nav Show Drawer 1`] = `
        
       <button
         aria-pressed="true"
-        class="nav__mobile__btn btn--primary"
+        class="nav__mobile__btn btn btn--secondary"
         role="button"
         tabindex="0"
       >
@@ -1290,279 +1277,7 @@ exports[`Storyshots organisms/Nav Show Drawer 1`] = `
   </div>
    
   <div
-    class="nav__drawer text--secondary"
-  >
-    <div
-      class="nav__drawer__wrapper"
-    >
-      <div
-        class="nav__drawer__top"
-      />
-       
-      <ul
-        class="nav__drawer__list"
-      >
-        <li>
-          <a
-            aria-current="page"
-            class="--active router-link-active"
-            href="#/"
-          >
-            <div
-              class="nav__menu__wrapper"
-            >
-              <!---->
-               
-              <span>
-                Item
-              </span>
-            </div>
-          </a>
-           
-          <!---->
-        </li>
-        <li>
-          <a
-            class=""
-            href="#/about/"
-          >
-            <div
-              class="nav__menu__wrapper"
-            >
-              <!---->
-               
-              <span>
-                Item
-              </span>
-            </div>
-          </a>
-           
-          <!---->
-        </li>
-        <li>
-          <a
-            aria-pressed="false"
-            exact-active-class="--active"
-            role="button"
-            tabindex="0"
-          >
-            <div
-              class="nav__menu__wrapper"
-            >
-              <!---->
-               
-              <span>
-                Dropdown
-              </span>
-            </div>
-          </a>
-           
-          <!---->
-        </li>
-        <li>
-          <a
-            class=""
-            href="#/contact/"
-          >
-            <div
-              class="nav__menu__wrapper"
-            >
-              <!---->
-               
-              <span>
-                Item
-              </span>
-            </div>
-          </a>
-           
-          <!---->
-        </li>
-      </ul>
-    </div>
-     
-    <div
-      class="nav__drawer__overlay"
-    />
-  </div>
-   
-  <!---->
-</nav>
-`;
-
-exports[`Storyshots organisms/Nav Show Drawer With Dropdown 1`] = `
-<nav
-  class="nav"
-  primary="true"
->
-  <div
-    class="nav__desktop"
-  >
-    <div
-      class="nav__desktop__brand"
-    >
-      <div
-        class="nav__desktop__logo"
-      >
-        <img
-          draggable="false"
-          src=""
-        />
-      </div>
-    </div>
-     
-    <ul
-      class="nav__desktop__list"
-    >
-      <li>
-        <a
-          aria-current="page"
-          class="--active router-link-active"
-          href="#/"
-        >
-          <div
-            class="nav__desktop__list__item"
-          >
-            <!---->
-             
-            <span>
-              ITEM
-            </span>
-          </div>
-        </a>
-      </li>
-      <li>
-        <a
-          class=""
-          href="#/about/"
-        >
-          <div
-            class="nav__desktop__list__item"
-          >
-            <!---->
-             
-            <span>
-              ITEM
-            </span>
-          </div>
-        </a>
-      </li>
-      <li>
-        <a
-          aria-pressed="false"
-          exact-active-class="--active"
-          role="button"
-          tabindex="0"
-        >
-          <div
-            class="nav__desktop__list__item"
-          >
-            <!---->
-             
-            <span>
-              DROPDOWN
-            </span>
-          </div>
-        </a>
-      </li>
-      <li>
-        <a
-          class=""
-          href="#/contact/"
-        >
-          <div
-            class="nav__desktop__list__item"
-          >
-            <!---->
-             
-            <span>
-              ITEM
-            </span>
-          </div>
-        </a>
-      </li>
-    </ul>
-     
-    <div
-      class="nav__desktop__btns"
-    >
-      <a
-        class="nav__desktop__btn btn--primary"
-        href="tel:0161 123 4567"
-      >
-        
-        CALL
-      
-      </a>
-       
-      <div
-        aria-pressed="false"
-        class="nav__desktop__btn btn--outline"
-        role="button"
-        tabindex="0"
-      >
-        
-        ENQUIRE
-      
-      </div>
-    </div>
-  </div>
-   
-  <div
-    class="nav__mobile"
-  >
-    <div
-      class="nav__mobile__brand"
-    >
-      <div
-        class="nav__mobile__logo"
-      >
-        <img
-          draggable="false"
-          src=""
-        />
-      </div>
-    </div>
-     
-    <div
-      class="nav__mobile__btns"
-    >
-      <a
-        class="nav__mobile__btn btn--outline"
-        href="tel:0161 123 4567"
-      >
-        
-        CALL
-      
-      </a>
-       
-      <button
-        aria-pressed="true"
-        class="nav__mobile__btn btn--primary"
-        role="button"
-        tabindex="0"
-      >
-        
-        ENQUIRE
-      
-      </button>
-    </div>
-  </div>
-   
-  <div
-    aria-pressed="true"
-    class="nav__toggle"
-    role="button"
-    tabindex="0"
-  >
-    <i
-      class="material-icons"
-    >
-      close
-    </i>
-  </div>
-   
-  <div
-    class="nav__drawer text--secondary"
+    class="nav__drawer"
   >
     <div
       class="nav__drawer__wrapper"
@@ -1758,7 +1473,7 @@ exports[`Storyshots organisms/Nav Show Dropdown 1`] = `
       class="nav__desktop__btns"
     >
       <a
-        class="nav__desktop__btn btn--primary"
+        class="nav__desktop__btn btn btn--outline"
         href="tel:0161 123 4567"
       >
         
@@ -1768,7 +1483,7 @@ exports[`Storyshots organisms/Nav Show Dropdown 1`] = `
        
       <div
         aria-pressed="false"
-        class="nav__desktop__btn btn--outline"
+        class="nav__desktop__btn btn btn--secondary"
         role="button"
         tabindex="0"
       >
@@ -1799,7 +1514,7 @@ exports[`Storyshots organisms/Nav Show Dropdown 1`] = `
       class="nav__mobile__btns"
     >
       <a
-        class="nav__mobile__btn btn--outline"
+        class="nav__mobile__btn btn btn--outline"
         href="tel:0161 123 4567"
       >
         
@@ -1809,7 +1524,7 @@ exports[`Storyshots organisms/Nav Show Dropdown 1`] = `
        
       <button
         aria-pressed="true"
-        class="nav__mobile__btn btn--primary"
+        class="nav__mobile__btn btn btn--secondary"
         role="button"
         tabindex="0"
       >
@@ -1836,67 +1551,87 @@ exports[`Storyshots organisms/Nav Show Dropdown 1`] = `
   <!---->
    
   <div
-    class="nav__dropdown bg--primary"
+    class="nav__dropdown"
   >
-    <ul>
+    <ul
+      class="nav__desktop__list"
+    >
       <li
-        class="nav__dropdown__item"
+        class="nav__desktop__list__item"
       >
         <a
           class=""
           href="#/dropdown-one/"
         >
           <div
-            class="nav__desktop__list__item"
+            class="nav__desktop__list__item--flex"
           >
-            <!---->
-             
-            <span
-              class="text--white"
-            >
+            <span>
               DROPDOWN ITEM
             </span>
+             
+            <span
+              class="material-icons"
+            >
+              chevron_right
+            </span>
           </div>
+           
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt sodales metus non efficitur. Donec risus dolor, bibendum a magna sit amet, lacinia vehicula diam.
+          </p>
         </a>
       </li>
       <li
-        class="nav__dropdown__item"
+        class="nav__desktop__list__item"
       >
         <a
           class=""
           href="#/dropdown-two/"
         >
           <div
-            class="nav__desktop__list__item"
+            class="nav__desktop__list__item--flex"
           >
-            <!---->
-             
-            <span
-              class="text--white"
-            >
+            <span>
               DROPDOWN ITEM
             </span>
+             
+            <span
+              class="material-icons"
+            >
+              chevron_right
+            </span>
           </div>
+           
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt sodales metus non efficitur. Donec risus dolor, bibendum a magna sit amet, lacinia vehicula diam.
+          </p>
         </a>
       </li>
       <li
-        class="nav__dropdown__item"
+        class="nav__desktop__list__item"
       >
         <a
           class=""
           href="#/dropdown-three/"
         >
           <div
-            class="nav__desktop__list__item"
+            class="nav__desktop__list__item--flex"
           >
-            <!---->
-             
-            <span
-              class="text--white"
-            >
+            <span>
               DROPDOWN ITEM
             </span>
+             
+            <span
+              class="material-icons"
+            >
+              chevron_right
+            </span>
           </div>
+           
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt sodales metus non efficitur. Donec risus dolor, bibendum a magna sit amet, lacinia vehicula diam.
+          </p>
         </a>
       </li>
     </ul>
