@@ -85,8 +85,8 @@
       tabindex="0"
       @click="onShowDrawer"
     >
-      <i v-if="!showDrawer" class="material-icons">menu</i>
-      <i v-else class="material-icons">close</i>
+      <span v-if="!showDrawer" class="icons"><Menu medium /></span>
+      <span v-else class="icons"><Close medium /></span>
     </div>
     <NavDrawer
       :links="links"
@@ -103,10 +103,15 @@
 <script>
 import NavDrawer from "./NavDrawer";
 import NavDropdown from "./NavDropdown";
+import Menu from "../../atoms/icons/Menu.vue";
+import Close from "../../atoms/icons/Close.vue";
+
 export default {
   components: {
     NavDrawer,
     NavDropdown,
+    Menu,
+    Close,
   },
   props: {
     links: {
