@@ -250,15 +250,15 @@
   &--outline {
     background-color: var(--primary);
     border: 1px solid var(--light);
-    color: var(--color-text-button);
+    color: var(--color-text-primary);
     &:hover {
-      color: var(--color-text-button);
+      color: var(--color-text-primary);
       background-color: var(--primary-100);
       border: 1px solid var(--light);
     }
     &:focus {
       outline: none;
-      color: var(--color-text-button);
+      color: var(--color-text-primary);
       background-color: var(--primary-100);
     }
   }
