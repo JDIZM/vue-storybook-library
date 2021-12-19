@@ -1,5 +1,6 @@
 // export all components to build as a library
 import "../../theme/main.scss";
+
 //
 // atoms
 //
@@ -20,6 +21,7 @@ export { default as IconPerson } from "../../stories/atoms/icons/Person.vue";
 export { default as IconPhone } from "../../stories/atoms/icons/Phone.vue";
 export { default as IconTwitter } from "../../stories/atoms/icons/Twitter.vue";
 export { default as IconWarning } from "../../stories/atoms/icons/Warning.vue";
+export { default as IconChevronRight } from "../../stories/atoms/icons/ChevronRight.vue";
 
 //
 // molecules
