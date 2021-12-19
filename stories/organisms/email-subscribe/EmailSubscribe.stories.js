@@ -3,14 +3,14 @@ import EmailSubscribe from "./EmailSubscribe.vue";
 // https://storybook.js.org/docs/react/workflows/stories-for-multiple-components
 import FormInput from "../../molecules/input-group/InputGroup.stories";
 import Button from "../../atoms/button/Button.stories";
+import Email from "../../atoms/icons/Email.vue";
 
 export default {
   title: "organisms/Email Subscribe",
   component: EmailSubscribe,
-  subcomponents: { FormInput, Button },
+  subcomponents: { FormInput, Button, Email },
   argTypes: {
     submit: { action: "submit" },
-    update: { action: "update" },
     error: { action: "error" },
   },
 };
@@ -19,7 +19,7 @@ const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { EmailSubscribe, FormInput, Button },
   template:
-    '<EmailSubscribe v-bind="$props" @submit="submit" @update="update" @error="error" />',
+    '<EmailSubscribe v-bind="$props" @submit="submit" @error="error" />',
 });
 
 export const SingleEmailField = Template.bind({});
@@ -28,14 +28,14 @@ SingleEmailField.args = {
   showSuccess: false,
   label: "Subscribe to our newsletter",
 };
-export const formWithError = Template.bind({});
-formWithError.args = {
+export const FormWithError = Template.bind({});
+FormWithError.args = {
   showError: true,
   showSuccess: false,
   label: "Subscribe to our newsletter",
 };
-export const formWithSuccess = Template.bind({});
-formWithSuccess.args = {
+export const FormWithSuccess = Template.bind({});
+FormWithSuccess.args = {
   showSuccess: true,
   showError: false,
   label: "Subscribe to our newsletter",

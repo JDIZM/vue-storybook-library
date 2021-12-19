@@ -1,73 +1,44 @@
 <template>
   <form ref="form" class="form" @submit.prevent="onSubmit">
     <FormInput
-      ref="email"
-      v-model="email"
       name="email"
       type="email"
       placeholder="Enter your email"
       icon="email"
       :label="label"
-      :show-icon="true"
       :show-error="showError"
       :show-success="showSuccess"
-      required
-      @update="onUpdate"
+    >
+      <Email medium />
+    </FormInput>
+    <Button
+      type="submit"
+      left
+      label="SUBMIT"
+      primary
+      @click="$emit('submit')"
     />
-    <Button type="submit" left label="SUBMIT" primary @click="onSubmit" />
   </form>
 </template>
 
 <script>
 import FormInput from "../../molecules/input-group/InputGroup.vue";
 import Button from "../../atoms/button/Button.vue";
+import Email from "../../atoms/icons/Email.vue";
+
 export default {
   components: {
     FormInput,
     Button,
-  },
-  model: {
-    data: "value",
-    event: "update",
+    Email,
   },
   props: {
     label: {
       type: String,
       required: true,
     },
-    showSuccess: {
-      type: Boolean,
-      default: () => false,
-    },
-    showError: {
-      type: Boolean,
-      default: () => false,
-    },
-  },
-  data() {
-    return {
-      email: "",
-    };
-  },
-  computed: {
-    //
-  },
-  methods: {
-    onSubmit() {
-      // click.prevent on the button
-      // stops the default form submit and html validation
-      // console.log(this.$refs);
-      // console.log(this.$refs["email"].$el.children[2].validity);
-      // console.log(this.$refs["form"].submit());
-      if (this.email === null || this.email === "") {
-        this.$emit("error", this.email);
-      } else {
-        this.$emit("submit", this.email);
-      }
-    },
-    onUpdate(value) {
-      this.$emit("update", value);
-    },
+    showSuccess: Boolean,
+    showError: Boolean,
   },
 };
 </script>
