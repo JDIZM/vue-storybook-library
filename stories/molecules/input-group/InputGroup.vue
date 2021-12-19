@@ -8,7 +8,7 @@
       <warning medium />
     </span>
     <span v-if="!showSuccess && !showError" class="icons">
-      <slot name="icon" />
+      <slot />
     </span>
     <textarea
       v-if="type === 'textarea'"

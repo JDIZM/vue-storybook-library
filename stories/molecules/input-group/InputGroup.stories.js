@@ -32,9 +32,7 @@ export const TextArea = (args, { argTypes }) => ({
   components: { InputGroup, Message },
   template: `
     <input-group v-bind="$props" @update="update" >
-      <template #icon>
-        <message medium />
-      </template>
+      <message medium />
     </input-group>
     `,
 });
@@ -52,9 +50,7 @@ export const InputWithIcon = (args, { argTypes }) => ({
   components: { InputGroup, Phone },
   template: `
     <input-group v-bind="$props" @update="update" >
-      <template #icon>
-        <phone medium />
-      </template>
+      <phone medium />
     </input-group>
     `,
 });
