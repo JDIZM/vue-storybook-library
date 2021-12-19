@@ -1,7 +1,9 @@
 <template>
   <div class="toast-wrapper">
     <div v-if="show" class="toast active">
-      <span class="material-icons">{{ icon }}</span>
+      <span class="icons">
+        <slot />
+      </span>
       <p>{{ msg }}</p>
     </div>
   </div>
@@ -11,10 +13,6 @@
 export default {
   props: {
     show: Boolean,
-    icon: {
-      type: String,
-      default: "info",
-    },
     msg: {
       type: String,
       required: true,
@@ -31,7 +29,6 @@ export default {
     this.onShow();
   },
   methods: {
-    //
     onShow() {
       if (this.show) {
         setTimeout(() => {
