@@ -13,6 +13,7 @@ import Twitter from "./Twitter.vue";
 import LinkedIn from "./LinkedIn.vue";
 import Instagram from "./Instagram.vue";
 import Github from "./Github.vue";
+import ChevronRight from "./ChevronRight.vue";
 
 export default {
   title: "atoms/Icons",
@@ -38,6 +39,7 @@ const Template = (args, { argTypes }) => ({
     LinkedIn,
     Instagram,
     Github,
+    ChevronRight,
   },
   template: `
       <div>
@@ -47,7 +49,7 @@ const Template = (args, { argTypes }) => ({
         <email v-bind="$props" :color="color" />
         <info v-bind="$props" :color="color" />
         <list v-bind="$props" :color="color" />
-        <menu v-bind="$props" :color="color" />
+        <Menu v-bind="$props" :color="color" />
         <message v-bind="$props" :color="color" />
         <person v-bind="$props" :color="color" />
         <phone v-bind="$props" :color="color" />
@@ -56,6 +58,7 @@ const Template = (args, { argTypes }) => ({
         <linked-in v-bind="$props" :color="color" />
         <instagram v-bind="$props" :color="color" />
         <github v-bind="$props" :color="color" />
+        <chevron-right v-bind="$props" :color="color" />
       </div>
     `,
 });

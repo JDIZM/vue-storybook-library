@@ -11,10 +11,8 @@
     class="icon"
     :class="classes"
   >
-    <path
-      fill-rule="evenodd"
-      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
-    />
+    <path d="M0 0h24v24H0z" fill="none" />
+    <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
   </svg>
 </template>
 
