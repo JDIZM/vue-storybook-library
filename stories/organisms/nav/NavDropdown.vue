@@ -13,7 +13,7 @@
         >
           <div class="nav__desktop__list__item--flex">
             <span>{{ item.name.toUpperCase() }}</span>
-            <span class="material-icons">chevron_right</span>
+            <span class="icons"><chevron-right medium /></span>
           </div>
           <p>{{ item.copy }}</p>
         </router-link>
@@ -23,8 +23,12 @@
 </template>
 
 <script>
+import ChevronRight from "../../atoms/icons/ChevronRight.vue";
+
 export default {
-  name: "NavDropdown",
+  components: {
+    ChevronRight,
+  },
   props: {
     items: {
       type: Array,
@@ -88,11 +92,11 @@ a.--active {
   background: rgba(255, 255, 255, 0.19);
   border-radius: 8px;
   text-decoration: none;
-  span.material-icons {
+  span.icons {
     transform: rotate(90deg);
   }
 }
-.material-icons {
+.icons {
   vertical-align: top;
 }
 </style>
