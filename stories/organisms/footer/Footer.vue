@@ -9,13 +9,7 @@
         </div>
         <div class="footer__grid__item social">
           <h3>SOCIAL</h3>
-          <ul>
-            <li v-for="link in social" :key="link.name">
-              <a :href="link.path" :aria-label="link.aria">
-                <i :class="link.iconClass" />
-              </a>
-            </li>
-          </ul>
+          <slot name="social"></slot>
         </div>
         <div class="footer__grid__item info">
           <h3>COMPANY INFO</h3>
@@ -57,10 +51,6 @@ export default {
       required: true,
     },
     address: {
-      type: Array,
-      required: true,
-    },
-    social: {
       type: Array,
       required: true,
     },

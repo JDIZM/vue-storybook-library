@@ -1,4 +1,6 @@
 import Toast from "./Toast.vue";
+import Warning from "../../atoms/icons/Warning.vue";
+import Info from "../../atoms/icons/Info.vue";
 
 export default {
   title: "molecules/Toast",
@@ -21,17 +23,39 @@ Hidden.args = {
   msg: "This is the toast message",
 };
 
-export const DefaultIcon = Template.bind({});
-DefaultIcon.args = {
+export const WithoutIcon = Template.bind({});
+WithoutIcon.args = {
   show: true,
   duration: 1000,
   msg: "This is the toast message",
 };
 
-export const AlarmIcon = Template.bind({});
-AlarmIcon.args = {
+export const WarningIcon = (args, { argTypes }) => ({
+  props: Object.keys(argTypes),
+  components: { Toast, Warning },
+  template: `
+    <Toast v-bind="$props" @timeout="timeout">
+      <warning medium />
+    </Toast>
+  `,
+});
+WarningIcon.args = {
   show: true,
   duration: 1000,
-  icon: "alarm",
+  msg: "This is the toast message",
+};
+
+export const InfoIcon = (args, { argTypes }) => ({
+  props: Object.keys(argTypes),
+  components: { Toast, Info },
+  template: `
+    <Toast v-bind="$props" @timeout="timeout">
+      <info medium />
+    </Toast>
+  `,
+});
+InfoIcon.args = {
+  show: true,
+  duration: 1000,
   msg: "This is the toast message",
 };

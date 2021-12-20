@@ -1,4 +1,6 @@
 import InputGroup from "./InputGroup.vue";
+import Phone from "../../atoms/icons/Phone.vue";
+import Message from "../../atoms/icons/Message.vue";
 
 export default {
   title: "molecules/Form Input",
@@ -25,62 +27,63 @@ TextInputWithoutIcon.args = {
   showSuccess: false,
 };
 
-export const TextArea = Template.bind({});
+export const TextArea = (args, { argTypes }) => ({
+  props: Object.keys(argTypes),
+  components: { InputGroup, Message },
+  template: `
+    <input-group v-bind="$props" @update="update" >
+      <message medium />
+    </input-group>
+    `,
+});
+// export const TextArea = Template.bind({});
 TextArea.args = {
   name: "message",
-  label: "label",
+  label: "Leave us a message",
   icon: "message",
-  placeholder: "Enter a message",
+  placeholder: "Type something..",
   type: "textarea",
-  showIcon: true,
-  showError: false,
-  showSuccess: false,
 };
 
-export const InputWithIcon = Template.bind({});
+export const InputWithIcon = (args, { argTypes }) => ({
+  props: Object.keys(argTypes),
+  components: { InputGroup, Phone },
+  template: `
+    <input-group v-bind="$props" @update="update" >
+      <phone medium />
+    </input-group>
+    `,
+});
 InputWithIcon.args = {
   name: "phone",
   label: "Phone",
-  icon: "phone",
   placeholder: "Enter your phone number",
   type: "phone",
-  showIcon: true,
-  showError: false,
-  showSuccess: false,
 };
 
-export const InputWithError = Template.bind({});
+export const InputWithError = InputWithIcon.bind({});
 InputWithError.args = {
   name: "phone",
   label: "Phone",
-  icon: "phone",
   placeholder: "Enter your phone number",
   type: "phone",
-  showIcon: true,
   showError: true,
 };
 
-export const InputWithSuccess = Template.bind({});
+export const InputWithSuccess = InputWithIcon.bind({});
 InputWithSuccess.args = {
   name: "phone",
   label: "Phone",
-  icon: "phone",
   placeholder: "Enter your phone number",
   type: "phone",
-  showIcon: true,
-  showError: false,
   showSuccess: true,
 };
 
-export const InputWithNoLabel = Template.bind({});
+export const InputWithNoLabel = InputWithIcon.bind({});
 InputWithNoLabel.args = {
   name: "phone",
   label: "Phone",
-  icon: "phone",
   placeholder: "Enter your phone number",
   type: "phone",
-  showIcon: true,
-  showError: false,
-  showSuccess: false,
   hideLabel: true,
 };

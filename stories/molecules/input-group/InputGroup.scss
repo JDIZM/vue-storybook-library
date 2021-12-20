@@ -17,11 +17,12 @@
   span {
     text-align: left;
   }
-  span.material-icons {
+  span.icons {
     position: absolute;
     top: 54px;
     left: 0.5rem;
     color: var(--primary);
+    vertical-align: middle;
   }
 }
 input {
@@ -71,7 +72,7 @@ textarea:focus {
   label {
     display: none;
   }
-  span.material-icons {
+  span.icons {
     // change position when no label
     top: 16px;
   }

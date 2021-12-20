@@ -1,0 +1,13 @@
+.icon {
+  width: 1rem;
+  height: 1rem;
+  vertical-align: middle;
+  &--md {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  &--lg {
+    width: 2rem;
+    height: 2rem;
+  }
+}
