@@ -250,7 +250,7 @@
   &--outline {
     background-color: var(--primary);
     border: 1px solid var(--light);
-    color: var(--text-color);
+    color: var(--button-text-color);
     &:hover {
       color: var(--text-color);
       background-color: var(--primary-100);
