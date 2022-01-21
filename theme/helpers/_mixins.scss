@@ -1,23 +1,6 @@
-@use './vars.scss' as *;
+@use "theme/helpers/_vars" as *;
 
-// 1. root vars
-// create root vars
-@mixin vars {
-  :root {
-    // colours
-    @each $name, $colour in $colours {
-      --#{"" + $name}: #{$colour};
-    }
-    // breakpoints
-    @each $size, $px in $breakpoints {
-      --#{"" + $size}: #{$px};
-    }
-  }
-}
-@include vars;
-
-// create spacing classes for margin and padding
-// m--1, p--1 etc
+// inherit spacing values
 @mixin spacing {
   @each $size, $rem in $spacing {
     // margin
@@ -45,4 +28,7 @@
     }
   }
 }
+
+// create spacing classes for margin and padding
+// m--1, p--1 etc
 @include spacing;

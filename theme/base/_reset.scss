@@ -1,0 +1,52 @@
+:root {
+  // @ 16px you can use 0.5 rem for an even 8px spacing grid
+  font-size: 16px; // set root font-size
+  line-height: 1.4; // unitless vertical rhythm
+  color: initial; // initial will change based on color-scheme
+}
+
+html,
+body {
+  background-color: var(--background-color);
+  margin: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+div {
+  width: auto;
+}
+
+input,
+button,
+span,
+ul,
+ol,
+dl,
+li {
+  box-shadow: unset;
+  border: unset;
+  line-height: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: inherit;
+  font-size: inherit;
+  margin: 0;
+  padding: 0;
+}

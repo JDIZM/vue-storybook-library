@@ -16,22 +16,22 @@
   word-spacing: normal;
   text-rendering: auto;
   border: 1px solid transparent;
-  color: var(--color-text);
+  color: var(--text-color);
   &:focus {
     outline: none;
   }
   &--primary {
-    color: var(--color-text-primary);
+    color: var(--button-text-color);
     background-color: var(--primary);
     border: 1px solid var(--primary);
     &:hover {
-      color: var(--color-text-primary);
+      color: var(--button-text-color);
       background-color: var(--primary);
       border: 1px solid var(--primary);
     }
   }
   &--secondary {
-    color: var(--color-text-primary);
+    color: var(--button-text-color);
     background-color: var(--secondary);
     border: 1px solid var(--secondary);
     &:hover {
@@ -72,7 +72,7 @@
     background-color: var(--destruct);
   }
   &--text {
-    color: var(--color-text);
+    color: var(--text-color);
     background-color: transparent;
     border: none;
     text-decoration: none;

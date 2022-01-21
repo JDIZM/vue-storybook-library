@@ -1,0 +1,30 @@
+@use "sass:map";
+
+:root {
+  --font-family: "Roboto", system, sans-serif;
+}
+
+// create spacing units for mixin
+// margin and paddings will be created with mixin
+$spacing: (
+  1: 0.5rem,
+  2: 1rem,
+  3: 1.5rem,
+  4: 2rem,
+);
+
+// breakpoints
+$breakpoints: (
+  xs: 320px,
+  sm: 600px,
+  md: 768px,
+  lg: 960px,
+  xl: 1200px,
+);
+
+// breakpoints
+$breakpoint-xs: map-get($breakpoints, xs);
+$breakpoint-sm: map-get($breakpoints, sm);
+$breakpoint-md: map-get($breakpoints, md);
+$breakpoint-lg: map-get($breakpoints, lg);
+$breakpoint-xl: map-get($breakpoints, xl);

@@ -1,4 +1,4 @@
-@use 'theme/vars.scss' as *;
+@use 'theme/helpers' as *;
 
 // NavMain
 .nav {
@@ -250,15 +250,15 @@
   &--outline {
     background-color: var(--primary);
     border: 1px solid var(--light);
-    color: var(--color-text-primary);
+    color: var(--button-text-color);
     &:hover {
-      color: var(--color-text-primary);
+      color: var(--text-color);
       background-color: var(--primary-100);
       border: 1px solid var(--light);
     }
     &:focus {
       outline: none;
-      color: var(--color-text-primary);
+      color: var(--text-color);
       background-color: var(--primary-100);
     }
   }

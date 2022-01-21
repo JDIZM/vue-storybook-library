@@ -1,0 +1,28 @@
+@use "theme/helpers" as *;
+
+body {
+  font-family: var(--font-family);
+  font-size: 1rem;
+  line-height: 1.4; // unitless vertical rhythm
+  color: var(--text-color);
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 0.5rem 0;
+  padding: 0;
+}
+a {
+  color: var(--links);
+  text-decoration: none;
+}
+
+::selection {
+  background-color: var(--primary);
+  color: white;
+}

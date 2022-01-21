@@ -1,0 +1,24 @@
+@mixin darkTheme {
+  color-scheme: dark;
+  --background-color: #1a1a1d;
+  --primary: #393964;
+  --primary-100: rgba(108, 108, 184, 0.07);
+  --secondary: #d6673b;
+  --disabled: #b0bec5;
+  --destruct: rgba(165, 10, 69, 0.9);
+  --error: rgba(165, 10, 69, 0.9);
+  --error-100: rgba(165, 10, 69, 0.2);
+  --success: #32543b;
+  --light: rgb(230, 230, 230);
+  --dark: rgb(48, 48, 48);
+  --white: #fff;
+  --links: var(--secondary);
+  --text-color: var(--light);
+  --text-color-dark-bg: var(--light);
+  --text-color-light-bg: var(--dark);
+  --button-text-color: var(--light);
+  --border-color: rgb(76, 76, 76);
+  --nav-toggle: var(--white);
+  --nav-toggle-text: var(--dark);
+  --placeholder-color: rgb(160, 160, 160);
+}
