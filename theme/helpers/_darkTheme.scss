@@ -9,7 +9,7 @@
   --error: rgba(165, 10, 69, 0.9);
   --error-100: rgba(165, 10, 69, 0.2);
   --success: #32543b;
-  --light: rgb(238, 238, 238);
+  --light: rgb(230, 230, 230);
   --dark: rgb(48, 48, 48);
   --white: #fff;
   --links: var(--white);
@@ -18,5 +18,5 @@
   --border-color: rgb(76, 76, 76);
   --nav-toggle: var(--white);
   --nav-toggle-text: var(--dark);
-  --placeholder-color: var(--text-color);
+  --placeholder-color: rgb(160, 160, 160);
 }
