@@ -12,7 +12,10 @@
   --light: rgb(255, 255, 255);
   --dark: rgb(31, 30, 30);
   --white: #fff;
+  --links: var(--secondary);
   --text-color: var(--dark);
+  --text-color-dark-bg: var(--light);
+  --text-color-light-bg: var(--dark);
   --button-text-color: var(--light);
   --border-color: rgb(204, 203, 203);
   --nav-toggle: var(--dark);
