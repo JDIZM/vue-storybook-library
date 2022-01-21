@@ -4,9 +4,10 @@
 :root {
   @include lightTheme;
 
-  @media (prefers-color-scheme: dark) {
-    @include darkTheme;
-  }
+  // implement
+  // @media (prefers-color-scheme: dark) {
+  //   @include darkTheme;
+  // }
 }
 
 .light {
