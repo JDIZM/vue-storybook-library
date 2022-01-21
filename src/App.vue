@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <VButton label="button" />
+    <VButton label="button" secondary />
   </div>
 </template>
 
@@ -17,10 +17,14 @@ export default {
 
 <style lang="scss">
 // access scss vars
-@import "../theme/_vars.scss";
+@use "theme/helpers" as *;
 #app {
   // use map-get for scss vars
-  background-color: map-get($colours, secondary);
+  width: map-get($breakpoints, md);
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   // use base css vars
   background-color: var(--primary);
 }
