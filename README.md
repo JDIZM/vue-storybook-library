@@ -142,3 +142,15 @@ Import the components directly from the /storybook folder (whatever you named th
 ```config
 import Toast from '@/storybook/stories/molecules/Toast.vue'
 ```
+
+### Dark mode and Color Scheme
+
+Dark and Light mode css variables are added to :root
+
+The default color scheme is light mode.
+
+The color scheme is applied via a `light` or `dark` class added to the root html so you can overwrite the default preference
+
+```
+<html lang="en" class="dark">
+```
