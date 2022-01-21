@@ -150,3 +150,12 @@ ul.nav__desktop__list {
   margin-left: 0 !important;
   text-decoration: underline !important;
 }
+
+.--error {
+  input {
+    background: var(--error-100);
+  }
+  input:focus {
+    border-bottom: 2px solid var(--error);
+  }
+}
