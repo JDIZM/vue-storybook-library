@@ -1,5 +1,6 @@
-// main.scss
-@use './vars.scss'; // theme colours
-@use './mixins.scss'; // mixin classes
-@use './global.scss'; // global styles.
-@use './theme.scss'; // base theme styling
+// https://css-tricks.com/introducing-sass-modules/
+
+@use "base/reset";
+@use "base/typography";
+@use "base/theme";
+@use "base/colorScheme";

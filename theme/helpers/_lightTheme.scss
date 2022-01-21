@@ -1,0 +1,21 @@
+@mixin lightTheme {
+  color-scheme: light;
+  --background-color: var(--light);
+  --primary: #1a1a1d;
+  --primary-100: rgba(108, 108, 184, 0.07);
+  --secondary: #d6673b;
+  --disabled: #b0bec5;
+  --destruct: rgba(165, 10, 69, 0.9);
+  --error: rgba(165, 10, 69, 0.9);
+  --error-100: rgba(165, 10, 69, 0.2);
+  --success: #32543b;
+  --light: rgb(255, 255, 255);
+  --dark: rgb(31, 30, 30);
+  --white: #fff;
+  --text-color: var(--dark);
+  --button-text-color: var(--light);
+  --border-color: rgb(204, 203, 203);
+  --nav-toggle: var(--dark);
+  --nav-toggle-text: var(--white);
+  --placeholder-color: var(--text-color);
+}

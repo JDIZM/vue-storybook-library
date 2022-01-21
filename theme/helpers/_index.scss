@@ -1,0 +1,5 @@
+// make available as a whole package on the global namespace
+// @use "@/theme/helpers" as *;
+
+@forward "mixins";
+@forward "vars";

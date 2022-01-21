@@ -1,0 +1,152 @@
+.container {
+  height: 100%;
+  min-height: 88vh;
+  max-width: 1600px; // set max breakpoint for content
+  width: 90%; // 5% margin
+  margin: 0 auto;
+  // flex and center
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  padding-bottom: 2rem;
+}
+
+h1 {
+  font-size: 3.125rem;
+  font-weight: 700;
+}
+h2 {
+  font-size: 2.125rem;
+  font-weight: 300;
+}
+h3 {
+  font-size: 2rem;
+  font-weight: 300;
+}
+h4 {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+h5 {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.overline {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.toast-info {
+  color: var(--light);
+  text-align: left;
+}
+
+.loading {
+  position: relative;
+  top: 50px;
+  left: 0px;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+}
+
+// set router view height to avoid collapse
+#view {
+  height: 100%;
+  min-height: 100vh;
+  padding-bottom: 4rem;
+}
+
+// set padding and app height
+// fixes the container collapsing and footer jumping to top
+#app {
+  height: 100%;
+  position: relative;
+  min-height: 100vh;
+}
+
+#subnav {
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  color: white;
+  background-color: var(--secondary);
+  a {
+    font-weight: 700;
+    color: white;
+    margin: auto 16px;
+    &.router-link-exact-active {
+      color: white;
+    }
+  }
+  span {
+    margin: auto 4px;
+  }
+}
+#breadcrumbs {
+  padding: 8px;
+  a {
+    font-weight: 700;
+    color: var(--text-color);
+    &.router-link-exact-active {
+      color: var(--text-color);
+    }
+  }
+  span {
+    margin: auto 4px;
+  }
+}
+// footer logo
+.brand__logo {
+  height: 60px;
+  width: 60px;
+  background-size: cover;
+}
+
+// fade transition
+.fade-enter-active,
+.fade-leave-active {
+  transition-duration: 0.3s;
+  transition-property: opacity;
+  transition-timing-function: ease;
+}
+.fade-enter,
+.fade-leave-active {
+  opacity: 0;
+}
+
+// slide transition
+.slide-fade-enter-active {
+  // transform: translateX(-100px);
+  transition: all 0.3s ease;
+}
+.slide-fade-leave-active {
+  // transform: translateX(0px);
+  transition: all 0.6s cubic-bezier(1, 0.5, 0.8, 1);
+}
+.slide-fade-enter
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: translateX(-100px);
+  opacity: 0;
+}
+.slide-fade-leave-to {
+  transform: translateX(0px);
+  opacity: 0;
+}
+
+ul.nav__desktop__list {
+  margin-block-end: 0px;
+}
+
+.--active {
+  color: var(--links);
+  margin-left: 0 !important;
+  text-decoration: underline !important;
+}
