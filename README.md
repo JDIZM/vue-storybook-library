@@ -40,6 +40,9 @@ For development and to modify this storybook library clone this project and:
 ```
 # run locally
 yarn storybook
+
+# run a local demo App.vue
+npm run serve
 ```
 
 see the [storybook docs](https://storybook.js.org/docs/vue/get-started/introduction) for more info.
