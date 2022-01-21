@@ -21,17 +21,17 @@
     outline: none;
   }
   &--primary {
-    color: var(--text-color);
+    color: var(--button-text-color);
     background-color: var(--primary);
     border: 1px solid var(--primary);
     &:hover {
-      color: var(--text-color);
+      color: var(--button-text-color);
       background-color: var(--primary);
       border: 1px solid var(--primary);
     }
   }
   &--secondary {
-    color: var(--text-color);
+    color: var(--button-text-color);
     background-color: var(--secondary);
     border: 1px solid var(--secondary);
     &:hover {
