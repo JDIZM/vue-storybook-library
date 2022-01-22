@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "vue-cli-service lint",
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --target lib src/entry.js",
+    "build": "vue-cli-service build --target lib src/entry.js --name index",
     "build:inline": "vue-cli-service build --target lib src/entry.js --inline-vue",
     "build-storybook": "build-storybook",
     "storybook": "start-storybook -p 6006 -s ./stories/assets",
