@@ -1,5 +1,5 @@
 <template>
-  <form ref="form" class="form" @submit.prevent="onSubmit">
+  <form ref="form" class="form" @submit.prevent>
     <FormInput
       name="email"
       type="email"
