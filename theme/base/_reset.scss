@@ -8,7 +8,6 @@
 html,
 body {
   background-color: var(--background-color);
-  margin: 0;
 }
 
 *,
@@ -16,10 +15,6 @@ body {
 *:after {
   box-sizing: border-box;
   margin: 0;
-}
-
-div {
-  width: auto;
 }
 
 input,
