@@ -38,7 +38,7 @@ export { default as VSlider } from "../../stories/molecules/slider/Slider.vue";
 //
 export { default as VContactForm } from "../../stories/organisms/contact-form/ContactForm.vue";
 export { default as VEmailSubscribe } from "../../stories/organisms/email-subscribe/EmailSubscribe.vue";
-export { default as VNav } from "../../stories/organisms/nav/NavMain.vue";
+export { default as VNav } from "../../stories/layout/nav/NavMain.vue";
 export { default as VFooter } from "../../stories/layout/footer/Footer.vue";
 
 //
