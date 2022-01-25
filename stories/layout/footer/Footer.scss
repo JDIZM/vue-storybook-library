@@ -1,4 +1,4 @@
-footer {
+.footer {
   position: relative;
   bottom: 0;
   width: 100%;
@@ -17,10 +17,10 @@ footer {
     font-size: 1.25rem;
   }
 }
-.footer {
-  width: 90%;
-}
+
 .footer__grid {
+  width: 90%;
+  max-width: 1600px;
   @media screen and (min-width: 992px) {
     display: flex;
     flex-direction: row;
@@ -43,30 +43,17 @@ a:visited {
   display: flex;
   flex-direction: row;
   justify-content: center;
-}
-.brand__logo {
-  height: 60px;
-  width: 60px;
-  background-size: cover;
-  img {
-    height: 100%;
+  &__logo {
+    height: 60px;
+    width: 60px;
+  }
+  &__name {
+    display: block;
+    text-align: left;
+    margin-top: 0.25rem;
   }
 }
-.brand__name {
-  display: block;
-  text-align: left;
-  margin-top: 0.25rem;
-}
-.brand__name__1 {
-  font-size: 2.125rem;
-  font-weight: 300;
-}
-.brand__name__2 {
-  font-size: 1rem;
-  font-weight: 300;
-}
 
-// COPY
 .copy {
   font-size: 0.8rem;
   width: 100%;
@@ -86,7 +73,6 @@ a:visited {
   }
 }
 
-// SOCIAL
 .social {
   li {
     display: inline-block;
