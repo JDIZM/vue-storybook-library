@@ -76,4 +76,21 @@ export const ShowDropdown = Template.bind({});
 ShowDropdown.args = {
   showDropdown: true,
   ...defaultProps,
+  dropdownItems: [
+    {
+      name: "Dropdown Item",
+      path: "/dropdown-one/",
+      copy: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt sodales metus non efficitur. Donec risus dolor, bibendum a magna sit amet, lacinia vehicula diam.",
+    },
+    {
+      name: "Dropdown Item",
+      path: "/dropdown-two/",
+      copy: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt sodales metus non efficitur. Donec risus dolor, bibendum a magna sit amet, lacinia vehicula diam.",
+    },
+    {
+      name: "Dropdown Item",
+      path: "/dropdown-three/",
+      copy: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt sodales metus non efficitur. Donec risus dolor, bibendum a magna sit amet, lacinia vehicula diam.",
+    },
+  ],
 };
