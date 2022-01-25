@@ -54,5 +54,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import "./Footer.scss";
+@use "./Footer.scss";
 </style>
