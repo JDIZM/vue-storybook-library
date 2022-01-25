@@ -2,47 +2,44 @@
   <nav class="nav">
     <div class="nav__desktop">
       <div class="nav__desktop__brand">
-        <div class="nav__desktop__logo">
-          <img :src="logoSrc" draggable="false" />
-        </div>
+        <img :src="logoSrc" draggable="false" />
       </div>
-      <!--  -->
       <ul class="nav__desktop__list">
-        <li v-for="link in links" :key="link.path">
+        <li
+          v-for="link in links"
+          :key="link.path"
+          class="nav__desktop__list__item"
+        >
           <router-link
             v-if="link.path"
             :to="link.path"
             exact-active-class="--active"
           >
-            <div class="nav__desktop__list__item">
-              <span v-if="link.icon" class="material-icons">
-                {{ link.icon }}
-              </span>
-              <span v-if="link.name">{{ link.name.toUpperCase() }}</span>
-            </div>
+            <span v-if="link.name">{{ link.name.toUpperCase() }}</span>
           </router-link>
           <a
             v-else
             exact-active-class="--active"
+            class="nav__desktop__list__item"
             role="button"
             aria-pressed="false"
             tabindex="0"
             @click.prevent="onDropdown"
           >
-            <div class="nav__desktop__list__item">
-              <span v-if="link.icon" class="material-icons">
-                {{ link.icon }}
-              </span>
-              <span v-if="link.name">{{ link.name.toUpperCase() }}</span>
-            </div>
+            <span v-if="link.name">{{ link.name.toUpperCase() }}</span>
           </a>
         </li>
       </ul>
       <div class="nav__desktop__btns">
-        <a :href="'tel:' + phone" class="nav__desktop__btn btn btn--outline">
+        <a
+          v-if="phone.length"
+          :href="'tel:' + phone"
+          class="nav__desktop__btn btn btn--outline"
+        >
           CALL
         </a>
         <div
+          v-if="showEnquire"
           class="nav__desktop__btn btn btn--secondary"
           role="button"
           aria-pressed="false"
@@ -57,15 +54,20 @@
     <!-- only show nav toggle on mobile -->
     <div class="nav__mobile">
       <div class="nav__mobile__brand">
-        <div class="nav__mobile__logo">
-          <img :src="logoSrc" draggable="false" />
-        </div>
+        <!-- <div class="nav__mobile__logo"> -->
+        <img :src="logoSrc" draggable="false" />
+        <!-- </div> -->
       </div>
       <div class="nav__mobile__btns">
-        <a class="nav__mobile__btn btn btn--outline" :href="'tel:' + phone">
+        <a
+          v-if="phone.length"
+          class="nav__mobile__btn btn btn--outline"
+          :href="'tel:' + phone"
+        >
           CALL
         </a>
         <button
+          v-if="showEnquire"
           class="nav__mobile__btn btn btn--secondary"
           role="button"
           aria-pressed="true"
@@ -118,14 +120,8 @@ export default {
       type: Array,
       required: true,
     },
-    showDrawer: {
-      type: Boolean,
-      required: true,
-    },
-    showDropdown: {
-      type: Boolean,
-      required: true,
-    },
+    showDrawer: Boolean,
+    showDropdown: Boolean,
     dropdownItems: {
       type: Array,
       required: true,
@@ -136,8 +132,10 @@ export default {
     },
     phone: {
       type: String,
-      required: true,
+      required: false,
+      default: "",
     },
+    showEnquire: Boolean,
   },
   data() {
     return {

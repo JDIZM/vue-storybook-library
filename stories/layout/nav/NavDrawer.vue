@@ -85,5 +85,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "./Nav.scss";
+@use "./Nav.scss";
 </style>

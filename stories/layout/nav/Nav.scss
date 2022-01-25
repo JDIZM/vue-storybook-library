@@ -1,6 +1,5 @@
 @use 'theme/helpers' as *;
 
-// NavMain
 .nav {
   width: 100%;
   background: var(--primary);
@@ -13,8 +12,6 @@
   color: var(--links);
 }
 
-// mobile
-
 .nav__toggle {
   width: 56px;
   position: fixed;
@@ -26,7 +23,7 @@
   cursor: pointer;
   padding: 1rem 1rem;
   border-radius: 50%;
-  background: rgba(0, 0, 0, 1);
+  background: var(--primary);
   z-index: 1001;
   color: var(--light);
   @media screen and (min-width: $breakpoint-md) {
@@ -39,22 +36,14 @@
   min-height: 95px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   @media screen and (min-width: $breakpoint-md) {
-    //
     display: none;
   }
   &__brand {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    span {
-      font-weight: 300;
-      font-size: 1.5rem;
-      vertical-align: middle;
-    }
-  }
-  &__logo {
-    background-size: cover;
     margin: 1rem;
     height: 50px;
     width: 50px;
@@ -73,11 +62,10 @@
   }
 }
 
-// desktop
-
 .nav__desktop {
   width: 96%;
   min-height: 95px;
+  max-width: 1600px;
   display: none;
   @media screen and (min-width: $breakpoint-md) {
     display: flex;
@@ -96,9 +84,6 @@
       font-size: 1.5rem;
       vertical-align: middle;
     }
-  }
-  &__logo {
-    background-size: cover;
     height: 50px;
     width: 50px;
     img {
@@ -128,7 +113,7 @@
   }
   &__btns {
     display: flex;
-    width: 200px;
+    max-width: 200px;
   }
   &__btn {
     margin: auto 0.5rem;
@@ -136,8 +121,6 @@
     padding: 0.5rem 1rem;
   }
 }
-
-// drawer
 
 .nav__drawer {
   color: var(--secondary);
@@ -212,12 +195,6 @@
   margin: auto;
 }
 
-:focus {
-  outline: none;
-}
-
-// dropdown
-
 .nav__dropdown {
   position: relative;
   top: 0;
@@ -233,8 +210,6 @@
   }
 }
 
-// animation
-
 @keyframes nav-in {
   from {
     left: -300px;
@@ -243,8 +218,6 @@
     left: 0px;
   }
 }
-
-// button styles
 
 .btn {
   &--outline {
