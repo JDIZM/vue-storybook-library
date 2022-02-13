@@ -17,11 +17,11 @@
   span {
     text-align: left;
   }
-  span.icons {
+  .icons {
     position: absolute;
     top: 54px;
     left: 0.5rem;
-    color: var(--secondary);
+    color: var(--input-highlight);
     vertical-align: middle;
   }
 }
@@ -42,7 +42,7 @@ input {
   &:focus {
     color: black;
     outline: none;
-    border-bottom: 2px solid var(--primary);
+    border-bottom: 2px solid var(--input-highlight);
   }
   &::placeholder {
     color: var(--placeholder-color);
