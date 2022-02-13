@@ -39,7 +39,7 @@ For development and to modify this storybook library clone this project and:
 
 ```
 # run locally
-yarn storybook
+npm run storybook
 
 # run a local demo App.vue
 npm run serve
@@ -47,7 +47,7 @@ npm run serve
 
 see the [storybook docs](https://storybook.js.org/docs/vue/get-started/introduction) for more info.
 
-## Setup & Configure
+### Setup & Configure
 
 The `.storybook` folder contains all the config files for setting up storybook.
 
@@ -55,58 +55,86 @@ The `.storybook` folder contains all the config files for setting up storybook.
 - External scripts, fonts and stylesheets are loaded in `.storybook/preview-head.html`
 - Imports the sass/scss theme and variables in `.storybook/preview.js` via ` import '../theme/main.scss'`
 
-## Assets
+### Assets
 
 - Static assets and resources are located in the `stories/assets` folder
 
-## Theme
+### Theme
 
-All the base styling is configured in the theme folder and there are mixins to create custom class names for styling background color, text and spacing according to the theme variables. Each component has it's own scoped scss file that's directly imported.
+All the base styling is configured in the theme folder
 
-- sass mixins
-- utility class names like tailwind
-- sass/css theme variables
+There are mixins to create custom class names for spacing values according to the theme variables eg `m--1` in addition to colorScheme css variabls
 
-The theme variables are mixed between sass variables for the mixins and class names in addition to css variables. I was having an issue importing the sass vars into SFC's but the root CSS vars work. Simple work around.
+Each component has it's own scoped scss file that's directly imported.
+
+- sass mixins and variables
+- utility class names for spacing
+- css variables for colorScheme
+
+You need to specify `@use "@/theme/helpers" as *;` at the top of the .scss file. 
+
+This will give you access to the `mixins` and `vars` via `@forward`. They are made available as a whole package on the global namespace.
 
 ```
 /theme
   main.scss
-  _vars.scss
-  _theme.scss
-  _global.scss
-  _mixins.scss
+  /base
+    _colorScheme
+    _reset
+    _theme
+    _typography
+  /helpers
+    _index
+    _vars
+    _mixins
+    _darkTheme
+    _lightTheme
+```
+#### Dark mode and Color Scheme
+
+Dark and Light mode css variables are added to :root using mixins.
+
+The default color scheme is light mode but will prefer the system ui settings using 
+
+```
+@media (prefers-color-scheme: dark) {
+  @include darkTheme;
+}
 ```
 
-## Run locally
+The color scheme is applied via a `light` or `dark` class added to the root html so you can overwrite the default preference
 
-`yarn storybook`
+```
+<html lang="en" class="dark">
+```
 
-## Build Storybook as a static web application
+### Build Storybook as a static web application
 
 <https://storybook.js.org/docs/vue/workflows/publish-storybook>
 
-build storybook: `yarn build-storybook`
+build storybook: `npm run build-storybook`
 serve locally: `npx http-server storybook-static`
 
-## Publish Storybook online
+### Publish Storybook online
 
 <https://storybook.js.org/docs/vue/workflows/publish-storybook#publish-storybook-online>
 
-netlify is configured to deploy the storybook static build.
+netlify is configured to deploy the storybook static build directly from main branch.
 
 build folder: /storybook-static
 production url: <https://vue-storybook-library.netlify.app/>
 
-## Build as a library
+### Build as a library
 
 This will package the Vue project as a library to be imported in another application.
 
 ```
-yarn build
+npm run build
 ```
 
-## Import into project
+It will need to be published to npm, imported locally or via a git branch.
+
+### Import into project
 
 Clone this git into the project root in /storybook folder
 
@@ -135,22 +163,11 @@ css: [
   ],
 ```
 
-### Using the components
+#### Using the components
 
-Import the components directly from the /storybook folder (whatever you named this project folder).
+Import the components directly from the /storybook folder.
 
 ```config
 import Toast from '@/storybook/stories/molecules/Toast.vue'
 ```
 
-### Dark mode and Color Scheme
-
-Dark and Light mode css variables are added to :root
-
-The default color scheme is light mode.
-
-The color scheme is applied via a `light` or `dark` class added to the root html so you can overwrite the default preference
-
-```
-<html lang="en" class="dark">
-```
