@@ -46,7 +46,6 @@ export const TextArea = (args, { argTypes }) => ({
 TextArea.args = {
   name: "message",
   label: "Leave us a message",
-  icon: "message",
   placeholder: "Type something..",
   type: "textarea",
 };
