@@ -33,6 +33,8 @@ img {
   width: 100%;
   height: 100%;
   border-radius: 50%;
+  max-width: 500px;
+  max-height: 500px;
 }
 .notfound {
   max-width: 900px;

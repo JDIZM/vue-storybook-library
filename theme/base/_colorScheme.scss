@@ -5,9 +5,9 @@
   @include lightTheme;
 
   // implement
-  // @media (prefers-color-scheme: dark) {
-  //   @include darkTheme;
-  // }
+  @media (prefers-color-scheme: dark) {
+    @include darkTheme;
+  }
 }
 
 .light {

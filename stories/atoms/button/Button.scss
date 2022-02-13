@@ -41,7 +41,7 @@
   }
   &--outline {
     background-color: transparent;
-    border: 1px solid var(--primary);
+    border: var(--button-border-outline);
     &:hover {
       color: var(--secondary);
       border: 1px solid var(--secondary);
