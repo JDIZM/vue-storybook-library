@@ -13,7 +13,10 @@ export default {
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { InputGroup },
-  template: '<InputGroup v-bind="$props" @update="update" />',
+  template: '<input-group v-bind="$props" v-model="value" @update="update" />',
+  data: () => ({
+    value: "hello",
+  }),
 });
 
 export const TextInputWithoutIcon = Template.bind({});
@@ -31,12 +34,15 @@ export const TextArea = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { InputGroup, Message },
   template: `
-    <input-group v-bind="$props" @update="update" >
+    <input-group v-bind="$props" v-model="value" @update="update">
       <message medium />
     </input-group>
     `,
+  data: () => ({
+    value: "hello",
+  }),
 });
-// export const TextArea = Template.bind({});
+
 TextArea.args = {
   name: "message",
   label: "Leave us a message",
@@ -49,10 +55,13 @@ export const InputWithIcon = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { InputGroup, Phone },
   template: `
-    <input-group v-bind="$props" @update="update" >
+    <input-group v-bind="$props" v-model="value" @update="update">
       <phone medium />
     </input-group>
     `,
+  data: () => ({
+    value: "hello",
+  }),
 });
 InputWithIcon.args = {
   name: "phone",

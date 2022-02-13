@@ -13,22 +13,24 @@
     <textarea
       v-if="type === 'textarea'"
       :id="name"
+      v-model="value"
       rows="4"
       cols="50"
-      :value="value"
       :type="type"
       :name="name"
       :placeholder="placeholder"
       @input="$emit('update', $event.target.value)"
+      @focus.prevent="$emit('focus')"
     />
     <input
       v-else
       :id="name"
-      :value="value"
+      v-model="value"
       :type="type"
       :name="name"
       :placeholder="placeholder"
       @input="$emit('update', $event.target.value)"
+      @focus.prevent="$emit('focus')"
     />
   </div>
 </template>
@@ -63,17 +65,13 @@ export default {
       type: String,
       required: true,
     },
-    icon: {
-      type: String,
-      default: "",
-    },
     showError: Boolean,
     showSuccess: Boolean,
     hideLabel: Boolean,
   },
   data() {
     return {
-      value: null,
+      value: "",
     };
   },
   computed: {
