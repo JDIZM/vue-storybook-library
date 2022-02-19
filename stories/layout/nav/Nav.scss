@@ -17,7 +17,6 @@
   height: 56px;
   position: fixed;
   bottom: 4.5rem;
-  right: 1rem;
   align-self: flex-end;
   margin: 1rem;
   text-decoration: none;
@@ -27,6 +26,9 @@
   background: var(--secondary);
   z-index: 1001;
   color: var(--light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   @media screen and (min-width: $breakpoint-md) {
     display: none;
   }

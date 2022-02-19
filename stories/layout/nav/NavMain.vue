@@ -87,8 +87,8 @@
       tabindex="0"
       @click="onShowDrawer"
     >
-      <span v-if="!showDrawer" class="icons"><Menu medium /></span>
-      <span v-else class="icons"><Close medium /></span>
+      <Menu v-if="!showDrawer" medium class="icons" />
+      <Close v-else medium class="icons" />
     </div>
     <NavDrawer
       :links="links"
