@@ -137,17 +137,11 @@ export default {
     },
     showEnquire: Boolean,
   },
-  data() {
-    return {
-      //
-    };
-  },
   watch: {
     // watch the route and call method
     "$route.fullPath": "onRouteChange",
   },
   methods: {
-    //
     onDropdown() {
       this.$emit("onDropdown");
     },
