@@ -14,16 +14,17 @@
 
 .nav__toggle {
   width: 56px;
+  height: 56px;
   position: fixed;
   bottom: 4.5rem;
   right: 1rem;
   align-self: flex-end;
-  margin: 1rem 1rem;
+  margin: 1rem;
   text-decoration: none;
   cursor: pointer;
-  padding: 1rem 1rem;
+  padding: 1rem;
   border-radius: 50%;
-  background: var(--primary);
+  background: var(--secondary);
   z-index: 1001;
   color: var(--light);
   @media screen and (min-width: $breakpoint-md) {
@@ -57,15 +58,15 @@
   }
   &__btn {
     margin: auto 0.5rem;
-    border-radius: 4px;
+    border-radius: 0.25rem;
     padding: 0.5rem 1rem;
   }
 }
 
 .nav__desktop {
   width: 96%;
-  min-height: 95px;
-  max-width: 1600px;
+  height: 5.9375rem;
+  max-width: 61.25rem;
   display: none;
   @media screen and (min-width: $breakpoint-md) {
     display: flex;
@@ -78,14 +79,14 @@
     align-items: flex-start;
     margin-left: 1rem;
     width: 100%;
-    max-width: 100px;
+    max-width: 6.25rem;
     span {
       font-weight: 300;
       font-size: 1.5rem;
       vertical-align: middle;
     }
-    height: 50px;
-    width: 50px;
+    height: 3.125rem;
+    width: 3.125rem;
     img {
       height: 100%;
     }
@@ -113,11 +114,11 @@
   }
   &__btns {
     display: flex;
-    max-width: 200px;
+    max-width: 12.5rem;
   }
   &__btn {
     margin: auto 0.5rem;
-    border-radius: 4px;
+    border-radius: 0.25rem;
     padding: 0.5rem 1rem;
   }
 }
@@ -158,10 +159,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    .btn {
-      padding: 34px 3px;
-      margin-left: 4rem;
-    }
   }
   &__brand {
     display: flex;
@@ -205,8 +202,11 @@
   background-color: var(--primary);
   &__item {
     display: block;
-    height: 60px;
+    height: 3.75rem;
     align-self: center;
+  }
+  @media screen and (max-width: $breakpoint-md) {
+    display: none;
   }
 }
 

@@ -65,7 +65,7 @@ export default {
     display: block;
     border: 1px solid rgba(255, 255, 255, 0.19);
     border-radius: 8px;
-    width: 313px;
+    width: 19.5625rem;
     margin: 0.5rem;
     p {
       text-align: left;
@@ -85,7 +85,7 @@ export default {
 a.nuxt-link-active,
 a.--active {
   background: rgba(255, 255, 255, 0.19);
-  border-radius: 8px;
+  border-radius: 0.5rem;
   text-decoration: none;
   span.icons {
     transform: rotate(90deg);
