@@ -20,7 +20,7 @@
   }
   &__grid {
     width: 90%;
-    max-width: 1600px;
+    max-width: 61.25rem;
     @media screen and (min-width: $breakpoint-lg) {
       display: flex;
       flex-direction: row;
@@ -47,6 +47,9 @@
     display: block;
     text-align: left;
     margin-top: 0.25rem;
+  }
+  @media screen and (min-width: $breakpoint-lg) {
+    justify-content: flex-start;
   }
 }
 
