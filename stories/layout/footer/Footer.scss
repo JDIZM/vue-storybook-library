@@ -53,6 +53,15 @@
   }
 }
 
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media screen and (min-width: $breakpoint-lg) {
+    align-items: flex-end;
+  }
+}
+
 .copy {
   font-size: 0.8rem;
   width: 100%;
