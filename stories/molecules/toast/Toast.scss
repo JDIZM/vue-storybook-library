@@ -10,13 +10,12 @@
 }
 .toast {
   background-color: var(--primary);
-  color: var(--text-color);
+  color: var(--text-color-dark-bg);
   position: fixed;
   bottom: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--text-color-dark-bg);
   font-size: 1rem;
   min-width: 230px;
   max-width: 60%;
@@ -38,5 +37,12 @@
   // use timeout to remove class
   &.active {
     margin-bottom: 20px;
+  }
+  &.--success {
+    background-color: var(--success);
+    color: var(--text-color-ld);
+  }
+  &.--destruct {
+    background-color: var(--destruct);
   }
 }

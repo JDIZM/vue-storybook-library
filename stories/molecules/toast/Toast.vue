@@ -1,6 +1,6 @@
 <template>
   <div class="toast-wrapper">
-    <div v-if="show" class="toast active">
+    <div v-if="show" class="toast active" :class="states">
       <span class="icons">
         <slot />
       </span>
@@ -20,6 +20,16 @@ export default {
     duration: {
       type: Number,
       required: true,
+    },
+    destruct: Boolean,
+    success: Boolean,
+  },
+  computed: {
+    states() {
+      return {
+        "--success": this.success,
+        "--destruct": this.destruct,
+      };
     },
   },
   mounted() {

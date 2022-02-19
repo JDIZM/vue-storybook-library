@@ -59,3 +59,20 @@ InfoIcon.args = {
   duration: 1000,
   msg: "This is the toast message",
 };
+
+export const Success = InfoIcon.bind({});
+
+Success.args = {
+  show: true,
+  duration: 1000,
+  msg: "This is the toast message",
+  success: true,
+};
+
+export const Destruct = InfoIcon.bind({});
+Destruct.args = {
+  show: true,
+  duration: 1000,
+  msg: "This is the toast message",
+  destruct: true,
+};
