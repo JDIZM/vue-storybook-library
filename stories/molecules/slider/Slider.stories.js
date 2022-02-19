@@ -1,8 +1,8 @@
-import Slider from "./Slider.vue";
+import SliderComponent from "./Slider.vue";
 
 export default {
   title: "molecules/Slider",
-  component: Slider,
+  component: SliderComponent,
   argTypes: {
     slide: { action: "slide" },
   },
@@ -11,36 +11,34 @@ export default {
 const slides = [
   {
     title: "slide name",
-    src: "https://source.unsplash.com/random/800x600",
+    src: "https://source.unsplash.com/600x300/?sunset",
   },
   {
     title: "slide name",
-    src: "https://source.unsplash.com/1000x800/?nature,water",
+    src: "https://source.unsplash.com/600x300/?river",
   },
   {
     title: "slide name",
-    src: "https://source.unsplash.com/random/900x600",
+    src: "https://source.unsplash.com/random/600x300/",
   },
   {
     title: "slide name",
-    src: "https://source.unsplash.com/9000x800/?nature,water",
+    src: "https://source.unsplash.com/600x300/?nature",
   },
 ];
 
-// create template
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
-  components: { Slider },
-  template: '<Slider v-bind="$props" @slide="slide"/>',
+  components: { SliderComponent },
+  template: '<slider-component v-bind="$props" @slide="slide"/>',
 });
 
-//
-export const Primary = Template.bind({});
-Primary.args = {
+export const Slider = Template.bind({});
+Slider.args = {
   show: false,
   slides,
-  height: 300,
-  width: 500,
-  // title: 'Modal Title',
-  // msg: 'This is the message'
+  height: "300px",
+  width: "90vw",
+  maxWidth: "600px",
+  maxHeight: "300px",
 };

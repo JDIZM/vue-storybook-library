@@ -1,5 +1,8 @@
 <template>
-  <div class="slider" :style="`height: ${height}px; width: ${width}px`">
+  <div
+    class="slider"
+    :style="`height: ${height}; width: ${width}; max-width: ${maxWidth};  max-height: ${maxHeight}`"
+  >
     <div
       v-for="(slide, i) in slides"
       :key="i"
@@ -27,12 +30,20 @@ export default {
       type: Array,
       required: true,
     },
+    maxWidth: {
+      type: String,
+      required: true,
+    },
     width: {
-      type: Number,
+      type: String,
+      required: true,
+    },
+    maxHeight: {
+      type: String,
       required: true,
     },
     height: {
-      type: Number,
+      type: String,
       required: true,
     },
   },
