@@ -1,16 +1,14 @@
 <template>
-  <div class="image">
-    <picture>
-      <source :alt="alt" :srcSet="srcset" :sizes="sizes" type="image/webp" />
-      <img
-        :src="src"
-        :alt="alt"
-        :srcSet="srcset"
-        :sizes="sizes"
-        draggable="false"
-      />
-    </picture>
-  </div>
+  <picture>
+    <source :alt="alt" :srcSet="srcset" :sizes="sizes" type="image/webp" />
+    <img
+      :src="src"
+      :alt="alt"
+      :srcSet="srcset"
+      :sizes="sizes"
+      draggable="false"
+    />
+  </picture>
 </template>
 
 <script>
@@ -37,11 +35,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.image {
-  height: 100%;
-  width: 100%;
-  margin: auto;
-}
 img {
   width: 100%;
   height: 100%;

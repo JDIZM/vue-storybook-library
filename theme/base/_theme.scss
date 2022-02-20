@@ -1,9 +1,29 @@
 @use "theme/helpers" as *;
 
+:root {
+  // @ 16px you can use 0.5 rem for an even 8px spacing grid
+  font-size: 16px; // set root font-size
+  line-height: 1.4; // unitless vertical rhythm
+  color: initial; // initial will change based on color-scheme
+  // responsive sizes with rem values for spacing
+  @media screen and (max-width: 600px){
+    font-size: 14px;
+  }
+  @media screen and (min-width: 1800px){
+    font-size: 18px;
+  }
+  @media screen and (min-width: 2400px){
+    font-size: 22px;
+  }
+  @media screen and (min-width: 2800px){
+    font-size: 30px;
+  }
+}
+
 .container {
   height: 100%;
   min-height: 88vh;
-  max-width: 1600px; // set max breakpoint for content
+  max-width: 61.25rem; // set max breakpoint for content
   width: 90%; // 5% margin
   margin: 0 auto;
   // flex and center
@@ -38,7 +58,7 @@ h5 {
 
 
 a.--active {
-  color: var(--links);
+  color: var(--light);
   margin-left: 0;
   text-decoration: underline;
 }

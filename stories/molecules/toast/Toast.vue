@@ -1,6 +1,6 @@
 <template>
   <div class="toast-wrapper">
-    <div v-if="show" class="toast active">
+    <div v-if="show" class="toast" :class="states">
       <span class="icons">
         <slot />
       </span>
@@ -21,6 +21,17 @@ export default {
       type: Number,
       required: true,
     },
+    destruct: Boolean,
+    success: Boolean,
+  },
+  computed: {
+    states() {
+      return {
+        "--success": this.success,
+        "--destruct": this.destruct,
+        "--active": this.show,
+      };
+    },
   },
   mounted() {
     this.onShow();
@@ -32,8 +43,8 @@ export default {
     onShow() {
       if (this.show) {
         setTimeout(() => {
-          this.$emit("timeout"); // emit timeout event to parent
-        }, this.duration); // after set duration
+          this.$emit("timeout");
+        }, this.duration);
       }
     },
   },

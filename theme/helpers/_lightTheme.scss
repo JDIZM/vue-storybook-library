@@ -13,7 +13,8 @@
   --dark: rgb(31, 30, 30);
   --white: #fff;
   --links: var(--secondary);
-  --text-color: var(--dark);
+  --text-color: var(--dark); // dark - light
+  --text-color-ld: var(--light); // light - dark
   --text-color-dark-bg: var(--light);
   --text-color-light-bg: var(--dark);
   --button-text-color: var(--light);

@@ -49,12 +49,12 @@
     &:focus {
       outline: none;
     }
+    &:disabled:hover {
+      color: var(--text-color);
+      border: var(--button-border-outline);
+    }
   }
   &:disabled {
-    cursor: not-allowed;
-    opacity: 0.38;
-  }
-  &--disabled {
     cursor: not-allowed;
     opacity: 0.38;
   }

@@ -10,33 +10,49 @@
 }
 .toast {
   background-color: var(--primary);
-  color: var(--text-color);
+  color: var(--text-color-dark-bg);
   position: fixed;
-  bottom: 0;
+  bottom: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--text-color-dark-bg);
   font-size: 1rem;
-  min-width: 230px;
+  min-width: 14.375rem;
   max-width: 60%;
-  padding: 20px;
+  padding: 1.25rem;
   border-radius: 4px;
   box-shadow: var(--shadow);
   text-align: center;
   transition: all 0.2s;
-  margin-bottom: -100px; // animate
+
   p {
     padding-top: 0;
-    margin: 0px 8px;
+    margin: 0px 0.5rem;
   }
   span {
-    margin: 0px 8px;
+    margin: 0px 0.5rem;
   }
   z-index: 100; // set it ontop of the content
   // active class makes toast appear from bottom by changing margin-bottom
   // use timeout to remove class
-  &.active {
-    margin-bottom: 20px;
+  &.--active {
+    animation-name: toast-in;
+    animation-duration: 0.4s;
+  }
+  &.--success {
+    background-color: var(--success);
+    color: var(--text-color-ld);
+  }
+  &.--destruct {
+    background-color: var(--destruct);
+  }
+}
+
+@keyframes toast-in {
+  from {
+    bottom: -200px;
+  }
+  to {
+    bottom: 2rem;
   }
 }

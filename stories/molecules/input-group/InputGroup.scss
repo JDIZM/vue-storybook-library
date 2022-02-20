@@ -47,8 +47,14 @@ input {
   &::placeholder {
     color: var(--placeholder-color);
   }
+  &:-webkit-autofill,
+  :-webkit-autofill:focus {
+    box-shadow: 0 0 0px 1000px var(--primary-100) inset;
+  }
+  &:autofill {
+    box-shadow: 0 0 0px 1000px var(--primary-100) inset;
+  }
 }
-
 
 textarea {
   padding: 1rem;

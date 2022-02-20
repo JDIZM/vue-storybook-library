@@ -27,7 +27,6 @@ export default {
         "btn--primary": this.primary,
         "btn--secondary": this.secondary,
         "btn--outline": this.outline,
-        "btn--disabled": this.disabled,
         "btn--destruct": this.destruct,
         "btn--left": this.left,
         "btn--block": this.block,

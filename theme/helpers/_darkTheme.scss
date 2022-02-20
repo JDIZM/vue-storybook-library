@@ -8,12 +8,13 @@
   --destruct: rgba(165, 10, 69, 0.9);
   --error: rgba(165, 10, 69, 0.9);
   --error-100: rgba(165, 10, 69, 0.2);
-  --success: #32543b;
+  --success: rgb(105, 177, 99);
   --light: rgb(230, 230, 230);
   --dark: rgb(48, 48, 48);
   --white: #fff;
   --links: var(--secondary);
-  --text-color: var(--light);
+  --text-color: var(--light); // dark - light
+  --text-color-ld: var(--dark); // light - dark
   --text-color-dark-bg: var(--light);
   --text-color-light-bg: var(--dark);
   --button-text-color: var(--light);
