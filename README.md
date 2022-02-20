@@ -47,6 +47,14 @@ npm run serve
 
 see the [storybook docs](https://storybook.js.org/docs/vue/get-started/introduction) for more info.
 
+### Releasing a new version
+
+```
+npm run build
+update version in package.json
+npm publish
+```
+
 ### Setup & Configure
 
 The `.storybook` folder contains all the config files for setting up storybook.
@@ -71,7 +79,7 @@ Each component has it's own scoped scss file that's directly imported.
 - utility class names for spacing
 - css variables for colorScheme
 
-You need to specify `@use "@/theme/helpers" as *;` at the top of the .scss file. 
+You need to specify `@use "@/theme/helpers" as *;` at the top of the .scss file.
 
 This will give you access to the `mixins` and `vars` via `@forward`. They are made available as a whole package on the global namespace.
 
@@ -90,11 +98,12 @@ This will give you access to the `mixins` and `vars` via `@forward`. They are ma
     _darkTheme
     _lightTheme
 ```
+
 #### Dark mode and Color Scheme
 
 Dark and Light mode css variables are added to :root using mixins.
 
-The default color scheme is light mode but will prefer the system ui settings using 
+The default color scheme is light mode but will prefer the system ui settings using
 
 ```
 @media (prefers-color-scheme: dark) {
@@ -170,4 +179,3 @@ Import the components directly from the /storybook folder.
 ```config
 import Toast from '@/storybook/stories/molecules/Toast.vue'
 ```
-
