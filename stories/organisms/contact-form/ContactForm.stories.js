@@ -16,7 +16,6 @@ export default {
   argTypes: {
     submit: { action: "submit" },
     update: { action: "update" },
-    error: { action: "error" },
   },
 };
 
@@ -27,8 +26,6 @@ export const ContactForm = (args, { argTypes }) => ({
     <Form 
       v-bind="$props" 
       @submit="submit" 
-      @update="update" 
-      @error="error"
     >
       <input-group
         type="text"
