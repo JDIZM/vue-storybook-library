@@ -64,11 +64,9 @@ export default {
         // from 1 to rangeLength
         let start = 1;
         let end = this.rangeLength;
-        console.log("less than prev");
         let range = [...Array(this.rangeLength + 1 - start).keys()].map(
           (key) => start + key
         );
-        console.log("r", range);
         return { start, end, range };
       }
 
@@ -88,7 +86,6 @@ export default {
 
       // middle
       let range = [...Array(end + 1 - start).keys()].map((key) => start + key);
-      console.log("range", range);
       return {
         start,
         end,
