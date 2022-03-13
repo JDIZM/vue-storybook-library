@@ -32,6 +32,7 @@ export { default as VInputGroup } from "../../stories/molecules/input-group/Inpu
 export { default as VModal } from "../../stories/molecules/modal/Modal.vue";
 export { default as VToast } from "../../stories/molecules/toast/Toast.vue";
 export { default as VSlider } from "../../stories/molecules/slider/Slider.vue";
+export { default as VPagination } from "../../stories/molecules/pagination/Pagination.vue";
 
 //
 // organisms

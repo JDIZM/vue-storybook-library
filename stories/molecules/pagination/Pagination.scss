@@ -1,0 +1,38 @@
+
+.pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary);
+    color: var(--text-color-dark-bg);
+   
+    &__list {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        li {
+            margin: 0;
+            padding: .5rem;
+            cursor: pointer;
+            button {
+                cursor: pointer;
+                color: var(--text-color-dark-bg);
+                padding: .5rem;
+                background-color: transparent;
+            }
+        }
+    }
+    .--active {
+        color: var(--secondary);
+        button {
+            font-weight: 700;
+            color: var(--secondary);
+        }
+    }
+    &__btn {
+        cursor: pointer;
+        padding: 1rem;
+        background-color: transparent;
+    }
+}

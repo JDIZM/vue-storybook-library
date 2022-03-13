@@ -1,16 +1,34 @@
 <template>
   <div id="app">
-    <VButton label="button" secondary />
+    <VPagination
+      :range-length="10"
+      :total-pages="20"
+      :current-page="page"
+      @click="pageHandler"
+      @next="pageHandler"
+      @prev="pageHandler"
+    />
   </div>
 </template>
 
 <script>
 // test registered component imports
-import { VButton } from "./components";
+import { VPagination } from "./components";
 export default {
+  data() {
+    return {
+      page: 6,
+    };
+  },
   created() {
     // test imported components
-    console.log(VButton);
+    console.log(VPagination);
+  },
+  methods: {
+    pageHandler(e) {
+      console.log(e);
+      this.page = e;
+    },
   },
 };
 </script>

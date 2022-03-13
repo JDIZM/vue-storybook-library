@@ -3,8 +3,8 @@ import Vue from "vue";
 import App from "./App.vue";
 
 // using the imported library components
-import { VButton } from "./components";
-Vue.component("VButton", VButton);
+import { VPagination } from "./components";
+Vue.component("VPagination", VPagination);
 
 new Vue({
   render: (h) => h(App),
