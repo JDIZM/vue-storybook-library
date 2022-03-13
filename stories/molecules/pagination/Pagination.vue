@@ -9,7 +9,7 @@
     </button>
     <ol class="pagination__list">
       <li
-        v-for="(page, i) in calcRange.range"
+        v-for="(page, i) in calcRange"
         :key="i"
         :class="[
           styles,
@@ -63,11 +63,10 @@ export default {
       if (this.currentPage <= prevPages) {
         // from 1 to rangeLength
         let start = 1;
-        let end = this.rangeLength;
         let range = [...Array(this.rangeLength + 1 - start).keys()].map(
           (key) => start + key
         );
-        return { start, end, range };
+        return range;
       }
 
       // end
@@ -77,20 +76,12 @@ export default {
         let range = [...Array(end + 1 - start).keys()].map(
           (key) => start + key
         );
-        return {
-          start,
-          end,
-          range,
-        };
+        return range;
       }
 
       // middle
       let range = [...Array(end + 1 - start).keys()].map((key) => start + key);
-      return {
-        start,
-        end,
-        range,
-      };
+      return range;
     },
   },
 };
