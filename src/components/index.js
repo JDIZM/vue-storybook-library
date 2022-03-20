@@ -6,6 +6,7 @@ import "../../theme/main.scss";
 //
 export { default as VButton } from "../../stories/atoms/button/Button.vue";
 export { default as VImg } from "../../stories/atoms/image/BaseImage.vue";
+export { default as VRadioButton } from "../../stories/atoms/radio-button/RadioButton.vue";
 export { default as IconAlarm } from "../../stories/atoms/icons/Alarm.vue";
 export { default as IconClose } from "../../stories/atoms/icons/Close.vue";
 export { default as IconDone } from "../../stories/atoms/icons/Done.vue";
