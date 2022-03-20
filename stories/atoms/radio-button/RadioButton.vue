@@ -36,8 +36,8 @@ export default {
       get() {
         return this.checked;
       },
-      set() {
-        this.$emit("input", this.value);
+      set(value) {
+        this.$emit("input", value);
       },
     },
     classes() {
