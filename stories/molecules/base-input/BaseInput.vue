@@ -68,12 +68,12 @@ export default {
     height: 100%;
   }
   .icons {
-    top: 40px;
+    top: 38px;
     left: 0.5rem;
   }
   textarea {
     height: 150px;
-    padding: 1.5rem 1.5rem 1.5rem 2.5rem;
+    padding: 1rem 1.5rem 1.5rem 2.5rem;
     &:focus {
       border-bottom: 2px solid var(--input-highlight);
     }
