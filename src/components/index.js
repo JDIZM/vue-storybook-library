@@ -29,6 +29,7 @@ export { default as IconChevronRight } from "../../stories/atoms/icons/ChevronRi
 //
 
 export { default as VDropdown } from "../../stories/molecules/dropdown/Dropdown.vue";
+export { default as VBaseInput } from "../../stories/molecules/base-input/BaseInput.vue";
 export { default as VInputGroup } from "../../stories/molecules/input-group/InputGroup.vue";
 export { default as VModal } from "../../stories/molecules/modal/Modal.vue";
 export { default as VToast } from "../../stories/molecules/toast/Toast.vue";
