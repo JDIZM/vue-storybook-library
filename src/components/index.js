@@ -4,7 +4,7 @@ import "../../theme/main.scss";
 //
 // atoms
 //
-export { default as VButton } from "../../stories/atoms/button/Button.vue";
+export { default as VButton } from "../../stories/components/button/Button.vue";
 export { default as VImg } from "../../stories/atoms/image/BaseImage.vue";
 export { default as VRadioButton } from "../../stories/atoms/radio-button/RadioButton.vue";
 export { default as IconAlarm } from "../../stories/atoms/icons/Alarm.vue";
@@ -28,20 +28,20 @@ export { default as IconChevronRight } from "../../stories/atoms/icons/ChevronRi
 // molecules
 //
 
-export { default as VDropdown } from "../../stories/molecules/dropdown/Dropdown.vue";
-export { default as VBaseInput } from "../../stories/molecules/base-input/BaseInput.vue";
-export { default as VInputGroup } from "../../stories/molecules/input-group/InputGroup.vue";
-export { default as VModal } from "../../stories/molecules/modal/Modal.vue";
-export { default as VToast } from "../../stories/molecules/toast/Toast.vue";
-export { default as VSlider } from "../../stories/molecules/slider/Slider.vue";
-export { default as VPagination } from "../../stories/molecules/pagination/Pagination.vue";
+export { default as VDropdown } from "../../stories/components/dropdown/Dropdown.vue";
+export { default as VBaseInput } from "../../stories/components/base-input/BaseInput.vue";
+export { default as VInputGroup } from "../../stories/components/input-group/InputGroup.vue";
+export { default as VModal } from "../../stories/components/modal/Modal.vue";
+export { default as VToast } from "../../stories/components/toast/Toast.vue";
+export { default as VSlider } from "../../stories/components/slider/Slider.vue";
+export { default as VPagination } from "../../stories/components/pagination/Pagination.vue";
 
 //
 // organisms
 //
-export { default as VContactForm } from "../../stories/organisms/contact-form/ContactForm.vue";
+export { default as VContactForm } from "../../stories/components/contact-form/ContactForm.vue";
 export { default as VEmailSubscribe } from "../../stories/organisms/email-subscribe/EmailSubscribe.vue";
-export { default as VNav } from "../../stories/layout/nav/NavMain.vue";
+export { default as VNav } from "../../stories/components/nav/NavMain.vue";
 export { default as VFooter } from "../../stories/layout/footer/Footer.vue";
 
 //

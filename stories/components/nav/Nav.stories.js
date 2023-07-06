@@ -1,4 +1,4 @@
-import NavMain from "../../layout/nav/NavMain.vue";
+import NavMain from "./NavMain.vue";
 import NavDrawer from "./NavDrawer";
 import NavDropdown from "./NavDropdown";
 import logoFile from "../../assets/logo.png";

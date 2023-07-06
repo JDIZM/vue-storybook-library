@@ -2,13 +2,13 @@
 import Form from "./ContactForm.vue";
 // instead of importing the sub components, we import their stories
 // https://storybook.js.org/docs/react/workflows/stories-for-multiple-components
-import Button from "../../atoms/button/Button.stories";
-import InputGroup from "../../molecules/input-group/InputGroup.vue";
+import Button from "../button/Button.stories";
+import InputGroup from "../../components/input-group/InputGroup.vue";
 import Phone from "../../atoms/icons/Phone.vue";
 import Person from "../../atoms/icons/Person.vue";
 import Message from "../../atoms/icons/Message.vue";
 import Email from "../../atoms/icons/Email.vue";
-import BaseInput from "../../molecules/base-input/BaseInput.vue";
+import BaseInput from "../../components/base-input/BaseInput.vue";
 
 export default {
   title: "organisms/Contact Form",
