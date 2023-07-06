@@ -79,8 +79,8 @@
 <script>
 import NavDrawer from "./NavDrawer";
 import NavDropdown from "./NavDropdown";
-import Menu from "../../atoms/icons/Menu.vue";
-import Close from "../../atoms/icons/Close.vue";
+import Menu from "../icons/Menu.vue";
+import Close from "../icons/Close.vue";
 
 export default {
   components: {
@@ -137,6 +137,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@use "../../atoms/button/Button.scss";
+@use "../button/Button.scss";
 @use "./Nav.scss";
 </style>

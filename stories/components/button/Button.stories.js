@@ -1,7 +1,7 @@
 import Button from "./Button.vue";
 
 export default {
-  title: "atoms/Button",
+  title: "components/Button",
   components: { Button },
   argTypes: {
     click: { action: "click" }

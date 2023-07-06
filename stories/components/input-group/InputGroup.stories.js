@@ -1,9 +1,9 @@
 import InputGroup from "./InputGroup.vue";
-import Phone from "../../atoms/icons/Phone.vue";
-import Message from "../../atoms/icons/Message.vue";
+import Phone from "../icons/Phone.vue";
+import Message from "../icons/Message.vue";
 
 export default {
-  title: "molecules/Form Input",
+  title: "components/Form Input",
   component: InputGroup,
   argTypes: {
     update: { action: "update" }

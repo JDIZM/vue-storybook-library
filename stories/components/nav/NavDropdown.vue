@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import ChevronRight from "../../atoms/icons/ChevronRight.vue";
+import ChevronRight from "../icons/ChevronRight.vue";
 
 export default {
   components: {

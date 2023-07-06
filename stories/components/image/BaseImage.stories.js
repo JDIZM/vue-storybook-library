@@ -1,7 +1,7 @@
 import BaseImage from "./BaseImage.vue";
 
 export default {
-  title: "atoms/Responsive Image",
+  title: "components/Responsive Image",
   components: { BaseImage }
 };
 

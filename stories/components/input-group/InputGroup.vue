@@ -36,8 +36,8 @@
 </template>
 
 <script>
-import Done from "../../atoms/icons/Done.vue";
-import Warning from "../../atoms/icons/Warning.vue";
+import Done from "../icons/Done.vue";
+import Warning from "../icons/Warning.vue";
 
 export default {
   components: {

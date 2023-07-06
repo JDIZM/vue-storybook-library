@@ -1,10 +1,10 @@
 import BaseInput from "./BaseInput.vue";
-import Phone from "../../atoms/icons/Phone.vue";
-import Person from "../../atoms/icons/Person.vue";
-import Message from "../../atoms/icons/Message.vue";
+import Phone from "../icons/Phone.vue";
+import Person from "../icons/Person.vue";
+import Message from "../icons/Message.vue";
 
 export default {
-  title: "molecules/Base Input",
+  title: "components/Base Input",
   component: BaseInput,
   argTypes: {
     input: { action: "input" },

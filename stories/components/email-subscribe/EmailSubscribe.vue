@@ -16,9 +16,9 @@
 </template>
 
 <script>
-import FormInput from "../../molecules/input-group/InputGroup.vue";
-import Button from "../../atoms/button/Button.vue";
-import Email from "../../atoms/icons/Email.vue";
+import FormInput from "../input-group/InputGroup.vue";
+import Button from "../button/Button.vue";
+import Email from "../icons/Email.vue";
 
 export default {
   components: {

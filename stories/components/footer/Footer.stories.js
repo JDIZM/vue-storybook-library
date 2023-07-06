@@ -1,11 +1,11 @@
 import VFooter from "./Footer.vue";
 import logoFile from "../../assets/logo.png";
-import Github from "../../atoms/icons/Github.vue";
-import Twitter from "../../atoms/icons/Twitter.vue";
-import LinkedIn from "../../atoms/icons/LinkedIn.vue";
+import Github from "../icons/Github.vue";
+import Twitter from "../icons/Twitter.vue";
+import LinkedIn from "../icons/LinkedIn.vue";
 
 export default {
-  title: "organisms/Footer",
+  title: "components/Footer",
   component: VFooter
 };
 

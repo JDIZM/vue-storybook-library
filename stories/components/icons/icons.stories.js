@@ -16,7 +16,7 @@ import Github from "./Github.vue";
 import ChevronRight from "./ChevronRight.vue";
 
 export default {
-  title: "atoms/Icons",
+  title: "components/Icons",
   argTypes: {
     color: { control: "color" }
   }

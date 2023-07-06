@@ -11,7 +11,7 @@ Vue.use(VueRouter);
 Vue.component("NuxtLink", Vue.component("RouterLink"));
 
 export default {
-  title: "organisms/Nav",
+  title: "components/Nav",
   components: { NavMain, NavDrawer, NavDropdown },
   argTypes: {
     onEnquire: { action: "onEnquire" },

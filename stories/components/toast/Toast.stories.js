@@ -1,9 +1,9 @@
 import Toast from "./Toast.vue";
-import Warning from "../../atoms/icons/Warning.vue";
-import Info from "../../atoms/icons/Info.vue";
+import Warning from "../icons/Warning.vue";
+import Info from "../icons/Info.vue";
 
 export default {
-  title: "molecules/Toast",
+  title: "components/Toast",
   component: Toast,
   argTypes: {
     timeout: { action: "timeout" }

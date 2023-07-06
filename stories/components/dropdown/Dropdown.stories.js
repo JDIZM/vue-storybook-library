@@ -1,7 +1,7 @@
 import Dropdown from "./Dropdown.vue";
 
 export default {
-  title: "molecules/Dropdown",
+  title: "components/Dropdown",
   component: Dropdown,
   argTypes: {
     click: { action: "click" }

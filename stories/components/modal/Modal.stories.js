@@ -1,7 +1,7 @@
 import Modal from "./Modal.vue";
 
 export default {
-  title: "molecules/Modal",
+  title: "components/Modal",
   component: Modal,
   argTypes: {
     confirm: { action: "confirm" },

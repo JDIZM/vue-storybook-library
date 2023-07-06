@@ -1,7 +1,7 @@
 import SliderComponent from "./Slider.vue";
 
 export default {
-  title: "molecules/Slider",
+  title: "components/Slider",
   component: SliderComponent,
   argTypes: {
     slide: { action: "slide" }

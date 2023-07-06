@@ -1,7 +1,7 @@
 import PaginationComponent from "./Pagination.vue";
 
 export default {
-  title: "molecules/Pagination",
+  title: "components/Pagination",
   component: PaginationComponent,
   argTypes: {
     click: { action: "click" },

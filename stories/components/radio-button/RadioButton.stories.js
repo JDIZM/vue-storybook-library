@@ -1,7 +1,7 @@
-import { VRadioButton as RadioButton } from "../../../src/components";
+import RadioButton from "./RadioButton";
 
 export default {
-  title: "atoms/Radio Button",
+  title: "components/Radio Button",
   component: RadioButton,
   argTypes: {
     input: { action: "input" }
