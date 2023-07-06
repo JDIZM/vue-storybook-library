@@ -7,5 +7,5 @@ import { VPagination } from "./components";
 Vue.component("VPagination", VPagination);
 
 new Vue({
-  render: (h) => h(App),
+  render: (h) => h(App)
 }).$mount("#app");

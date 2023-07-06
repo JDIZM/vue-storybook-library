@@ -14,16 +14,16 @@ export default {
   props: {
     imgSrc: {
       type: String,
-      required: true,
-    },
+      required: true
+    }
   },
   computed: {
     classes() {
       return {
-        "--notfound": true,
+        "--notfound": true
       };
-    },
-  },
+    }
+  }
 };
 </script>
 

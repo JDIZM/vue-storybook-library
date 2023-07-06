@@ -3,17 +3,17 @@ import imgSrc from "../assets/lionel-richie.jpg";
 
 export default {
   title: "pages/Not Found Component",
-  component: NotFoundComponent,
+  component: NotFoundComponent
 };
 
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { NotFoundComponent },
-  template: '<NotFoundComponent :imgSrc="imgSrc" />',
+  template: '<NotFoundComponent :imgSrc="imgSrc" />'
 });
 
 export const notFoundComponent = Template.bind({});
 
 notFoundComponent.args = {
-  imgSrc: imgSrc,
+  imgSrc: imgSrc
 };

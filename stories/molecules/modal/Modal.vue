@@ -15,13 +15,7 @@
             show = false;
           "
         />
-        <Button
-          left
-          label="CLOSE"
-          primary
-          :disabled="disableCancel"
-          @click="show = false"
-        />
+        <Button left label="CLOSE" primary :disabled="disableCancel" @click="show = false" />
       </div>
     </div>
     <div class="modal__overlay" @click.self="show = false" />
@@ -32,12 +26,12 @@
 import Button from "../../atoms/button/Button.vue";
 export default {
   components: {
-    Button,
+    Button
   },
   props: {
     disableConfirm: Boolean,
     disableCancel: Boolean,
-    value: Boolean,
+    value: Boolean
   },
   computed: {
     show: {
@@ -46,9 +40,9 @@ export default {
       },
       set(value) {
         this.$emit("input", value);
-      },
-    },
-  },
+      }
+    }
+  }
 };
 </script>
 

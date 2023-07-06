@@ -42,36 +42,36 @@ import Warning from "../../atoms/icons/Warning.vue";
 export default {
   components: {
     Done,
-    Warning,
+    Warning
   },
   model: {
     data: "value",
-    event: "update",
+    event: "update"
   },
   props: {
     name: {
       type: String,
-      required: true,
+      required: true
     },
     placeholder: {
       type: String,
-      required: true,
+      required: true
     },
     type: {
       type: String,
-      required: true,
+      required: true
     },
     label: {
       type: String,
-      required: true,
+      required: true
     },
     showError: Boolean,
     showSuccess: Boolean,
-    hideLabel: Boolean,
+    hideLabel: Boolean
   },
   data() {
     return {
-      value: "",
+      value: ""
     };
   },
   computed: {
@@ -79,10 +79,10 @@ export default {
       return {
         "--error": this.showError,
         "--success": this.showSuccess,
-        "form__field--no-label": this.hideLabel,
+        "form__field--no-label": this.hideLabel
       };
-    },
-  },
+    }
+  }
 };
 </script>
 

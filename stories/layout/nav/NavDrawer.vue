@@ -5,11 +5,7 @@
       <div class="nav__drawer__top"></div>
       <ul class="nav__drawer__list">
         <li v-for="link in links" :key="link.path">
-          <router-link
-            v-if="link.path"
-            :to="link.path"
-            exact-active-class="--active"
-          >
+          <router-link v-if="link.path" :to="link.path" exact-active-class="--active">
             <div class="nav__menu__wrapper">
               <span v-if="link.icon" class="material-icons">
                 {{ link.icon }}
@@ -35,11 +31,7 @@
           </a>
           <ul v-if="showDropdown && !link.path" class="nav__drawer__dropdown">
             <li v-for="item in dropdownItems" :key="item.name">
-              <router-link
-                v-if="item.path"
-                :to="item.path"
-                exact-active-class="--active"
-              >
+              <router-link v-if="item.path" :to="item.path" exact-active-class="--active">
                 <div class="nav__drawer__dropdown">{{ item.name }}</div>
               </router-link>
             </li>
@@ -56,31 +48,31 @@ export default {
   props: {
     links: {
       type: Array,
-      required: true,
+      required: true
     },
     showDrawer: {
       type: Boolean,
-      required: true,
+      required: true
     },
     dropdownItems: {
       type: Array,
-      required: true,
+      required: true
     },
     logoSrc: {
       type: String,
-      required: true,
-    },
+      required: true
+    }
   },
   data() {
     return {
-      showDropdown: false,
+      showDropdown: false
     };
   },
   methods: {
     onDropdown() {
       this.showDropdown = !this.showDropdown;
-    },
-  },
+    }
+  }
 };
 </script>
 

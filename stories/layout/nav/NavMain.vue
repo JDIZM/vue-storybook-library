@@ -5,16 +5,8 @@
         <img :src="logoSrc" draggable="false" />
       </div>
       <ul class="nav__desktop__list">
-        <li
-          v-for="link in links"
-          :key="link.path"
-          class="nav__desktop__list__item"
-        >
-          <router-link
-            v-if="link.path"
-            :to="link.path"
-            exact-active-class="--active"
-          >
+        <li v-for="link in links" :key="link.path" class="nav__desktop__list__item">
+          <router-link v-if="link.path" :to="link.path" exact-active-class="--active">
             <span v-if="link.name">{{ link.name.toUpperCase() }}</span>
           </router-link>
           <a
@@ -31,13 +23,7 @@
         </li>
       </ul>
       <div class="nav__desktop__btns">
-        <a
-          v-if="phone.length"
-          :href="'tel:' + phone"
-          class="nav__desktop__btn btn btn--outline"
-        >
-          CALL
-        </a>
+        <a v-if="phone.length" :href="'tel:' + phone" class="nav__desktop__btn btn btn--outline"> CALL </a>
         <div
           v-if="showEnquire"
           class="nav__desktop__btn btn btn--secondary"
@@ -59,13 +45,7 @@
         <!-- </div> -->
       </div>
       <div class="nav__mobile__btns">
-        <a
-          v-if="phone.length"
-          class="nav__mobile__btn btn btn--outline"
-          :href="'tel:' + phone"
-        >
-          CALL
-        </a>
+        <a v-if="phone.length" class="nav__mobile__btn btn btn--outline" :href="'tel:' + phone"> CALL </a>
         <button
           v-if="showEnquire"
           class="nav__mobile__btn btn btn--secondary"
@@ -80,13 +60,7 @@
       </div>
     </div>
     <!-- toggle hidden on desktop with display:none -->
-    <div
-      class="nav__toggle"
-      role="button"
-      aria-pressed="true"
-      tabindex="0"
-      @click="onShowDrawer"
-    >
+    <div class="nav__toggle" role="button" aria-pressed="true" tabindex="0" @click="onShowDrawer">
       <Menu v-if="!showDrawer" medium class="icons" />
       <Close v-else medium class="icons" />
     </div>
@@ -113,33 +87,33 @@ export default {
     NavDrawer,
     NavDropdown,
     Menu,
-    Close,
+    Close
   },
   props: {
     links: {
       type: Array,
-      required: true,
+      required: true
     },
     showDrawer: Boolean,
     showDropdown: Boolean,
     dropdownItems: {
       type: Array,
-      required: true,
+      required: true
     },
     logoSrc: {
       type: String,
-      required: true,
+      required: true
     },
     phone: {
       type: String,
       required: false,
-      default: "",
+      default: ""
     },
-    showEnquire: Boolean,
+    showEnquire: Boolean
   },
   watch: {
     // watch the route and call method
-    "$route.fullPath": "onRouteChange",
+    "$route.fullPath": "onRouteChange"
   },
   methods: {
     onDropdown() {
@@ -157,12 +131,12 @@ export default {
     },
     onCloseDrawer() {
       this.$emit("onCloseDrawer");
-    },
-  },
+    }
+  }
 };
 </script>
 
 <style lang="scss" scoped>
-@use '../../atoms/button/Button.scss';
-@use './Nav.scss';
+@use "../../atoms/button/Button.scss";
+@use "./Nav.scss";
 </style>

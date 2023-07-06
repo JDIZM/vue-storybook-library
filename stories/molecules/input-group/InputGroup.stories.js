@@ -6,8 +6,8 @@ export default {
   title: "molecules/Form Input",
   component: InputGroup,
   argTypes: {
-    update: { action: "update" },
-  },
+    update: { action: "update" }
+  }
 };
 
 const Template = (args, { argTypes }) => ({
@@ -15,8 +15,8 @@ const Template = (args, { argTypes }) => ({
   components: { InputGroup },
   template: '<input-group v-bind="$props" v-model="value" @update="update" />',
   data: () => ({
-    value: "hello",
-  }),
+    value: "hello"
+  })
 });
 
 export const TextInputWithoutIcon = Template.bind({});
@@ -27,7 +27,7 @@ TextInputWithoutIcon.args = {
   type: "text",
   showIcon: false,
   showError: false,
-  showSuccess: false,
+  showSuccess: false
 };
 
 export const TextArea = (args, { argTypes }) => ({
@@ -39,15 +39,15 @@ export const TextArea = (args, { argTypes }) => ({
     </input-group>
     `,
   data: () => ({
-    value: "hello",
-  }),
+    value: "hello"
+  })
 });
 
 TextArea.args = {
   name: "message",
   label: "Leave us a message",
   placeholder: "Type something..",
-  type: "textarea",
+  type: "textarea"
 };
 
 export const InputWithIcon = (args, { argTypes }) => ({
@@ -59,14 +59,14 @@ export const InputWithIcon = (args, { argTypes }) => ({
     </input-group>
     `,
   data: () => ({
-    value: "hello",
-  }),
+    value: "hello"
+  })
 });
 InputWithIcon.args = {
   name: "phone",
   label: "Phone",
   placeholder: "Enter your phone number",
-  type: "phone",
+  type: "phone"
 };
 
 export const InputWithError = InputWithIcon.bind({});
@@ -75,7 +75,7 @@ InputWithError.args = {
   label: "Phone",
   placeholder: "Enter your phone number",
   type: "phone",
-  showError: true,
+  showError: true
 };
 
 export const InputWithSuccess = InputWithIcon.bind({});
@@ -84,7 +84,7 @@ InputWithSuccess.args = {
   label: "Phone",
   placeholder: "Enter your phone number",
   type: "phone",
-  showSuccess: true,
+  showSuccess: true
 };
 
 export const InputWithNoLabel = InputWithIcon.bind({});
@@ -93,5 +93,5 @@ InputWithNoLabel.args = {
   label: "Phone",
   placeholder: "Enter your phone number",
   type: "phone",
-  hideLabel: true,
+  hideLabel: true
 };

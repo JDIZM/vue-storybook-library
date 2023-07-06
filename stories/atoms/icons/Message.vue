@@ -23,16 +23,16 @@ export default {
   props: {
     small: Boolean,
     medium: Boolean,
-    large: Boolean,
+    large: Boolean
   },
   computed: {
     classes() {
       return {
         "icon--md": this.medium,
-        "icon--lg": this.large,
+        "icon--lg": this.large
       };
-    },
-  },
+    }
+  }
 };
 </script>
 

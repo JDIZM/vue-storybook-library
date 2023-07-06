@@ -10,27 +10,27 @@ export default {
   component: EmailSubscribe,
   subcomponents: { FormInput, Button, Email },
   argTypes: {
-    submit: { action: "submit" },
-  },
+    submit: { action: "submit" }
+  }
 };
 
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { EmailSubscribe, FormInput, Button },
-  template: '<EmailSubscribe v-bind="$props" @submit="submit"/>',
+  template: '<EmailSubscribe v-bind="$props" @submit="submit"/>'
 });
 
 export const SingleEmailField = Template.bind({});
 SingleEmailField.args = {
-  label: "Subscribe to our newsletter",
+  label: "Subscribe to our newsletter"
 };
 export const FormWithError = Template.bind({});
 FormWithError.args = {
   showError: true,
-  label: "Subscribe to our newsletter",
+  label: "Subscribe to our newsletter"
 };
 export const FormWithSuccess = Template.bind({});
 FormWithSuccess.args = {
   showSuccess: true,
-  label: "Subscribe to our newsletter",
+  label: "Subscribe to our newsletter"
 };

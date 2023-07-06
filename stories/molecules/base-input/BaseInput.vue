@@ -12,13 +12,7 @@
         :type="type"
         @focus.prevent="$emit('focus')"
       />
-      <input
-        v-else
-        v-model="model"
-        v-bind="$attrs"
-        :type="type"
-        @focus.prevent="$emit('focus')"
-      />
+      <input v-else v-model="model" v-bind="$attrs" :type="type" @focus.prevent="$emit('focus')" />
     </label>
   </div>
 </template>
@@ -28,26 +22,26 @@ export default {
   inheritAttrs: false,
   model: {
     data: "value",
-    event: "input",
+    event: "input"
   },
   props: {
     value: {
       type: [String, Number],
       required: false,
-      default: "",
+      default: ""
     },
     type: {
       type: String,
-      required: true,
+      required: true
     },
     showError: Boolean,
-    showSuccess: Boolean,
+    showSuccess: Boolean
   },
   computed: {
     classes() {
       return {
         "--error": this.showError,
-        "--success": this.showSuccess,
+        "--success": this.showSuccess
       };
     },
     model: {
@@ -56,9 +50,9 @@ export default {
       },
       set(value) {
         this.$emit("input", value);
-      },
-    },
-  },
+      }
+    }
+  }
 };
 </script>
 

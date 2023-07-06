@@ -11,13 +11,7 @@
     >
       <Email medium />
     </FormInput>
-    <Button
-      type="submit"
-      left
-      label="SUBMIT"
-      primary
-      @click="$emit('submit')"
-    />
+    <Button type="submit" left label="SUBMIT" primary @click="$emit('submit')" />
   </form>
 </template>
 
@@ -30,16 +24,16 @@ export default {
   components: {
     FormInput,
     Button,
-    Email,
+    Email
   },
   props: {
     label: {
       type: String,
-      required: true,
+      required: true
     },
     showSuccess: Boolean,
-    showError: Boolean,
-  },
+    showError: Boolean
+  }
 };
 </script>
 

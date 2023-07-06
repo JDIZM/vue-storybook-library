@@ -15,23 +15,23 @@ export default {
     show: Boolean,
     msg: {
       type: String,
-      required: true,
+      required: true
     },
     duration: {
       type: Number,
-      required: true,
+      required: true
     },
     destruct: Boolean,
-    success: Boolean,
+    success: Boolean
   },
   computed: {
     states() {
       return {
         "--success": this.success,
         "--destruct": this.destruct,
-        "--active": this.show,
+        "--active": this.show
       };
-    },
+    }
   },
   mounted() {
     this.onShow();
@@ -46,8 +46,8 @@ export default {
           this.$emit("timeout");
         }, this.duration);
       }
-    },
-  },
+    }
+  }
 };
 </script>
 

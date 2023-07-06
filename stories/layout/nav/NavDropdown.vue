@@ -1,16 +1,8 @@
 <template>
   <div v-if="showDropdown" class="nav__dropdown">
     <ul class="nav__desktop__list">
-      <li
-        v-for="item in items"
-        :key="item.path"
-        class="nav__desktop__list__item"
-      >
-        <router-link
-          v-if="item.path"
-          :to="item.path"
-          exact-active-class="--active"
-        >
+      <li v-for="item in items" :key="item.path" class="nav__desktop__list__item">
+        <router-link v-if="item.path" :to="item.path" exact-active-class="--active">
           <div class="nav__desktop__list__item--flex">
             <span>{{ item.name.toUpperCase() }}</span>
             <span class="icons"><chevron-right medium /></span>
@@ -27,18 +19,18 @@ import ChevronRight from "../../atoms/icons/ChevronRight.vue";
 
 export default {
   components: {
-    ChevronRight,
+    ChevronRight
   },
   props: {
     items: {
       type: Array,
-      required: true,
+      required: true
     },
     showDropdown: {
       type: Boolean,
-      required: true,
-    },
-  },
+      required: true
+    }
+  }
 };
 </script>
 

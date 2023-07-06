@@ -14,9 +14,7 @@
     <div class="copy">
       <p>
         &copy; {{ currentDate }} {{ companyName }}
-        <span v-if="companyNo.length">
-          - Company number {{ companyNo }} -
-        </span>
+        <span v-if="companyNo.length"> - Company number {{ companyNo }} - </span>
         <a v-if="privacy.length" :href="privacy">Privacy</a>
       </p>
     </div>
@@ -28,28 +26,28 @@ export default {
   props: {
     companyName: {
       type: String,
-      required: true,
+      required: true
     },
     companyNo: {
       type: String,
       required: false,
-      default: "",
+      default: ""
     },
     privacy: {
       type: String,
       required: false,
-      default: "",
+      default: ""
     },
     logoSrc: {
       type: String,
-      required: true,
-    },
+      required: true
+    }
   },
   computed: {
     currentDate() {
       return new Date().getFullYear();
-    },
-  },
+    }
+  }
 };
 </script>
 

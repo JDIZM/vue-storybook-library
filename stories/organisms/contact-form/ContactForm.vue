@@ -18,7 +18,7 @@ import Button from "../../atoms/button/Button.vue";
 
 export default {
   components: {
-    Button,
+    Button
   },
   props: {
     disableSubmit: Boolean,
@@ -26,14 +26,14 @@ export default {
     label: {
       type: String,
       required: false,
-      default: "SUBMIT",
-    },
+      default: "SUBMIT"
+    }
   },
   methods: {
     onSubmit() {
       this.$emit("submit");
-    },
-  },
+    }
+  }
 };
 </script>
 

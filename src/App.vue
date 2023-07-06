@@ -17,7 +17,7 @@ import { VPagination } from "./components";
 export default {
   data() {
     return {
-      page: 6,
+      page: 6
     };
   },
   created() {
@@ -28,8 +28,8 @@ export default {
     pageHandler(e) {
       console.log(e);
       this.page = e;
-    },
-  },
+    }
+  }
 };
 </script>
 

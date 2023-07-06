@@ -8,8 +8,8 @@ export default {
   component: BaseInput,
   argTypes: {
     input: { action: "input" },
-    focus: { action: "focus" },
-  },
+    focus: { action: "focus" }
+  }
 };
 
 // v-model already sets a value and listens for input event
@@ -30,8 +30,8 @@ const Template = (args, { argTypes }) => ({
     </base-input>
   `,
   data: () => ({
-    inputValue: "",
-  }),
+    inputValue: ""
+  })
 });
 
 export const TextInput = (args, { argTypes }) => ({
@@ -51,19 +51,19 @@ export const TextInput = (args, { argTypes }) => ({
     </base-input>
   `,
   data: () => ({
-    inputValue: "",
-  }),
+    inputValue: ""
+  })
 });
 
 TextInput.args = {
   placeholder: "John Smith",
-  type: "text",
+  type: "text"
 };
 
 export const PhoneInput = Template.bind({});
 PhoneInput.args = {
   placeholder: "0161 123 4567",
-  type: "tel",
+  type: "tel"
 };
 
 export const TextArea = (args, { argTypes }) => ({
@@ -83,18 +83,18 @@ export const TextArea = (args, { argTypes }) => ({
     </base-input>
   `,
   data: () => ({
-    inputValue: "",
-  }),
+    inputValue: ""
+  })
 });
 
 TextArea.args = {
   placeholder: "John Smith",
-  type: "textarea",
+  type: "textarea"
 };
 
 export const InputError = Template.bind({});
 InputError.args = {
   placeholder: "Please enter a phone number",
   type: "tel",
-  showError: true,
+  showError: true
 };

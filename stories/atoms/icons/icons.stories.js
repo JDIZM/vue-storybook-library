@@ -18,8 +18,8 @@ import ChevronRight from "./ChevronRight.vue";
 export default {
   title: "atoms/Icons",
   argTypes: {
-    color: { control: "color" },
-  },
+    color: { control: "color" }
+  }
 };
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
@@ -39,7 +39,7 @@ const Template = (args, { argTypes }) => ({
     LinkedIn,
     Instagram,
     Github,
-    ChevronRight,
+    ChevronRight
   },
   template: `
       <div>
@@ -60,17 +60,17 @@ const Template = (args, { argTypes }) => ({
         <github v-bind="$props" :color="color" />
         <chevron-right v-bind="$props" :color="color" />
       </div>
-    `,
+    `
 });
 
 export const Small = Template.bind({});
 
 export const Medium = Template.bind({});
 Medium.args = {
-  medium: true,
+  medium: true
 };
 
 export const Large = Template.bind({});
 Large.args = {
-  large: true,
+  large: true
 };

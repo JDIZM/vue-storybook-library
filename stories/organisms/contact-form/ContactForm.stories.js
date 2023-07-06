@@ -18,8 +18,8 @@ export default {
     submit: { action: "submit" },
     update: { action: "update" },
     focus: { action: "focus" },
-    input: { action: "input" },
-  },
+    input: { action: "input" }
+  }
 };
 
 export const ContactForm = (args, { argTypes }) => ({
@@ -67,7 +67,7 @@ export const ContactForm = (args, { argTypes }) => ({
         <message medium />
       </input-group>
     </Form>
-  `,
+  `
 });
 
 const Template = (args, { argTypes }) => ({
@@ -110,27 +110,27 @@ const Template = (args, { argTypes }) => ({
   `,
   data: () => ({
     name: "",
-    phone: "",
-  }),
+    phone: ""
+  })
 });
 
 export const FormWithBaseInputs = Template.bind({});
 
 FormWithBaseInputs.args = {
   disableSubmit: false,
-  label: "SEND",
+  label: "SEND"
 };
 
 export const FormWithDisabledSubmit = Template.bind({});
 
 FormWithDisabledSubmit.args = {
   disableSubmit: true,
-  label: "SEND",
+  label: "SEND"
 };
 
 export const FormWithHiddenSubmit = Template.bind({});
 
 FormWithHiddenSubmit.args = {
   hideSubmit: true,
-  label: "SEND",
+  label: "SEND"
 };

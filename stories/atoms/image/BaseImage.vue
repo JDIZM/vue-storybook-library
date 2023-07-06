@@ -1,13 +1,7 @@
 <template>
   <picture>
     <source :alt="alt" :srcSet="srcset" :sizes="sizes" type="image/webp" />
-    <img
-      :src="src"
-      :alt="alt"
-      :srcSet="srcset"
-      :sizes="sizes"
-      draggable="false"
-    />
+    <img :src="src" :alt="alt" :srcSet="srcset" :sizes="sizes" draggable="false" />
   </picture>
 </template>
 
@@ -16,21 +10,21 @@ export default {
   props: {
     src: {
       type: String,
-      required: true,
+      required: true
     },
     srcset: {
       type: String,
-      required: true,
+      required: true
     },
     alt: {
       type: String,
-      required: true,
+      required: true
     },
     sizes: {
       type: String,
-      required: true,
-    },
-  },
+      required: true
+    }
+  }
 };
 </script>
 

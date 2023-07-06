@@ -1,12 +1,6 @@
 <template>
   <nav class="pagination" aria-label="page navigation">
-    <button
-      v-show="currentPage > 1"
-      class="pagination__btn"
-      @click="$emit('prev', currentPage - 1)"
-    >
-      prev
-    </button>
+    <button v-show="currentPage > 1" class="pagination__btn" @click="$emit('prev', currentPage - 1)">prev</button>
     <ol class="pagination__list">
       <li
         v-for="(page, i) in calcRange"
@@ -14,18 +8,14 @@
         :class="[
           styles,
           {
-            '--active': currentPage === page,
-          },
+            '--active': currentPage === page
+          }
         ]"
       >
         <button @click.prevent="$emit('click', page)">{{ page }}</button>
       </li>
     </ol>
-    <button
-      v-show="currentPage < totalPages"
-      class="pagination__btn"
-      @click="$emit('next', currentPage + 1)"
-    >
+    <button v-show="currentPage < totalPages" class="pagination__btn" @click="$emit('next', currentPage + 1)">
       next
     </button>
   </nav>
@@ -36,21 +26,21 @@ export default {
   props: {
     currentPage: {
       type: Number,
-      required: true,
+      required: true
     },
     totalPages: {
       type: Number,
-      required: true,
+      required: true
     },
     rangeLength: {
       type: Number,
-      default: 10,
-    },
+      default: 10
+    }
   },
   computed: {
     styles() {
       return {
-        pagination__list__item: true,
+        pagination__list__item: true
       };
     },
     calcRange() {
@@ -63,9 +53,7 @@ export default {
       if (this.currentPage <= prevPages) {
         // from 1 to rangeLength
         let start = 1;
-        let range = [...Array(this.rangeLength + 1 - start).keys()].map(
-          (key) => start + key
-        );
+        let range = [...Array(this.rangeLength + 1 - start).keys()].map((key) => start + key);
         return range;
       }
 
@@ -73,20 +61,18 @@ export default {
       if (end >= this.totalPages) {
         let start = this.currentPage - this.rangeLength + 1;
         let end = this.currentPage;
-        let range = [...Array(end + 1 - start).keys()].map(
-          (key) => start + key
-        );
+        let range = [...Array(end + 1 - start).keys()].map((key) => start + key);
         return range;
       }
 
       // middle
       let range = [...Array(end + 1 - start).keys()].map((key) => start + key);
       return range;
-    },
-  },
+    }
+  }
 };
 </script>
 
 <style lang="scss">
-@use './Pagination.scss';
+@use "./Pagination.scss";
 </style>

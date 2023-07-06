@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="slider"
-    :style="`height: ${height}; width: ${width}; max-width: ${maxWidth};  max-height: ${maxHeight}`"
-  >
+  <div class="slider" :style="`height: ${height}; width: ${width}; max-width: ${maxWidth};  max-height: ${maxHeight}`">
     <div
       v-for="(slide, i) in slides"
       :key="i"
@@ -28,36 +25,36 @@ export default {
   props: {
     slides: {
       type: Array,
-      required: true,
+      required: true
     },
     maxWidth: {
       type: String,
-      required: true,
+      required: true
     },
     width: {
       type: String,
-      required: true,
+      required: true
     },
     maxHeight: {
       type: String,
-      required: true,
+      required: true
     },
     height: {
       type: String,
-      required: true,
-    },
+      required: true
+    }
   },
   data() {
     return {
-      currentSlide: 0,
+      currentSlide: 0
     };
   },
   methods: {
     selectSlide(i) {
       this.currentSlide = i;
       this.$emit("slide", i);
-    },
-  },
+    }
+  }
 };
 </script>
 

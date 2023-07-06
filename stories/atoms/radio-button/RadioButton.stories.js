@@ -4,8 +4,8 @@ export default {
   title: "atoms/Radio Button",
   component: RadioButton,
   argTypes: {
-    input: { action: "input" },
-  },
+    input: { action: "input" }
+  }
 };
 
 const Template = (args, { argTypes }) => ({
@@ -24,9 +24,9 @@ const Template = (args, { argTypes }) => ({
   `,
   data() {
     return {
-      selected: "one",
+      selected: "one"
     };
-  },
+  }
 });
 
 export const MultipleOptions = Template.bind({});
@@ -34,7 +34,7 @@ RadioButton.args = {};
 
 const options = [
   { value: "first", text: "first option", disabled: true },
-  { value: "second", text: "second option" },
+  { value: "second", text: "second option" }
 ];
 
 export const DisabledOption = (args, { argTypes }) => ({
@@ -59,7 +59,7 @@ export const DisabledOption = (args, { argTypes }) => ({
   data() {
     return {
       selected: "first",
-      options,
+      options
     };
-  },
+  }
 });

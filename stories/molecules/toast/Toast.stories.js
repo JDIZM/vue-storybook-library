@@ -6,28 +6,28 @@ export default {
   title: "molecules/Toast",
   component: Toast,
   argTypes: {
-    timeout: { action: "timeout" },
-  },
+    timeout: { action: "timeout" }
+  }
 };
 
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { Toast },
-  template: '<Toast v-bind="$props" @timeout="timeout" />',
+  template: '<Toast v-bind="$props" @timeout="timeout" />'
 });
 
 export const Hidden = Template.bind({});
 Hidden.args = {
   show: false,
   duration: 1000,
-  msg: "This is the toast message",
+  msg: "This is the toast message"
 };
 
 export const WithoutIcon = Template.bind({});
 WithoutIcon.args = {
   show: true,
   duration: 1000,
-  msg: "This is the toast message",
+  msg: "This is the toast message"
 };
 
 export const WarningIcon = (args, { argTypes }) => ({
@@ -37,12 +37,12 @@ export const WarningIcon = (args, { argTypes }) => ({
     <Toast v-bind="$props" @timeout="timeout">
       <warning medium />
     </Toast>
-  `,
+  `
 });
 WarningIcon.args = {
   show: true,
   duration: 1000,
-  msg: "This is the toast message",
+  msg: "This is the toast message"
 };
 
 export const InfoIcon = (args, { argTypes }) => ({
@@ -52,12 +52,12 @@ export const InfoIcon = (args, { argTypes }) => ({
     <Toast v-bind="$props" @timeout="timeout">
       <info medium />
     </Toast>
-  `,
+  `
 });
 InfoIcon.args = {
   show: true,
   duration: 1000,
-  msg: "This is the toast message",
+  msg: "This is the toast message"
 };
 
 export const Success = InfoIcon.bind({});
@@ -66,7 +66,7 @@ Success.args = {
   show: true,
   duration: 1000,
   msg: "This is the toast message",
-  success: true,
+  success: true
 };
 
 export const Destruct = InfoIcon.bind({});
@@ -74,5 +74,5 @@ Destruct.args = {
   show: true,
   duration: 1000,
   msg: "This is the toast message",
-  destruct: true,
+  destruct: true
 };

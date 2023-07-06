@@ -6,7 +6,7 @@ import LinkedIn from "../../atoms/icons/LinkedIn.vue";
 
 export default {
   title: "organisms/Footer",
-  component: VFooter,
+  component: VFooter
 };
 
 export const Footer = (args, { argTypes }) => ({
@@ -21,12 +21,12 @@ export const Footer = (args, { argTypes }) => ({
     ${args.addressSlot}
     </template>
   </VFooter>
-  `,
+  `
 });
 
 const Logo = {
   src: logoFile,
-  alt: "logo",
+  alt: "logo"
 };
 
 Footer.args = {
@@ -49,5 +49,5 @@ Footer.args = {
   addressSlot: `
     <h3>Location</h3>
     <p>Manchester - Remote</p>
-  `,
+  `
 };

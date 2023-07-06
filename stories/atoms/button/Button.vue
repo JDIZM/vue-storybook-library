@@ -17,8 +17,8 @@ export default {
     text: Boolean,
     label: {
       type: String,
-      required: true,
-    },
+      required: true
+    }
   },
   computed: {
     classes() {
@@ -30,10 +30,10 @@ export default {
         "btn--destruct": this.destruct,
         "btn--left": this.left,
         "btn--block": this.block,
-        "btn--text": this.text,
+        "btn--text": this.text
       };
-    },
-  },
+    }
+  }
 };
 </script>
 

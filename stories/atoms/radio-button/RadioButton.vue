@@ -1,13 +1,6 @@
 <template>
   <label class="radio" :class="classes">
-    <input
-      v-model="model"
-      :value="value"
-      v-bind="$attrs"
-      :disabled="disabled"
-      type="radio"
-      class="radio__input"
-    />
+    <input v-model="model" :value="value" v-bind="$attrs" :disabled="disabled" type="radio" class="radio__input" />
     <slot />
   </label>
 </template>
@@ -18,18 +11,18 @@ export default {
   inheritAttrs: false,
   model: {
     prop: "checked",
-    event: "input",
+    event: "input"
   },
   props: {
     disabled: Boolean,
     checked: {
       type: String,
-      required: true,
+      required: true
     },
     value: {
       type: String,
-      required: true,
-    },
+      required: true
+    }
   },
   computed: {
     model: {
@@ -38,14 +31,14 @@ export default {
       },
       set(value) {
         this.$emit("input", value);
-      },
+      }
     },
     classes() {
       return {
-        "--disabled": this.disabled,
+        "--disabled": this.disabled
       };
-    },
-  },
+    }
+  }
 };
 </script>
 

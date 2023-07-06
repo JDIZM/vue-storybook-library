@@ -5,8 +5,8 @@ export default {
   component: Modal,
   argTypes: {
     confirm: { action: "confirm" },
-    input: { action: "input" },
-  },
+    input: { action: "input" }
+  }
 };
 
 const Template = (args, { argTypes }) => ({
@@ -20,9 +20,9 @@ const Template = (args, { argTypes }) => ({
   `,
   data() {
     return {
-      showModal: true,
+      showModal: true
     };
-  },
+  }
 });
 
 export const ShowModal = Template.bind({});
@@ -30,10 +30,10 @@ ShowModal.args = {};
 
 export const ConfirmDisabled = Template.bind({});
 ConfirmDisabled.args = {
-  disableConfirm: true,
+  disableConfirm: true
 };
 
 export const CancelDisabled = Template.bind({});
 CancelDisabled.args = {
-  disableCancel: true,
+  disableCancel: true
 };
