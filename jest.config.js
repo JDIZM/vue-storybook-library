@@ -1,9 +1,19 @@
 module.exports = {
-  preset: "@vue/cli-plugin-unit-jest",
+  testEnvironment: "jsdom",
+  moduleNameMapper: {
+    "^@/(.*)$": "<rootDir>/$1",
+    "^~/(.*)$": "<rootDir>/$1",
+    "^vue$": "vue/dist/vue.common.dev.js"
+  },
   transform: {
     "^.+\\.jsx?$": "babel-jest",
-    ".*\\.(vue)$": "<rootDir>/node_modules/jest-vue-preprocessor",
+    ".*\\.(vue)$": "vue-jest"
   },
   transformIgnorePatterns: ["/node_modules/(?!(@storybook/.*\\.vue$))"],
-  moduleFileExtensions: ["vue", "js", "jsx", "json", "node"],
+  collectCoverage: true,
+  collectCoverageFrom: ["<rootDir>/stories/**/*.vue"],
+  moduleFileExtensions: ["js", "vue"],
+  globalSetup: "<rootDir>/test/globalSetup.js",
+  setupFilesAfterEnv: ["<rootDir>/test/setupAfterEnv.js"],
+  testMatch: ["**/stories/**/*.spec.js"]
 };
