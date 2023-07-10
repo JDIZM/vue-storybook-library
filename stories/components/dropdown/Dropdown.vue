@@ -23,7 +23,6 @@ export default {
   },
   methods: {
     onActive(dropdown) {
-      // TODO nested props are being mutated and classname doesn't update
       dropdown.isActive = !dropdown.isActive;
       this.$emit("click", dropdown);
     }

@@ -1,8 +1,8 @@
 import { render, screen, fireEvent } from "@testing-library/vue";
 import { composeStories } from "@storybook/testing-vue";
-import * as stories from "./Dropdown.stories"; // import all stories from the stories file
+import * as stories from "./Dropdown.stories";
 
-const { Primary } = composeStories(stories); // composeStories will return an object with a key for each exported story
+const { Primary } = composeStories(stories);
 
 const dropdowns = [
   {
