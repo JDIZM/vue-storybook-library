@@ -19,6 +19,9 @@ jobs:
     # Job steps
     steps:
       - uses: actions/checkout@v1
+      - uses: volta-cli/action@v1
+        with:
+          node-version: 16
       - name: Install dependencies
         run: npm ci
         # 👇 Adds Chromatic as a step in the workflow
