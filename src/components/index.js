@@ -5,24 +5,24 @@ import "../../theme/main.scss";
 // atoms
 //
 export { default as VButton } from "../../stories/components/button/Button.vue";
-export { default as VImg } from "../../stories/atoms/image/BaseImage.vue";
-export { default as VRadioButton } from "../../stories/atoms/radio-button/RadioButton.vue";
-export { default as IconAlarm } from "../../stories/atoms/icons/Alarm.vue";
-export { default as IconClose } from "../../stories/atoms/icons/Close.vue";
-export { default as IconDone } from "../../stories/atoms/icons/Done.vue";
-export { default as IconEmail } from "../../stories/atoms/icons/Email.vue";
-export { default as IconGithub } from "../../stories/atoms/icons/Github.vue";
-export { default as IconInfo } from "../../stories/atoms/icons/Info.vue";
-export { default as IconInstagram } from "../../stories/atoms/icons/Instagram.vue";
-export { default as IconLinkedIn } from "../../stories/atoms/icons/LinkedIn.vue";
-export { default as IconList } from "../../stories/atoms/icons/List.vue";
-export { default as IconMenu } from "../../stories/atoms/icons/Menu.vue";
-export { default as IconMessage } from "../../stories/atoms/icons/Message.vue";
-export { default as IconPerson } from "../../stories/atoms/icons/Person.vue";
-export { default as IconPhone } from "../../stories/atoms/icons/Phone.vue";
-export { default as IconTwitter } from "../../stories/atoms/icons/Twitter.vue";
-export { default as IconWarning } from "../../stories/atoms/icons/Warning.vue";
-export { default as IconChevronRight } from "../../stories/atoms/icons/ChevronRight.vue";
+export { default as VImg } from "../../stories/components/image/BaseImage.vue";
+export { default as VRadioButton } from "../../stories/components/radio-button/RadioButton.vue";
+export { default as IconAlarm } from "../../stories/components/icons/Alarm.vue";
+export { default as IconClose } from "../../stories/components/icons/Close.vue";
+export { default as IconDone } from "../../stories/components/icons/Done.vue";
+export { default as IconEmail } from "../../stories/components/icons/Email.vue";
+export { default as IconGithub } from "../../stories/components/icons/Github.vue";
+export { default as IconInfo } from "../../stories/components/icons/Info.vue";
+export { default as IconInstagram } from "../../stories/components/icons/Instagram.vue";
+export { default as IconLinkedIn } from "../../stories/components/icons/LinkedIn.vue";
+export { default as IconList } from "../../stories/components/icons/List.vue";
+export { default as IconMenu } from "../../stories/components/icons/Menu.vue";
+export { default as IconMessage } from "../../stories/components/icons/Message.vue";
+export { default as IconPerson } from "../../stories/components/icons/Person.vue";
+export { default as IconPhone } from "../../stories/components/icons/Phone.vue";
+export { default as IconTwitter } from "../../stories/components/icons/Twitter.vue";
+export { default as IconWarning } from "../../stories/components/icons/Warning.vue";
+export { default as IconChevronRight } from "../../stories/components/icons/ChevronRight.vue";
 
 //
 // molecules
@@ -40,9 +40,9 @@ export { default as VPagination } from "../../stories/components/pagination/Pagi
 // organisms
 //
 export { default as VContactForm } from "../../stories/components/contact-form/ContactForm.vue";
-export { default as VEmailSubscribe } from "../../stories/organisms/email-subscribe/EmailSubscribe.vue";
+export { default as VEmailSubscribe } from "../../stories/components/email-subscribe/EmailSubscribe.vue";
 export { default as VNav } from "../../stories/components/nav/NavMain.vue";
-export { default as VFooter } from "../../stories/layout/footer/Footer.vue";
+export { default as VFooter } from "../../stories/components/footer/Footer.vue";
 
 //
 // pages
