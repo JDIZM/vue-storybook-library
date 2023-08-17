@@ -1,18 +1,18 @@
 module.exports = {
   root: true,
   env: {
-    node: true,
+    node: true
   },
   extends: [
     "eslint:recommended",
     "plugin:vue/recommended",
     "plugin:prettier-vue/recommended",
     "plugin:storybook/recommended",
-    "prettier",
+    "prettier"
   ],
   parserOptions: {
     parser: "babel-eslint",
-    ecmaVersion: 2020,
+    ecmaVersion: 2020
   },
   rules: {
     "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
@@ -26,18 +26,15 @@ module.exports = {
         // singleQuote: true,
         // semi: false,
         // trailingComma: 'es5',
-      },
-    ],
+      }
+    ]
   },
   overrides: [
     {
-      files: [
-        "**/__tests__/*.{j,t}s?(x)",
-        "**/tests/unit/**/*.spec.{j,t}s?(x)",
-      ],
+      files: ["**/*.spec.js", "**/*.spec.jsx", "**/test/*"],
       env: {
-        jest: true,
-      },
-    },
-  ],
+        jest: true
+      }
+    }
+  ]
 };

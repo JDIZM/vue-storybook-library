@@ -5,15 +5,14 @@
   "main": "./dist/index.umd.min.js",
   "scripts": {
     "lint": "vue-cli-service lint",
+    "format": "prettier --write \"**/*.{js,vue,json,md}\"",
+    "format:check": "prettier --check \"**/*.{js,vue,json,md}\"",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --target lib src/entry.js --name index",
     "build:inline": "vue-cli-service build --target lib src/entry.js --inline-vue",
     "build-storybook": "build-storybook",
     "storybook": "start-storybook -p 6006 -s ./stories/assets",
-    "test:unit": "vue-cli-service test:unit",
-    "test:update": "vue-cli-service test:unit -u",
-    "test:coverage": "vue-cli-service test:unit --collectCoverage",
-    "test:verbose": "vue-cli-service test:unit --verbose"
+    "test": "jest --no-cache"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "1.2.35",
@@ -24,17 +23,17 @@
   },
   "devDependencies": {
     "@babel/core": "^7.11.6",
-    "@storybook/addon-essentials": "^6.4.14",
-    "@storybook/addon-links": "^6.4.14",
-    "@storybook/addon-storyshots": "^6.4.14",
-    "@storybook/theming": "^6.4.14",
-    "@storybook/vue": "^6.4.14",
+    "@storybook/addon-essentials": "^6.5.16",
+    "@storybook/addon-links": "^6.5.16",
     "@storybook/preset-scss": "^1.0.3",
+    "@storybook/testing-vue": "^0.0.4",
+    "@storybook/theming": "^6.5.16",
+    "@storybook/vue": "^6.5.16",
+    "@testing-library/vue": "^5.9.0",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-plugin-unit-jest": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
-    "@vue/test-utils": "^1.0.3",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^27.0.6",
     "babel-loader": "^8.1.0",
@@ -44,19 +43,15 @@
     "eslint-plugin-prettier-vue": "^3.1.0",
     "eslint-plugin-storybook": "^0.5.6",
     "eslint-plugin-vue": "^7.15.1",
-    "jest": "^27.0.6",
-    "jest-vue-preprocessor": "^1.7.1",
+    "jest": "^27.2.1",
     "prettier": "^2.3.2",
     "sass": "^1.43.4",
     "sass-loader": "^10.0.2",
     "typescript": "^4.3.5",
+    "vue-jest": "^3.0.7",
     "vue-loader": "^15.9.7",
     "vue-router": "^3.5.2",
     "vue-template-compiler": "^2.6.11"
-  },
-  "description": "Live demo:",
-  "directories": {
-    "test": "tests"
   },
   "files": [
     "dist/*"
@@ -74,5 +69,8 @@
   "bugs": {
     "url": "https://github.com/JDIZM/vue-storybook-library/issues"
   },
-  "homepage": "https://github.com/JDIZM/vue-storybook-library#readme"
+  "homepage": "https://github.com/JDIZM/vue-storybook-library#readme",
+  "volta": {
+    "node": "16.18.1"
+  }
 }
