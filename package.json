@@ -26,9 +26,9 @@
     "@storybook/addon-essentials": "^6.5.16",
     "@storybook/addon-links": "^6.5.16",
     "@storybook/preset-scss": "^1.0.3",
+    "@storybook/testing-vue": "^0.0.4",
     "@storybook/theming": "^6.5.16",
     "@storybook/vue": "^6.5.16",
-    "@storybook/testing-vue": "^0.0.4",
     "@testing-library/vue": "^5.9.0",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
@@ -48,10 +48,10 @@
     "sass": "^1.43.4",
     "sass-loader": "^10.0.2",
     "typescript": "^4.3.5",
+    "vue-jest": "^3.0.7",
     "vue-loader": "^15.9.7",
     "vue-router": "^3.5.2",
-    "vue-template-compiler": "^2.6.11",
-    "vue-jest": "^3.0.7"
+    "vue-template-compiler": "^2.6.11"
   },
   "files": [
     "dist/*"
@@ -69,5 +69,8 @@
   "bugs": {
     "url": "https://github.com/JDIZM/vue-storybook-library/issues"
   },
-  "homepage": "https://github.com/JDIZM/vue-storybook-library#readme"
+  "homepage": "https://github.com/JDIZM/vue-storybook-library#readme",
+  "volta": {
+    "node": "16.18.1"
+  }
 }
