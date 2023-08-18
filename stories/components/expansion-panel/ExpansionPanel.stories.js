@@ -18,7 +18,7 @@ const Template = (args, { argTypes }) => ({
     </div>
   `,
   data: () => ({
-    activePanels: [1]
+    activePanels: [1, 2]
   }),
   methods: {
     allPanels() {
@@ -35,8 +35,7 @@ Closed.args = {
   panels: [
     {
       title: "Panel 1",
-      content: "Panel one content",
-      isActive: false
+      content: "Panel one content"
     }
   ]
 };
@@ -46,17 +45,15 @@ Open.args = {
     {
       title: "Panel 1",
       content: "Panel one content",
-      isActive: false
+      value: "A"
     },
     {
       title: "Panel 2",
-      content: "Panel two content",
-      isActive: true
+      content: "Panel two content"
     },
     {
       title: "Panel 3",
-      content: "Panel three content",
-      isActive: false
+      content: "Panel three content"
     }
   ]
 };

@@ -1,9 +1,9 @@
 <template>
   <div class="expansion-panel">
-    <div class="expansion-panel-title" @click="selectPanel">
+    <div class="expansion-panel-title" data-testid="expansion-panel-title" @click="selectPanel">
       <slot name="title">Panel title</slot>
     </div>
-    <div v-show="isActive" class="expansion-panel-content" :class="classes">
+    <div v-show="isActive" class="expansion-panel-content" data-testid="expansion-panel-content" :class="classes">
       <slot name="content">Panel content</slot>
     </div>
   </div>

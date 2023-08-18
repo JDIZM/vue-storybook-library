@@ -5,7 +5,8 @@
     <ExpansionPanel
       v-for="(panel, i) in panels"
       :key="i"
-      :is-active="value.includes(i)"
+      :is-active="value.includes(getValue(panel, i))"
+      data-testid="expansion-panel"
       @change="updatePanel(panel, i)"
     >
       <template #title>
@@ -35,16 +36,6 @@ export default {
       required: true
     }
   },
-  computed: {
-    model: {
-      get() {
-        return this.value;
-      },
-      set(value) {
-        this.$emit("input", value);
-      }
-    }
-  },
   methods: {
     getValue(item, index) {
       return item.value || index;
@@ -55,7 +46,7 @@ export default {
     updatePanel(item, index) {
       const value = this.getValue(item, index);
 
-      if (this.value.includes(index)) {
+      if (this.value.includes(value)) {
         this.$emit("input", this.toggleMethod(value));
         return;
       }
